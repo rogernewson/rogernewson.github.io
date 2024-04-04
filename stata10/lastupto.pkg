@@ -1,0 +1,19 @@
+v 2
+d lastupto: Condense a dataset to have 1 observation for each of a list of X-values
+d lastupto inputs a dataset in memory with an X-variable, a list of
+d X-values, and (optionally) a list of by-variables.  It creates an
+d output dataset (or resultsset}, with 1 observation per provided X-value
+d in the list (or per X-value per by-group), and data on the variable
+d values in the last observation in the dataset (or by-group) with an
+d X-value up to and including the provided X-value, when the observations
+d have been sorted by by-group, then by their X-values, and then by their
+d pre-existing order.  lastupto is very useful for condensing
+d Kaplan-Meier curves in big datasets.  lastupto uses the SSC package 
+d expgen, which must be installed if lastupto is to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 22july2018
+d Stata-Version: 10
+f lastupto.ado
+f lastupto.sthlp
+e

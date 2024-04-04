@@ -1,0 +1,18 @@
+v 3
+d margprev: Marginal prevalences from binary regression models
+d margprev calculates confidence intervals for marginal
+d prevalences, also known as scenario proportions.  margprev can be
+d used after an estimation command whose predicted values are
+d interpreted as conditional proportions, such as logit, logistic, 
+d probit, or glm.  It estimates a marginal prevalence for a
+d scenario ("Scenario 1"), in which one or more predictor variables
+d may be assumed to be set to particular values, and any other
+d predictor variables in the model are assumed to remain the same.
+d
+d Author: Roger Newson
+d Distribution-Date: 03june2012
+d Stata-Version: 12
+f margprev.ado
+f margprev_p.ado
+f margprev.sthlp
+e

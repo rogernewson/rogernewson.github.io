@@ -1,0 +1,26 @@
+v 3
+d punaf: Population attributable fractions for cohort studies
+d punaf calculates confidence intervals for population attributable
+d fractions, and also for scenario means and their ratio, known as
+d the population unattributable fraction.  punaf can be used after
+d an estimation command whose predicted values are interpreted as
+d conditional arithmetic means, such as logit, logistic, poisson,
+d or glm.  It estimates the logs of two scenario means, the
+d baseline scenario ("Scenario 0") and a fantasy scenario
+d ("Scenario 1"), in which one or more exposure variables are
+d assumed to be set to particular values (typically zero), and any
+d other predictor variables in the model are assumed to remain the
+d same.  It also estimates the log of the ratio of the Scenario 1
+d mean to the Scenario 0 mean.  This ratio is known as the
+d population unattributable fraction, and is subtracted from 1 to
+d derive the population attributable fraction, defined as the
+d proportion of the mean of the outcome variable attributable to
+d living in Scenario 0 instead of Scenario 1.
+d
+d Author: Roger Newson
+d Distribution-Date: 03june2012
+d Stata-Version: 12
+f punaf.ado
+f punaf_p.ado
+f punaf.sthlp
+e

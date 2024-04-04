@@ -1,0 +1,128 @@
+{smcl}
+{hline}
+help for {cmd:sdecode} {right:(Roger Newson)}
+{hline}
+
+
+{title:Decode string variable into numeric using formats for unlabelled values}
+
+{p 8 15}{cmd:sdecode} {it:varname} [{cmd:if} {it:exp}] [{cmd:in} {it:range}] ,
+ [ {cmdab:g:enerate}{cmd:(}{it:newvar}{cmd:)} | {cmd:replace} ]
+ [ {cmdab:maxl:ength}{cmd:(}{it:#}{cmd:)} {cmdab:fo:rmat}{cmd:(}{it:format_spec}{cmd:)}
+   {cmdab:labo:nly} {cmdab:m:issing}
+   {cmdab:pr:efix}{cmd:(}{it:string}{cmd:)} {cmdab:su:ffix}{cmd:(}{it:string}{cmd:)} ]
+
+{p}
+where {it:format_spec} is either a format or a string variable name.
+
+
+{title:Description}
+
+{p}
+{cmd:sdecode} ("super {help decode}") creates an output string variable with values from
+the input numeric variable {it:varname}, using {help label:labels} if present and {help format:formats} otherwise.
+The output string variable may either replace the input numeric variable or be generated
+as a new variable named {it:newvar}. Unlike {help decode}, {cmd:sdecode} creates an output string
+variable containing the values of the input variable as output by the {help tabulate} command
+and other Stata output, instead of decoding all unlabelled input values to missing.
+{cmd:sdecode} is especially useful if a numeric variable has value labels for some values
+but not for others.
+
+
+{title:Options}
+
+{p 0 4}
+Either {cmd:generate()} or {cmd:replace} must be specified, but both options may not be specified
+at the same time.
+
+{p 0 4}{cmd:generate(}{it:newvar}{cmd:)} specifies the name of a new output string variable to be
+created.
+
+{p 0 4}{cmd:replace} specifies that the output string variable will replace the input
+numeric variable, and have the same name, the same {help order:position in the data set},
+and the same {help label:variable label} and {help char:characteristics} if present.
+
+{p 0 4}{cmd:maxlength(}{it:#}{cmd:)} is optional. It specifies how many characters of the
+value label to retain.  {it:#} must be between 1 and 80, with default 80, for
+Intercooled Stata.  {it:#} must be between 1 and 244, with default 244, for
+Stata/SE; see help {help SpecialEdition}.
+
+{p 0 4}{cmd:format(}{it:format_spec}{cmd:)} is optional.
+It specifies the {help format:format} (or formats) used for decoding unlabelled values of the input numeric variable.
+It may be either a format (to be used for all unlabelled values) or the name of a string format variable
+(in which case each observation with an unlabelled value is decoded using the format stored in the
+string format variable for that observation). If {cmd:format()} is not specified, then {cmd:sdecode}
+uses the format associated with the input numeric variable.
+
+{p 0 4}{cmd:labonly} is optional. It specifies that only labelled values for the input numeric variable
+will be decoded to nonmissing string values in the output string variable, and that unlabelled values
+will be decoded to a missing string value, as with {help decode}. If {cmd:labonly} is not specified,
+then all nonmissing values of the input string variable will be decoded to nonmissing string values, except
+for values in observations excluded by the {help if} and {help in} qualifiers, which are decoded to
+a missing string value.
+
+{p 0 4}{cmd:missing} is optional. It specifies that missing values in the input numeric variable
+will be decoded (using formats) to non-missing formatted string values (such as {hi:"."}).
+If {cmd:missing} is absent, then missing values in the input numeric variable are decoded
+to missing string values.
+
+{p 0 4}{cmd:prefix(}{it:string}{cmd:)} is optional.
+It specifies a prefix string, to be added to the left of the decoded string variable.
+
+{p 0 4}{cmd:suffix(}{it:string}{cmd:)} is optional.
+It specifies a suffix string, to be added to the right of the decoded string variable.
+
+
+{title:Remarks}
+
+{p}
+{cmd:sdecode} is a separate package from {help sencode} ("super {help encode}"),
+which is also downloadable from SSC, However, the two packages both have the alternative
+{cmd:generate} and {cmd:replace} options. They are complementary to the {help destring}
+command (which is part of official Stata) and the {help tostring} command
+(which became part of official Stata in Version 8.1). {help tostring} and {help destring}
+convert numeric values to and from their formatted string values, respectively, but
+they do not use {help label:value labels}, and they do contain precautionary features to prevent the loss of information.
+{cmd:sdecode} and {help sencode}, on the other hand, do use {help label:value labels}, and
+are based on the principle that the mapping from numeric values to string values can be many-to-one.
+
+
+{title:Examples}
+
+{p 16 20}{inp:. sdecode price, replace}{p_end}
+
+{p 16 20}{inp:. sdecode foreign, replace labonly}{p_end}
+
+{p 16 20}{inp:. sdecode foreign, gene(origin)}{p_end}
+
+{p 16 20}{inp:. sdecode foreign, gene(origin) maxlen(3)}{p_end}
+
+{p 16 20}{inp:. replace foreign=_n/_N if mod(_n,2)}{p_end}
+{p 16 20}{inp:. sdecode foreign, gene(origin1)}{p_end}
+{p 16 20}{inp:. sdecode foreign, gene(origin2) format(%8.4f)}{p_end}
+
+{p 16 20}{inp:. sdecode rep78, gene(srep78) missing}{p_end}
+
+{p 16 20}{inp:. sdecode price, gene(sprice) prefix($)}{p_end}
+
+{p 16 20}{inp:. sdecode weight, gene(sweight) suffix(" lb")}{p_end}
+
+
+{title:Author}
+
+{p}
+Roger Newson, Imperial College London, UK.
+Email: {browse "mailto:r.newson@imperial.ac.uk":r.newson@imperial.ac.uk}
+
+
+{title:Also see}
+
+{p 0 10}
+{bind: }Manual:   {hi:[U] 15.6.3 Value labels},
+          {hi:[U] 26.2 Categorical string variables},
+          {hi:[R] encode}, {hi:[R] destring}
+{p_end}
+{p 0 10}
+On-line:  help for {help decode}, {help compress}, {help generate}, {help label}, {help format}, {help destring}, {help functions}
+{break} help for {help sencode} if installed
+{p_end}

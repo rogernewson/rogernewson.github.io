@@ -1,0 +1,18 @@
+d parmest: Save estimation results as a data set with 1 obs per parameter
+d parmest creates an output data set, with 1 observation per parameter of the
+d most recent estimation results, and variables corresponding to parameter names,
+d estimates, standard errors, z- or t-test statistics, P-values and confidence
+d limits. The output data set may be saved to a file, retained in memory
+d (overwriting the pre-existing data set), or both.
+d
+d Author: Roger Newson
+d Date: 16 April 2002
+d Stata version: 5
+d
+d Note: This is a superseded version of parmest for users with Stata Version 5.
+d The most recent version of parmest can usually be downloaded from SSC using
+d the Stata command:
+d ssc install parmest
+f parmest.ado
+f parmest.hlp
+e

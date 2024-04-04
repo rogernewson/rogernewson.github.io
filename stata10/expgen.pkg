@@ -1,0 +1,29 @@
+d expgen: Duplicate observations and add generated variables
+d expgen is an extended version of expand.  It replaces each
+d observation in the current dataset with nc copies of the
+d observation, sorted in the original order, where nc is equal to the
+d integer part int(ncexp) of the required expression ncexp.  expgen
+d may also add new variables.  These are newvarname1 (containing the
+d value of the expression ncexp), newvarname2 (containing the
+d sequential order of the original observation in the old dataset),
+d and newvarname3 (containing the sequential order of each copy in
+d the set of copies generated from its original observation).  If
+d missing and/or zero is specified, then observations in the old
+d dataset with missing and/or non-positive values for int(ncexp) are
+d each replaced by one observation in the new dataset.  lexpgen is an
+d alternative version of expgen.  It replaces each observation in the
+d current dataset with one copy of the observation for each of a
+d user-specified input list of numbers, sorted primarily in the
+d original order, and secondarily by the numbers in the list.  It may
+d add the new variables added by expgen, and/or another new variable
+d newvarname4, containing the number in the input list of numbers
+d corresponding to the copy.
+d
+d Author: Roger Newson
+d Distribution-Date: 22march2024
+d Stata-Version: 10
+f expgen.ado
+f expgen.sthlp
+f lexpgen.ado
+f lexpgen.sthlp
+e

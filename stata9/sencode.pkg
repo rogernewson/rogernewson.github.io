@@ -1,0 +1,21 @@
+v 2
+d sencode: Encode a string variable non-alphanumerically into a numeric variable
+d sencode is an extended version of encode. It takes, as input, a string
+d variable, and generates, as output, a numeric variable, with value labels
+d corresponding to values of the string variable. The output numeric variable
+d may replace the input string variable or be generated as a new variable.
+d sencode orders the numeric values corresponding to string values in the
+d sequential order of appearance in the input string variable in the data set,
+d or in another order specified by the user, instead of ordering them in
+d alphanumeric order of the string value, as encode does. The mapping from
+d numeric code values to string labels may be one-to-one (coded in order of
+d first appearance of the string value) or many-to-one (coded in each
+d observation by the position of that observation in the data set, or in the
+d user-specified ordering).
+d
+d Author: Roger Newson
+d Distribution-Date: 21february2007
+d Stata-Version: 9
+f sencode.ado
+f sencode.hlp
+e

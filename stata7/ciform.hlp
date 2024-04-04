@@ -1,0 +1,83 @@
+.-
+help for ^ciform^                                                  (Roger Newson)
+.-
+
+Formatting numeric variables as a confidence interval for tables in documents
+-----------------------------------------------------------------------------
+
+        ^ciform^     [varlist] [^if^ exp] [^in^ range] , ^n^ewvars(newvarlist)
+                       [ ^f^ormat(format) ^r^efind(varname) ]
+
+
+Description
+-----------
+
+^ciform^ takes, as input, a list of 3 numeric variables, assumed to contain
+estimates, lower confidence limits and upper confidence limits, respectively,
+It creates, as output, a list of 3 new string variables, containing the 3
+numeric input variables formatted as a confidence interval. These new variables
+are intended to be output using ^outsheet^ and imported into word processors or
+spreadsheets (or even TeX) to be incorporated into tables. ^ciform^ is intended
+for use after ^parmest^ or ^parmby^, each of which saves a model fit as a new data
+set, with 1 observation per parameter of the most recently fitted model, and
+variables containing point estimates and confidence limits. If ^varlist^ is
+absent, then ^ciform^ searches for variables called ^estimate^, ^min$S_level^ and
+^max$S_level^ (as created by ^parmest^), where ^S_level^ is the global macro
+containing the current confidence level.
+
+
+Options for use with ^ciform^
+--------------------------
+
+^newvars^ specifies a list of 3 new string variables, containing the input
+    variables formatted as a confidence interval, with commas and parentheses
+    added to the lower and upper limits as appropriate.
+
+^format^ specifies the format to be used for the confidence interval. If ^format^
+    is not specified, then ^ciform^ uses the format of the first variable in
+    ^varlist^.
+
+^refind^ specifies an indicator variable indicating that an observation
+    corresponds to a reference category of a factor, rather than to a fitted
+    model parameter such as an odds ratio. For such observations, ^ciform^
+    formats the confidence limits as for a reference category.
+
+
+Remarks
+-------
+
+^ciform^ is designed to be used after ^parmby^ or ^parmest^ and before
+^outsheet,noquote^ when creating tables of confidence intervals in a document.
+It saves the labour of manually reformatting the estimates and confidence limits
+and keying in the commas and parentheses one by one inside a word processor
+(or even a text editor in preparation for input to TeX). The output worksheet is
+typically a tab-delimited text file. The user can cut and paste this output into
+a word processor, or replace all the tabs with ampersands and all the ^<newline>^s
+with ^\cr<newline>^ and then cut and paste the result into a TeX table.
+
+
+Examples
+--------
+
+ . ^regress mpg foreign weight,robust^
+ . ^parmest,label^
+ . ^ciform,f(%8.2f) n(beta betamin betamax)^
+ . ^outsheet parm label beta betamin betamax using table1.txt,noquote replace^
+
+
+ . ^ciform or ormin ormax,ne(sor sormin sormax) fo(%8.2f)^
+
+
+Author
+------
+
+Roger Newson, King's College, London, UK.
+Email: ^roger.newson@@kcl.ac.uk^
+
+
+Also see
+--------
+
+Manual:   ^[R] outsheet^
+STB:      dm65 (STB-49)
+On-line:  help for @outsheet@, help for @parmest@ and @parmby@ if installed

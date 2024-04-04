@@ -1,0 +1,17 @@
+d rglm: module to estimate GLMs with Huber variances
+d rglm is an early interpretation of Huber and semi-Huber
+d variances for generalized linear models in Stata, first
+d distributed on SSC in 1998 and later submitted to the
+d Stata Technical Bulletin in 1999. It is based on an earlier
+d implementation, hglm, written by David Clayton, which
+d calculated semi-Huber variances. rglm has been superseded
+d by the addition of Huber and semi-Huber variances to the
+d official Stata command glm. It is distributed here mainly
+d for the historical record.
+d
+d Author: Roger Newson
+d Date: 03 February 2012
+d Stata version: 5
+f rglm.ado
+f rglm.hlp
+e

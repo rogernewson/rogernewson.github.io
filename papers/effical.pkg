@@ -1,0 +1,28 @@
+v 2
+d effical: Efficient calculation of confidence intervals for rank statistics
+d This is an article from the Journal of Statistical Software (Newson, 2006).
+d The article presents an efficient algorithm for calculating totals of
+d concordance-discordance differences in a time proportional to N log N,
+d where N is the number of observations, using a balanced binary search tree.
+d These totals can be used to calculate jackknife pseudovalues for a very wide
+d range of rank statistics, including Kendall's tau, Somers' D, Harrell's c,
+d the area under the receiver operating characteristic (ROC) curve, the Gini
+d coefficient, and the parameters underlying the sign test and the
+d Mann-Whitney-Wilcoxon ranksum test. The article also describes the somersd
+d package, downloadable from SSC, which uses this algorithm, and demonstrates
+d the large improvements in computational speed made possible by this algorithm
+d when large datasets are processed. The main paper is in the file effical.pdf.
+d However, users may also download the additional file somersd.pdf, which
+d contains full documentation, including Syntax, Methods and Formulas, for the
+d program somersd in the somersd package.
+d
+d References
+d
+d Newson R. 2006. Efficient calculation of jackknife confidence intervals for
+d rank statistics. Journal of Statistical Software 15(1): 1-10.
+d
+d Author: Roger Newson
+d Distribution-date: 26 February 2006
+f effical.pdf
+f somersd.pdf
+e

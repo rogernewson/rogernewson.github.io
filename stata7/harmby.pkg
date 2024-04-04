@@ -1,0 +1,22 @@
+v 2
+d harmby: Harmonize values of variables within by-groups
+d harmby ("harmonize within by-groups") checks that each variable in a
+d varlist has no more than one value, other than the standard missing value,
+d in each of the by-groups specified by by(), or in the whole data set, if
+d by() is not specified. A standard missing value is . for a numeric
+d variable, or the empty string "" for a string variable. If this condition
+d is true, then harmby replaces all standard missing values in the by-group
+d (or data set) by the one value that is not standard missing, if such a
+d value exists, and takes no action if all values in a by-group (or data set)
+d are standard missing.  harmby is useful if there are variables whose values
+d should be unique within each by-group (or within the data set), and new
+d observations with standard missing values for these variables have been
+d added to some or all of the by-groups by merge, or by ingap, which is
+d downloadable from SSC or from this website.
+d
+d Author: Roger Newson
+d Distribution-Date: 03march2004
+d Stata-Version: 7
+f harmby.ado
+f harmby.hlp
+e

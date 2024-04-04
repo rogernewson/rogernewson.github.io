@@ -1,0 +1,18 @@
+v 2
+d gmratio: Stata tip 1: The eform() option of regress
+d This is a post-publication update of a Stata Tip in The Stata Journal
+d (Newson, 2003), describing the use of the eform() option of the regress
+d command to estimate geometric means and their ratios. These are often used
+d with positive-valued and positively-skewed outcome variables, such as house
+d prices and serum viral loads, as approximations for medians and their ratios.
+d
+d References
+d
+d Newson R. 2003. Stata tip 1: The eform() option of regress. The Stata Journal
+d 3(4): 445.
+d
+d Author: Roger Newson
+d Distribution-date: 05 February 2004
+d
+f gmratio.pdf
+e

@@ -1,0 +1,23 @@
+v 3
+d crib13: Do-file templates for use in Stata Version 13
+d These files are used as templates (or cribs) to create do-files in
+d Stata Version 13 for use with the dolog package. They can be inserted
+d into the Stata do-file editor, or other text editors, and edited and
+d saved with other names, and then executed using the dolog package.
+d The file crib13.do is used to create semicolon-delimited do-files,
+d the file crcrib13.do is used to create carriage-return-delimited
+d do-files, the file rtfcrib13.do is used to create semicolon-delimited
+d RTF document-generating do-files, and the file htmcrib13 is used to
+d create semicolon-delimited HTML document-generating do-files. These
+d templates are written assuming that the user has already installed
+d some of the packages by Roger Newson, downloadable from SSC or from
+d this website.
+d
+d Author: Roger Newson
+d Distribution-date: 16september2020
+d Stata-version: 13
+f crib13.do
+f crcrib13.do
+f rtfcrib13.do
+f htmcrib13.do
+e

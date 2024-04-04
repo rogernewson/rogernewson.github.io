@@ -1,0 +1,10 @@
+v 2
+d transp1: Bias caused by missing values in primary predictor variables
+d This was first presented to a Statistics Group meeting at King's
+d College London on 29 January 2002. Its subtitle is: "Does smoking kill
+d the drinking classes or vice versa?".
+d
+d Author: Roger Newson
+d Distribution-date: 20 August 2008
+f transp1.pdf
+e

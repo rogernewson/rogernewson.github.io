@@ -1,0 +1,16 @@
+v 2
+d sortpreserve: Stata tip 5: Ensuring programs preserve dataset sort order
+d This is a post-publication update of a Stata Tip in The Stata Journal
+d (Newson, 2004), describing the use of the sortpreserve option of the program
+d statement to preserve the sort order of the data after the program executes.
+d
+d References
+d
+d Newson R. 2004. Stata tip 5: Ensuring programs preserve dataset sort order.
+d The Stata Journal 4(1): 94.
+d
+d Author: Roger Newson
+d Distribution-date: 17 March 2004
+d
+f sortpreserve.pdf
+e

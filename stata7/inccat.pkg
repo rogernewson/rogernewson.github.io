@@ -1,0 +1,18 @@
+v 2
+d inccat: Concatenate input files to an output file (possibly with insertions)
+d inccat ("include and concatenate") is an extended version of the copy command
+d in official Stata. It takes, as input, a list of one or more input files, and
+d concatenates them to an output file. Optionally, one or more of the input
+d files may contain one or more lines beginning with a user-specified prefix
+d and continuing with a list of valid file names belonging to additional input
+d files, and each such line is replaced in the output file by the contents of
+d these files. These additional input files can contain prefixed lines with
+d lists of further additional input files, which are also included in the same
+d way.
+d Author: Roger Newson
+d Distribution-Date: 22february2007
+d Stata-Version: 7
+d
+f inccat.ado
+f inccat.hlp
+e

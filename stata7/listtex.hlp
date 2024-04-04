@@ -1,0 +1,160 @@
+{smcl}
+{.-}
+help for {cmd:listtex} {right:(Roger Newson)}
+{.-}
+ 
+{title:List a variable list to a file or to the log for inclusion in a TeX, HTML or word processor table}
+
+{p 8 27}
+{cmd:listtex} [ {it:varlist} ] [ {cmd:using} {it:filename} ]
+ [ {cmd:if} {it:expression} ] [ {cmd:in} {it:range} ]
+ [ , {cmdab:b:egin}{cmd:(}{it:string}{cmd:)} {cmdab:d:elimiter}{cmd:(}{it:string}{cmd:)}
+  {cmdab:e:nd}{cmd:(}{it:string}{cmd:)} {cmdab:m:issnum}{cmd:(}{it:string}{cmd:)}
+  {cmdab:rs:tyle}{cmd:(}{it:rowstyle}{cmd:)}
+  {cmdab:nol:abel} {cmdab:t:ype} {cmdab:replace:} ]
+
+
+{title:Description}
+
+{p}
+{cmd:listtex} lists the variables in the {it:varlist} (or all variables, if {it:varlist}
+is absent) to the Stata log or to a file specified by {cmd:using}, in a format with one line per observation
+and the values of different variables separated by a delimiter string. This output file can then
+be inserted, cut and pasted, or {cmd:\input} into a TeX, HTML or word processor table. Values of numeric variables
+are output according to their display formats or value labels (if non-missing) or as the missing value string
+specified by {cmd:missnum} (if missing).
+
+
+{title:Options}
+
+{p 0 4}{cmd:begin(}{it:string}{cmd:)} specifies a string to be output at the beginning of every
+output line corresponding to an observation. If absent, it is set to an empty string.
+
+{p 0 4}{cmd:delimiter(}{it:string}{cmd:)} specifies the delimiter between values in an observation.
+If absent, it is set to "&".
+
+{p 0 4}{cmd:end(}{it:string}{cmd:)} specifies a string to be output at the end of every
+output line corresponding to an observation. If absent, it is set to an empty string.
+
+{p 0 4}{cmd:missnum(}{it:string}{cmd:)} specifies a string to be output for numeric missing values.
+If absent, it is set to an empty string.
+
+{p 0 4}{cmd:rstyle(}{it:rowstyle}{cmd:)} specifies a row style for the table rows.
+A row style is a named combination of values for the {cmd:begin()}, {cmd:end()}, {cmd:delimiter()}
+and {cmd:missnum()} options. It may be {cmd:html}, {cmd:htmlhead}, {cmd:tabular}, {cmd:halign}
+or {cmd:settabs}. Row styles are specified under {hi:Row styles} below.
+The options set by a row style may be overridden by the {cmd:begin()}, {cmd:end()},
+{cmd:delimiter()} and {cmd:missnum()} options.
+
+{p 0 4}{cmd:nolabel} specifies that numeric variables with variable labels are to be output as
+numbers and not as labels.
+
+{p 0 4}{cmd:type} specifies that the output must be typed to the Stata log. The data can then
+be cut and pasted from the Stata log (or from the Results window) to the TeX, HTML or
+word processor file. The user must specify the {cmd:type} option, the {cmd:using} qualifier, or both.
+
+{p 0 4}{cmd:replace} specifies that any existing file with the same name as the {cmd:using}
+file must be overwritten.
+
+
+{title:Row styles}
+
+{p}
+A row style is a combination of the {cmd:begin()}, {cmd:end()},
+{cmd:delimiter()} and {cmd:missnum()} options. Each row style produces rows for a particular
+type of table (HTML, TeX or word processor). The row styles available are as follows:
+
+{cmd:Row style}   {cmd:begin}           {cmd:delimiter}       {cmd:end}             {cmd:missnum} {cmd:Description}
+{cmd:html}        "<tr><td>"      "</td><td>"     "</td></tr>"    ""      HTML table rows
+{cmd:htmlhead}    "<tr><th>"      "</th><th>"     "</th></tr>"    ""      HTML table header rows
+{cmd:tabular}     ""              "&"             "\\"            ""      LaTeX {cmd:\tabular} environment table rows
+{cmd:halign}      ""              "&"             "\cr"           ""      Plain TeX {cmd:\halign} table rows
+{cmd:settabs}     "\+"            "&"             "\cr"           ""      Plain TeX {cmd:\settabs} table rows
+
+{p}
+Any of these row styles may be specified together with {cmd:begin()} and/or {cmd:delimiter()}
+and/or {cmd:end()} and/or {cmd:missnum()} options, and the default options for the row style
+will then be overridden. For instance, the user may specify any of the above options with {cmd:missnum(-)}, and
+then missing numeric values will be given as minus signs.
+
+
+{title:Remarks}
+
+{p 0 0}
+{cmd:listtex} is often used to output data with values delimited by the TeX alignment tab character "&"
+and with lines ending with the carriage return string "\cr". However, the user can also specify other line
+formats, such as the format suitable for a HTML table, the format suitable for a plain TeX
+{cmd:\settabs} table, or even for dialects of TeX which
+use an alignment character other than "&". {cmd:listtex} is similar in function to {help textab},
+but {cmd:listtex} only produces the rows of the table, does not attempt to define any
+preamble, header or footer, and may output either to a text file or to the Stata log.
+(Note, however, that header rows may sometimes be added to the data set using the {help ingap}
+command.)
+{cmd:listtex} therefore allows the user to specify any table
+format and to use any TeX or HTML dialect or style, as long as the table rows have a consistent
+beginning-of-row string (specified by {cmd:begin}), a consistent end-of-row string (specified by
+{cmd:end}), and a consistent delimiter between values in the same row (specified by
+{cmd:delimiter}). {cmd:listtex} is also similar in function to {help outsheet}, which is
+used to output Stata data sets for input to spreadsheets and word processors, but which has no {cmd:begin},
+{cmd:end} or {cmd:missnum} options, and therefore is not often used to output data for input to
+TeX or HTML. Also, at least in Stata 7, {cmd:outsheet} does not have a {cmd:type} option, so the user
+cannot list the output to the Results window using a single command and then cut and paste this output
+into a TeX, HTML or word processor file. Output files created by {cmd:listtex} can be included in TeX files
+using the TeX {cmd:\input} command, or in TeX or HTML files using the {help inccat} package in Stata.
+{help inccat} can be described and installed using the {help ssc}, {help findit} or {help net} commands,
+and so can various alternatives to {cmd:listtex},
+such as {help textab}, {help outtex}, {help sutex} and {help outtable}.
+
+
+{title:Examples}
+
+{p 0 0} To type text table lines separated by {hi:&} characters for cutting and pasting into a
+Microsoft Word table using {hi:Table->Convert->Text to Table}:
+
+{p 8 16}{inp:. listtex make foreign weight mpg,type}{p_end}
+
+{p 0 0} To produce TeX table lines for a plain TeX {cmd:\halign} table:
+
+{p 8 16}{inp:. listtex make foreign weight mpg using trash1.tex,rs(halign) replace}{p_end}
+
+{p 0 0} To produce TeX table lines for a plain TeX {cmd:\halign} table with
+horizontal and vertical rules:
+
+{p 8 16}{inp:. listtex make foreign weight mpg using trash1.tex,b(&&) d(&&) e(&\cr{\noalign{\hrule}}) replace}{p_end}
+
+{p 0 0} To produce TeX table lines for a plain TeX {cmd:\settabs} table:
+
+{p 8 16}{inp:. listtex make foreign weight mpg using trash1.tex,rstyle(settabs) replace}{p_end}
+
+{p 0 0} To produce LaTeX table lines for the LaTeX {cmd:\tabular} environment:
+
+{p 8 16}{inp:. listtex make foreign weight mpg using trash1.tex,rstyle(tabular) replace}{p_end}
+
+{p 0 0} To produce HTML table rows for insertion into a HTML table:
+
+{p 8 16}{inp:.listtex make foreign weight mpg using trash1.htm,rstyle(html) replace}{p_end}
+
+
+{title:Author}
+
+{p}
+Roger Newson, King's College, London, UK.
+Email: {browse "mailto:roger.newson@kcl.ac.uk":roger.newson@kcl.ac.uk}
+
+
+{title:Also see}
+
+{p 0 21}
+{bind: }Manual:  {hi:[R] outsheet}, {hi:[R] insheet}, {hi:[R] file}, {hi:[R] type]}, {hi:[R] list}.
+{p_end}
+{p 0 21}
+On-line:  help for {help outsheet}, {help insheet}, {help file}, {help type}, {help list} and {help ssc}
+{p_end}
+{p 10 21}
+help for {help textab}, {help outtex}, {help sutex}, {help outtable}, {help inccat} and/or {help ingap} if installed
+{p_end}
+{p 0 21}
+{bind:  }Other:  {hi:Knuth D. E. 1992. The TeXbook. Reading, Mass: Addison-Wesley.}
+{p_end}
+{p 10 21} {hi:Lamport L. 1994. LaTeX: a document preparation system. 2nd edition. Boston, Mass: Addison-Wesley.}
+{p_end}

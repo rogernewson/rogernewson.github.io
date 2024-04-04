@@ -1,0 +1,17 @@
+v 2
+d listtex: List variables as rows of a TeX, HTML or word processor table
+d listtex outputs a list of variables to the Stata log or to a file as TeX,
+d HTML or word processor table rows, which can then be inserted into a TeX,
+d HTML or word processor table by cutting and pasting and/or file concatenation
+d and/or the TeX \input command. listtex only produces the table rows. It is
+d the responsibility of the user to provide preambles and/or table definitions
+d and/or table headers and/or table footers. Note, however, that table header
+d rows can sometimes be added to data sets using the ingap command,
+d downloadable from SSC.
+d
+d Author: Roger Newson
+d Distribution-Date: 15june2003
+d Stata-Version: 7
+f listtex.ado
+f listtex.hlp
+e

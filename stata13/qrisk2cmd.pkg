@@ -1,0 +1,19 @@
+d qrisk2cmd: Running the QRISK2 command from within Stata
+d qrisk2cmd calls the QRISK2 command to convert from a QRISK2 input
+d data file to a QRISK2 output data file.  qrisk2import inputs a
+d QRISK2 input or output data file into a Stata dataset in memory.
+d qrisk2export exports a QRISK2 input data file, using variables with
+d standard QRISK2 names from the dataset in memory.  This package
+d requires the QRISK2 program to be installed, and also requires the
+d SSC package keyby.
+d
+d Author: Roger Newson
+d Distribution-Date: 14septemer2016
+d Stata-Version: 13
+f qrisk2cmd.ado
+f qrisk2import.ado
+f qrisk2export.ado
+f qrisk2cmd.sthlp
+f qrisk2import.sthlp
+f qrisk2export.sthlp
+e

@@ -1,0 +1,11 @@
+v 2
+d linclog1: Linear combinations of logs of multinomial parameter estimates
+d This justifies the standard error formulas for linear combinations of
+d logs of multinomial parameters.  Examples include the log odds ratio,
+d and Lindley's alpha parameter for measuring Hardy-Weinberg
+d disequilibrium in genetics.
+d
+d Author: Roger Newson
+d Distribution-date: 20 August 2008
+f linclog1.pdf
+e

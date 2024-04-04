@@ -1,0 +1,15 @@
+v 2
+d punaf1: Population unattributable fractions and other scenario comparisons
+d This was first presented to an Asthma Club meeting at Imperial
+d College London on 11 November 2010. It discusses population
+d unattributable fractions, population attributable fractions,
+d population attributable risks, and their estimation using Stata.
+d This presentation uses data provided by the ALSPAC Study Team
+d at the Institute of Child Health at Bristol University, UK,
+d who have a Web page at
+d http://www.alspac.bris.ac.uk
+d
+d Author: Roger Newson
+d Distribution-date: 11 November 2010
+f punaf1.pdf
+e

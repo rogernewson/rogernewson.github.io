@@ -1,0 +1,20 @@
+v 2
+d lincomest: Extension to lincom saving the combination as estimation results
+d lincomest is an extended version of lincom, which calculates confidence
+d intervals and P-values for linear combinations of model coefficients.
+d lincomest saves the estimate and variance of the linear combination as
+d estimation results, with the option of saving any existing estimation results
+d to be recalled by estimates unhold. The advantage of doing this is that the
+d linear combination can be input to parmest or parmby to create a data set
+d with one observation, containing a confidence interval and P-value for the
+d linear combination.  This data set can be concatenated with other parmest
+d or parmby output data sets using dsconcat, and the confidence intervals
+d and/or P-values can then be plotted and/or tabulated.
+d
+d Author: Roger Newson
+d Distribution-Date: 09may2005
+d Stata-Version: 7
+f lincomest.ado
+f lincomest.hlp
+f lincomest_p.ado
+e

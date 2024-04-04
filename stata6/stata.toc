@@ -1,0 +1,13 @@
+v 2
+d Stata 6 packages written by Roger Newson
+d These can be used by users with Stata Version 6 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p bspline Create a basis of B-splines or reference splines
+p dolog Execute commands from a file, creating a log file
+p dsconcat Concatenate a list of Stata data files into the memory
+p expgen Duplicate observations and add generated variables
+p parmest Save estimation results as a data set with 1 obs per parameter
+p somersd Kendall's tau-a, Somers' D and median differences
+p stcmd Run the Stat/Transfer st command from inside Stata
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

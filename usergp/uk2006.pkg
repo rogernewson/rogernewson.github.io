@@ -1,0 +1,30 @@
+v 2
+d uk2006: On the central role of Somers' D
+d Somers' D and Kendall's tau-a are parameters behind rank or "non-parametric"
+d statistics, interpreted as differences between proportions. Given two
+d bivariate data pairs (X_1,Y_1) and (X_2,Y_2), Kendall's tau-a is the
+d difference between the probability that the two pairs are concordant
+d and the probability that the two pairs are discordant, and Somers' D is the
+d difference between the corresponding conditional probabilities, given
+d that the X-values are ordered. The somersd package computes confidence
+d intervals for both parameters. The Stata 9 version of somersd uses Mata,
+d and greatly extends the definition of Somers' D, allowing the X- and/or
+d Y-variables to be left- or right-censored, and allowing multiple versions
+d of Somers' D for multiple sampling schemes for pairs of X,Y-pairs.
+d In particular, we may define stratified versions of Somers' D, in which we
+d only compare pairs from the same stratum. The strata may be defined by
+d grouping a Rubin-Rosenbaum propensity score, based on the values of
+d multiple confounders for an association between an exposure variable X and
+d an outcome variable Y. Therefore, rank statistics can have not only
+d confidence intervals, but confounder-adjusted confidence intervals.
+d Usually, we either estimate D(Y|X) as a measure of the effect of X on Y,
+d or estimate D(X|Y) as a measure of the performance of X as a predictor of Y,
+d compared to other predictors. Alternative rank-based measures of the effect
+d of X on Y include the Hodges-Lehmann median difference and the Theil-Sen
+d median slope, both of which are defined in terms of Somers'D and estimated
+d using the somersd package.
+d
+d Author: Roger Newson
+d Distribution-date: 13 August 2006
+f uk2006.pdf
+e

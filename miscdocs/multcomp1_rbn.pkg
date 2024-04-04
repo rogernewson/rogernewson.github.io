@@ -1,0 +1,12 @@
+v 2
+d multcomp1_rbn: Multiple comparisons: The issues as I see them
+d This document was presented to the National Heart and Lung Institute
+d Asthma Club on 07 February 2008. It represents my thinking about
+d multiple comparisons before I discovered frequentist q-values,
+d and uses data from the ALSPAC Study Team at the Institute of Child
+d Health at Bristol University, UK.
+d
+d Author: Roger Newson
+d Distribution-date: 10 March 2015
+f multcomp1_rbn.pdf
+e

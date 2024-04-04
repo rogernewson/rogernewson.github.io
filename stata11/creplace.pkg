@@ -1,0 +1,20 @@
+d creplace: Exchange values cyclically between variables
+d creplace is an extended version of replace, which exchanges values
+d cyclically between variables in a list of two or more variables.  By
+d default, the values in each variable are replaced by values from the
+d next variable in the list, or by values from the first variable, in
+d the case of the last variable.  Optionally, the values in each
+d variable are replaced by values from the previous variable in the
+d list, or by values from the last variable, in the case of the first
+d variable.  If there are only two variables in the list, then their
+d values will simply be exchanged.  Variables in the list must be all
+d numeric or all string.  After exchanging the values, creplace will 
+d compress these variables to the smallest storage type possible without
+d loss of information.
+d
+d Author: Roger Newson
+d Distribution-Date: 09december2010
+d Stata-Version: 11
+f creplace.ado
+f creplace.sthlp
+e

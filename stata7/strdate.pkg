@@ -1,0 +1,17 @@
+v 2
+d strdate: Replace string date variables with numeric date variables
+d strdate takes, as input, a list of character date variables,
+d and replaces them with a list of numeric date variables with the same
+d names and variable labels (if any), occupying the same positions in
+d the variable order as the original character date variables. The
+d conversion is carried out using the date function. The user can
+d specify cutoff year (for two-digit years) and date format. strdate
+d is typically used after a user inputs a generic spreadsheet
+d containing string date variables using insheet.
+d
+d Author: Roger Newson
+d Distribution-Date: 23jul2002
+d Stata-Version: 7
+f strdate.ado
+f strdate.hlp
+e

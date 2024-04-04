@@ -1,0 +1,16 @@
+d subsave: Save a subset of the dataset in memory to a disk file
+d subsave saves a subset of the dataset currently in memory to a disk
+d file. This saves the user the trouble of inserting a preserve
+d statement before a save command and a restore statement after a save
+d command. This is especially useful in a group of commands between a
+d preserve command and a restore command, as paired preserve and restore
+d statements cannot be nested. In the output dataset, variables can be
+d renamed, and observations can be resorted.
+d 
+d Author: Roger Newson
+d Distribution-date: 14september2006
+d Stata-version: 9
+d
+f subsave.ado
+f subsave.hlp
+e

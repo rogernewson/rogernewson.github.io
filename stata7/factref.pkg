@@ -1,0 +1,22 @@
+v 2
+d factref: Insert new observations with reference values for factors
+d factref is used with factext, descsave, parmby and parmest.  It takes, as
+d input, a data set created by parmby or parmest, in which categorical
+d variables (factors) have been created by descsave and factext. These factors
+d are variables (numeric or string) representing categorical variables in the
+d fitted model, represented by dummy variables such as those created by xi.
+d factref adds to that data set a set of additional observations with reference
+d values for these factors, copied from the omit characteristic for each
+d factor. For each factor, factref creates one reference observation if there
+d are non-missing values for the factor and there is no by-variable list, or
+d one reference observation for each by-group where there are non-missing
+d values of the factor if there is a by-variable list.  After the reference
+d observations have been added, the user may create a plot or table of
+d confidence intervals for factor effects.
+d
+d Author: Roger Newson
+d Distribution-Date: 22february2007
+d Stata-Version: 7
+f factref.ado
+f factref.hlp
+e

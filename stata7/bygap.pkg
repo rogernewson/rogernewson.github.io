@@ -1,0 +1,23 @@
+v 2
+d bygap: Insert a by-gap observation at the start of each by-group
+d bygap inserts a by-gap observation at the start of each by-group defined by
+d a list of by-variables, or at the start of the data set if no by-variables
+d are specified.  The by-gap observation for each by-group has the same
+d by-variable values as the by-group. All other variables are either set to
+d form a title row (if this is requested by the user), or otherwise set to
+d missing values. (The user can replace these missing values with other values
+d afterwards.) Optionally, bygap generates an indicator variable, indicating
+d which observations are by-gap observations. bygap is useful for preparing a
+d data set to be plotted using graph or the eclplot package (downloadable from
+d SSC) together with the sencode package (downloadable from SSC), or output to
+d a Microsoft Word, TeX, LaTeX or HTML table using the listtex package
+d (downloadable from SSC). The bygap package is now superseded by the ingap
+d package, and users are therefore advised to download ingap rather than bygap.
+d
+d Author: Roger Newson
+d Distribution-Date: 21may2003
+d Stata-Version: 7
+d Superseded-by: ingap
+f bygap.ado
+f bygap.hlp
+e

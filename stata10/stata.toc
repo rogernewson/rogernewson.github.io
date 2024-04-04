@@ -1,0 +1,80 @@
+v 3
+d Stata 10 packages written by Roger Newson
+d These can be used by users with Stata Version 10 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p addinby Add in data from a disk dataset using a foreign key
+p adodev Reorder ado-path for developers and other independent-minded users
+p adostore Store and restore the current ado-path
+p bmjcip Format confidence intervals and P-values for medical journals
+p bpmedian Bonett-Price confidence intervals for medians and their contrasts
+p bspline Create a basis of B-splines or reference splines
+p bynote Create a note with a user-specified format for use with the by option
+p cgroup Group contiguous observations with identical values of a varlist
+p chardef Assign values to a characteristic of a list of variables
+p creplace Exchange values cyclically between variables
+p descgen Add Stata dataset attribute variables to a xdir resultsset
+p descsave Extension of describe creating output dataset and do-file
+p dolog Execute commands from a file, creating a log file
+p dologx Multiple versions of dolog for executing certification scripts
+p dotex Execute a do-file generating a SJ LaTeX log
+p dsconcat Concatenate a list of Stata data files into the memory
+p dsweight Generate direct standardization weights
+p dtastamp Store current date and time in dataset characteristics
+p eclplot Horizontal and vertical confidence interval plots
+p esetran Transforming estimates and standard errors in parmest resultssets
+p estparm Save results from a parmest resultsset and test equality
+p expgen Duplicate observations and add generated variables
+p factext Extract factor values from a label variable created by parmest
+p factmerg Merge a list of factors to create string variables
+p gsgroup Create a group variable and optionally an output dataset for a gsort key
+p haif Homoskedastic adjustment inflation factors for model selection
+p htmlutil Utilities for writing Hypertext Markup Language (HTML) files
+p ingap Insert gap observations in a dataset
+p invcise Compute standard errors using the inverse confidence interval method
+p jformat Justify formats for a list of variables
+p keyby Key the dataset by a variable list
+p kmest Compute Kaplan-Meier survival probabilities and/or percentiles as estimation results
+p lablist List value labels (if present) for one or more variables
+p lastupto Condense a dataset to have 1 observation for each of a list of X-values
+p lincomest Extension to lincom saving the combination as estimation results
+p linuxlsd1 Create a dataset of file records from the output of a Linux ls -d1 command
+p listtab List variables as rows of a TeX, HTML or word processor table
+p listtex List variables as rows of a TeX, HTML or word processor table
+p msdirb Create a dataset of file names from the output of a MS-DOS dir/b command
+p normalbvr Generate Normal bivariate ridits
+p normalrir Calculate ridits of inverse ridits between Normal populations
+p parmest Create datasets with 1 observation per estimated parameter
+p parmhet Heterogeneity tests in parmest resultssets
+p polyspline Generate sensible bases for polynomials and other splines
+p powercal Generalized power calculations saving results in variables
+p predsurv Compute predicted or baseline survival after streg or stcox
+p prodvars Create product variables for two lists of input variables
+p qqvalue Generate frequentist q-values by inverting multiple-test procedures
+p rcentile Robust confidence intervals for percentiles
+p regaxis Regular linear and logarithmic axis scales, ranges and tick lists
+p rsource Run R from inside Stata
+p rtfutil Utilities for writing Rich Text Format (RTF) files
+p scheme_rbn1mono Minimal monochrome graphics schemes
+p scsomersd Rank statistics for scenario comparisons
+p sdecode Decode a numeric variable to string, formatting unlabelled values
+p sencode Encode a string variable non-alphanumerically into a numeric variable
+p senspec Sensitivity and specificity results saved in generated variables
+p smileplot Multiple test procedures and smile plots
+p somersd Kendall's tau-a, Somers' D and percentile slopes
+p sscpax Describe, install, or uninstall a list of SSC packages
+p stcmd Run the Stat/Transfer st command from inside Stata
+p textpad Call TextPad to edit a file
+p tfinsert Insert text into an open text file
+p vallabdef Define value labels from label name, value and label variables
+p varlabdef Define a value label with values corresponding to variables
+p wridit Generate weighted ridits
+p xauto Input an extended version of the auto data
+p xcollapse Make data set of summary statistics on disk or in memory
+p xcontract Make dataset of frequencies and percents on disk or in memory
+p xdatelist Create ascending numeric lists of dates
+p xdir Create a resultsset with 1 observation per file in a directory
+p xgroup Group the data creating a group variable and/or output dataset
+p xrewide Extended versions of reshape wide and reshape long
+p xsvmat Convert a matrix to variables in an output dataset
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

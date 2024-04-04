@@ -1,0 +1,116 @@
+.-
+help for ^stcmd^, ^inputst^ and ^outputst^                             (Roger Newson)
+.-
+
+Running the Stat/Transfer command from inside Stata
+---------------------------------------------------
+
+        ^stcmd^      [ filetype1 ] infilename.ext1 [ filetype2 ] outfilename.ext2
+                      [ switches ]
+
+        ^stcmd^      command_filename.stc
+
+        ^inputst^    [ filetype ] infilename.ext  [ switches ]
+
+        ^outputst^   [ filetype ] outfilename.ext  [ switches ]
+
+
+Description
+-----------
+
+^stcmd^ calls the Stat/Transfer command ^st^ to convert infilename.ext1 to
+outfilename.ext2, or to obey the commands in the Stat/Transfer command file
+command_filename.stc. ^inputst^ inputs into the memory a Stata-converted version
+of infilename.ext, overwriting any existing data set. ^outputst^ outputs a
+converted version of the Stata data set in memory to outfilename.ext. File
+types are determined by filetype, filetype1 and/or filetype2 if present, and by
+Stat/Transfer from the extensions ext, ext1 and/or ext2 otherwise. File names
+containing spaces must be given in quotes.
+
+
+Switches for use with  ^stcmd^, ^inputst^ and ^outputst^
+--------------------------------------------------
+
+These are prefixed by ^/^ under Windows and by ^-^ under Unix. The Windows switches
+are as follows:
+
+^/o^ specifies that Stat/Transfer will optimize outputfilename.ext to be as small
+    as possible.
+
+^/y^ specifies that outfilename.ext will be overwritten, if it already exists.
+    (If ^/y^ is not specified, then Stat/Transfer consults the user.)
+
+^/q^ will suppress all messages from Stat/Transfer, with the exception of error
+    messages and warnings that a file is about to be overwritten. 
+
+^/t^tablename is used in order to specify a table from a Microsoft Access data
+    source.
+
+
+Remarks
+-------
+
+^inputst^ and ^outputst^ call ^stcmd^, which in turn calls the Stat/Transfer ^st^
+command. For a list of file types and standard extensions used by
+Stat/Transfer, see the Stat/Transfer manual or on-line help.
+
+
+Technical note
+--------------
+
+^stcmd^, ^inputst^ and ^outputst^ will only work if Stat/Transfer is installed on the
+user's system, and the path for the Stat/Transfer ^st^ command on the user's
+system is the same as the setting of the local macro ^path^ in the user's copy of
+^stcmd.ado^. In the distributed version of ^stcmd.ado^, the macro ^path^ is set to
+^st^. This means that ^stcmd^ will only call Stat/Transfer if the directory in
+which Stat/Transfer is installed on the user's system is on the user's default
+path (or is the current directory). If the Stat/Transfer directory is not on
+the user's default path, then the user must edit his/her copy of ^stcmd.ado^ and
+change the setting of the local macro ^path^ so as to specify the path of the
+Stat/Transfer ^st^ command on the user's system. For instance, if Stat/Transfer
+is installed in the directory ^c:\Program Files\StatTransfer5^, then the user
+must edit ^stcmd.ado^ and alter the command
+
+^local path "st"^
+
+to
+
+^local path "c:\Program Files\StatTransfer5\st"^
+
+
+Examples
+--------
+
+ . ^inputst strange1.sav^
+
+ . ^outputst mydata.sd2 /y^
+ 
+ . ^outputst odbc "My ODBC file with a long name.xyz"^
+
+ . ^stcmd mystcom.stc^
+ 
+ . ^stcmd splus hisdset.xyz mydset.csv /y^
+ . ^insheet mydset.csv,comma clear^
+
+
+Author
+------
+
+Roger Newson, Guy's, King's and St Thomas' School of Medicine, London, UK.
+Email: ^roger.newson@@kcl.ac.uk^
+
+
+Also see
+--------
+
+Manual:   ^[U] 24.4 Transfer programs^
+          ^[R] insheet, [R] outsheet, [R] infile, [R] outfile^
+On-line:  help for @insheet@, @outsheet@, @infile@, @outfile@
+Also see: Stat/Transfer manuals for Windows or Unix
+          Stat/Transfer on-line help
+
+Stat/Transfer can be installed on Windows 98/95/NT, Windows 3.1, and some Unix
+platforms. It is available from Stata Corporation (email: ^stata@@stata.com^;
+URL: @http://www.stata.com/@) and manufactured by Circle Systems
+(email: ^stsales@@circlesys.com^; URL: @http://www.stattransfer.com/@).
+

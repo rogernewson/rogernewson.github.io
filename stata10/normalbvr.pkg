@@ -1,0 +1,20 @@
+v 2
+d normalbvr: Generate Normal bivariate ridits
+d normalbvr inputs expressions specifying an X-variable and a
+d Y-variable and parameters for a bivariate normal distribution, and
+d generates a new variable, containing bivariate ridits of the
+d X-variable and the Y-variable with respect to the specified
+d bivariate Normal distribution.  Normal bivariate ridits are used in
+d power calcuations for Kendall's tau-a.  If the X-variable and the
+d Y-variable have the specified bivariate Normal distribution, then
+d the mean bivariate ridit is equal to the population Kendall's
+d tau-a, and the sampling variance of the sample Kendal's tau-a is
+d equal to 4 times the variance of the bivariate ridits divided by
+d the sample number.
+d
+d Author: Roger Newson
+d Distribution-Date: 02april2018
+d Stata-Version: 10
+f normalbvr.ado
+f normalbvr.sthlp
+e

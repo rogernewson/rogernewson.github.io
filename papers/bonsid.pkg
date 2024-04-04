@@ -1,0 +1,19 @@
+v 2
+d bonsid: Bonferroni approximations for Sidak q–values
+d This is a pre-publication draft of a Stata Journal paper
+d (Newson, 2013). The paper describes he use of the Bonferroni
+d and Holm formulas as approximations for the Sidak and
+d Holland–Copenhaver formulas when precision issues are
+d encountered, especially with q–values corresponding to
+d very small p–values.
+d
+d References
+d
+d Newson R. B. Bonferroni and Holm approximations for Sidak and
+d Holland–Copenhaver q–values. The Stata Journal 2013; 13(2):
+d 379-381.
+d
+d Author: Roger Newson
+d Distribution-date: 05july2013
+f bonsid.pdf
+e

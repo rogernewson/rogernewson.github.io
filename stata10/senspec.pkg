@@ -1,0 +1,21 @@
+v 3
+d senspec: Sensitivity and specificity results saved in generated variables
+d senspec inputs a reference variable with two values and a quantitative
+d classification variable. It creates, as output, a set of new variables,
+d containing, in each observation, the numbers and/or rates of true positives,
+d true negatives, false positives and false negatives observed if the
+d classification variable is used to define a diagnostic test, with a threshold
+d equal to the value of the classification variable for that observation. The
+d reference variable indicates the true state of the observation, such as
+d diseased and non-diseased, or normal and abnormal. The rating or outcome of
+d the diagnostic test is recorded in the classification variable. senspec is
+d similar to roctab, but produces output variables instead of plots and
+d listings, so that users can create plots and listings in their own chosen
+d formats.
+d
+d Author: Roger Newson
+d Distribution-Date: 01june2017
+d Stata-Version: 10
+f senspec.ado
+f senspec.sthlp
+e

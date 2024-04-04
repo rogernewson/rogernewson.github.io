@@ -1,0 +1,20 @@
+d descgen: Add Stata dataset attribute variables to a xdir resultsset
+d descgen is intended for use in output datasets (or resultssets)
+d produced by the xdir package, which have one observation for each
+d of a list of files, and data on directory names and file names.  It
+d inputs the file name variable and (optionally) the directory name
+d variable, and generates a list of new variables, containing, in
+d each observation, Stata dataset attributes describing the Stata
+d dataset stored in the corresponding file.  These attributes include
+d numbers of variables and observations and sizes of an observation
+d or of the dataset, and (optionally) dataset labels, dataset
+d characteristics or lists of variables in the dataset.  If the
+d corresponding file is not a Stata dataset, then these dataset
+d attribute variables will have missing values.
+d
+d Author: Roger Newson
+d Distribution-Date: 17february2020
+d Stata-Version: 10
+f descgen.ado
+f descgen.sthlp
+e

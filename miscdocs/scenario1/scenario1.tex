@@ -1,0 +1,119 @@
+% This is a LaTeX input file.
+%
+% A '%' character causes TeX to ignore all remaining text on the line,
+% and is used for comments like this one.
+
+\documentclass{article}      % Specifies the document class
+
+                             % The preamble begins here.
+\title{Confidence intervals for scenario means and their differences and ratios}  % Declares the document's title.
+\author{Roger Newson}      % Declares the author's name.
+\date{28 August, 2005}      % Deleting this command produces today's date.
+
+\newcommand{\ip}[2]{(#1, #2)}
+                             % Defines \ip{arg1}{arg2} to mean
+                             % (arg1, arg2).
+
+%\newcommand{\ip}[2]{\langle #1 | #2\rangle}
+                             % This is an alternative definition of
+                             % \ip that is commented out.
+
+\begin{document}             % End of preamble and beginning of text.
+
+\maketitle                   % Produces the title.
+
+\section{Formulas}
+
+Assume that we fit to a set of data a generalized linear model with $P$ parameters $\mathbf{\beta}=(\beta_1, \ldots, \beta_P)^T$
+to a set of data with $N$ data points. We will denote the $Y$--value for the $i$th data point as $Y_i$,
+we will denote the $j$th $X$--value for the $i$th data point as $X_{ij}$,
+we will denote the conditional mean for the $i$th data point as
+$\mu_i$, and we will denote its link function as $\eta_i$. The overall mean is defined as
+\begin{equation}
+M=N^{-1} \sum_{i=1}^N \mu_i \, ,
+\label{eq:eqseq1}
+\end{equation}
+and its derivative with respect to the $j$th parameter is
+\begin{equation}
+G_j = { {\partial M}\over{\partial \beta_j} } = N^{-1} \sum_{i=1}^N { {\partial \mu_i} \over {\partial \eta_i} } X_{ij} \, ,
+\label{eq:eqseq2}
+\end{equation}
+and the derivative of its log with respect to the $j$th parameter is
+\begin{equation}
+\Gamma_j = { \partial \over {\partial \beta_j} } \log(M) = \left( \sum_{i=1}^N \mu_i \right)^{-1} \sum_{i=1}^N { {\partial \mu_i} \over {\partial \eta_i} } X_{ij} \, .
+\label{eq:eqseq3}
+\end{equation}
+Note that, except in the trivial case of a linear link function (such as the familiar identity link),
+these gradients are \textit{not} the gradients arrived at by setting all the $X$-variates to their sample means.
+
+To define confidence intervals for $M$ and $\log(M)$,
+we define the $P$-column row vectors $\mathbf{G}$ and $\mathbf{\Gamma}$ by (\ref{eq:eqseq2}) and (\ref{eq:eqseq3}) respectively,
+\def\cov{\mathrm{Cov}}
+\def\var{\mathrm{Var}}
+denote by $\cov(\mathbf{\beta})$ the covariance matrix of the vector parameter $\mathbf{\beta}$,
+and we then have the estimates
+\begin{equation}
+\var\left( M \right) = \mathbf{G} \cov(\mathbf{\beta}) {\mathbf{G}}^T,
+ \quad \var\left[\log(M)\right] = \mathbf{\Gamma} \cov(\mathbf{\beta}) {\mathbf{\Gamma}}^T \, ,
+\label{eq:eqseq4}
+\end{equation}
+and calculate standard errors and symmetric confidence limits in the usual manner,
+possibly exponentiating these confidence limits in the case of $\log(M)$ to derive asymmetric confidence limits for $M$.
+
+To compare expected overall means under different scenarios, we usually want to estimate either their differences
+or their ratios. Using out--of--sample prediction, we can fantasize that, under ``Scenario~$*$'', we have a sample of $N^*$
+observations, and their hypothesized $X$--values are denoted $X^*_{ij}$ for the $j$th $X$--variate in the $i$th observation,
+and their hypothesized expected $Y$--values and their link functions (assuming the same $\mathbf{\beta}$ as before) are denoted
+$\mu^*_i$ and $\eta^*_i$, respectively, for the $i$th observation. The overall scenario mean is then
+\begin{equation}
+M^* = {N^*}^{-1} \sum_{i=1}^{N^*} \mu^*_i \, ,
+\label{eq:eqseq5}
+\end{equation}
+and we can define vectors $\mathbf{G^*}$ and $\mathbf{\Gamma^*}$ analogously to (\ref{eq:eqseq2}) and (\ref{eq:eqseq3}), respectively,
+and define confidence intervals for $M^*$ and its log using formulas similar to (\ref{eq:eqseq4}).
+For a second scenario, denoted ``Scenario~$**$'', we might similarly assume a sample size of $N^{**}$,
+define $X$--values $X^{**}_{ij}$, expected $Y$--values $\mu^{**}_i$,
+link functions $\eta^{**}_i$, an overall scenario mean $M^{**}$,
+and gradient vectors $\mathbf{G^{**}}$ and $\mathbf{\Gamma^{**}}$.
+The difference $M^*-M^{**}$ between the expected overall means under the two scenarios has a variance estimated as
+\begin{equation}
+\var \left( M^*-M^{**} \right) \quad = \quad \left( \mathbf{G^*} - \mathbf{G^{**}} \right) \cov(\mathbf{\beta}) \left( \mathbf{G^*} - \mathbf{G^{**}} \right)^T \, ,
+\label{eq:eqseq6}
+\end{equation}
+and the corresponding log ratio $\log(M^*/M^{**})$ has a variance estimated as
+\begin{equation}
+\var \left[\log\left( M^*/M^{**} \right)\right] \quad = \quad \left( \mathbf{\Gamma^*} - \mathbf{\Gamma^{**}} \right) \cov(\mathbf{\beta}) \left( \mathbf{\Gamma^*} - \mathbf{\Gamma^{**}} \right)^T \, .
+\label{eq:eqseq7}
+\end{equation}
+We can therefore calculate standard errors and confidence limits for the scenario difference $M^* - M^{**}$,
+and for the log scenario ratio $\log(M^*/M^{**})$, in the usual manner, and define asymmetric confidence limits for
+$M^*/M^{**}$.
+
+An important special case of the scenario ratio is the population unattributable fraction,
+which is subtracted from one to define the population attributable fraction.
+In the case of a cohort study, ``Scenario~*'' might represent a hypothetical version of our cohort
+if they were all non--smokers and were the same in all other respects,
+and ``Scenario~**'' might represent the cohort we actually have.
+In the case of a case--control study, ``Scenario~**'' might represent the controls in our sample
+(assumed to represent the population at large because of the rare-disease assumption),
+and ``Scenario~*'' might represent a hypothetical sample who are all non--smokers, but
+who are like the controls in our sample in all other respects. For further information
+on these examples, see Bruzzi \textit{et al}. (1985) and Greenland and Drescher (1993).
+
+\section{References}
+
+{\parindent=0pt
+
+\smallskip
+Bruzzi P, Green SB, Byar DP, Brinton LA, Schairer C.
+Estimating the population attributable risk for multiple risk factors using case--control data.
+\textsl{American Journal of Epidemiology} 1985; \textbf{122(5)}: 904--914.
+
+\smallskip
+Greenland S, Drescher K. Maximum likelihood estimation of the attributable fraction from logistic models.
+\textsl{Biometrics} 1993; \textbf{49}: 865--872.
+
+}
+
+
+\end{document}               % End of document.

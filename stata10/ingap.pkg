@@ -1,0 +1,21 @@
+v 2
+d ingap: Insert gap observations in a dataset
+d ingap inserts gap observations into a list of positions in an existing data
+d set. All existing variables in the dataset will have missing values in the
+d gap observations, unless the user specifies otherwise.  Often, the user
+d specifies non-missing values in the gap observations for one particular
+d existing string variable, known as the row label variable. This row label
+d variable may then be output with a list of other variables to form a
+d publication-ready table with labelled gap rows, using the listtab package.
+d Alternatively, the row label variable may be encoded, using the sencode
+d package, to form a numeric variable with value labels. This numeric variable
+d can then be plotted on one axis of a graph to define axis labels, including
+d gap axis labels.  The sencode and listtab packages are downloadable from SSC
+d or from this website.
+d
+d Author: Roger Newson
+d Distribution-Date: 20july2012
+d Stata-Version: 10
+f ingap.ado
+f ingap.sthlp
+e

@@ -1,0 +1,28 @@
+d cprdhesaeutil: Inputting CPRD HES A&E linkage datasets into Stata
+d The cprdhesaeutil package is designed for use with the cprdutil
+d package, which creates Stata datasets from text data files produced
+d by the Clinical Practice Research Datalink (CPRD).  cprdhesaeutil
+d is a suite of utility programs for inputting linkage text data
+d files produced by CPRD to contain data on the same patients from
+d the Hospital Episode System Accident and Emergency (HES A&E) data
+d warehouse, and creating equivalent Stata datasets in the memory.
+d cprdhesaeutil uses the SSC packages keyby, chardef and lablist,
+d which need to be installed for cprdhesaeutil to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 30january2019
+d Stata-Version: 13
+f cprdhesae_attendance.ado
+f cprdhesae_diagnosis.ado
+f cprdhesae_investigation.ado
+f cprdhesae_treatment.ado
+f cprdhesae_hrg.ado
+f cprdhesae_pathway.ado
+f cprdhesae_attendance.sthlp
+f cprdhesae_diagnosis.sthlp
+f cprdhesae_investigation.sthlp
+f cprdhesae_treatment.sthlp
+f cprdhesae_hrg.sthlp
+f cprdhesae_pathway.sthlp
+f cprdhesaeutil.sthlp
+e

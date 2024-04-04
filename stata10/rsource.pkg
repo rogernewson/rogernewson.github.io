@@ -1,0 +1,16 @@
+d rsource: Run R from inside Stata
+d rsource runs an R source program, from an inline sequence of lines
+d and/or from a file, in batch mode from within Stata, optionally
+d listing the R output and/or the R source code to the Stata Results
+d window and/or the Stata log file.  This allows the user to call R
+d at a point in the execution of a Stata program to input data files
+d previously created by Stata and/or to create output data files for
+d later input by Stata.  The R software system must be installed on
+d the user's system if the rsource package is to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 05may2016
+d Stata-Version: 10
+f rsource.ado
+f rsource.sthlp
+e

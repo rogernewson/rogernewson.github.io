@@ -1,0 +1,16 @@
+v 2
+d dolog: Execute commands from a file, creating a log file
+d dolog (like do) causes Stata to execute the commands stored in filename
+d just as if they were entered from the keyboard, and echos the commands as it
+d executes them, creating a log file filename.log.  If filename is specified
+d without an extension, filename.do is assumed. If filename is specified with
+d an extension, then the log file will have .log as an additional extension
+d (so dolog will not overwrite the original do-file). Arguments are allowed
+d (as with do), but the nostop option is not available.
+d
+d Author: Roger Newson
+d Distribution-Date: 10august2011
+d Stata-Version: 12
+f dolog.ado
+f dolog.sthlp
+e

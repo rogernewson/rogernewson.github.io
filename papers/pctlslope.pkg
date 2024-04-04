@@ -1,0 +1,25 @@
+v 2
+d pctlslope: Confidence intervals for percentile slopes, differences and ratios
+d This is a pre-publication draft of a Stata Journal paper (Newson, 2006).
+d The paper introduces a family of rank statistics, which are generalizations
+d of the Theil-Sen median slope and the Hodges-Lehmann median difference,
+d and the censlope module of the Stata package somersd, which calculates
+d confidence intervals for these rank statistics. The formulas and
+d computational methods are defined in terms of Somers' D or Kendall's tau-a,
+d and can use all the generalizations of these parameters, to clustered and/or
+d stratified data, available from the somersd module of the somersd package.
+d In particular, we can estimate the effect of a predictor variable on an
+d outcome variable within strata defined by confounding variables, and/or by
+d a propensity score derived from multiple confounding variables. This paper
+d provides a reference for the methods and formulas used by censlope, and
+d gives some worked examples.
+d
+d References
+d
+d Newson R. 2006. Confidence intervals for rank statistics: Percentile slopes,
+d differences, and ratios. The Stata Journal 6(4): 497-520.
+d
+d Author: Roger Newson
+d Distribution-date: 01 December 2006
+f pctlslope.pdf
+e

@@ -1,0 +1,24 @@
+d dsweight: Generate direct standardization weights
+d dsweight generates direct standardization weights for input as
+d pweights to estimation commands, standardizing the joint
+d distribution of a list of standardization variables to a standard
+d target population, possibly within groups defined by value
+d combinations of a list of group variables.  A direct
+d standardization weight is defined as a ratio between the frequency
+d of a combination of values of standardization variables in a target
+d standard population and the frequency of the same combination of
+d values of standardization variables in the sample or group.  The
+d standard target population may be the full sample, or a by-group
+d defined by a combination of values of by-variables, or it may be
+d defined using a dataset with 1 observation per combination of the
+d group variables, and data on the frequencies of these combinations
+d in the standard target population.
+d
+d Author: Roger Newson
+d Distribution-Date: 01february2012
+d Stata-Version: 10
+f dsweight.ado
+f dsweight.sthlp
+f scdsweight.ado
+f scdsweight.sthlp
+e

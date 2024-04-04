@@ -1,0 +1,22 @@
+d cprdhesoputil: Inputting CPRD HES/OP linkage datasets into Stata
+d The cprdhesoputil package is designed for use with the cprdutil
+d package, which creates Stata datasets from text data files
+d produced by the Clinical Practice Research Datalink (CPRD).
+d cprdhesoputil is a suite of utility programs for inputting linkage
+d text data files produced by CPRD to contain data on the same
+d patients from the Hospital Episode System outpatient events
+d (HES/OP) data warehouse, and creating equivalent Stata datasets in
+d the memory.  cprdhesoputil uses the SSC packages keyby, chardef
+d and lablist, which need to be installed for cprdhesoputil to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 30january2019
+d Stata-Version: 13
+f cprdhesop_patient_pathway.ado
+f cprdhesop_appointment.ado
+f cprdhesop_clinical.ado
+f cprdhesop_patient_pathway.sthlp
+f cprdhesop_appointment.sthlp
+f cprdhesop_clinical.sthlp
+f cprdhesoputil.sthlp
+e

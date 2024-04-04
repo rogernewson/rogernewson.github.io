@@ -1,0 +1,12 @@
+v 2
+d scencomp1: Scenario comparisons: How much good can we do?
+d This presentation was given to the Imperial College Primary Care
+d and Public Health Biostatistics Group on 10 December 2014.
+d It is an updated version of my presentation at the 2012 UK Stata
+d User Meeting, revised to describe the SSC package scenttest,
+d which was added to the punaf suite of packages in 2014.
+d
+d Author: Roger Newson
+d Distribution-date: 08 January 2015
+f scencomp1.pdf
+e

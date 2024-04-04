@@ -1,0 +1,28 @@
+v 2
+d predsurv: Comparing the predictive power of survival models
+d This is a pre-publication draft of a Stata Journal paper (Newson, 2010).
+d Medical researchers frequently make statements that one model predicts
+d survival better than another, and are frequently challenged to provide
+d rigorous statistical justification for these statements. Stata provides
+d the command estat concordance to calculate the rank parameters
+d Harrell’s c and Somers’ D as a measure of the ordinal predictive power
+d of a model. However, no confidence limits or P–values are provided to
+d compare the predictive power of distinct models. The somersd package,
+d downloadable from SSC, can provide such confidence intervals, but these
+d should not be taken seriously, if they are calculated in the dataset
+d in which the model was fitted. Methods are demonstrated for fitting
+d alternative models to a training set of data, and then measuring and
+d comparing their predictive power by using out–of–sample prediction,
+d and somersd, in a test set, to produce statistically sensible confidence
+d intervals and P–values for the differences between the predictive powers
+d of different models.
+d
+d References
+d
+d Newson R. B. 2010. Comparing the predictive power of survival models
+d using Harrell’s c or Somers’ D. The Stata Journal 10(3): 339–358.
+d
+d Author: Roger Newson
+d Distribution-date: 29 September 2010
+f predsurv.pdf
+e

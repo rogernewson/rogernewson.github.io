@@ -1,0 +1,23 @@
+v 3
+d crib12: Do-file templates for use in Stata Version 12
+d These files are used as templates (or cribs) to create do-files in
+d Stata Version 12 for use with the dolog package. They can be inserted
+d into the Stata do-file editor, or other text editors, and edited and
+d saved with other names, and then executed using the dolog package.
+d The file crib12.do is used to create semicolon-delimited do-files,
+d the file crcrib12.do is used to create carriage-return-delimited
+d do-files, the file rtfcrib12.do is used to create semicolon-delimited
+d RTF document-generating do-files, and the file htmcrib12 is used to
+d create semicolon-delimited HTML document-generating do-files. These
+d templates are written assuming that the user has already installed
+d some of the packages by Roger Newson, downloadable from SSC or from
+d this website.
+d
+d Author: Roger Newson
+d Distribution-date: 16september2020
+d Stata-version: 12
+f crib12.do
+f crcrib12.do
+f rtfcrib12.do
+f htmcrib12.do
+e

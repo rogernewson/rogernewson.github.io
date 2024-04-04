@@ -1,0 +1,49 @@
+.-
+help for ^dolog^                                                  (Roger Newson)
+.-
+
+Execute commands from a file, creating a log file
+-------------------------------------------------
+
+        ^dolog^ filename [arguments]
+
+Description
+-----------
+
+^dolog^ (like ^do^) causes Stata to execute the commands stored in filename
+just as if they were entered from the keyboard, and echos the commands as it
+executes them, creating a log file filename.log.  If filename is specified
+without an extension, filename.do is assumed. If filename is specified with
+an extension, then the log file will have .log as an additional extension
+(so ^dolog^ will not overwrite the original do-file). Arguments are allowed
+(as with ^do^), but the ^nostop^ option is not available.
+
+Remarks
+-------
+
+The original version of ^dolog^ was apparently an example given as ^dofile^
+in a Stata NetCourse. This version is slightly improved.
+
+Examples
+--------
+
+ . ^dolog trash1^
+
+ . ^dolog mycom argone argtwo^
+
+Author
+------
+
+Roger Newson, Guy's, King's and St Thomas' School of Medicine, London, UK.
+Email: ^roger.newson@@kcl.ac.uk^
+
+Also see
+--------
+
+ Manual:  ^[GSM] 14 Using the do-file editor^,
+          ^[GSW] 14 Using the do-file editor^,
+          ^[U] 18 Printing and preserving output^,
+          ^[U] 19 Do-files^,
+          ^[R] do^
+On-line:  help for ^do^, ^run^ and ^doedit^
+

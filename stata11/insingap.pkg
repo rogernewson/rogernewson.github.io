@@ -1,0 +1,24 @@
+v 2
+d insingap: Insert a single gap observation at the top of each by-group
+d insingap inputs a dataset and (optionally) a list of by-variables.
+d It sorts the dataset by these by-variables (if present), and then
+d inserts a single gap observation at the beginning of each by-group,
+d or at the top of the dataset if there are no by-variables.  In the
+d gap observations, values of the non-by variables are initialized to
+d missing.  However, the user may specify an existing string variable
+d as a row label variable, and set its value in the gap observations
+d to a value derived by decoding a subset of the by-variables, using
+d the msdecode module of the SSC package sdecode.  These gap
+d observations may be useful when presenting the dataset.  For
+d instance, the dataset may be used to produce tables, using the SSC
+d package listtab.  Alternatively, the dataset may be used to produce
+d plots, using the SSC package sencode to encode the row variable.
+d insingap requires the packages sdecode and ingap, which the user can
+d download from SSC.
+d
+d Author: Roger Newson
+d Distribution-Date: 20march2013
+d Stata-Version: 11
+f insingap.ado
+f insingap.sthlp
+e

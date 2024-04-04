@@ -1,0 +1,25 @@
+d rglm: rglm - Robust variance estimates for generalized linear models
+d This paper is a pre-publication draft of Newson (1999), which is referenced
+d in Hardin and Hilbe (2001). It documents the Stata 5 package rglm, which is
+d downloadable from SSC, but is now mostly of historical interest, as it was
+d superseded by the Stata 7 version of the official Stata glm package. The rglm
+d package was an early implementation of Huber variances in generalized linear
+d models, and is based on an earlier implementation of semi-Huber variances in
+d generalized linear models by David Clayton of the Medical Research Council
+d (MRC) in Cambridge, England. The present author had previously implemented
+d semi-Huber variances for generalized linear models, and Huber variances for
+d non-linear models, in the Genstat statistical package.
+d
+d References
+d
+d Hardin, J. W. and J. Hilbe. 2001. Generalized Linear Models and Extensions.
+d College Station, Texas: Stata Press.
+d
+d Newson R. 1999. sg114: rglm - Robust variance estimates for generalized
+d linear models. Stata Technical Bulletin 50: 27-33. Reprinted in Stata
+d Technical Bulletin Reprints, vol. 9, pp. 181-190.
+d 
+d Author: Roger Newson
+d Distribution-date: 10 June 2003
+f rglm.pdf
+e

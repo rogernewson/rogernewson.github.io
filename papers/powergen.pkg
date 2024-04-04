@@ -1,0 +1,29 @@
+v 2
+d powergen: Generalized power calculations for GLMs and more
+d This is a pre-publication draft of a Stata Journal paper (Newson, 2004).
+d The paper describes the powergen package (downloadable from SSC), and
+d contains a complete description of the package, including Syntax,
+d Methods and Formulas, and Examples. The powercal package performs
+d generalized power calculations, storing the result in a new variable,
+d which can be plotted and/or listed. It can calculate any of 5 quantities,
+d namely number of sampling units, power, alpha (significance level), delta
+d (difference in parameter value to be detected), or the standard deviation
+d (SD) of the influence function, defined as the standard error multiplied by
+d the square root of the sample number. The paper gives generalized methods
+d and formulas for a wide range of sample designs and parameters, including
+d any design where the parameter to be estimated is a linear contrast of link
+d functions of subpopulation means arising from generalized linear models.
+d These parameters include arithmetic mean differences, geometric mean ratios,
+d odds ratios, risk ratios and rate ratios. More general power calculations,
+d including those for rank statistics, may be carried out using a standard
+d error from a pilot study or simulation.
+d
+d References
+d
+d Newson R. 2004. Generalized power calculations for generalized linear models
+d and more. The Stata Journal 4(4): 379-401.
+d 
+d Author: Roger Newson
+d Distribution-Date: 13dec2004
+f powergen.pdf
+e

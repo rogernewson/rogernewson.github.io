@@ -1,0 +1,17 @@
+d adostore: Store and restore the current ado-path
+d adostore stores the current ado-file path to a global macro,
+d which defaults to S_ADOSTORE.  adorestore restores a stored
+d ado-path to the current ado-file path from a global macro, which
+d defaults to S_ADOSTORE.  These commands enable the user to
+d practice safe ado-path management by storing the current ado-path
+d before temporarily modifying the ado-path, and restoring the
+d stored ado-path after using the modified ado-path.
+d
+d Author: Roger Newson
+d Distribution-Date: 10november2017
+d Stata-Version: 10
+f adostore.ado
+f adorestore.ado
+f adostore.sthlp
+f adorestore.sthlp
+e

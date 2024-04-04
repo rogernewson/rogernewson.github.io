@@ -1,0 +1,110 @@
+.-
+help for ^expgen^                                                  (Roger Newson)
+.-
+
+Duplicate observations sorted in original order with generated variables
+------------------------------------------------------------------------
+
+        ^expgen^     [newvarname1]^=^ncexp [^if^ exp] [^in^ range] [ ,
+                      ^c^opyseq(newvarname2) ^o^ldseq(newvarname3)
+                      ^m^issing ^z^ero ]
+
+
+Description
+-----------
+
+^expgen^ is an extended version of ^expand^. It replaces each observation in the
+current dataset with nc copies of the observation, sorted in the original
+order, where nc is equal to the integer part ^int(^ncexp^)^ of the required
+expression ncexp. ^expgen^ may also add new variables. These are newvarname1
+(containing the value of the expression ncexp), newvarname2 (containing the
+sequential order of the original observation in the old data set), and
+newvarname3 (containing the sequential order of each copy in the set of copies
+generated from its original observation). If ^missing^ and/or ^zero^ is specified,
+then observations in the old data set with missing and/or non-positive values
+for ^int(^ncexp^)^ are each replaced by one observation in the new data set.
+
+
+Options for use with ^expgen^
+--------------------------
+
+^oldseq^ specifies a new variable to be generated, containing the sequential
+    order of the observation in the old data set from which the current
+    observation was copied, as defined in the old data set. This old sequential
+    order is defined after the exclusion from the old data set of observations
+    not satisfying the ^if^ and ^in^ requirements, and after the exclusion of
+    observations with missing values of ncexp (if ^missing^ was not specified)
+    and of observations with non-positive values of ^int(^ncexp^)^ (if ^zero^ was
+    not specified). (See ^missing^ and ^zero^ below.)
+
+^copyseq^ specifies a new variable to be generated, containing the sequential
+    order of the copied observation in the new data set, in the set of
+    observations copied from the same original observation in the old data set.
+    If an observation in the old data set has a value ^int(^ncexp^)^ equal to k,
+    then the k duplicates of that observation in the new data set have values
+    of the ^copyseq^ variable in ascending order from 1 to k.
+
+^missing^ specifies that observations in the old data set with missing values of
+    ncexp are each to be replaced in the new data set with a single duplicate
+    observation. If ^missing^ is absent, then such old observations are deleted
+    from the new data set.
+
+^zero^ specifies that observations in the old data set with non-positive values
+    of ^int(^ncexp^)^ are each to be replaced in the new data set with a single
+    duplicate observation. If ^zero^ is absent, then such old observations are
+    deleted from the new data set.
+
+
+Remarks
+-------
+
+^expgen^ is designed as an improved version of ^expand^. Unlike ^expand^, it
+returns duplicate observations sorted in the original order of the
+corresponding observations in the old data set, from which they were copied.
+There is also the option of adding new variables to the duplicate observations.
+^expgen^ was designed for use, in a medical setting, in the case when the
+original data set is from a spreadsheet with one row per patient, and with
+multiple columns containing multiple repeated measurements on the same patient
+at different times and/or on different parts of the same patient's body. We
+might want to expand this data set to a new data set with 1 observation per
+repeated measurement, and then perform a repeated measures analysis. The
+^copyseq^ variable can be used to generate a new variable in this new data set,
+containing the repeated measures. The new variable might have values each
+copied from one of a list of columns in the original data set, depending on the
+value of the ^copyseq^ variable. (See Examples. In SAS, this kind of duplication
+is done using a SAS data step containing a SAS ^output^ statement inside a SAS
+^do^-loop iterating over a list of variables defined as a SAS array.)
+
+
+Examples
+--------
+
+ . ^expgen nreps=rep78,old(modseq) copy(repseq) miss zero^
+
+The following example uses the ^census^ data set, and expands it from a data set
+of US states to a data set of combinations of US state and age group:
+
+ . ^use census,clear^
+ . ^expgen=4,copy(agegp)^
+ . ^lab def agegp 1 "0-4" 2 "5-17" 3 "18-64" 4 "65+"^
+ . ^lab val agegp agegp^
+ . ^gene popul=(agegp==1)*poplt5+(agegp==2)*pop5_17+(agegp==3)*(pop18p-pop65p)^
+     ^+(agegp==4)*pop65p^
+ . ^drop pop poplt5 pop5_17 pop18p pop65p^
+ . ^desc^
+ . ^list state agegp popul^
+
+
+Author
+------
+
+Roger Newson, Guy's, King's and St Thomas' School of Medicine, London, UK.
+Email: ^roger.newson@@kcl.ac.uk^
+
+
+Also see
+--------
+
+Manual:   ^[R] expand^, ^[R] joinby^, ^[R] contract^, ^[R] collapse^
+On-line:  help for @expand@, @joinby@, @contract@, @collapse@
+          help for @expandby@ if installed

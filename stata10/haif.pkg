@@ -1,0 +1,30 @@
+d haif: Homoskedastic adjustment inflation factors for model selection
+d haif calculates homoskedastic adjustment inflation factors (HAIFs)
+d for core variables in the corevarlist, caused by adjustment by the
+d additional variables specified by addvars().  HAIFs are calculated
+d for the variances and standard errors of estimated linear regression
+d parameters corresponding to the core variables.  For each variance
+d (or standard error), the HAIF is defined as the ratio between that
+d variance (or standard error) of that parameter, in a model containing
+d both the core variables and the additional variables, to the
+d corresponding variance (or standard error) of the same parameter, in
+d a model containing only the core variables, calculated assuming that
+d the second model is true, and also assuming that the outcome variable
+d is homoskedastic (meaning that it has equal variances in all
+d subpopulations defined by the predictor variables).  haifcomp
+d calculates the ratios between the HAIFs for the same core variables
+d caused by adjustment for two alternative lists of additional
+d variables, namely a numerator list and a denominator list.  haif and
+d haifcomp are intended for use in model selection, allowing the user
+d to choose a model based on the joint distribution of the exposures
+d and confounders, before estimating the parameters of the model from
+d the data on the outcome variable.
+d
+d Author: Roger Newson
+d Distribution-Date: 10may2013
+d Stata-Version: 10
+f haif.ado
+f haifcomp.ado
+f haif.sthlp
+f haifcomp.sthlp
+e

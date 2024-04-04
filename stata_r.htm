@@ -1,0 +1,345 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Some of Roger Newson's Stata packages</title>
+</head>
+
+<body bgcolor="white">
+
+<a name="top_of_page">
+<img src="Queen-Mary-logo-956800381.png" style="width:160px;" alt="Queen Mary University London" class="logo" />
+</a>
+
+<h1>Some of Roger Newson's Stata packages</h1>
+
+<p>
+These can be downloaded from two sites, namely from the
+<a href="http://ideas.uqam.ca/ideas/data/bocbocode.html">the Statistical Software components (SSC) archive site</a>
+and from this website.
+A user who wants the latest version of a package should download from SSC,
+if the user's version of <a href="http://www.stata.com/">Stata</a> is ccompatible with the latest version of the package.
+The download facility on this website is mainly provided for users of superseded versions of <a href="http://www.stata.com/">Stata</a>,
+who need to download a superseded version of the package,
+written in the user's <a href="http://www.stata.com/">Stata</a> version,
+or in an earlier version.
+</p>
+
+<p>
+<a href="#download_from_ssc">Downloading Roger Newson's packages from SSC</a>
+<br>
+<a href="#download_from_here">Downloading Roger Newson's packages from this website</a>
+<br>
+<a href="#all_versions">List of all versions of all Stata packages on this website</a>
+</p>
+
+<p>
+Whichever download source is used, the user may want to download the latest versions of all the packages,
+or at least the latest version of each package that can work on the user's version of <a href="http://www.stata.com/">Stata</a>.
+This is because these packages are often used together, as a dialect of the <a href="http://www.stata.com/">Stata</a> language.
+I have therefore provided do-files to describe, install and uninstall these maximal sets of package versions from each source.
+These do-files can be downloaded from the sections of this page corresponding to the two download sources,
+and then run in <a href="http://www.stata.com/">Stata</a> using the <code>run</code> or <code>do</code> commands.
+</p>
+
+<p>
+<a href="#download_from_ssc">Downloading Roger Newson's packages from SSC</a>
+<br>
+<a href="#download_from_here">Downloading Roger Newson's packages from this website</a>
+<br>
+<a href="#all_versions">List of all versions of all Stata packages on this website</a>
+</p>
+
+<p>
+Users who have installed the full set of packages for their versions of  <a href="http://www.stata.com/">Stata</a>
+may also write do-files to be run using the <code>dolog</code> package,
+taking advantage of this and other installed packages.
+I have therefore provided template (or crib) do-files for <a href="http://www.stata.com/">Stata</a> versions 9 or higher.
+These can be downloaded from the table below.
+</p>
+
+<h3>Do-file templates for download</h3>
+
+<p>
+<table border="1">
+<tr><th>Do-file name</th><th>Description</th><th>Stata version</th><th>Download</th></tr>
+<tr><td><code>crib18.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/crib18.do">Download</a></td></tr>
+<tr><td><code>crcrib18.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/crcrib18.do">Download</a></td></tr>
+<tr><td><code>rtfcrib18.do</code></td><td>Template for RTF document generating do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/rtfcrib18.do">Download</a></td></tr>
+<tr><td><code>htmcrib18.do</code></td><td>Template for HTML document generating do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/htmcrib18.do">Download</a></td></tr>
+<tr><td><code>docxcrib18.do</code></td><td>Template for .docx document generating do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/docxcrib18.do">Download</a></td></tr>
+<tr><td><code>crib17.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/crib17.do">Download</a></td></tr>
+<tr><td><code>crcrib17.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/crcrib17.do">Download</a></td></tr>
+<tr><td><code>rtfcrib17.do</code></td><td>Template for RTF document generating do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/rtfcrib17.do">Download</a></td></tr>
+<tr><td><code>htmcrib17.do</code></td><td>Template for HTML document generating do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/htmcrib17.do">Download</a></td></tr>
+<tr><td><code>docxcrib17.do</code></td><td>Template for .docx document generating do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/docxcrib17.do">Download</a></td></tr>
+<tr><td><code>crib16.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/crib16.do">Download</a></td></tr>
+<tr><td><code>crcrib16.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/crcrib16.do">Download</a></td></tr>
+<tr><td><code>rtfcrib16.do</code></td><td>Template for RTF document generating do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/rtfcrib16.do">Download</a></td></tr>
+<tr><td><code>htmcrib16.do</code></td><td>Template for HTML document generating do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/htmcrib16.do">Download</a></td></tr>
+<tr><td><code>docxcrib16.do</code></td><td>Template for .docx document generating do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/docxcrib16.do">Download</a></td></tr>
+<tr><td><code>crib15.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 15</td><td>15</td><td><a href="./docribs/crib15.do">Download</a></td></tr>
+<tr><td><code>crcrib15.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 15</td><td>15</td><td><a href="./docribs/crcrib15.do">Download</a></td></tr>
+<tr><td><code>rtfcrib15.do</code></td><td>Template for RTF document generating do-files in Stata Version 15</td><td>15</td><td><a href="./docribs/rtfcrib15.do">Download</a></td></tr>
+<tr><td><code>htmcrib15.do</code></td><td>Template for HTML document generating do-files in Stata Version 15</td><td>15</td><td><a href="./docribs/htmcrib15.do">Download</a></td></tr>
+<tr><td><code>crib14.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 14</td><td>14</td><td><a href="./docribs/crib14.do">Download</a></td></tr>
+<tr><td><code>crcrib14.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 14</td><td>14</td><td><a href="./docribs/crcrib14.do">Download</a></td></tr>
+<tr><td><code>rtfcrib14.do</code></td><td>Template for RTF document generating do-files in Stata Version 14</td><td>14</td><td><a href="./docribs/rtfcrib14.do">Download</a></td></tr>
+<tr><td><code>htmcrib14.do</code></td><td>Template for HTML document generating do-files in Stata Version 14</td><td>14</td><td><a href="./docribs/htmcrib14.do">Download</a></td></tr>
+<tr><td><code>crib13.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 13</td><td>13</td><td><a href="./docribs/crib13.do">Download</a></td></tr>
+<tr><td><code>crcrib13.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 13</td><td>13</td><td><a href="./docribs/crcrib13.do">Download</a></td></tr>
+<tr><td><code>rtfcrib13.do</code></td><td>Template for RTF document generating do-files in Stata Version 13</td><td>13</td><td><a href="./docribs/rtfcrib13.do">Download</a></td></tr>
+<tr><td><code>htmcrib13.do</code></td><td>Template for HTML document generating do-files in Stata Version 13</td><td>13</td><td><a href="./docribs/htmcrib13.do">Download</a></td></tr>
+<tr><td><code>crib12.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 12</td><td>12</td><td><a href="./docribs/crib12.do">Download</a></td></tr>
+<tr><td><code>crcrib12.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 12</td><td>12</td><td><a href="./docribs/crcrib12.do">Download</a></td></tr>
+<tr><td><code>rtfcrib12.do</code></td><td>Template for RTF document generating do-files in Stata Version 12</td><td>12</td><td><a href="./docribs/rtfcrib12.do">Download</a></td></tr>
+<tr><td><code>htmcrib12.do</code></td><td>Template for HTML document generating do-files in Stata Version 12</td><td>12</td><td><a href="./docribs/htmcrib12.do">Download</a></td></tr>
+<tr><td><code>crib11.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 11</td><td>11</td><td><a href="./docribs/crib11.do">Download</a></td></tr>
+<tr><td><code>crcrib11.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 11</td><td>11</td><td><a href="./docribs/crcrib11.do">Download</a></td></tr>
+<tr><td><code>rtfcrib11.do</code></td><td>Template for RTF document generating do-files in Stata Version 11</td><td>11</td><td><a href="./docribs/rtfcrib11.do">Download</a></td></tr>
+<tr><td><code>htmcrib11.do</code></td><td>Template for HTML document generating do-files in Stata Version 11</td><td>11</td><td><a href="./docribs/htmcrib11.do">Download</a></td></tr>
+<tr><td><code>crib10.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 10</td><td>10</td><td><a href="./docribs/crib10.do">Download</a></td></tr>
+<tr><td><code>crcrib10.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 10</td><td>10</td><td><a href="./docribs/crcrib10.do">Download</a></td></tr>
+<tr><td><code>rtfcrib10.do</code></td><td>Template for RTF document generating do-files in Stata Version 10</td><td>10</td><td><a href="./docribs/rtfcrib10.do">Download</a></td></tr>
+<tr><td><code>htmcrib10.do</code></td><td>Template for HTML document generating do-files in Stata Version 10</td><td>10</td><td><a href="./docribs/htmcrib10.do">Download</a></td></tr>
+<tr><td><code>crib9.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 9</td><td>9</td><td><a href="./docribs/crib9.do">Download</a></td></tr>
+<tr><td><code>crcrib9.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 9</td><td>9</td><td><a href="./docribs/crcrib9.do">Download</a></td></tr>
+</table>
+</p>
+
+<p>
+To find more about Stata statistical software, <a href="http://www.stata.com/">click here</a>.
+</p>
+
+<p>
+<a href="#download_from_ssc">Downloading Roger Newson's packages from SSC</a>
+<br>
+<a href="#download_from_here">Downloading Roger Newson's packages from this website</a>
+<br>
+<a href="#all_versions">List of all versions of all Stata packages on this website</a>
+<br>
+<a href="http://ideas.uqam.ca/ideas/data/bocbocode.html">Statistical Software components (SSC) archive site</a>
+<br>
+<a href="http://www.stata.com/">Stata Corporation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<h2><a name="download_from_ssc">Downloading Roger Newson's packages from SSC</a></h2>
+
+<p>
+I usually follow a policy of distributing my Stata programs mainly from
+<a href="http://ideas.uqam.ca/ideas/data/bocbocode.html">the Statistical Software components (SSC) archive site</a>.
+Users of the latest version of Stata can download my programs from there, using the <code>ssc</code> command in Stata.
+Users of earlier versions of Stata should check that a package is written in the user's Stata version, or in an earlier version,
+before downloading it from SSC.
+</p>
+
+<p>
+To help users of the latest Stata version to download my packages from SSC,
+I have written 3 Stata do-files <code>descasisay.do</code>, <code>instasisay.do</code> and <code>uninstasisay.do</code>,
+which users can download from this page.
+<code>descasisay.do</code> attempts to describe the current versions, on SSC, of the packages,
+using the <code>ssc describe</code> command.
+<code>instasisay.do</code> attempts to install, on the user's site, the current versions, on SSC,
+of the packages,
+using the <code>ssc install</code> command, and replacing all existing versions of these packages.
+<code>uninstasisay.do</code> attempts to uninstall, on the user's site,
+all of my SSC packages (but does not attempt to uninstall any other SSC packages provided by other authors).
+The user therefore may install (and uninstall) all my packages at once,
+instead of installing (and uninstalling) them one by one.
+This option is useful, as these packages are often used together as a dialect of the Stata language.
+</p>
+
+<p>
+To execute these do-files in a Stata session, download them from this page to your local folder.
+Then, type, in Stata,
+</p>
+
+<p>
+<code>do descasisay</code>
+</p>
+
+<p>
+to execute <code>descasisay.do</code>, and/or type, in Stata,
+</p>
+
+<p>
+<code>do instasisay</code>
+
+<p>
+to execute <code>instasisay.do</code>, and/or type, in Stata,
+</p>
+
+<p>
+<code>do uninstasisay</code>
+</p>
+
+<p>
+to execute <code>uninstasisay.do</code>.
+</p>
+
+<h3>Do-files to describe, install and uninstall Stata packages from SSC</h3>
+
+<p>
+<table border="1">
+<tr><th>Do-file name</th><th>Description</th><th>Stata version</th><th>Download</th></tr>
+<tr><td><code>descasisay.do</code></td><td>Describe Roger Newson's packages from SSC</td><td>None</td><td><a href="./instasisay/descasisay.do">Download</a></td></tr>
+<tr><td><code>instasisay.do</code></td><td>Install Roger Newson's packages from SSC</td><td>None</td><td><a href="./instasisay/instasisay.do">Download</a></td></tr>
+<tr><td><code>uninstasisay.do</code></td><td>Uninstall Roger Newson's packages from SSC</td><td>None</td><td><a href="./instasisay/uninstasisay.do">Download</a></td></tr>
+</table>
+</p>
+
+<p>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<h2><a name="download_from_here">Downloading Roger Newson's packages from this website</a></h2>
+
+<p>
+The SSC archive is maintained by Kit Baum, who does an excellent job, and is greatly appreciated in the Stata Community for this.
+However, SSC only stores one version of a package with a given name.
+Therefore, if I distribute the Stata Version 15 version of a package on SSC,
+then users who only have Stata Versions 14, 13, 12, 11, 10, 9, 8, 7, 6 or 5
+can no longer download the Stata  14, 13, 12, 11, 10, 9, 8, 7, 6 or 5 versions from SSC.
+
+<p>
+I have tried to solve this problem by having my own site,
+which contains a separate folder for packages written in each Stata version.
+Users are advised to access them inside Web-aware Stata, using the commands
+</p>
+
+<p>
+<code>findit</code> <em>package_name</em>
+</p>
+
+<p>
+or
+</p>
+
+<p>
+<code>net search</code> <em>package_name</em>
+</p>
+
+<p>
+or
+</p>
+
+<p>
+<code>net from http://www.rogernewsonresources.org.uk</code>
+</p>
+
+<p>
+if the user's version of Stata supports one of those commands.
+</p>
+
+<p>
+I have provided some Stata do-files for use by users of versions of Stata from version 9 upwards,
+which a user can run in Stata, to describe and install, from my website,
+the latest version of each Stata package compatible with the version of Stata used by the user.
+I have also provided do-files to uninstall each of these sets of packages.
+All of these do-files can be downloaded from the table below.
+</p>
+
+<h3>Do-files to describe, install and uninstall Stata packages from this website</h3>
+
+<p>
+<table border="1">
+<tr><th>Do-file name</th><th>Description</th><th>Stata version</th><th>Download</th></tr>
+<tr><td><code>descasisay_18.do</code></td><td>Describe packages in Stata versions up to 18</td><td>None</td><td><a href="./instasisay/descasisay_18.do">Download</a></td></tr>
+<tr><td><code>instasisay_18.do</code></td><td>Install packages in Stata versions up to 18</td><td>None</td><td><a href="./instasisay/instasisay_18.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_18.do</code></td><td>Uninstall packages in Stata versions up to 18</td><td>None</td><td><a href="./instasisay/uninstasisay_18.do">Download</a></td></tr>
+<tr><td><code>descasisay_17.do</code></td><td>Describe packages in Stata versions up to 17</td><td>None</td><td><a href="./instasisay/descasisay_17.do">Download</a></td></tr>
+<tr><td><code>instasisay_17.do</code></td><td>Install packages in Stata versions up to 17</td><td>None</td><td><a href="./instasisay/instasisay_17.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_17.do</code></td><td>Uninstall packages in Stata versions up to 17</td><td>None</td><td><a href="./instasisay/uninstasisay_17.do">Download</a></td></tr>
+<tr><td><code>descasisay_16.do</code></td><td>Describe packages in Stata versions up to 16</td><td>None</td><td><a href="./instasisay/descasisay_16.do">Download</a></td></tr>
+<tr><td><code>instasisay_16.do</code></td><td>Install packages in Stata versions up to 16</td><td>None</td><td><a href="./instasisay/instasisay_16.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_16.do</code></td><td>Uninstall packages in Stata versions up to 16</td><td>None</td><td><a href="./instasisay/uninstasisay_16.do">Download</a></td></tr>
+<tr><td><code>descasisay_15.do</code></td><td>Describe packages in Stata versions up to 15</td><td>None</td><td><a href="./instasisay/descasisay_15.do">Download</a></td></tr>
+<tr><td><code>instasisay_15.do</code></td><td>Install packages in Stata versions up to 15</td><td>None</td><td><a href="./instasisay/instasisay_15.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_15.do</code></td><td>Uninstall packages in Stata versions up to 15</td><td>None</td><td><a href="./instasisay/uninstasisay_15.do">Download</a></td></tr>
+<tr><td><code>descasisay_14.do</code></td><td>Describe packages in Stata versions up to 14</td><td>None</td><td><a href="./instasisay/descasisay_14.do">Download</a></td></tr>
+<tr><td><code>instasisay_14.do</code></td><td>Install packages in Stata versions up to 14</td><td>None</td><td><a href="./instasisay/instasisay_14.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_14.do</code></td><td>Uninstall packages in Stata versions up to 14</td><td>None</td><td><a href="./instasisay/uninstasisay_14.do">Download</a></td></tr>
+<tr><td><code>descasisay_13.do</code></td><td>Describe packages in Stata versions up to 13</td><td>None</td><td><a href="./instasisay/descasisay_13.do">Download</a></td></tr>
+<tr><td><code>instasisay_13.do</code></td><td>Install packages in Stata versions up to 13</td><td>None</td><td><a href="./instasisay/instasisay_13.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_13.do</code></td><td>Uninstall packages in Stata versions up to 13</td><td>None</td><td><a href="./instasisay/uninstasisay_13.do">Download</a></td></tr>
+<tr><td><code>descasisay_12.do</code></td><td>Describe packages in Stata versions up to 12</td><td>None</td><td><a href="./instasisay/descasisay_12.do">Download</a></td></tr>
+<tr><td><code>instasisay_12.do</code></td><td>Install packages in Stata versions up to 12</td><td>None</td><td><a href="./instasisay/instasisay_12.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_12.do</code></td><td>Uninstall packages in Stata versions up to 12</td><td>None</td><td><a href="./instasisay/uninstasisay_12.do">Download</a></td></tr>
+<tr><td><code>descasisay_11.do</code></td><td>Describe packages in Stata versions up to 11</td><td>None</td><td><a href="./instasisay/descasisay_11.do">Download</a></td></tr>
+<tr><td><code>instasisay_11.do</code></td><td>Install packages in Stata versions up to 11</td><td>None</td><td><a href="./instasisay/instasisay_11.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_11.do</code></td><td>Uninstall packages in Stata versions up to 11</td><td>None</td><td><a href="./instasisay/uninstasisay_11.do">Download</a></td></tr>
+<tr><td><code>descasisay_10.do</code></td><td>Describe packages in Stata versions up to 10</td><td>None</td><td><a href="./instasisay/descasisay_10.do">Download</a></td></tr>
+<tr><td><code>instasisay_10.do</code></td><td>Install packages in Stata versions up to 10</td><td>None</td><td><a href="./instasisay/instasisay_10.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_10.do</code></td><td>Uninstall packages in Stata versions up to 10</td><td>None</td><td><a href="./instasisay/uninstasisay_10.do">Download</a></td></tr>
+<tr><td><code>descasisay_9.do</code></td><td>Describe packages in Stata versions up to 9</td><td>None</td><td><a href="./instasisay/descasisay_9.do">Download</a></td></tr>
+<tr><td><code>instasisay_9.do</code></td><td>Install packages in Stata versions up to 9</td><td>None</td><td><a href="./instasisay/instasisay_9.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_9.do</code></td><td>Uninstall packages in Stata versions up to 9</td><td>None</td><td><a href="./instasisay/uninstasisay_9.do">Download</a></td></tr>
+</table>
+</p>
+
+<p>
+However, if the user cannot download the package version using Stata, or does not want to,
+then s/he can download the package versions (as .zip files) from the table below.
+These .zip files can be unzipped into the user's personal ado folder, and should then work if the
+user has the same version of Stata, or a higher version.
+If there are multiple versions of a package, corresponding to multiple Stata versions,
+then the user should choose the highest available version at or below his/her own Stata version.
+</p>
+
+<p>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<h2><a name="all_versions">List of all versions of all Stata packages on this website</a></h3>
+
+<p>
+<table border="1">
+<tr><th>Package name</th><th>Description</th><th>Stata version</th><th>Download</th></tr>
+<!--insert packages.htm -->
+</table>
+</p>
+
+<p>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<p>
+Roger B. Newson
+<br>
+Email: <a href="mailto:r.newson@qmul.ac.uk">r.newson@qmul.ac.uk</a>
+<br>
+Text written: 01 April 2024. (Packages and do-files may have been added, deleted or revised since then.)
+<br>
+<a href="http://www.stata.com/">Stata Corporation</a>
+<br>
+<a href="http://ideas.uqam.ca/ideas/data/bocbocode.html">Statistical Software components (SSC) archive site</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+</body>
+
+</html>

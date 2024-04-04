@@ -1,0 +1,14 @@
+v 2
+d causconf1: Causality, confounders, and propensity scores
+d This was first presented to an Asthma Club meeting at Imperial
+d College London on 11 December 2008. It discusses confounder
+d adjustment in observational studies in epidemiology.
+d This presentation uses data provided by the ALSPAC Study Team
+d at the Institute of Child Health at Bristol University, UK,
+d who have a Web page at
+d http://www.alspac.bris.ac.uk
+d
+d Author: Roger Newson
+d Distribution-date: 17 December 2008
+f causconf1.pdf
+e

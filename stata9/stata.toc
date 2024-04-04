@@ -1,0 +1,25 @@
+v 3
+d Stata 9 packages written by Roger Newson
+d These can be used by users with Stata Version 9 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p bmjcip Format confidence intervals and P-values for medical journals
+p descsave Extension of describe creating output dataset and do-file
+p dolog Execute commands from a file, creating a log file
+p dologx Multiple versions of dolog for executing certification scripts
+p dsconcat Concatenate a list of Stata data files into the memory
+p eclplot Horizontal and vertical confidence interval plots
+p expgen Duplicate observations and add generated variables
+p intext Read text files into string variables (without losing blanks)
+p keyby Key the dataset by a variable list
+p lablist List value labels (if present) for one or more variables
+p listtex List variables as rows of a TeX, HTML or word processor table
+p parmest Create datasets with 1 observation per estimated parameter
+p rsource Run R from inside Stata using an R source file
+p scheme_rbn1mono Minimal monochrome graphics schemes
+p sdecode Decode a numeric variable to string, formatting unlabelled values
+p sencode Encode a string variable non-alphanumerically into a numeric variable
+p somersd Kendall's tau-a, Somers' D and percentile slopes
+p stcmd Run the Stat/Transfer st command from inside Stata
+p subsave Save a subset of the dataset in memory to a disk file
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

@@ -1,0 +1,18 @@
+v 2
+d Package installation do-files written by Roger Newson
+d These packages contain Stata do-files, which users can download and
+d use to install current versions of Roger Newson's Stata packages from SSC,
+d or to install earlier versions of Roger Newson's Stata packages, for use
+d with earlier versions of Stata, from Roger Newson's website.
+p instasisay Install, uninstall and describe Roger Newson's SSC packages
+p instasisay_18 Install packages in Stata versions up to Version 18
+p instasisay_17 Install packages in Stata versions up to Version 17
+p instasisay_16 Install packages in Stata versions up to Version 16
+p instasisay_15 Install packages in Stata versions up to Version 15
+p instasisay_14 Install packages in Stata versions up to Version 14
+p instasisay_13 Install packages in Stata versions up to Version 13
+p instasisay_12 Install packages in Stata versions up to Version 12
+p instasisay_11 Install packages in Stata versions up to Version 11
+p instasisay_10 Install packages in Stata versions up to Version 10
+p instasisay_9 Install packages in Stata versions up to Version 9
+e

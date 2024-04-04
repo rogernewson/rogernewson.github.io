@@ -1,0 +1,19 @@
+d somersd: Confidence intervals for Somers' D and Kendall's tau-a
+d Roger Newson, King's College London, UK
+d somersd calculates values of Somers' D or Kendall's tau-a for the first
+d variable of varlist as a predictor of each of the other variables in varlist,
+d with estimates and jackknife variances stored as estimation output.
+d
+d Author: Roger Newson
+d Distribution-date: 24 March 2004
+d Stata-version: 5
+d
+d Note: This is a superseded version of somersd for users with Stata Version 5.
+d The most recent version of somersd can usually be downloaded from this
+d website using the Stata -net- command, or from SSC using the Stata command:
+d ssc install somersd
+f somersd.ado
+f somersd.hlp
+f tidot.ado
+f ujack.ado
+e

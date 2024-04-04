@@ -1,0 +1,23 @@
+v 2
+d intext: Read text files into string variables (without losing blanks)
+d intext inputs an arbitrary text file into a set of generated string variables
+d in the memory, generating as many string variables as is necessary to store
+d the longest text records in full, without trimming leading and trailing
+d blanks (as infix does). tfconcat concatenates a list of text files (without
+d losing blanks) to create a new data set in memory, overwriting any
+d pre-existing data. The new data set contains one observation for each record
+d in each text file, and a set of generated string variables containing the
+d text, as created by intext. Optionally, tfconcat creates new variables,
+d specifying, for each observation, the input text file of origin and/or the
+d sequential order of the observation in its input text file. tfconcat uses
+d intext, and therefore should not be downloaded separately.
+d
+d Author: Roger Newson
+d Distribution-Date: 31march2017
+d Stata-Version: 13
+d
+f intext.ado
+f intext.sthlp
+f tfconcat.ado
+f tfconcat.sthlp
+e

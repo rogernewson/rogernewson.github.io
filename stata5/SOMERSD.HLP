@@ -1,0 +1,61 @@
+..-
+help for ^somersd^
+..-
+
+Somers' D (or Kendall's tau-a) with jackknife variances
+- -------------------------------------------------------
+
+	^somersd^     varlist [weight] [^,t^aua]
+
+^fweights^ are allowed; see help ^weights^.
+
+Description
+- -----------
+
+^somersd^ calculates values of Somers' D (or Kendall's tau-a) for the first
+variable of varlist as a predictor of each of the other variables in
+varlist, with estimates and jackknife variances stored as output as if
+for the parameters of a maximum likelihood fit.
+
+Options for use with ^somersd^
+- ----------------------------
+
+^taua^ causes ^somersd^ to calculate Kendall's tau-a instead of Somers' D.
+
+Remarks
+- -------
+
+^somersd^ calls the programs ^tidot^ and ^ujack^. For Kendall's tau-a, the
+covariance matrix is estimated by simple jackknifing, as described in
+Arvesen (1969). For Somers' D, defined as
+
+^D(Y|X)=tau-a(X,Y)/tau-a(X,X)^,
+
+the variances are calculated by jackknifing numerator and denominator and
+using the Taylor polynomial.
+
+Examples
+- --------
+
+ . ^somersd x y^
+
+ . ^somersd x y1 y2 [fweight=freq]^
+
+ . ^somersd gender height weight beercap,taua^
+
+Author
+- ------
+
+Roger Newson, Imperial College Medical School, London, UK.
+email: ^r.newson@@cxwms.ac.uk^
+
+References
+- ----------
+
+Arvesen JN. 1969. Jackknifing U-statistics. Annals of Mathematical Statistics
+40: 2076-2100.
+
+Also see
+- --------
+
+ Manual: ^[R] spearman, [R] signrank^

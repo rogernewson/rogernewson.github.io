@@ -1,0 +1,22 @@
+v 2
+d instasisay_18: Install packages in Stata versions up to Version 18
+d The do-files in this package can be used to install, uninstall and
+d describe the latest versions of Roger Newson's packages, in Stata
+d versions up to 18, from Roger Newson's website. Users are advised
+d to install these packages from SSC if they have the latest version
+d of Stata, and to install packages from this website if they require
+d a superseded version from a previous version of Stata. The file
+d descasisay_18.do attempts to describe all the program packages, in
+d Stata versions up to 18, distributed on this website. The file
+d instasisay_18.do attempts to install these packages from this
+d website, replacing any existing versions. The file uninstasisay_18.do
+d attempts to uninstall all these packages. All of these do-files are
+d automatically updated when a new program package is added to this
+d website.
+d
+d Author: Roger Newson
+d Distribution-date: 27 April 2023
+f descasisay_18.do
+f instasisay_18.do
+f uninstasisay_18.do
+e

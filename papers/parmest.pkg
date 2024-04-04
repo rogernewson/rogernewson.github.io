@@ -1,0 +1,14 @@
+v 2
+d parmest: A program for saving a model fit as a dataset
+d This is the first description of the parmest package published in a
+d refereed journal (Newson, 1999).
+d
+d References
+d
+d Newson R. 1999. A program for saving a model fit as a dataset.
+d Stata Technical Bulletin 49: 2-5.
+d
+d Author: Roger Newson
+d Distribution-Date: 28november2018
+f parmest.pdf
+e

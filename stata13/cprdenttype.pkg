@@ -1,0 +1,29 @@
+d cprdenttype: Converting CPRD entity string data of any enttype to numeric
+d The cprdenttype package is intended for use with datasets produced by
+d the cprdutil package to convert CPRD entity string data variables to
+d numeric variables.  cprdenttype inputs an integer number, assumed to
+d be a CPRD enttype (or entity type) value, and a filename, assumed to
+d be a Stata dataset produced by the cprd_entity module of cprdutil,
+d with one observation for each enttype value known to CPRD.  It outputs
+d descriptive information about the entity type with the specified
+d enttype value, and, optionally, two local macros, storing lists of
+d CPRD lookups and descriptive labels for decoding the string data
+d variables used by that enttype.  cprdentcode is used in test and
+d additional clinical datasets, produced by the cprd_test and 
+d cprd_additional modules of cprdutil, respectively.  It inputs the
+d lists specified by the local macros output by cprdenttype, and uses
+d them to input the string entity data variables in the datasets, and to
+d output a list of numeric variables with the correct formats, variable
+d labels and/or value labels, assuming that the test or additional
+d clinical observations have the enttype value originally specified by
+d the user to cprdenttype.  cprdentcode requires the SSC package chardef
+d in order to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 15may2019
+d Stata-Version: 13
+f cprdenttype.ado
+f cprdentcode.ado
+f cprdenttype.sthlp
+f cprdentcode.sthlp
+e

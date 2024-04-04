@@ -1,0 +1,31 @@
+d somersd: Kendall's tau-a, Somers' D and median differences
+d The somersd package contains the programs somersd and cendif, which
+d calculate confidence intervals for the parameters behind rank or
+d "nonparametric" statistics. The program somersd calculates confidence
+d intervals for Kendall's tau-a or Somers' D, and stores the estimates and
+d their covariance matrix as estimation results. The program cendif calculates
+d confidence intervals for Hodges-Lehmann median differences (or other
+d percentile differences) between two groups. Kendall's tau-a is a difference
+d between probabilities of concordance and discordance, and measures rank
+d order correlation. Somers' D is a parameter equal to zero under the null
+d hypothesis tested by the Wilcoxon or Mann-Whitney ranksum test, and can be
+d used to calculate confidence intervals for Harrell's c index, for areas under
+d receiver operating characteristic (ROC) curves, and for differences between
+d Harrell's c indices or ROC areas. The Hodges-Lehmann median difference can be
+d defined in terms of Somers' D, and is also zero under the null hypothesis
+d tested by the ranksum test. Full documentation of the two programs (including
+d methods and formulas) can be found in the ancillary files somersd.pdf and
+d cendif.pdf, which can be viewed using the Adobe Acrobat Reader.
+d 
+d Author: Roger Newson
+d Distribution-date: 31 May 2005
+d Stata-version: 6
+d
+f somersd.ado
+f somersd.hlp
+f somers_p.ado
+f cendif.ado
+f cendif.hlp
+f somersd.pdf
+f cendif.pdf
+e

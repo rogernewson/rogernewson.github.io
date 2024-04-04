@@ -1,0 +1,15 @@
+v 2
+d portplus: Stata tip 147: Porting downloaded packages between machines
+d This is a post-publication update of a Stata Tip in The Stata Journal
+d (Newson, 2022).
+d
+d References
+d
+d Newson R. Stata tip 147: Porting downloaded packages between machines.
+d The Stata Journal 2022; 22(4): 996-997.
+d
+d Author: Roger Newson
+d Distribution-date: 23 January 2022
+d
+f portplus.pdf
+e

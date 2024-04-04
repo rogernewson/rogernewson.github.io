@@ -1,0 +1,143 @@
+.-
+help for ^somersd^                                  (STB-55: snp15; Roger Newson)
+.-
+
+Somers' D or Kendall's tau-a with confidence intervals
+-------------------------------------------------------
+
+	^somersd^     varlist [weight] [^if^ exp] [^in^ range]
+			[,^cl^uster^(^varname^)^ ^l^evel^(^#^)^ ^ta^ua  ^td^ist
+			^tr^ansf^(^transformation_name^)^ ^ci^matrix^(^new_matrix^)^ ]
+
+where transformation_name is one of
+
+	^iden^ | ^z^ | ^asin^ | ^rho^ | ^zrho^ | ^c^
+
+^fweights^, ^iweights^ and ^pweights^ are allowed; see help ^weights^.
+
+
+Description
+-----------
+
+^somersd^ calculates values of Somers' D or Kendall's tau-a for the first
+variable of varlist as a predictor of each of the other variables in varlist,
+with estimates and jackknife variances and confidence intervals output as if
+for the parameters of a maximum likelihood fit. It is possible to use @lincom@
+to output confidence limits for differences between the population Somers' D or
+tau-a values.
+
+
+Options for use with ^somersd^
+----------------------------
+
+^cluster(^varname^)^ specifies the variable which defines sampling clusters.
+    If ^cluster^ is defined, then the between-cluster Somers' D or tau-a is
+    calculated, and the variances are calculated assuming that the data are
+    sampled independently from a population of clusters, rather than from a
+    population of observations
+
+^level(^#^)^ specifies the confidence level, in percent, for confidence intervals
+    of the estimates; see help for @level@.
+
+^taua^ causes ^somersd^ to calculate Kendall's tau-a. If ^taua^ is absent, then
+    Somers' D is calculated.
+
+^tdist^ specifies that the estimates are assumed to have a
+    t-distribution with n-1 degrees of freedom, where n is the number of
+    clusters, or the number of observations if ^cluster^ is not specified.
+
+^transf(^transformation_name^)^ specifies that the estimates are to be transformed,
+    defining a confidence level for the transformed population value. ^iden^
+    (identity or untransformed) is the default. ^z^ specifies Fisher's z (the
+    hyperbolic arctangent), ^asin^ specifies Daniels' arcsine, ^rho^ specifies
+    Greiner's rho (Pearson correlation estimated using Greiner's relation),
+    ^zrho^ specifies the z-transform of Greiner's rho, and ^c^ specifies Harrell's c.
+    If the first variable of varlist is a binary indicator of a disease
+    and the other variables are quantitative predictors for that disease, then
+    Harrell's c is the area under the reciever operating characteristic (ROC)
+    curve.
+
+^cimatrix(^new_matrix^)^ specifies an output matrix to be created, containing
+    estimates and confidence limits for the untransformed Somers' D, Kendall's
+    tau-a or Greiner's rho parameters. If ^transf()^ is specified, then the
+    confidence limits will be asymmetric and based on symmetric confidence
+    limits for the transformed parameters. This option (like @level@) may be
+    used in replay mode as well as in non-replay mode.
+
+
+Remarks
+-------
+
+For variables X and Y, Kendall's tau-a is defined as
+
+^tau-a(X,Y) = E[sign(X1-X2)sign(Y1-Y2)]^
+
+where (X1,Y1) and (X2,Y2) are sampled from the bivariate distribution of
+X and Y. Somers' D is defined as
+
+^D(Y|X) = tau-a(X,Y)/tau-a(X,X)^
+
+In the case of a binary X-variable, Somers' D is the parameter tested for a
+zero value by the Mann-Whitney U-test. If X is a disease indicator and Y is a
+quantitative diagnostic measure, then Somers' D is related to the area ^A^ under
+the receiver operating characteristic (ROC) curve by the formula ^A=[D(Y|X)+1]/2^,
+and confidence limits for ^A^ can be calculated by specifying the option ^transf(c)^.
+The covariance matrix is estimated by jackknifing the underlying U-statistics
+and using Taylor polynomials. Confidence intervals for differences and other
+contrasts can be calculated using @lincom@. Confidence intervals for
+Hodges-Lehmann median (and other percentile) differences (and ratios) between
+two groups can be calculated using @cendif@, which is distributed as part of
+the ^somersd^ package.
+
+Full documentation of the ^somersd^ package (including methods and formulas)
+is provided in the files ^somersd.pdf^ and ^cendif.pdf^, which are distributed
+with the ^somersd^ package as ancillary files (see help for @net@). They can be
+viewed using the Adobe Acrobat Reader, which can be downloaded from
+
+^http://www.adobe.com/products/acrobat/readermain.html^
+
+For a comprehensive review of Kendall's tau-a, Somers' D and median
+differences, see Newson (2002).
+
+
+Examples
+--------
+
+ . ^somersd foreign mpg weight, tr(z)^
+
+ . ^somersd us gpm weight^
+ . ^lincom (weight-gpm)/2^
+
+ . ^somersd us gpm weight, tr(c)^
+ . ^lincom weight-gpm^
+
+ . ^somersd mpg weight displ, taua tr(z) cluster(manuf)^
+
+
+Author
+------
+
+Roger Newson, King's College, London, UK.
+email: ^roger.newson@@kcl.ac.uk^
+
+
+References
+----------
+
+Newson R. 2002. Parameters behind "nonparametric" statistics: Kendall's tau,
+Somers' D and median differences. ^The Stata Journal^ 2(1): 45-64.
+A pre-publication draft of this paper can be downloaded from my website.
+In net-aware Stata, type
+^net from http://www.kcl-phs.org.uk/rogernewson/papers^
+to find how to do this.
+
+
+Also see
+--------
+
+ Manual:  ^[R] spearman, [R] signrank, [R] roc^
+    STB:  STB-52: sg123, STB-55: snp15, STB-57: snp15.1, STB-58: snp15.2,
+          STB-58: snp16; STB-61: snp15.3; STB-61: snp16.1.
+On-line:  help for @ktau@, @ranksum@, @roc@, @lincom@
+          help for @cendif@ and @jknife@ if installed
+

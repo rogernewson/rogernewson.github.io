@@ -1,0 +1,32 @@
+v 2
+d Stata 7 packages written by Roger Newson
+d These can be used by users with Stata Version 7 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p bygap Insert a by-gap observation at the start of each by-group
+p ciform module to format confidence interval for tables in documents
+p descsave Extension of describe creating output files
+p dolog Execute commands from a file, creating a log file
+p dotex Execute a do-file generating a SJ LaTeX log
+p dsconcat Concatenate a list of Stata data files into the memory
+p explist Creating exponentially-spaced lists of numbers
+p factext Extract factor values from a label variable created by parmest
+p factmerg Merge a list of factors to create string variables
+p factref Insert new observations with reference values for factors
+p gphepssj Translate a list of Stata graph files to Stata Journal .eps figures
+p gpreset Reset Stata Version 7 graphics preferences
+p harmby Harmonize values of variables within by-groups
+p inccat Concatenate input files to an output file (possibly with insertions)
+p ingap Insert gap observations in a data set
+p intext Read text files into string variables (without losing blanks)
+p lincomest Extension to lincom saving the combination as estimation results
+p listtex List variables as rows of a TeX, HTML or word processor table
+p parmest Convert estimation results to a data set with 1 obs per parameter
+p powercal Generalized power calculations saving results in variables
+p qrowname Extract lists of quoted row and column names from a matrix
+p sdecode Decode a numeric variable to string, formatting unlabelled values
+p sencode Encode a string variable non-alphanumerically into a numeric variable
+p smileplot Multiple test procedures and smile plots
+p strdate Replace string date variables with numeric date variables
+p xdatelist Create ascending numeric lists of dates
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

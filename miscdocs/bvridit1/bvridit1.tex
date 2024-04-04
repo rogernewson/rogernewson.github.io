@@ -1,0 +1,264 @@
+% This is a LaTeX input file.
+%
+% A '%' character causes TeX to ignore all remaining text on the line,
+% and is used for comments like this one.
+
+\documentclass[a4paper]{article}      % Specifies the document class
+                             % The preamble begins here.
+\title{Bivariate ridits and distribution theory for Kendall's tau--a}  % Declares the document's title.
+\author{
+Roger B. Newson
+\\ Imperial College London
+\\ \href{mailto:r.newson@imperial.ac.uk}{r.newson@imperial.ac.uk}
+\\ \href{http://www.rogernewsonresources.org.uk/}{\textsl{http://www.rogernewsonresources.org.uk/}}
+}      % Declares the author's name.
+%\date{28 April, 2018}      % Deleting this command produces today's date.
+
+\usepackage{graphics}
+\usepackage{hyperref}
+
+%
+% Set margins
+% (which are explained in Figure C3 of LaTeX User's Guide
+% and which CAN BE RESET BY EDITORS AT ANY TIME AS FAR AS I CARE!!!!!!!!
+% - RBN.)
+%
+\setlength{\topmargin}{-0.5in}
+%\setlength{\headsep}{0.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{10in}
+
+%
+% Set page style (headers and footers)
+%
+\pagestyle{myheadings}
+\markboth{\textit{Bivariate ridits and distribution theory for Kendall's tau--a}}
+{\textit{Bivariate ridits and distribution theory for Kendall's tau--a}}
+
+\begin{document}             % End of preamble and beginning of text.
+
+\maketitle                   % Produces the title.
+
+\section{Introduction}
+
+This document is motivated by the need to do power calculations for estimation of Kendall's tau--a (or $\tau_a$),
+using bivariate data.
+To do power calculations, we need an expression for the sampling variance of the sample Kendall's tau--a
+in its distribution around the population Kendall's tau--a,
+which does not have to be zero, even under the null hypothesis used in the power calculations.
+The sampling distribution of Kendall's tau--a is defined in terms of the bivariate ridit function,
+which is in turn defined by analogy with the univariate ridit function.
+We therefore need first to define univariate and bivariate ridits,
+and then to define Kendall's tau--a in terms of bivariate ridits,
+and then to define the sampling distribution of the sample Kendall's tau--a,
+and then to explain how this theory can be used in power calculations.
+
+\section{Univariate and bivariate ridits}
+
+Given a random variable $X$ with a cumulative distribution function $F_X(\cdot)$,
+its distribution can be defined alternatively
+using the Brockett--Levene ridit function\cite{brockettlevene1977} $R_X(\cdot)$,
+defined in turn by
+\def\sign{{\rm sign}}
+\def\Pr{{\rm Pr}}
+\begin{equation}
+R_X(x) \quad = \quad \Pr(X<x)-\Pr(X>x) \quad = \quad E\left[\sign(x-X)\right],
+\end{equation}
+where $E[\cdot]$ denotes expectation.
+This function is defined on a probability--difference scale from -1 to 1.
+(Note that a third alternative is the Bross ridit function\cite{bross1958},
+defined, on a scale from 0 to 1, by averaging the Brockett--Levene ridit with 1.
+Bross stated, in this reference, that the word ridit stood for ``with \underline{r}espect to an \underline{i}dentified \underline{d}istribution'',
+but later stated that it was named after his wife Rida.)
+
+Given a bivariate random variable $(X,Y)$, with distribution function $F_{X,Y}(\cdot,\cdot)$,
+we can define the bivariate ridit function $B_{X,Y}(\cdot,\cdot)$ (on a scale from -1 to 1)
+by the formula
+\begin{equation}
+\begin{array}{rcl}
+B_{X,Y}(x,y) &\, = \,& E\left[ \sign(x-X) \, \sign(y-Y) \right] \\
+&\, = \,& \Pr\left[[\sign(x-X)\,\sign(y-Y)=1\right] \quad - \quad \Pr\left[\sign(x-X)\,\sign(y-Y)=-1\right],
+\end{array}
+\label{eq:eqseq2}
+\end{equation}
+or  (in other words) as the difference between the probability that the bivariate $(X,Y)$ is concordant with $(x,y)$
+and the probability that $(X,Y)$ is discordant with $(x,y)$.
+Note that the bivariate ridit function does not define the bivariate dstribution,
+as a univariate ridit function defines its univariate distribution.
+
+The mean bivariate ridit of $(X,Y)$ with respect to its own distribution
+is known as Kendall's tau--a, defined as
+\begin{equation}
+\tau_{X,Y} \quad = \quad E\left[B_{X,Y}(X,Y)\right],
+\label{eq:eqseq3}
+\end{equation}
+or (in other words) as the difference between the probabilities of concordance and discordance
+between 2 bivariate values independently sampled from the joint distribution of $X$ and $Y$.
+Kendall's tau--a is available in multiple versions for multiple sampling schemes, discussed in
+Newson (2002)\cite{newson2002} and Newson (2006)\cite{newson2006}.
+However, we will concentrate on the case where the bivariate $(X,Y)$--pairs
+are sampled independently from a common distribution.
+Kendall's tau--a is a member of a class of distributional parameters known as regular Hoeffding functionals,
+whose estimation
+(using corresponding sample statistics with asymptotically Normal distributions) is discussed
+in Section~3.2 of Puri and Sen (1971)\cite{purisen1971}.
+
+\section{Power calculations for Kendall's tau--a}
+
+We will use the unified power calculations methods of Newson (2004)\cite{newson2004}.
+These methods use a quantity known as the standard deviation of the influence function,
+which can be divided by the square root of the sample number to compute
+the sampling standard error of the sample statistic.
+In our case, the sample statistic is the sample Kendall's tau--a,
+which (in the terminology of Section~3.2 of Puri and Sen (1971)\cite{purisen1971}
+s a $U$--statistic.
+The standard deviation of the influence function is asymptotically equal to
+\def\sdinf{SD_{\rm inf}}
+\begin{equation}
+\sdinf(\tau_{XY}) \quad = \quad \sqrt{ 4 Var\left[B_{X,Y}(X,Y)\right] } \quad = \quad 2 SD\left[B_{X,Y}(X,Y)\right],
+\label{eq:eqseq4}
+\end{equation}
+where $Var[\cdot]$ and $SD[\cdot]$ denote the population variance and standard deviation,
+respectively.
+The key to power calculations is therefore the estimation
+of the variance and standard deviation of $B_{X,Y}(X,Y)$.
+This can be done using numerical integration,
+if we specify a distribution for $B_{X,Y}(X,Y)$.
+
+We will assume that there exist monotonic transformations $g(\cdot)$ and $h(\cdot)$,
+with the feature that $U=g(X)$ and $V=h(Y)$ are variables with a bivariate standard Normal joint distribution
+with correlation coefficient $\rho$.
+As Kendall's tau--a is invariant under monotonic transformations,
+it follows that
+\begin{equation}
+\tau_{X,Y} \quad = \quad \tau_{U,V} \quad = \quad \left({2\over\pi}\right)\arcsin\left(\rho\right).
+\label{eq:eqseq5}
+\end{equation}
+(This is a consequence of Greiner's relation between Kendall's tau--a and Pearson's rho under a bivariate Normal distribution,
+discussed in Section 3 of Newson (2002)\cite{newson2002}.)
+This assumption allows the possibility that $X$ and $Y$ are non--Normal,
+and skewed in one direction or other,
+but it also implies that there are no 2--way relationships,
+and that the conditional variance of $V$ given that $U=u$ is the same for all $u$,
+and that the conditional variance of $U$ given that $V=v$ is the same for all $v$.
+
+If we can assume this, then the bivariate ridit of $X$ and $Y$ (with respect to their own bivariate distribution)
+is equal to the bivariate ridit of $U$ and $V$ (with respect to their own bivariate distribution).
+Standard Normal bivariate ridits are given by the formula
+\begin{equation}
+\begin{array}{rl}
+B_{U,V}(u,v) \, = \,& \Pr\left[[\sign(u-U) \, \sign(v-V) \, = \, 1\right] \quad - \quad \Pr\left[\sign(u-U) \, \sign(v-V) \, = \, -1\right] \\
+ = \,& 2\Pr\left[[\sign(u-U) \, \sign(v-V)=1\right] \quad - \quad 1 \\
+ = \,& 2 \left[ \Pr(U<u \quad \& \quad V<v) \, + \, \Pr(U>u \quad \& \quad V>v)  \right] \quad - \quad 1 \\
+ = \,& 2 \left[ \Phi(u,v | \rho) \, + \, \Phi(-u,-v | \rho) \right] \quad - \quad 1 ,
+\end{array}
+\label{eq:eqseq6}
+\end{equation}
+where $\Phi(\cdot,\cdot |\rho)$ is the cumulative bivariate standard Normal distribution function
+with Pearson correlation coefficient $\rho$.
+(The first equality follows from (\ref{eq:eqseq2}),
+the second equality follows from the fact that the bivariate standard Normal distribution is continuous,
+the third equality follows from the definition of the sign function,
+and the fourth equality follows from the fact that the bivariate standard Normal distribution is symmetrical around 0
+in both arguments.)
+
+It follows that Kendall's tau--a between $X$ and $Y$ is given by
+\begin{equation}
+\tau_{X,Y} \quad = \quad \tau_{U,V} \quad = \quad E \left\{ 2 \left[ \Phi(U,V | \rho) \, + \, \Phi(-U,-V | \rho) \right] \quad - \quad 1 \right\}
+\label{eq:eqseq7}
+\end{equation}
+and the standard deviation of its influence function is given by
+\begin{equation}
+\sdinf(\tau_{XY}) \quad = \quad 2 SD\left\{ 2 \left[ \Phi(U,V | \rho) \, + \, \Phi(-U,-V | \rho) \right] \, - \, 1 \right\}.
+\label{eq:eqseq8}
+\end{equation}
+The value of $\tau_{X,Y}$ is alternatively given by the Greiner relation (\ref{eq:eqseq5}). 
+The standard deviation of the influence function is equal to 2/3 if $\rho=0$ (and therefore $\tau_{X,Y}=0$),
+and has lower values for other values of $\rho$,
+and is zero in the limit as $\rho$ tends to 1 or -1.
+
+It is possible to define confidence intervals for Kendall's~tau--a using Normalizing and variance--stabilizing transformations,
+such as Daniels'~arcsine or Fisher's~$z$--transform (also known as the hyperbolic arctangent).
+The confidence interval for the transformed Kendall's~tau--a will usually have a coverage probability
+nearer to the advertized level than a confidence interval for the untransformed Kendall's~tau--a,
+and can be back--transformed using the inverse function of the transformation function
+to give an asymmetric confidence interval for the untransformed Kendall's~tau--a.
+A list of such transformations is given in Table~1 of Newson (2006)\cite{newson2006}.
+If we do this, then the power calculations have to be for the transformed Kendall's~tau--a,
+and the standard deviation of the influence function (given by twice the standard deviation of the bivariate ridits)
+must be multiplied by $d \zeta (\tau_{X,Y}) / d \tau_{XY}$,
+where $\zeta(\cdot)$ is the transformation function.
+Note that, if the null hypothesis being tested specifies a non--zero Kendall's~tau--a,
+then the null tau--a must also be transformed,
+in order for the detectable difference to be specified correctly
+as a difference between the alternative and null tau--a values.
+
+\subsection{Implementation in the Stata statistical software}
+
+If we are using the Stata statistical software\cite{statacorpversion} to do the power and sample size calculations,
+then we can estimate $\sdinf(\tau_{XY})$ using numerical integration,
+and input the result into the \texttt{powercal} package of Newson (2004)\cite{newson2004}.
+The numerical integration is done using the SSC add--on package \texttt{expgen}
+to expand each observation (representing a power--calculation scenario)
+to a large number of new observations
+(representing combinations of power--calculation scenarios and values of the bivariate variables $U$ and $V$).
+The variables $U$ and $V$ can be generated either by random sampling
+(using the \texttt{runiform()} function)
+or by using \texttt{expgen} to expand the datset to have 1 observation
+per power calculation scenario per $(U,X)$-pair,
+and sampling probability weights proportional to the bivariate standard Normal probability density.
+We can then use the add--on SSC command \texttt{normalbvr}
+to compute the Normal bivariate ridits.
+To collapse the dataset to have 1 observation per power--calculation scenario,
+and data on the mean and standard deviation of the Normal bivariate ridits under that scenario,
+we use the \texttt{collapse} command.
+We then double the standard deviaton of the Normal bivariate ridits, under each scenario,
+to compute the standard deviation of the influence function for Kendall's tau--a under that scenario.
+Some examples are given in the on--line help
+for \texttt{normalbvr}.
+
+{\parindent=0pt
+
+\smallskip
+
+\begin{thebibliography}{10}
+
+\bibitem{brockettlevene1977}
+Brockett PL, Levene A.
+On a characterization of ridits.
+\textsl{The Annals of Statistics} 1977; \textbf{5(6)}: 1245--1248.
+
+\bibitem{bross1958}
+Bross IDJ.
+How to use ridit analysis.
+\textsl{Biometrics} 1958; \textbf{14(1)}: 18--38.
+
+\bibitem{newson2002}
+Newson R. Parameters behind ``nonparametric'' statistics: Kendall's tau, Somers'~$D$ and median differences.
+\textsl{The Stata Journal} 2002; \textbf{2(1)}: 45--64.
+
+\bibitem{newson2004}
+Newson R. Generalized power calculations for generalized linear models and more.
+\textsl{The Stata Journal} 2004; \textbf{4(4)}: 379--401.
+
+\bibitem{newson2006}
+Newson R. Confidence intervals for rank statistics: Somers'~$D$ and extensions.
+\textsl{The Stata Journal} 2006; \textbf{6(3)}: 309--334.
+
+\bibitem{purisen1971}
+Puri ML, Sen PK.
+Nonparametric Methods in Multivariate Statistics.
+New York: John Wiley \& Sons Inc.; 1971.
+
+\bibitem{statacorpversion}
+StataCorp.
+\textsl{Stata: Release 15. Statistical Software.}
+College Station, TX: StataCorp LLC; 2017.
+
+\end{thebibliography}
+
+}
+
+\end{document}               % End of document.

@@ -1,0 +1,42 @@
+d cprdentutil: Converting CPRD entity data variables to numeric variables
+d The cprdentutil library of programs is intended for use in
+d datasets produced by the cprdutil package.  The programs are used
+d to input string variables with names of form datax, where x is an
+d integer, found in Stata datasets produced using the cprdutil
+d modules cprd_test or cprd_additional, and to output labelled
+d numeric variables, containing the same information in a form
+d usable by Stata statistical programs and understandable by human
+d users.  The names and values of these numeric variables are
+d chosen to define CPRD entities of types indicated by the entity
+d type number, such as test results for a specific kind of test
+d (such as a blood metabolite measurement), or additional
+d information for a specific kind of clinical event (such as a
+d height measurement).
+d
+d Author: Roger Newson
+d Distribution-Date: 04november2016
+d Stata-Version: 13
+f cprdent_1.ado
+f cprdent_4.ado
+f cprdent_5.ado
+f cprdent_13.ado
+f cprdent_14.ado
+f cprdent_26.ado
+f cprdent_87.ado
+f cprdent_147.ado
+f cprdent_163.ado
+f cprdent_175.ado
+f cprdent_177.ado
+f cprdent_1.sthlp
+f cprdent_4.sthlp
+f cprdent_5.sthlp
+f cprdent_13.sthlp
+f cprdent_14.sthlp
+f cprdent_26.sthlp
+f cprdent_87.sthlp
+f cprdent_147.sthlp
+f cprdent_163.sthlp
+f cprdent_175.sthlp
+f cprdent_177.sthlp
+f cprdentutil.sthlp
+e

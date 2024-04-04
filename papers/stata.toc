@@ -1,0 +1,37 @@
+v 2
+d Papers written by Roger Newson
+d These are pre-publication drafts, post-publication updates, published papers
+d or unpublished papers written by Roger Newson. Each package contains
+d a paper as an ancillary file, which the user can download to his/her
+d current directory by typing
+d
+d net get filename
+d
+d in Stata. The programs used in these papers are usually downloadable
+d from the SSC-Ideas site.
+p robit Robit regression in Stata
+p portplus Stata tip 147: Porting downloaded packages between machines
+p capnoi Stata tip 127: Use capture noisily groups
+p attrib Attributable and unattributable risks and fractions
+p bonsid Bonferroni approximations for Sidak q-values
+p sensparm Sensible parameters for univariate and multivariate splines
+p restab From resultssets to resultstables in Stata
+p qqvalue Frequentist q-values for multiple-test procedures
+p predsurv Comparing the predictive power of survival models
+p pctlslope Confidence intervals for percentile slopes, differences and ratios
+p somdext Confidence intervals for Somers' D and extensions
+p effical Efficient calculation of confidence intervals for rank statistics
+p recur Stata tip 13: generate and replace use the current sort order
+p powergen Generalized power calculations for GLMs and more
+p sortpreserve Stata tip 5: Ensuring programs preserve dataset sort order
+p gmratio Stata tip 1: The eform() option of regress
+p enduser Confidence intervals and p-values for delivery to the end user
+p multproc Multiple test procedures and smile plots
+p params Parameters behind "nonparametric" statistics
+p glmext2 Review of Generalized Linear Models and Extensions by Hardin and Hilbe
+p genpower Generalized power calculations
+p frencurv Splines parameterized by their values at reference points
+p rglm rglm - Robust variance estimates for generalized linear models
+p parmest A program for saving a model fit as a dataset
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

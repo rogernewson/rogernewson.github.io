@@ -1,0 +1,20 @@
+v 2
+d bscthesis: Competition between strains of bacteria with controlled and uncontrolled operons
+d This is my BSc thesis, in which I presented my very first confidence
+d intervals, computed using FORTRAN back in 1977. The project involved
+d in vitro competition experiments between strains of E. coli K12
+d bacteria, which generated data on Petri plate counts of colonies,
+d which I used to estimate the exponential rate of change over time
+d of the ratio between concentrations of bacteria of the competing
+d strains in vitro, with confidence limits. I also used the method of
+d steepest descent to fit sigmoid growth curves for the bacterial
+d strains in isolation, using numerical solution of the Monod growth
+d curve equations. The thesis was presented in part fulfillment for
+d a BSc degree in Botany and Zoology (Joint Honours) at the University
+d of Nottingham in 1977, and documents the beginning of my move to
+d statistics from a genetics background.
+d
+d Author: Roger Newson
+d Distribution-date: 03 September 2018
+f ./bscthesis.pdf
+e

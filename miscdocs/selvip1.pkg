@@ -1,0 +1,9 @@
+v 2
+d selvip1: Asymptotic standard errors for the logs of variance-inflated Poisson means
+d The formulas here are not really original. However, a few lines of algebra
+d are required to derive them from first principles.
+d
+d Author: Roger Newson
+d Distribution-date: 06 December 2016
+f ./selvip1.pdf
+e

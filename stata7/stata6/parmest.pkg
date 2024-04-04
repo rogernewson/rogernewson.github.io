@@ -1,0 +1,24 @@
+v 2
+d parmest: Save estimation results as a data set with 1 obs per parameter
+d parmest creates an output data set, with 1 observation per parameter of the
+d most recent estimation results, and variables corresponding to parameter names,
+d estimates, standard errors, z- or t-test statistics, P-values and confidence
+d limits. parmby is a quasi-byable extension to parmest, which calls an
+d estimation command, and creates a new data set, with 1 observation per
+d parameter if the by() option is unspecified, or 1 observation per parameter per
+d by-group if the by() option is specified. The output data set may be saved to a
+d file, retained in memory (overwriting the pre-existing data set), or both.
+d
+d Author: Roger Newson
+d Date: 16 April 2002
+d Stata version: 6
+d
+d Note: This is a superseded version of parmest for users with Stata Version 6.
+d The most recent version of parmest can usually be downloaded from SSC using
+d the Stata command:
+d ssc install parmest
+f parmest.ado
+f parmest.hlp
+f parmby.ado
+f parmby.hlp
+e

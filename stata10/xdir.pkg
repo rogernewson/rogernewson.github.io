@@ -1,0 +1,18 @@
+d xdir: Create a resultsset with 1 observation per file in a directory
+d xdir is an extended version of dir, or of the extended macro
+d function dir.  It creates an output dataset (or resultsset), with 1
+d observation for each file in a user-specified directory conforming
+d to a user-specified pattern, and belonging to a user-specified file
+d type, and data on the file name and the directory name.  This
+d dataset may be listed using the list() option and/or saved to a file
+d using the saving() option and/or written to the memory using the
+d norestore or fast option, overwriting any existing dataset.
+d Alternatively (or additionally), a list of the file names may be
+d saved in a local macro.
+d
+d Author: Roger Newson
+d Distribution-Date: 02september2019
+d Stata-Version: 10
+f xdir.ado
+f xdir.sthlp
+e

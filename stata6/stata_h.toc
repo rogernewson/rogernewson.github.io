@@ -1,0 +1,4 @@
+v 2
+d Stata 6 packages written by Roger Newson
+d These can be used by users with Stata Version 6 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.

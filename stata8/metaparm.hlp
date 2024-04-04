@@ -1,0 +1,468 @@
+{smcl}
+{hline}
+help for {cmd:metaparm} and {cmd:parmcip} {right:(Roger Newson)}
+{hline}
+
+
+{title:Meta-analysis and redefining confidence intervals using {help parmest}-format resultssets}
+
+{p 8 15}{cmd:parmcip}  [{cmd:if} {it:exp}] [{cmd:in} {it:range}] [ {cmd:,}
+ {cmdab::no}{cmdab:td:ist} {cmdab:ef:orm} {cmdab:float} {cmd:fast} 
+ {break}
+ {cmdab:est:imate}{cmd:(}{it:varname}{cmd:)} {cmdab:std:err}{cmd:(}{it:varname}{cmd:)} {cmdab:d:of}{cmd:(}{it:varname}{cmd:)}
+ {break} 
+ {cmdab:t:stat}{cmd:(}{it:newvarname}{cmd:)} {cmdab:z:stat}{cmd:(}{it:newvarname}{cmd:)} {cmdab:p:value}{cmd:(}{it:newvarname}{cmd:)}
+ {cmdab:sta:rs}{cmd:(}{it:numlist}{cmd:)} {cmdab:nsta:rs}{cmd:(}{it:newvarname}{cmd:)}
+ {cmdab:le:vel}{cmd:(}{it:numlist}{cmd:)} {cmdab:cln:umber}{cmd:(}{it:numbering_rule}{cmd:)}
+ {cmdab:minp:refix}{cmd:(}{it:prefix}{cmd:)} {cmdab:maxp:refix}{cmd:(}{it:prefix}{cmd:)}
+ ]
+
+{p 8 15}{cmd:metaparm} [{it:weight}]  [{cmd:if} {it:exp}] [{cmd:in} {it:range}] [ {cmd:,}
+ {break}
+ {cmdab:li:st}{cmd:(} [{it:varlist}] [{cmd:if} {it:exp}] [{cmd:in} {it:range}] [ , [{it:list_options}] ] {cmd:)}
+ {cmdab:sa:ving}{cmd:(}{it:filename}[{cmd:,replace}]{cmd:)} {cmdab::no}{cmdab:re:store}
+ {cmdab:fl:ist}{cmd:(}{it:global_macro_name}{cmd:)}
+ {break}  
+ {cmd:by(}{it:varlist}{cmd:)} {cmdab:su:mvar}{cmd:(}{it:varlist}{cmd:)}
+ {cmdab:idn:um}{cmd:(}{it:string}{cmd:)} {cmdab:nidn:um}{cmd:(}{it:newvarname}{cmd:)}
+ {cmdab:ids:tr}{cmd:(}{it:#}{cmd:)} {cmdab:nids:tr}{cmd:(}{it:newvarname}{cmd:)}
+ {break}
+ {cmdab:fo:rmat}{cmd:(}{it:varlist_1 format_1 ... varlist_n format_n}{cmd:)}
+ {break} {it:parmcip_options}
+ ]
+
+
+{p 4 4 2}
+{cmd:aweight}s and {cmd:iweight}s are
+allowed with {cmd:metaparm}. See help for {help weights}.
+
+
+{title:Description}
+
+{p}
+{cmd:metaparm} and {cmd:parmcip} are resultsset-processing programs designed for use in {help parmest}
+resultssets, which have one observation per estimated parameter and data on parameter estimates.
+(See Newson (2003), Newson (2004) and Newson (2006).)
+{cmd:metaparm} inputs a dataset in memory with one observation per parameter and variables containing
+estimates, standard errors and (optionally) degrees of freedom, and creates an output dataset with one observation,
+or one observation per by-group, and data on estimates, standard errors,
+{it:z}- or {it:t}-statistics, {it:P}-values and confidence limits
+for a linear combination (weighted sum) of the input parameters,
+assuming that the input parameters are estimated independently for different sub-populations.
+The output dataset can be listed to the Stata log, saved to a disk file,
+or written to memory, overwriting the existing dataset.
+{cmd:metaparm} is useful for meta-analyses (where {help weight:aweights} are used),
+and can also be used with {help weight:iweights} for calculating confidence intervals
+and {it:P}-values for differences or ratios between parameters for different subpopulations.
+{cmd:parmcip} inputs a dataset in memory with one observation per parameter
+and variables containing parameter estimates, standard errors and (optionally) degrees of freedom,
+and adds new variables to the dataset, containing the confidence limits, {it:z}- or {it:t}-statistics,
+{it:P}-values, and (optionally) stars for {it:P}-values.
+{cmd:parmcip} is useful if the user requires confidence intervals for a Normalizing
+and/or variance-stabilixing transformation of the original parameters.
+{cmd:metaparm} works by calling {cmd:parmcip}, and therefore should not be downloaded without {cmd:parmcip}.
+
+
+
+{title:Options}
+
+{p 4 4 2}
+The options are listed in the following 3 groups:
+
+{p 4 6 2}
+{bf:1.} Output-destination options for {cmd:metaparm} only.
+(These specify where the output dataset will be written.)
+
+{p 4 6 2}
+{bf:2.} Other options for {cmd:metaparm} only.
+(These specify what the output dataset will contain.)
+
+{p 4 6 2}{bf:3.} Options for use with {cmd:parmcip} and {cmd:metaparm}.{p_end}
+
+
+{title:Output-destination options for {cmd:metaparm} only}
+
+{p 0 4}{cmd:list(}{it:varlist} [{cmd:if} {it:exp}] [{cmd:in} {it:range}] [, {it:list_options} ] {cmd:)}
+specifies a list of variables in the output
+dataset, which will be listed to the Stata log and/or the Results window.
+The {cmd:list()} option can be used with the {cmd:format()} option (see below)
+to produce a list of parameter names, estimates, confidence limits,
+{it:P}-values and other parameter attributes,
+with user-specified numbers of decimal places or significant figures.
+The user may optionally also specify {help if} or {help in} clauses to list subsets of parameters,
+or change the display style using a list of {it:list_options} allowed as options by the {help list} command.
+
+{p 0 4}{cmd:saving(}{it:filename}[{cmd:,replace}]{cmd:)} saves the output dataset to a disk file.
+If {cmd:replace} is specified, and a file of that name already exists,
+then the old file is overwritten.
+
+{p 0 4}{cmd:norestore} specifies that the output dataset will be written to the memory,
+overwriting any pre-existing dataset. This option is automatically set if {cmd:fast} is
+specified. Otherwise, if {cmd:norestore} is not specified, then the pre-existing dataset is restored
+in the memory after the execution of {cmd:metaparm}.
+
+{p 4 4}Note that the user must specify at least one of the four options {cmd:list()}, {cmd:saving()}, {cmd:norestore}
+and {cmd:fast}. These four options specify whether the output dataset is listed to the Stata log,
+saved to a disk file, or written to the memory (overwriting any pre-existing dataset). More than
+one of these options can be specified.
+
+{p 0 4}{cmd:flist(}{it:global_macro_name}{cmd:)} specifies the name of a global macro, containing
+a filename list (possibly empty). If {cmd:saving()} is also specified, then
+{cmd:metaparm} will append the name of the dataset specified in the
+{cmd:saving()} option to the value of the global macro specified in {cmd:flist()}. This
+enables the user to build a list of filenames in a global macro, containing the
+output of a sequence of datasets.
+These files may later be concatenated using {help append}, or using {help dsconcat}
+if installed.
+
+
+{title:Other options for {cmd:metaparm} only}
+
+{p 0 4}{cmd:by(}{it:varlist}{cmd:)} specifies a list of existing by-variables in the input dataset.
+{cmd:metaparm} creates an output dataset with one observation in each by-group,
+or with one observation only if {cmd:by()} is not specified,
+and data on estimates, {it:P}-values, {it:z-} or {it:t}-statistics  and confidence limits
+for the weighted sums of parameters within the by-group,
+or in the whole input dataset if {cmd{by()} is not specified.
+The weightings for the weighted sums are specified using the {help weight:weight specification}.
+
+{p 0 4}{cmd:sumvar(}{it:varlist}{cmd:)} specifies a list of variables in the input dataset
+to be included in the output dataset, with values equal to their unweighted sums in the input dataset
+(if {cmd:by()} is not specified) or to their unweighted sums within the by-group
+(if {cmd:by()} is specified). For instance, if the input dataset contains one observation
+per study to be entered into a meta-analysis, and contains a variable {hi:N} specifying the number
+of subjects in the study, then the user can specify {cmd:sumvar(N)}, and {hi:N} will be present
+in the output dataset, where it will contain the total number of subjects in all the studies.
+
+{p 0 4}{cmd:idnum(}{it:#}{cmd:)} specifies an ID number for the output data set.
+It is used to create a numeric variable, with default name {hi:idnum}, in the output data set,
+with that value for all observations.
+This is useful if the output resultsset is concatenated with other resultssets
+using {help append}, or using {help dsconcat} if installed.
+
+{p 0 4}{cmd:nidnum(}{it:newvarname}{cmd:)} specifies a name for the numeric ID variable
+evaluated by {cmd:idnum()}. If {cmd:idnum()} is present and {cmd:nidnum()} is absent,
+then the name of the numeric ID variable is set to {hi:idnum}.
+
+{p 0 4}{cmd:idstr(}{it:string}{cmd:)} specifies an ID string for the output dataset.
+It is used to create a string variable, with default name {hi:idstr}, in the output dataset,
+with that value for all observations.
+This is useful if the output resultsset is concatenated with other resultssets
+using {help append}, or using {help dsconcat} if installed.
+
+{p 0 4}{cmd:nidstr(}{it:newvarname}{cmd:)} specifies a name for the string ID variable
+evaluated by {cmd:idstr()}. If {cmd:idstr()} is present and {cmd:nidstr()} is absent,
+then the name of the string ID variable is set to {hi:idstr}.
+
+{p 0 4}{cmd:format(}{it:varlist_1 format_1 ... varlist_n format_n}{cmd:)}
+specifies a list of pairs of variable lists and {help format:display formats}.
+The {help format:formats} will be allocated to
+the variables in the output dataset specified by the corresponding {it:varlist}s.
+
+
+{title:Options for use with {cmd:parmcip} and {cmd:metaparm}}
+ 
+{p 0 4}{cmd:notdist} specifies whether or not a {it:t}-distribution is used
+to calculate confidence limits. If {cmd:tdist} is specified, then a {it:t}-distribution is used.
+If {cmd:notdist} is specified, then a standard Normal distribution is used.
+If neither {cmd:tdist} nor {cmd:notdist} is specified by the user,
+then the option is set to {cmd:tdist} if the {cmd:dof()} option
+is set to the name of an existing variable, and is set to {cmd:notdist} otherwise.
+If {cmd:tdist} is specified with {cmd:metaparm}, then the degrees of freedom in the output dataset
+are calculated from the degrees of freedom and standard errors in the input dataset,
+using the Satterthwaite formula (Satterthwaite, 1946).
+
+{p 0 4}{cmd:eform} indicates that the input estimates are exponentiated,
+and that the input standard errors are multiplied by the exponentiated estimate,
+and that the output confidence limits are to be exponentiated.
+If {cmd:eform} is used with {cmd:metaparm}, then the estimate variable in the output dataset is exponentiated,
+and the standard error variable in the output dataset is multiplied
+by the exponentiated estimate variable.
+
+{p 0 4}{cmd:float} specifies that the numeric output variables will be created as type {hi:float} or below.
+If {cmd:float} is unset, then the numeric output variables are created as type {hi:double}.
+Note that all generated variables are compressed as much as possible without loss of information,
+whether or not {cmd:float} is specified.
+
+{p 0 4}{cmd:fast} is an option for programmers, and specifies that no action will be taken
+to restore the original data if the user presses {help break:Break}.
+If used with {cmd:metaparm}, the {cmd:fast} option implies the {cmd:norestore} option (see above).
+
+{p 0 4}{cmd:estimate(}{it:varname}{cmd:)} specifies the name of the input variable containing estimates.
+It is set to {hi:estimate} if not specified.
+
+{p 0 4}{cmd:stderr(}{it:varname}{cmd:)} specifies the name of the input variable containing standard errors.
+It is set to {hi:stderr} if not specified.
+
+{p 0 4}{cmd:dof(}{it:varname}{cmd:)} specifies the name of the input variable containing degrees of freedom.
+It is set to {hi:dof} if not specified.
+
+{p 0 4}{cmd:zstat(}{it:newvarname}{cmd:)} specifies the name of the output variable containing the {it:z}-statistics.
+It is set to {hi:z} if not specified.
+
+{p 0 4}{cmd:tstat(}{it:newvarname}{cmd:)} specifies the name of the output variable containing the {it:t}-statistics.
+It is set to {hi:t} if not specified.
+
+{p 0 4}{cmd:pvalue(}{it:newvarname}{cmd:)} specifies the name of the output variable containing the {it:P}-values.
+It is set to {hi:p} if not specified.
+
+{p 0 4}{cmd:stars(}{it:numlist}{cmd:)} is used to generate a string variable with default name {hi:stars},
+containing the stars for the {it:P}-values.
+It works in the same way as the {cmd:stars()} option of {help parmest}.
+
+{p 0 4}{cmd:nstars(}{it:newvarname}{cmd:)} specifies the name of the output variable containing the stars,
+if {cmd:stars()} is specified. If {cmd:nstars()} is not specified,
+then the name is set to {hi:stars}.
+
+{p 0 4}{cmd:level(}{it:numlist}{cmd:)} specifies the confidence levels, in percent, for
+the confidence limit variables created in the output dataset.
+It works in the same way as the {cmd:level()} option of {help parmest}.
+
+{p 0 4}{cmd:clnumber(}{it:numbering_rule}{cmd:)} specifies the rule used to number the names of the
+confidence limit variables created in the output dataset.
+It works similarly to the {cmd:clnumber()} option of {help parmest}.
+However, with {cmd:parmcip} and {cmd:metaparm}, the user may specify
+prefixes other than {hi:min} and {hi:max} for the confidence limits, using the
+{cmd:minprefix()} and {cmd:maxprefix()} options.
+
+{p 0 4}{cmd:minprefix(}{it:prefix}{cmd:)} specifies the prefix used for naming the lower confidence limit variables.
+It is set to {hi:min} if not specified. For instance, if the user specifies {cmd:minprefix(inf)}, then
+the lower 95% confidence limit variable will be named {hi:inf95}.
+
+{p 0 4}{cmd:maxprefix(}{it:prefix}{cmd:)} specifies the prefix used for naming the upper confidence limit variables.
+It is set to {hi:max} if not specified. For instance, if the user specifies {cmd:maxprefix(sup)}, then
+the upper 95% confidence limit variable will be named {hi:sup95}.
+
+
+{title:Methods and formulas}
+
+{p}
+{cmd:metaparm} generates an output dataset with one observation, or one observation per by-group,
+and data on estimates, standard errors and degrees of freedom
+for linear combinations (weighted sums) of parameters,
+and then uses {cmd:parmcip} to derive the {it:t}- or {it:z}-statistics, {it:P}-values and confidence limits.
+The exact method used to calculate the estimates, standard errors and degrees of freedom
+depends on whether the {cmd:tdist} option is in force,
+and on whether {help weight:aweights} or {help weight:iweights} are specified.
+In general, it is assumed that, in the input dataset (or in a by-group of the input dataset),
+there are {hi:N} observations, corresponding to parameters {hi:theta_1, ..., theta_N},
+with corresponding standard errors {hi:se_1, ..., se_N},
+corresponding coefficients {hi:a_1, ..., a_N},
+and corresponding degrees of freedon {hi:df_1, ..., df_N} if the {cmd:tdist} option is in force.
+We wish to calculate an estimate
+for the linear combination 
+
+{hi:Theta = Sum ( a_j * theta_j )}
+
+{p}
+and a corresponding standard error
+
+{hi:SE = sqrt( Sum (a_j * se_j)^2} )
+
+{p}
+and degrees of freedom (if {cmd:tdist} is in force) calculated from the {hi:df_j} and the {hi:se_j} by
+the Satterthwaite formula (Satterthwaite, 1946). The definition of the {cmd:a_j} depends on whether
+{help weight:iweights} or {help weight:aweights} are specified. If {help weight:iweights} are specified,
+then the {hi:a_j} are given by the result of the {help weight:weight expression},
+which may be positive, zero or negative.
+If {help weight:aweights} are specified, then the result of the {help weight:weight expression}
+must be non-negative, and is divided by its total within the input dataset or by-group to give the {hi:a_j}.
+If no weights are specified, then {help weight:aweights} are assumed, and are set to one,
+so that the {cmd:a_j} are equal to {hi:1/N}, and their sum in the dataset or by-group is equal to one.
+{help weight:aweights} are typically specified if the user wishes to carry out a meta-analysis,
+whereas {help weight:iweights} are typically specified if the user wishes to estimate a difference
+between two parameters {hi:theta_1} and {hi:theta_2} in each by-group.
+
+
+{title:Output datasets created by {cmd:metaparm} and {cmd:parmcip}}
+
+{p}
+The datasets created by {cmd:metaparm} and {cmd:parmcip} have one observation per parameter
+and data on their estimation results. After {cmd:parmcip} has executed successfully,
+the dataset in memory will contain the following variables (and possibly others):
+
+
+{title:Default name}        {title:Description}
+{hi:estimate}            Parameter estimate
+{hi:stderr}              SE of parameter estimate
+{hi:dof}                 Degrees of freedom
+{hi:t}                   {it:t}-test statistic
+{hi:z}                   {it:z}-test statistic
+{hi:p}                   {it:P}-value
+{hi:stars}               Stars for {it:P}-value
+{hi:min}{it:yy}               Lower {it:xx}% confidence limit
+{hi:max}{it:yy}               Upper {it:xx}% confidence limit
+
+{p}
+These variables contain the same information as the variables of the same name
+in the {help parmest} resultsset.
+The variables {hi:estimate}, {hi:stderr} and {hi:dof} are usually present before the
+execution of {cmd:parmcip}.
+THe others are added to the dataset by {cmd:parmcip}.
+The variable {hi:t} is created only if the {cmd:tdist} option is in force,
+the variable {hi:z} is only present if the {cmd:notdist} option is in force,
+and the variable {cmd:stars} is only present if the {cmd:stars()} option is specified.
+All of these variables may have non-default names, which can be specified
+by the options listed above in {hi:Options for use with {cmd:parmcip} and {cmd:metaparm}}.
+
+{p}
+The output dataset created by {cmd:metaparm} contains all of these variables,
+and may also contain the following additional variables:
+
+
+{title:Default name}        {title:Description}
+{it:by-variables}        Variables specified in the {cmd:by()} option
+{it:sumvar-variables}    Variables specified in the {cmd:sumvar()} option
+
+
+{title:Remarks}
+
+{p}
+More information about {help parmest} and {help parmby} resultssets
+can be found in Newson (2003), Newson (2004) and Newson (2006).
+Other programs are available in the Stata community for carrying out meta-analyses,
+including {help meta}, written by Stephen Sharp and Jonathan Sterne.
+(See {hi:[R] meta} for details.)
+{cmd:metaparm} is complementary to these, and is designed specifically for use with {help parmest} resultssets.
+Note, however, that the input resultsset does not have to be produced by {help parmest}.
+It need only contain an estimate variable, a standard error variable, and a degrees of freedom variable (if appropriate).
+Linear combinations of parameters for the same model can be estimated
+using the official Stata command {help lincom}, or by the {help lincomest} package,
+downloadable from {help ssc:SSC}.
+{cmd:metaparm} is complementary to these, and is designed for use when parameters are estimated 
+by sampling independently from distinct populations.
+
+{p}
+{cmd:parmcip} may be used for defining additional confidence limits in a {help parmest} resultsset,
+with different {help level:confidence levels} from those originally calculated by {help parmby}
+or {help parmest}. However, {cmd:parmcip} is also useful for calculating confidence limits for
+transformed parameters, using standard errors calculated using the
+{browse "http://www.stata.com/support/faqs/stat/deltam.html":delta method}.
+
+{p}
+The confidence limits calculated by {cmd:metaparm} or {cmd:parmcip} can be plotted
+using the {help eclplot} command, which is downloadable from {help ssc:SSC},
+and which can be used to calculate Cochrane forest plots for meta-analyses.
+
+
+{title:Examples}
+
+{p 16 20}{inp:. metaparm, list(,)}{p_end}
+
+{p 16 20}{inp:. metaparm [awei=studynum], sumvar(studynum) list(,)}{p_end}
+
+{p 16 20}{inp:. parmcip}{p_end}
+
+{p}
+The following example uses the {hi:auto} data. A variable {hi:mod4} is defined, equal to 0, 1, 2 or 3 for approximately equal numbers of cars.
+We then use {help parmby} to fit a regression model, comparing mileage in non-American and American cars, for cars with each value of {hi:mod4},
+and to store the parameters in a {help parmby} resultsset in memory, which is listed.
+Finally, we carry out a meta-analysis on the differences between the non-American and American cars in the 4 {hi:mod4} groups,
+weighting the differences by numbers of cars to produce a weighted mean difference, which is listed,
+together with its 95% confidence limits and {it:P}-value.
+
+{p 16 20}{inp:. sysuse auto, clear}{p_end}
+{p 16 20}{inp:. gene byte mod4=mod(_n,4)}{p_end}
+{p 16 20}{inp:. parmby "regress mpg foreign", by(mod4) norestore escal(N) rename(es_1 N) format(estimate min* max* %8.2f p %-8.2g)}{p_end}
+{p 16 20}{inp:. bysort mod4 (N parmseq): list}{p_end}
+{p 16 20}{inp:. metaparm [awei=N] if parm=="foreign", sumvar(N) list(,)}{p_end}
+
+{p}
+The following example uses the {hi:auto} data. A variable {hi:odd} is defined, equal to 0 for even-numbered cars
+and 1 for odd-numbered cars in the order in the dataset. We then demonstrate that {cmd:metaparm} (with {help weight:iweights})
+produces the same results as {help ttest} with the {cmd:unequal} option when comparing the weights of American and non-American cars
+within the odd-numbered and even-numbered categories. {cmd:metaparm} has the advantage that it can store the confidence intervals in a resultsset
+on disk or memory, which can later be plotted using {help eclplot}, although this is not done here.
+
+{p 16 20}{inp:. sysuse auto, clear}{p_end}
+{p 16 20}{inp:. gene byte odd=mod(_n,2)}{p_end}
+{p 16 20}{inp:. bysort odd: ttest weight, by(foreign) unequal}{p_end}
+{p 16 20}{inp:. parmby "regress weight", by(odd foreign) norestore format(estimate min* max* %8.2f p %-8.2g)}{p_end}
+{p 16 20}{inp:. list}{p_end}
+{p 16 20}{inp:. metaparm [iwei=!foreign-foreign], by(odd) norestore}{p_end}
+{p 16 20}{inp:. list odd estimate min* max* p dof}{p_end}
+
+
+{p}
+The following example uses the {help svyset} and {help svytab} commands in the {hi:auto} data
+to demonstrate the use of {cmd:parmcip} for calculating transformed confidence intervals.
+It uses {help svytab} to calculate confidence intervals for the proportions of cars with each combination of
+the values of the variables {hi:rep78} and {hi:foreign}, and uses {help parmest}
+to save the estimates and standard errors of these proportions in a resultsset in memory.
+We then replace the estimates and standard errors of the proportions
+with the estimates and standard errors of the corresponding logged odds,
+drop the existing {it:t}-statistics, {it:P}-values and confidence limits,
+use {cmd:parmcip} to calculate {it:t}-statistics, {it:P}-values and confidence limits for the logged odds,
+and then calculate new estimates and confidence limits for the proportions by
+back-transforming the estimates and confidence limits for the logged odds.
+These confidence limits are listed, and are identical to those displayed by {help svytab},
+but have the advantage that they may then be plotted using {help eclplot},
+or listed using {help format:formats} chosen by the user.
+(This is an example of the
+{browse "http://www.stata.com/support/faqs/stat/deltam.html":delta method}.
+See {hi:[SVY] svytab} for details of the formulas.)
+
+{p 16 20}{inp:. sysuse auto, clear}{p_end}
+{p 16 20}{inp:. gene byte pwt=1}{p_end}
+{p 16 20}{inp:. svyset [pweight=pwt]}{p_end}
+{p 16 20}{inp:. svytab rep78 foreign, ci}{p_end}
+{p 16 20}{inp:. parmest, norestore}{p_end}
+{p 16 20}{inp:. list}{p_end}
+{p 16 20}{inp:. replace stderr=stderr/(estimate*(1-estimate))}{p_end}
+{p 16 20}{inp:. replace estimate=log(estimate/(1-estimate))}{p_end}
+{p 16 20}{inp:. drop t p min* max*}{p_end}
+{p 16 20}{inp:. parmcip}{p_end}
+{p 16 20}{inp:. gene estimate_2=exp(estimate)/(1+exp(estimate))}{p_end}
+{p 16 20}{inp:. gene min95_2=exp(min95)/(1+exp(min95))}{p_end}
+{p 16 20}{inp:. gene max95_2=exp(max95)/(1+exp(max95))}{p_end}
+{p 16 20}{inp:. list parm estimate_2 min95_2 max95_2 p}{p_end}
+
+
+{title:Acknowledgements}
+
+{p}
+I would like to thank Jill Starkes and Lee Sieswerda of Thunder Bay District Health Unit for drawing my attention
+to the example of the delta method used to calculate the confidence intervals displayed by {help svytab}.
+
+
+{title:Author}
+
+{p}
+Roger Newson, Imperial College London, UK.
+Email: {browse "mailto:r.newson@imperial.ac.uk":r.newson@imperial.ac.uk}
+
+
+{title:References}
+
+{p}Newson, R. 2003. Confidence intervals and {it:p}-values for delivery to the end user.
+{it:The Stata Journal} 3(3): 245-269. Pre-publication draft downloadable from
+{net "from http://www.imperial.ac.uk/nhli/r.newson":Roger Newson's website at http://www.imperial.ac.uk/nhli/r.newson}.
+
+{p} Newson, R. 2004. From datasets to resultssets in Stata.
+Presented at {browse "http://ideas.repec.org/s/boc/usug04.html" :the 10th United Kingdom Stata Users' Group Meeting, London, 29 June, 2004}.
+Also downloadable from
+{net "from http://www.imperial.ac.uk/nhli/r.newson":Roger Newson's website at http://www.imperial.ac.uk/nhli/r.newson}.
+
+{p} Newson, R. 2006. Resultssets, resultsspreadsheets, and resultsplots in Stata.
+Presented at {browse "http://ideas.repec.org/s/boc/dsug06.html" :the 4th German Stata Users' Group Meeting, Mannheim, 31 March, 2006}.
+Also downloadable from
+{net "from http://www.imperial.ac.uk/nhli/r.newson":Roger Newson's website at http://www.imperial.ac.uk/nhli/r.newson}.
+
+{p} Satterthwaite, F. E. 1946. An approximate distribution of estimates of variance components.
+{it:Biometrics Bulletin} 2(6): 110-114.
+
+
+{title:Also see}
+
+{p 0 10}
+{bind:    }STB:  STB-49 dm65, STB-58 dm65.1, STB-38 sbe16, STB-42 sbe16.1
+{p_end}
+{p 0 10}
+{bind: }Manual:  {hi:[U] 23 Estimation and post-estimation commands},
+{break} {hi:[U] 29 Overview of Stata estimation commands},
+{break} {hi:[R] append}, {hi:[R] lincom}, {hi:[R] meta}, {hi:[SVY] svyset}, {hi:[SVY] svytab}.
+{p_end}
+{p 0 10}
+On-line:  help for {help append}, {help lincom}, {help svyset}, {help svytab}
+{break} help for {help parmest}, {help parmby}, {help meta}, {help dsconcat} and {help lincomest} if installed
+{p_end}

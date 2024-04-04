@@ -1,0 +1,21 @@
+v 2
+d listtab: List variables as rows of a TeX, HTML or word processor table
+d listtab outputs a list of variables to the Stata log or to a file as TeX,
+d HTML or word processor table rows, which can then be inserted into a TeX,
+d HTML or word processor table by cutting and pasting and/or file linking
+d and/or embedding (eg using the TeX \input command). listtab produces the
+d table rows, but may also produce a set of header lines before the table
+d rows and/or footer lines after the table rows, containing preambles and/or
+d table definitions and/or table headers and/or table footers, as specified
+d by the user.
+d
+d Author: Roger Newson
+d Distribution-Date: 09april2010
+d Stata-Version: 10
+f listtab.ado
+f listtab_vars.ado
+f listtab_rstyle.ado
+f listtab.sthlp
+f listtab_vars.sthlp
+f listtab_rstyle.sthlp
+e

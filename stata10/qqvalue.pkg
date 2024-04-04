@@ -1,0 +1,26 @@
+v 2
+d qqvalue: Generate frequentist q-values by inverting multiple-test procedures
+d qqvalue is similar to the R package p.adjust.  It inputs a single
+d variable, assumed to contain P-values calculated for multiple
+d comparisons, in a dataset with 1 observation per comparison.  It
+d outputs a new variable, containing the q-values corresponding to
+d these P-values, calculated by inverting a multiple-test procedure
+d specified by the user.  These q-values represent, for each
+d corresponding P-value, the minimum uncorrected P-value threshold
+d for which that P-value would be in the discovery set, assuming that
+d the specified multiple-test procedure was used on the same set of
+d input P-values to generate a corrected P-value threshold.  These
+d minimum uncorrected P-value thresholds may represent familywise
+d error rates or false discovery rates, depending on the procedure
+d used.  Optionally, qqvalue may output other variables, containing
+d the various intermediate results used in calculating the
+d q-values.  The multiple-test procedures available for
+d qqvalue are a subset of those available using the multproc module
+d of the smileplot package, which can be downloaded from SSC.
+d
+d Author: Roger Newson
+d Distribution-Date: 18november2020
+d Stata-Version: 10
+f qqvalue.ado
+f qqvalue.sthlp
+e

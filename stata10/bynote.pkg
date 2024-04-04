@@ -1,0 +1,18 @@
+v 2
+d bynote: Create a note with a user-specified format for use with the by option
+d bynote creates a note for use as the note() suboption of the
+d by-option of the graph command.  This note is made up of the
+d variable labels of the variables in the varlist, if these labels
+d exist, and of the names of these variables otherwise.  The user
+d can specify a format for this note, and/or save it in a local
+d macro.  The by-option automatically sets the overall note()
+d suboption to a list of by-variable names and/or labels by default,
+d but it does not always have the format that the user wanted, and
+d may not use all the variable labels.
+d
+d Author: Roger Newson
+d Distribution-Date: 08may2008
+d Stata-Version: 10
+f bynote.ado
+f bynote.sthlp
+e

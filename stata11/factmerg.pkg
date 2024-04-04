@@ -1,0 +1,16 @@
+v 2
+d factmerg: Merge a list of factors to create string variables
+d factmerg takes, as input, a list of variables (numeric or string),
+d representing discrete factors.  It creates, as output, one to three
+d string variables, containing, in each observation, a value, a factor
+d name or a factor variable label, respectively, copied from the first
+d factor variable in the input variable list with a non-missing value
+d for that observation.  factmerg requires the SSC package sdecode in
+d order to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 18May2023
+d Stata-Version: 11
+f factmerg.ado
+f factmerg.sthlp
+e

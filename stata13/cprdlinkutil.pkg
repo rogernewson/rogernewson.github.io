@@ -1,0 +1,31 @@
+d cprdlinkutil: Inputting CPRD linkage-source datasets into Stata
+d The cprdlinkutil package is designed for use with the cprdutil
+d package, which creates Stata datasets from text data files produced
+d by the Clinical Practice Research Datalink (CPRD).  cprdlinkutil is
+d a suite of utility programs for inputting linkage-source text data
+d files produced by CPRD for linkage to one or more non-CPRD sources
+d of data on the same patients, and creating equivalent Stata datasets
+d in the memory.  Possible linkage-data sources include the Hospital
+d Episodes System (HES) for data on hospitalisations, and the Office
+d of National Statistics (ONS) for data on deaths.  CPRD can carry out
+d data retrievals to provide linkage datasets, with data about
+d patients known to CPRD, and with one observation per event of the
+d type recorded by the linkage-data source.  Datasets produced by
+d cprdlinkutil contain information on patients and practices known to
+d CPRD, and on the times at which patients in these practices can be
+d said to be at risk of experiencing recorded events of the types
+d recorded by each linkage-data source.  cprdlinkutil uses the SSC
+d packages keyby and chardef, which need to be installed for
+d cprdlinkutil to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 10december2017
+d Stata-Version: 13
+f cprdlink_linkage_eligibility.ado
+f cprdlink_linkage_coverage.ado
+f cprdlink_linked_practices.ado
+f cprdlink_linkage_eligibility.sthlp
+f cprdlink_linkage_coverage.sthlp
+f cprdlink_linked_practices.sthlp
+f cprdlinkutil.sthlp
+e

@@ -1,0 +1,22 @@
+v 2
+d factext: Extract factor values from a label variable created by parmest
+d factext is used to extract factors (categorical variables) from a
+d label variable in an output data set created by the parmest package.
+d The parmest package creates a data set with 1 obs per estimated parameter
+d and data on the parameter estimates, confidence limits, P-values, and
+d (optionally) also a variable named label, containing the variable label for
+d the X-variable corresponding to the parameter. If the X-variable is a dummy
+d variable created by xi, tabulate or John Hendrickx's desmat package, then the
+d value of label will be of the form "varname==value", where varname is a
+d variable name and value is a numeric or string  value. factext uses this
+d information to create new factors (categorical variables) with the specified
+d varnames and values. These new variables can then be used to produce tables
+d and/or plots. factext can be used together with the descsave package, also
+d downloadable from SSC or from this website.
+d
+d Author: Roger Newson
+d Distribution-Date: 22february2007
+d Stata-Version: 7
+f factext.ado
+f factext.hlp
+e

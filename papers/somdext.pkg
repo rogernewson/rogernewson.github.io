@@ -1,0 +1,28 @@
+v 2
+d somdext: Confidence intervals for Somers' D and extensions
+d This is a pre-publication draft of a Stata Journal paper (Newson, 2006).
+d The paper introduces a family of rank statistics, which are generalizations
+d of Somers' D and Kendall's tau-a, and the Stata 9 version of the program
+d somersd, which calculates confidence intervals for all these rank statistics.
+d Generalizations and/or reparameterizations of Somers' D include the
+d difference between two proportions, the Gini inequality index in economics,
+d the population attributable risk in epidemiology, Harrell's c index, the area
+d under the receiver-operating characteristic (ROC) curve, and the parameters
+d tested by the various "nonparametric" sign and ranksum tests. somersd can now
+d estimate versions of these parameters for left-censored, right-censored,
+d clustered or stratified data. In particular, we can measure the association
+d between a predictor variable and an outcome variable within strata defined by
+d a confounding variable, or by a propensity score derived from multiple
+d confounding variables. This paper provides a reference for the methods and
+d formulas used by somersd, and some worked examples using commonly available
+d datasets.
+d
+d References
+d
+d Newson R. 2006. Confidence intervals for rank statistics: Somers' D and
+d extensions. The Stata Journal 6(3): 309-334.
+d
+d Author: Roger Newson
+d Distribution-date: 31 August 2006
+f somdext.pdf
+e

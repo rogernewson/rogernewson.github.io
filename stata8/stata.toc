@@ -1,0 +1,20 @@
+v 3
+d Stata 8 packages written by Roger Newson
+d These can be used by users with Stata Version 8 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p descsave Extension of describe creating output files
+p dolog Execute commands from a file, creating a log file
+p dologx Multiple versions of dolog for executing certification scripts
+p eclplot Horizontal and vertical confidence interval plots
+p lincomest Extension to lincom saving the combination as estimation results
+p listtex List variables as rows of a TeX, HTML or word processor table
+p metaparm Meta-analysis and transformations using parmest resultssets
+p parmest Convert estimation results to a data set with 1 obs per parameter
+p pcontract Make a data set of frequencies and percentages
+p regaxis Regular linear and logarithmic axis scales, ranges and tick lists
+p senspec Sensitivity and specificity results saved in generated variables
+p smileplot Multiple test procedures and smile plots
+p xcollapse Make data set of summary statistics on disk or in memory
+p xcontract Make data set of frequencies and percents on disk or in memory
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

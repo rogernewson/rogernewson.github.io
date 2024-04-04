@@ -1,0 +1,17 @@
+v 2
+d sdecode: Decode a numeric variable to string, formatting unlabelled values
+d sdecode is an extended version of decode. It takes, as input, a numeric
+d variable, and generates, as output, a string variable, with values
+d corresponding to value labels of the numeric variable for labelled values,
+d and (optionally) formatted values of the numeric variable for unlabelled
+d values. The output string values therefore appear as the numeric input
+d values appear in output from the tabulate command. The output string
+d variable may replace the input numeric variable or be generated as a new
+d variable.
+d
+d Author: Roger Newson
+d Distribution-Date: 09april2010
+d Stata-Version: 10
+f sdecode.ado
+f sdecode.sthlp
+e

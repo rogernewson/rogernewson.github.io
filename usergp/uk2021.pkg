@@ -1,0 +1,32 @@
+v 2
+d uk2021: Ridits right, left, center, native and foreign
+d Ridit functions are specified with respect to an identified probability
+d distribution. They are like ranks, only expressed on a scale from 0 to 1
+d (for unfolded ridits), or -1 to 1 (for folded ridits). Ridit functions
+d have generalised inverses called percentile functions. A native ridit
+d is a ridit of a variable with respect to its own distribution. Native
+d ridits can be computed using the ridit() function of Nick Cox's SSC
+d package egenmore. Alternatively, weighted ridits can be computed using
+d the SSC package wridit. This has a handedness() option, where
+d handedness(right) specifies a right-continuous ridit (also known as a
+d cumulative distribution function), handedness(left) specifies a
+d left-continuous ridit, and handedness(center) (the default) specifies
+d a ridit function discontinuous at its mass points. wridit now has a
+d module fridit, computing foreign ridits of a variable with respect to
+d a distribution other than its own, specifying the foreign distribution
+d in another data frame. An application of ridits is ridit splines, which
+d are splines in a ridit function, typically computed using the SSC package
+d polyspline. As an example, we may fit a ridit spline to a training set,
+d and use it for prediction in a test set, using foreign ridits of an
+d X-variable in the test set with respect to the distribution of the
+d X-variable in the training set. The model parameterss are typically
+d values of an outcome variable corresponding to percentiles of the
+d X-variable in the training set. This practice stabilises (or Winsorises)
+d outcome values corresponding to X-values in the test set outside the
+d range of X-values in the training set. 
+d
+d Author: Roger Newson
+d Distribution-date: 12 September 2021
+f ./uk2021/newson_ohp1.pdf
+f ./uk2021/exampledofiles.zip
+e

@@ -1,0 +1,23 @@
+v 2
+d enduser: Confidence intervals and p-values for delivery to the end user
+d This is a pre-publication draft of a Stata Journal paper (Newson, 2003),
+d describing a suite of Stata packages used to convert Stata results to plots
+d and tables of confidence intervals and p-values, which can be inserted into
+d documents containing papers, presentations and web pages. The eclplot package
+d creates plots of estimates with confidence limits, and the listtex package
+d outputs a Stata data set in the form of table rows that can be inserted into
+d a plain TeX, LaTeX, HTML or word processor table. To create Stata data sets
+d which can be input to eclplot or listtex, we use the packages parmest,
+d dsconcat, lincomest, sencode, tostring, ingap, reshape, descsave and factext,
+d all of which are available either on SSC or as part of official Stata.
+d
+d References
+d
+d Newson R. 2003. Confidence intervals and p-values for delivery to the end
+d user. The Stata Journal 3(3): 245-269.
+d
+d Author: Roger Newson
+d Distribution-date: 06 November 2003
+d
+f enduser.pdf
+e

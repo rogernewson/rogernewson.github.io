@@ -1,0 +1,18 @@
+v 2
+d crib9: Do-file templates for use in Stata Version 9
+d These files are used as templates (or cribs) to create do-files in
+d Stata Version 9 for use with the dolog package. They can be inserted
+d into the Stata do-file editor, or other text editors, and edited and
+d saved with other names, and then executed using the dolog package.
+d The file crib9.do is used to create semicolon-delimited do-files,
+d and the file crcrib9.do is used to create carriage-return-delimited
+d do-files. These templates are written assuming that the user has
+d already installed some of the packages by Roger Newson, downloadable
+d from SSC or from this website.
+d
+d Author: Roger Newson
+d Distribution-date: 21august2018
+d Stata-version: 9
+f crib9.do
+f crcrib9.do
+e

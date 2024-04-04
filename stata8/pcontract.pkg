@@ -1,0 +1,17 @@
+v 2
+d pcontract: Make a data set of frequencies and percentages
+d pcontract is an extended version of contract. It replaces the dataset in
+d memory with a new dataset consisting of all combinations of values of a list
+d of variables that exist in the existing data set and new variables containing
+d the frequency and percentage of each combination, and, optionally, the
+d cumulative frequency and percentage of each combination. pcontract is now
+d superseded by the xcontract package, and users are therefore advised to
+d download xcontract rather than pcontract.
+d
+d Author: Roger Newson
+d Distribution-Date: 31july2003
+d Stata-Version: 8
+d Superseded-by: xcontract
+f pcontract.ado
+f pcontract.hlp
+e

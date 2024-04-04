@@ -1,0 +1,17 @@
+d htmltit: Generate a document title variable for a HTML filename variable
+d htmltit inputs a string variable, assumed to contain the file names (or
+d paths) of existing readable HTML documents, and outputs a new string
+d variable, to contain the corresponding HTML document titles, if they can
+d be found in the documents.  htmltit is designed for use by users who want
+d to create HTML documents containing HTML tables to index (and link to)
+d other HTML documents.  This can be done using the SSC packages htmlutil
+d (to generate the HTML documents}, xdir (to generate datasets with 1
+d observation for each of a list of files which may be HTML documents), and
+d listtab (to generate the HTML tables).
+d
+d Author: Roger Newson
+d Distribution-Date: 01april2017
+d Stata-Version: 14
+f htmltit.ado
+f htmltit.sthlp
+e

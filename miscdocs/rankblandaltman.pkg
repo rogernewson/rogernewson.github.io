@@ -1,0 +1,12 @@
+v 2
+d rankblandaltman: Rank parameters for Bland-Altman plots
+d Rank parameters are defined for use with Bland-Altman plots,
+d to measure the 3 principal components of disagreement. These
+d components are discordance, bias, and scale differential.
+d They are demonstrated using the somersd package on a dataset
+d of student exam scripts, which were double-marked.
+d
+d Author: Roger Newson
+d Distribution-date: 10 January 2019
+f ./rankblandaltman.pdf
+e

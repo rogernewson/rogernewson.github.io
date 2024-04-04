@@ -1,0 +1,24 @@
+v 2
+d powercal: Generalized power calculations saving results in variables
+d powercal performs general power calculations, storing the result in a new
+d variable, which can be plotted and/or listed. It can calculate any of 5
+d quantities, namely number of sampling units, power, alpha (significance
+d level), delta (difference in parameter value to be detected), or the
+d standard deviation (SD) of the influence function, defined as the standard
+d error multiplied by the square root of the sample number. Each of these 5
+d quantities is calculated using user-defined expressions for the other 4,
+d usually involving existing variables supplied by the user. powercal has
+d 2 advantages over sampsi. First, it performs general power calculations,
+d not only power calculations for special cases such as differences between
+d means and proportions. Second, it stores the results in variables, which
+d the user can list and/or plot on graphs. This package has an on-line
+d manual powercal.pdf containing the Methods and Formulas and details on
+d the Examples in the help file.
+d
+d Author: Roger Newson
+d Distribution-Date: 26march2012
+d Stata-Version: 10
+f powercal.ado
+f powercal.sthlp
+f powercal.pdf
+e

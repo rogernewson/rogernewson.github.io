@@ -1,0 +1,12 @@
+d fvprevar: Version of fvrevar generating permanent result variables
+d fvprevar is an extended version of fvrevar, which returns the
+d generated result variables as permanent variables (instead of
+d as temporary variables), with names prefixed with a
+d user-specified stub.
+d
+d Author: Roger Newson
+d Distribution-Date: 09february2011
+d Stata-Version: 11
+f fvprevar.ado
+f fvprevar.sthlp
+e

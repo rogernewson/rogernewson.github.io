@@ -1,0 +1,15 @@
+v 2
+d capnoi: Stata tip 127: Use capture noisily groups
+d This is a post-publication update of a Stata Tip in The Stata Journal
+d (Newson, 2017), describing the use of capture noisily groups.
+d
+d References
+d
+d Newson R. 2017. Stata tip 127: Use capture noisily groups.
+d The Stata Journal 2017; 17(2): 511-514.
+d
+d Author: Roger Newson
+d Distribution-date: 25 July 2017
+d
+f capnoi.pdf
+e

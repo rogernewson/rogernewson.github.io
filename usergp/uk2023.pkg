@@ -1,0 +1,19 @@
+v 2
+d uk2023: Customized Markdown and .docx tables using listtab and docxtab
+d Statisticians make their living producing tables (and plots). We present
+d an update of a general family of methods for making customized tables,
+d called the DCRIL path (decode, characterize, reshape, insert, list),
+d with customized table cells (using the package sdecode), customized
+d column attributes (using the package chardef), customized column labels
+d (using the package xrewide), and/or customized inserted gap-row labels
+d (using the package insingap), and listing these tables to automatically-
+d generated documents. This demonstration uses the package listtab to list
+d Markdown tables for browser-ready HTML documents, which Stata users like
+d to generate, and the package docxtab to list .docx tables for printer-
+d ready .docx documents, which our superiors like us to generate.
+d
+d Author: Roger Newson
+d Distribution-date: 10 September 2023
+f ./uk2023/newson_ohp1.pdf
+f ./uk2023/newson_examples.zip
+e

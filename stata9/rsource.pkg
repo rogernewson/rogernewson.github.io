@@ -1,0 +1,16 @@
+d rsource: Run R from inside Stata using an R source file
+d The program rsource runs the Rterm command of R from inside Stata,
+d using an R source file, if R is installed on the user's system.
+d The output and/or the source file can be listed to the Stata log file
+d and/or to the Stata Results window in an interactive Stata session.
+d If the R directory on the user's system is not on the user's default
+d path, then the user must set the global macro Rterm_path to contain
+d the path for the Rterm command, possibly in the profile.do file
+d (see on-line help for details).
+d
+d Author: Roger Newson
+d Distribution-Date: 13june2007
+d Stata-Version: 9
+f rsource.ado
+f rsource.hlp
+e

@@ -1,0 +1,26 @@
+d bspline: Create a basis of B-splines or reference splines
+d The bspline package contains the programs bspline and frencurv, which
+d generate bases of splines in an X-variable for inclusion in the
+d design matrix of a regression model. The program bspline generates a
+d basis of Schoenberg B-splines. The program frencurv ("French curve")
+d generates a basis of reference splines, spanning the same spline
+d space as the corresponding B-splines, but the fitted parameters
+d in the regression model corresponding to the reference splines are
+d simply values of the spline at reference points on the X-axis.
+d These parameters are easy for non-mathematicians to understand.
+d The user is allowed to specify the power of the spline, and also the
+d positions of the knots and/or reference points.
+d Full documentation of the program (including Methods and Formulas)
+d can be found in the ancillary file bspline.pdf, which can be viewed
+d using the Adobe Acrobat Reader.
+d 
+d Author: Roger Newson
+d Distribution-date: 21 December 2004
+d Stata-version: 6
+d
+f bspline.ado
+f bspline.hlp
+f frencurv.ado
+f frencurv.hlp
+f bspline.pdf
+e

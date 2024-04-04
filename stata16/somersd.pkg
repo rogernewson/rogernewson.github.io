@@ -1,0 +1,58 @@
+d somersd: Kendall's tau-a, Somers' D and percentile slopes
+d The somersd package contains the programs somersd, censlope and cendif,
+d which calculate confidence intervals for a range of parameters behind
+d rank or "nonparametric" statistics. somersd calculates confidence
+d intervals for generalized Kendall's tau-a or Somers' D parameters,
+d and stores the estimates and their covariance matrix as estimation results.
+d It can be used on left-censored, right-censored, clustered and/or
+d stratified data. censlope is an extended version of somersd, which also
+d calculates confidence limits for the generalized Theil-Sen median slopes
+d (or other percentile slopes) corresponding to the version of Somers' D
+d or Kendall's tau-a estimated. cendif is an easy-to-use program to
+d calculate confidence intervals for Hodges-Lehmann median differences
+d (or other percentile differences) between two groups. The somersd package
+d can be used to calculate confidence intervals for a wide range of
+d rank-based parameters, which are special cases of Kendall's tau-a,
+d Somers' D or percentile slopes. These parameters include differences
+d between proportions, Harrell's c index, areas under receiver operating
+d characteristic (ROC) curves, differences between Harrell's c indices or
+d ROC areas, Gini coefficients, population attributable risks, median
+d differences, ratios, slopes and per-unit ratios, and the parameters
+d behind the sign test and the Wilcoxon-Mann-Whitney or Breslow-Gehan
+d ranksum tests. Full documentation of the programs (including methods and
+d formulas) can be found in the manual files somersd.pdf, censlope.pdf and
+d cendif.pdf, which can be viewed using the Adobe Acrobat Reader.
+d
+d Author: Roger Newson
+d Distribution-date: 16april2020
+d Stata-version: 16.0
+d
+f cendif.ado
+f censlope.ado
+f somers_p.ado
+f somersd.ado
+f _bcsf_bisect.mata
+f _bcsf_bracketing.mata
+f _bcsf_regula.mata
+f _bcsf_ridders.mata
+f _blncdtree.mata
+f _somdtransf.mata
+f _u2jackpseud.mata
+f _v2jackpseud.mata
+f blncdtree.mata
+f tidot.mata
+f tidottree.mata
+f lsomersd.mlib
+f cendif.pdf
+f censlope.pdf
+f somersd.pdf
+f cendif.sthlp
+f censlope.sthlp
+f censlope_iteration.sthlp
+f mf_bcsf_bracketing.sthlp
+f mf_blncdtree.sthlp
+f mf_somdtransf.sthlp
+f mf_u2jackpseud.sthlp
+f somersd.sthlp
+f somersd_mata.sthlp
+e

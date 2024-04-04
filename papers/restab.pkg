@@ -1,0 +1,25 @@
+v 2
+d restab: From resultssets to resultstables in Stata
+d This is a pre-publication draft of a Stata Journal paper
+d (Newson, 2012). The paper describes the listtab package,
+d and other packages, used with listtab. The listtab package
+d supersedes listtex. It inputs a list of variables, and
+d outputs them as a table in one of a range of formats,
+d including TeX, LaTeX, HTML, Microsoft Rich Text Format (RTF),
+d or possibly future XML–based formats. It works with a team of
+d 4 other packages, sdecode, chardef, xrewide and ingap.
+d Together, these packages form a general toolkit to convert
+d Stata datasets (or resultssets) to tables, complete with row
+d labels and column labels. This article uses data from the
+d Avon Longitudinal Study of Parents and Children (ALSPAC),
+d based at Bristol University, UK.
+d
+d References
+d
+d Newson R. B. From resultssets to resultstables in Stata.
+d The Stata Journal 2012; 12(2): 191–213.
+d
+d Author: Roger Newson
+d Distribution-date: 27june2012
+f restab.pdf
+e

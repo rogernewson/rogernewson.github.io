@@ -1,0 +1,181 @@
+.-
+help for ^cendif^                                   (STB-58: snp16; Roger Newson)
+.-
+
+Robust confidence intervals for median and other percentile differences
+-----------------------------------------------------------------------
+
+	^cendif^    depvar [^using^ filename] [weight] [^if^ exp] [^in^ range],
+			^by(^groupvar^)^ [^ce^ntile^(^numlist^)^ ^l^evel^(^#^)^ ^ef^orm
+                        ^cl^uster^(^varname^)^ ^td^ist ^tr^ansf^(^transformation_name^)^
+                        ^sa^ving^(^filename[^,replace^]^)^ no^hold^ ]
+
+where transformation_name is one of
+
+	^iden^ | ^z^ | ^asin^
+
+^fweights^, ^iweights^ and ^pweights^ are allowed; see help for @weights@.
+
+
+Description
+-----------
+
+^cendif^ calculates confidence intervals for median differences, and other
+percentile differences, between values of a Y-variable in depvar for a pair
+of observations chosen at random from two groups A and B, defined by the
+groupvar in the ^by^ option. These confidence intervals are robust to the
+possibility that the population distributions in the two groups are different
+in ways other than location. This might happen if, for example, the two
+populations had different variances. For positive-valued variables, ^cendif^
+can be used to calculate confidence intervals for median ratios or other
+percentile ratios. ^cendif^ is part of the @somersd@ package, and requires the
+@somersd@ program in order to work.
+
+
+Options for use with ^cendif^
+---------------------------
+
+^by(^groupvar^)^ is not optional. It specifies the name of the grouping
+    variable. This variable must have exactly two possible values. The lower
+    value indicates Group A, and the higher value indicates Group B.
+
+^centile(^numlist^)^ specifies a list of percentile differences to be reported,
+    and defaults to ^centile(50)^ (median only) if not specified. Specifying
+    ^centile(25 50 75)^ will produce the 25th, 50th and 75th percentile
+    differences.
+
+^level(^#^)^ specifies the confidence level (percent) for confidence intervals;
+    see help for @level@.
+
+^eform^ specifies that exponentiated percentile differences are to be given. This
+    option is used if depvar is the log of a positive-valued variable. In this
+    case, confidence intervals are calculated for percentile ratios between
+    values of the original positive variable, instead of for percentile
+    differences.
+
+^cluster(^varname^)^ specifies the variable which defines sampling clusters. If
+    ^cluster^ is defined, then the percentiles are calculated using the
+    between-cluster Somers' D, and the confidence intervals are calculated
+    assuming that the data are a sample of clusters from a population of
+    clusters, rather than a sample of observations from a population of
+    observations.
+
+^tdist^ specifies that the standardized Somers' D estimates are assumed to be
+    sampled from a t-distribution with n-1 degrees of freedom, where n is the
+    number of clusters, or the number of observations if ^cluster^ is not
+    specified.
+
+^transf(^transformation_name^)^ specifies that the Somers' D estimates are to be
+    transformed, defining a standard error for the transformed population
+    value, from which the confidence limits for the percentile differences are
+    calculated. ^z^ (the default) specifies Fisher's z (the hyperbolic
+    arctangent), ^asin^ specifies Daniels' arcsine, and ^iden^ specifies identity
+    or untransformed.
+
+^saving(^filename[^,replace^]^)^ specifies a data set, to be created, whose
+    observations correspond to the observed values of differences between a
+    value of depvar in Group A and a value of depvar in Group B. ^replace^
+    instructs Stata to replace any existing data set of the same name. The
+    saved data set can then be re-used if ^cendif^ is called later, with ^using^,
+    to save the large amounts of processing time used to calculate the set of
+    observed differences. The ^saving^ option and the ^using^ utility are provided
+    mainly for programmers to use, at their own risk.
+
+^nohold^ indicates that any existing estimation results are to be overwritten
+    with a new set of estimation results, for the use of programmers. In
+    default, any existing estimation results are restored after execution of
+    ^cendif^.
+
+
+Remarks
+-------
+
+^cendif^ is part of the @somersd@ package, and uses the program @somersd@,
+which calculates confidence intervals for Somers' D; see help for @somersd@
+if installed. A 100q'th percentile difference is defined as a value of theta
+satisfying the equation
+
+^D[ystar(theta)|group_A]=1-2q^
+
+where D[.|.] represents Somers' D, group_A is an indicator variable for
+membership of Group A instead of Group B, and ystar(theta) is a variable
+equal to depvar for observations in Group A and equal to depvar+theta for
+observations in Group B. If q=0.5, then the value of theta is the
+Hodges-Lehmann median difference. In this case, ^cendif y, by(group)^ gives the
+same median difference as ^npshift y, by(group)^, although the confidence limits
+may be different. (The program @npshift@ calculates confidence intervals for
+the Hodges-Lehmann minimum difference, assuming that the two group
+distributions differ only in location. It is available from Stata Technical
+Bulletin (STB) in STB-52: sg123.)
+
+In the case of extreme percentiles and/or very small sample numbers, ^cendif^
+sometimes calculates infinite confidence limits. These are represented by the
+"magic numbers" +/-1E+300, because Stata does not allow missing values to be
+stored in matrices.
+
+With very large sample numbers, ^cendif^ may be slow, as it must calculate
+every possible paired difference between values in the 2 samples in order to
+calculate the median difference. A possible remedy is to reduce the number of
+possible differences by grouping the ^Y^-variable. For instance, if ^income^
+is a measure of income in dollars, and ^group^ is a binary variable indicating
+membership of one of 2 groups, then the user might type
+
+ . ^gene incomegp=100*(int(income/100)+1)^
+ . ^cendif incomegp, by(group)^
+
+to calculate the median difference in income between the 2 groups to the
+nearest 100 dollars. This would probably take less time than if the user typed
+
+ . ^cendif income, by(group)^
+
+Full documentation of the @somersd@ package (including methods and formulas)
+is provided in the files ^somersd.pdf^ and ^cendif.pdf^, which are distributed
+with the @somersd@ package as ancillary files (see help for @net@). They can be
+viewed using the Adobe Acrobat Reader, which can be downloaded from
+
+^http://www.adobe.com/products/acrobat/readermain.html^
+
+For a comprehensive review of Kendall's tau-a, Somers' D and median
+differences, see Newson (2002).
+
+
+Examples
+--------
+
+ . ^cendif weight,by(foreign)^
+
+ . ^cendif weight,by(foreign) ce(20(10)80)^
+
+ . ^gene logwt=log(weight)^
+ . ^cendif logwt,by(foreign) ce(20(10)80) eform^
+
+ . ^cendif mpg,by(foreign) saving(trash1,replace)^
+ . ^cendif mpg using trash1,by(foreign) tr(asin) tdist^
+
+
+Author
+------
+
+Roger Newson, King's College, London, UK.
+email: ^roger.newson@@kcl.ac.uk^
+
+
+References
+----------
+
+Newson R. 2002. Parameters behind "nonparametric" statistics: Kendall's tau,
+Somers' D and median differences. ^The Stata Journal^ 2(1): 45-64.
+A pre-publication draft of this paper can be downloaded from my website.
+In net-aware Stata, type
+^net from http://www.kcl-phs.org.uk/rogernewson/papers^
+to find how to do this.
+
+
+Also see
+--------
+
+ Manual:  ^[R] spearman^, ^[R] signrank^, ^[R] centile^
+    STB:  STB-52: sg123, STB-55: snp15, STB-57: snp15.1, STB-58: snp15.2,
+          STB-58: snp16; STB-61: snp15.3; STB-61: snp16.1.
+On-line:  help for @ranksum@, @ktau@
+          help for @somersd@, @cid@, @npshift@ if installed

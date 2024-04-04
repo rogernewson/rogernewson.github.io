@@ -1,0 +1,12 @@
+v 2
+d asy2con1: Asymptotic distributions of two-sample rank statistics
+d This document summarizes the asymptotic distributions of two-sample
+d rank statistics for continuous outcomes. The rank statistics discussed
+d are Somers' D, Harrell's c, Hodges-Lehmann percentile differences, and
+d differences between percentiles. It is not generally assumed that the
+d two samples are from equally variable subpopulations.
+d
+d Author: Roger Newson
+d Distribution-date: 27 April 2017
+f asy2con1.pdf
+e

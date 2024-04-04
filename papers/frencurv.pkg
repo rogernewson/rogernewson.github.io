@@ -1,0 +1,24 @@
+d frencurv: Splines parameterized by their values at reference points
+d This paper is the manual distributed with the bspline package (downloadable
+d from SSC). It is a post-publication update to Newson (2000). The bspline
+d package contains 3 programs, bspline, frencurv and flexcurv. The program
+d bspline creates a basis of Schoenberg B-splines of a user-defined power,
+d based on a user-defined set of knots on the X-axis. The program frencurv
+d creates a basis of reference splines spanning the same space, but with the
+d advantage that, if these reference splines are used in a design matrix,
+d then the corresponding parameters estimated are simply values of the spline
+d at a user-defined set of reference points on the X-axis. The program
+d flexcurv is an easy-to-use version of frencurv. The parameters estimated
+d using flexcurv and frencurv are easier to explain to a non-mathematical
+d reader, compared to most parameters corresponding to spline bases. Methods,
+d formulas and examples are given.
+d
+d References
+d
+d Newson R. 2000. B-splines and splines parameterized by their values at
+d reference points on the X-axis. Stata Technical Bulletin 57: 20-27.
+d 
+d Author: Roger Newson
+d Distribution-date: 17 August 2022
+f bspline.pdf
+e

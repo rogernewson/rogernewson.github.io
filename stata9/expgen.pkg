@@ -1,0 +1,20 @@
+d expgen: Duplicate observations and add generated variables
+d The program expgen is an extended version of expand. It replaces each
+d observation in the current dataset with multiple copies of the observation,
+d sorted in the order of the original observations. It can also generate new
+d variables, including a variable containing the sequential order of a
+d duplicate observation in the set of duplicate observations from the same
+d original observation (so that if the old observation has k duplicates, then
+d these duplicates are numbered from 1 to k in the new variable). expgen is
+d useful if the user has a dataset of repeated measures. For instance, in a
+d medical setting, the original dataset may contain one observation per
+d patient, and multiple variables containing repeated measures on the same
+d patient, and the user may want to expand the original dataset into a new
+d dataset, with one observation per repeated measure.
+d
+d Author: Roger Newson
+d Distribution-Date: 20may2007
+d Stata-Version: 9
+f expgen.ado
+f expgen.hlp
+e

@@ -1,0 +1,15 @@
+d varlabdef: Define a value label with values corresponding to variables
+d varlabdef creates (or extends) a value label, with one value
+d for each of a list of variables, and labels copied from the
+d variable labels, variable names, or other variable
+d attributes.  This value label may be re-used in output
+d datasets (or resultssets), with observations corresponding
+d to the variables.  Such output datasets may be created using
+d packages such as parmest, downloadable from SSC.
+d
+d Author: Roger Newson
+d Distribution-Date: 09april2009
+d Stata-Version: 10
+f varlabdef.ado
+f varlabdef.sthlp
+e

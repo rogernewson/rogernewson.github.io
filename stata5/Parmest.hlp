@@ -1,0 +1,89 @@
+.-
+help for ^parmest^
+.-
+
+Create new data set with 1 observation per parameter of most recent model
+-------------------------------------------------------------------------
+
+	^parmest^     [^,d^of^(#)^ ^l^abel ^ef^orm ^le^vel(#) ^fast^                     
+                       ^sa^ving^(^filename[,replace]^)^ no^re^store]
+
+Description
+-----------
+
+^parmest^ takes, as input, the parameters of the most recently fitted
+model, and their covariance matrix. It creates, as output, a new data
+set, with 1 observation per parameter, and variables corresponding to
+parameter names, estimates, standard errors, z- or t-test statistics,
+P-values and confidence limits. This data set may be saved to a file,
+retained in memory (overwriting the pre-existing data set), or both.
+
+Options for use with ^parmest^
+----------------------------
+
+^dof(^#^)^ specifies the degrees of freedom for t-distribution-based
+confidence limits. If ^dof^ is zero, then confidence limits are
+calculated using the standard normal distribution. If ^dof^ is absent,
+it is set to a default according to the last estimation results.
+
+^label^ indicates that a variable named label is to be generated in the
+new data set, containing the variable labels of variables corresponding
+to the parameter names, if such variables can be found in the existing
+data set.
+
+^eform^ indicates that the estimates and confidence limits are to be
+exponentiated, and the standard errors multiplied by the exponentiated
+estimates.
+
+^level(^#^)^ specifies the confidence level, in percent, for confidence
+limits. The default is ^level(95)^ or as set by ^set level^. (See
+^[U] Estimation and post-estimation commands^.)
+
+^fast^ specifies that ^parmest^ not go to extra work so that it can
+restore the original data should the user press Break. ^fast^ is
+intended for use by programmers.
+
+^sa^ving^(^filename[,replace]^)^ saves the output data set in a file.
+If ^replace^ is specified, and a file of that name already exists, then
+the old file is overwritten.
+
+no^re^store specifies whether or not the pre-existing data set is
+restored at the end of execution. This option is automatically set to
+^norestore^ if ^fast^ is specified or ^saving()^ is absent, otherwise it
+defaults to restoring the pre-existing data set.
+
+Remarks
+-------
+
+^parmest^  creates a new data set. This data set contains the
+character variables eq and parm, containing equation and parameter names,
+respectively. It also contains numeric variables estimate, stderr, z
+(or t), p, min^xx^ and max^xx^ where ^xx^ is the value of the ^level^
+option. These variables contain parameter estimates, standard errors,
+z-test (or t-test) statistics, P-values, and confidence limits,
+respectively. The P-values test the hypothesis that the appropriate
+parameter is zero, or one if ^eform^ is specified.
+
+Examples
+--------
+
+ . ^regr price mpg weight,robust^
+ . ^parmest, fast^
+
+ . ^glm mpg foreign,family(gamma) link(identity)^
+ . ^parmest, dof(70)^
+
+ . ^logit foreign mpg^
+ . ^parmest, label eform saving(parms1.dta)^
+
+
+Author
+------
+
+Roger Newson, Imperial College School of Medicine, London, UK.
+Email: ^r.newson@@ic.ac.uk^
+
+Also see
+--------
+
+ Manual:  ^[U] Estimation and post-estimation commands

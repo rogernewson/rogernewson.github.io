@@ -1,0 +1,22 @@
+d xrewide: Extended versions of reshape wide and reshape long
+d The xrewide package contains 2 commands, xrewide and xrelong.
+d The xrewide commmand is an extended version of reshape wide.  It
+d saves results in variable characteristics, in addition to the
+d dataset characteristics saved by reshape.  This is done using
+d additional options for assigning the values and/or value labels
+d of the j-variable to characteristics of the corresponding
+d generated output variables.  These characteristics can be useful
+d for defining column headings if the reshaped output dataset is
+d output to a table using the listtab package, which can be
+d downloaded from SSC.  The xrelong commmand is an extended version
+d of reshape long, with the option of assigning an existing value
+d label to the generated variable specified by the j() option.
+d
+d Author: Roger Newson
+d Distribution-Date: 07november2012
+d Stata-Version: 10
+f xrelong.ado
+f xrewide.ado
+f xrelong.sthlp
+f xrewide.sthlp
+e

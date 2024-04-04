@@ -1,0 +1,28 @@
+d rtfutil: Utilities for writing Rich Text Format (RTF) files
+d The rtfutil package is a suite of file handling utilities for
+d producing Rich Text Format (RTF) files in Stata, possibly
+d containing plots and tables.  These RTF files can then be
+d opened by Microsoft Word, and possibly by alternative free
+d word processors.  The plots can be included by inserting, as
+d linked objects, graphics files that might be produced by the
+d graph export command in Stata.  The tables can be included by
+d using the listtab command, downloadable from SSC, with the
+d handle() option.
+d
+d Author: Roger Newson
+d Distribution-Date: 24november2010
+d Stata-Version: 10
+f rtfopen.ado
+f rtflink.ado
+f rtfhyper.ado
+f rtfcumlist.ado
+f rtfrstyle.ado
+f rtfclose.ado
+f rtfutil.sthlp
+f rtfopen.sthlp
+f rtflink.sthlp
+f rtfhyper.sthlp
+f rtfcumlist.sthlp
+f rtfrstyle.sthlp
+f rtfclose.sthlp
+e

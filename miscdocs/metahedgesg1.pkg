@@ -1,0 +1,15 @@
+v 2
+d metahedgesg1: Estimating and pooling Hedges' g in a meta-analysis
+d The parameter Hedges' g was advocated by Hedges as a measure of
+d effect of a treatment, to be derived from a 2-sample comparison
+d between treated and untreated subjects, which can be compared, and
+d pooled in a meta-analysis, between studies where different outcomes
+d are measured for the same treatment comparison. Having done a
+d meta-analysis of Hedges' g parameters on a messy set of journal
+d articles, the current author would like to share some of the
+d formulas used with other meta-analysts for future reference.
+d
+d Author: Roger Newson
+d Distribution-date: 01 May 2020
+f metahedgesg1.pdf
+e

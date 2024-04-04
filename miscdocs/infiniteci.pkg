@@ -1,0 +1,12 @@
+v 2
+d infiniteci: The pure mathematics behind infinite confidence intervals for percentiles
+d Applied statisticians frequently have reasons for calculating
+d confidence intervals with infinite lower and upper limits,
+d especially for percentiles and for percentile differences,
+d ratios and slopes. This document gives a pure mathematical
+d justification for this practice.
+d
+d Author: Roger Newson
+d Distribution-date: 05 January 2019
+f ./infiniteci.pdf
+e

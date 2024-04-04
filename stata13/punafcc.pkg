@@ -1,0 +1,24 @@
+v 3
+d punafcc: Population attributable fractions for case-control and survival studies
+d punafcc calculates confidence intervals for population attributable
+d and unattributable fractions in case-control or survival studies.
+d punafcc can be used after an estimation command whose parameters are
+d interpreted as log rate ratios, such as logit or logistic for
+d case-control data, or stcox for survival data.  It estimates the log
+d of the mean rate ratio, in cases or deaths, between 2 scenarios, a
+d baseline scenario ("Scenario 0") and a fantasy scenario ("Scenario
+d 1"), in which one or more exposure variables are assumed to be set
+d to particular values (typically zero), and any other predictor
+d variables in the model are assumed to remain the same.  This ratio
+d is known as the population unattributable fraction (PUF), and is
+d subtracted from 1 to derive the population attributable fraction
+d (PAF), defined as the proportion of the cases or deaths attributable
+d to living in Scenario 0 instead of Scenario 1.
+d
+d Author: Roger Newson
+d Distribution-Date: 25december2013
+d Stata-Version: 13
+f punafcc.ado
+f punafcc_p.ado
+f punafcc.sthlp
+e

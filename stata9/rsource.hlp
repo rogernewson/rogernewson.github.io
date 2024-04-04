@@ -1,0 +1,165 @@
+{smcl}
+{hline}
+help for {cmd:rsource}{right:(Roger Newson)}
+{hline}
+
+{title:Run R from inside Stata using an R source file}
+
+{p 8 21 2}
+{cmd:rsource}
+{helpb using} {it:R_source_filename} [ {cmd:,}
+{cmd:no}{cmdab:lo:utput} {cmdab:ls:ource}
+{cmdab:rp:ath}{cmd:(}{it:R_pathname}{cmd:)}
+{cmdab:ro:ptions}{cmd:(}{it:R_options}{cmd:)}
+]
+
+{pstd}
+where {it:R_source_filename} is the name of a file containing R source code,
+{it:R_pathname} is the name of the path of the R command to be used under the user's system,
+and {it:R_options} is a set of options for the R command.
+
+
+{title:Description}
+
+{pstd}
+{cmd:rsource} runs an R source file in batch mode from within Stata,
+optionally listing the R output and/or the R source file
+to the Stata Results window and/or the Stata {help log:log file}.
+This allows the user to call R at a point in the execution of a Stata program
+to input data files previously created by Stata
+and/or to create output data files for later input by Stata.
+The R software system must be installed on the user's system if the {cmd:rsource} package is to work.
+
+
+{title:Options for use with {cmd:rsource}}
+
+{p 4 8 2}
+{cmd:noloutput} specifies that the output from the R command is not listed
+to the Stata Results window and/or the Stata {help log:log file}.
+If {cmd:noloutput} is not specified,
+then the output from the R command is listed.
+
+{p 4 8 2}
+{cmd:lsource} specifies that the R source file specified by the {helpb using} modifier is listed
+to the Stata Results window and/or the Stata {help log:log file}.
+If {cmd:lsource()} is specified and {cmd:noloutput} is not specified,
+then the R source file is listed before the output from the R command.
+
+{p 4 8 2}
+{cmd:rpath(}{it:R_pathname}{cmd:)} specifies a path name for invoking the R command.
+If {cmd:rpath()} is not specified,
+then it is set to the value of the {help macro:global macro} {hi:Rterm_path},
+if that macro has been specified,
+and to {hi:"Rterm.exe"} otherwise.
+(See {hi:{help rsource##rsource_technote:Technical note}} below.)
+
+{p 4 8 2}
+{cmd:roptions(}{it:R_options}{cmd:)} specifies a set of options for the R command.
+If {cmd:roptions()} is not specified,
+then it is set to the value of the {help macro:global macro} {hi:Rterm_options},
+if that macro has been specified,
+and to the empty string {hi:""} otherwise.
+(See {hi:{help rsource##rsource_technote:Technical note}} below.)
+
+
+{title:Remarks}
+
+{pstd}
+The R statistical software system can be downloaded from {browse "http://www.r-project.org/":the R Project Website}.
+It is complementary to Stata in its capabilities, as it contains implementations of many methods unavailable in Stata,
+but does not have as many easy-to-use data management tools as Stata.
+It may therefore be useful to be able to call R in batch mode from within a Stata do-file.
+R can read Stata dataset files using the {cmd:read.dta} and {cmd:write.dta} modules of the {cmd:foreign} package.
+Alternatively, it is possible to translate between Stata and R datasets using Version 9 of {browse "http://www.stattransfer.com/":Stat/Transfer},
+which can be accessed from within Stata using the {helpb stcmd} package, downloadable from {help ssc:SSC}.
+For more about import and export of data to and from R, refer to {it:R Data Import/Export}
+(see {hi:{help rsource##rsource_references:References}})
+
+
+{marker rsource_technote}{...}
+{title:Technical note}
+
+{pstd}
+{cmd:rsource} works by running the {cmd:Rterm.exe} program of R.
+The assumed R program path is displayed by {cmd:rsource} before any other output,
+and is the assumed name and address of the R program run by {cmd:rsource}.
+If the user does not specify the {cmd:rpath()} and {cmd:roptions()} options,
+then {cmd:rsource} sets defaults.
+In the case of {cmd:rpath()}, the default is the value of the {help macro:global macro} {hi:Rterm_path},
+if that macro has been specified,
+and is {hi:"Rterm.exe"} otherwise.
+In the case of {cmd:roptions()}, the default is the value of the {help macro:global macro} {hi:Rterm_options},
+if that macro has been specified,
+and is the empty string {hi:""} otherwise.
+Therefore, the user should either set the system default file search path to include the directory containing the current version of R,
+or set the {help macro:global macros} {hi:Rterm_path} and {hi:Rterm_options} to sensible default values before using {cmd:rsource}.
+
+{pstd}
+The setting of default values for {hi:Rterm_path} and {hi:Rterm_options}
+is probably done most easily by inserting two lines into the user's Stata {help profile:profile do-file}
+to initialize these {help macro:global macros} every time the user starts Stata.
+For instance, under Windows, if the user's {help profile:profile do-file} contains the lines
+
+{p 8 12 2}{cmd:. global Rterm_path `"c:\r\R-2.5.0\bin\Rterm.exe"'}{p_end}
+{p 8 12 2}{cmd:. global Rterm_options `"--vanilla"'}{p_end}
+
+{pstd}
+and the {cmd:Rterm.exe} program of R, in the user's system, has path {hi:c:\r\R-2.5.0\bin\Rterm.exe},
+then the user does not need to specify the {cmd:rpath()} and {cmd:roptions()} options of {cmd:rsource},
+because the R path is then set to its correct value,
+and the R options are set to the sensible default value {hi:--vanilla}.
+Other possible R options, which can be set using {cmd:roptions()},
+are listed in Appendix B of {it:An Introduction to R}
+(see {hi:{help rsource##rsource_references:References}}).
+
+{pstd}
+Note that, when the user downloads a new version of R, the installation process creates a new directory,
+containing the new version of {hi:Rterm.exe}.
+Therefore, when R is upgraded,
+the user should either change the system default file search path,
+or change the line of code in the {help profile:profile do-file} setting the {help macro:global macro} {hi:Rterm_path}.
+
+
+{title:Examples}
+
+{p 8 12 2}{cmd:. rsource using nitz2.R}{p_end}
+
+{p 8 12 2}{cmd:. rsource using nitz2.R, lsource}{p_end}
+
+{p 8 12 2}{cmd:. rsource using nitz2.R, noloutput roptions(--slave)}{p_end}
+
+
+{title:Author}
+
+{pstd}
+Roger Newson, National Heart and Lung Institute, Imperial College London, UK.{break}
+Email: {browse "mailto:r.newson@imperial.ac.uk":r.newson@imperial.ac.uk}
+
+
+{marker rsource_references}{...}
+{title:References}
+
+{phang}
+Venables W. N., D. M. Smith, and the R Development Core Team.
+{it:An Introduction to R}.
+Downloadable from
+{browse "http://www.r-project.org/":the R Project Website}.
+
+{phang}
+The R Development Core Team.
+{it:R Data Import/Export}.
+Downloadable from
+{browse "http://www.r-project.org/":the R Project Website}.
+
+
+{title:Also see}
+
+{p 4 13 2}
+{bind: }Manual: {hi:[GSW] A.7 Executing commands every time Stata is started},
+{hi:[GSM] A.7 Executing commands every time Stata is started},
+{hi:[GSU] A.7 Executing commands every time Stata is started}
+{p_end}
+{p 4 13 2}
+On-line: help for {help profile}, {help profilew}, {help profilem}, {help profileu}{break}
+         help for {helpb stcmd} if installed
+{p_end}

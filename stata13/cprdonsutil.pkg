@@ -1,0 +1,21 @@
+d cprdonsutil: Inputting CPRD ONS-linkage datasets into Stata
+d The cprdonsutil package is designed for use with the cprdutil
+d package, which creates Stata datasets from text data files produced
+d by the Clinical Practice Research Datalink (CPRD).  cprdonsutil is a
+d suite of utility programs for inputting linkage text data files
+d produced by CPRD to contain data on the same patients from the United
+d Kingdom (UK) Office of National Statistics (ONS), and creating
+d equivalent Stata datasets in the memory.  Currently, there is one
+d program in the suite, which imports into Stata a dataset type
+d produced by a CPRD ONS linkage retrieval, with 1 observation for each
+d of a set of patients on which ONS collects death data.  cprdonsutil
+d uses the SSC packages keyby, chardef, and lablist, which need to be
+d installed for cprdonsutil to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 25january2019
+d Stata-Version: 13
+f cprdons_death_patient.ado
+f cprdons_death_patient.sthlp
+f cprdonsutil.sthlp
+e

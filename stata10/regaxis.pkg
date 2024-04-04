@@ -1,0 +1,20 @@
+v 3
+d regaxis: Regular linear and logarithmic axis scales, ranges and tick lists
+d The regaxis package contains 2 programs, named regaxis and logaxis.
+d regaxis generates a regular linear axis range and tick list for a list of
+d variables and/or numbers to be included in the axis range. logaxis generates
+d a regular logarithmic axis range and tick list for a list of variables and/or
+d numbers to be included in the axis range.  Both programs can output the
+d elements of the axis range and/or tick list to be stored in local and/or
+d global macros, which can then be used in Stata graphics commands as axis
+d options and suboptions, such as the the range() suboption of the xscale() and
+d yscale() options, or the xlabel() ylabel(), xtick() and ytick() options.
+d
+d Author: Roger Newson
+d Distribution-Date: 22april2016
+d Stata-Version: 10
+f regaxis.ado
+f regaxis.sthlp
+f logaxis.ado
+f logaxis.sthlp
+e

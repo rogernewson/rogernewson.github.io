@@ -1,0 +1,213 @@
+.-
+help for ^parmest^ and ^parmby^        (STB-49: dm65; STB-58: dm65.1; Roger Newson)
+.-
+
+
+Create new data set with 1 observation per parameter of most recent model
+-------------------------------------------------------------------------
+
+	^parmest^     [ ^,d^of^(#)^ ^l^abel ^ef^orm ^le^vel(numlist) ^fast^
+                       ^sa^ving^(^filename[,replace]^)^ no^re^store
+                       ^em^ac(name_list) ^es^cal(name_list) ^ev^ec(name_list)
+                       ^idn^um^(^#^)^ ^ids^tr(^(^string^)^
+                       ^fl^ist^(^global_macro_name^)^ _
+                       ^ren^ame(oldvarname_1 newvarname1 ... oldvarname_n newvarname_n)
+                      ]
+
+        ^parmby^ ^"^command^"^ [ ^,by(^varlist^)^ parmest_options ]
+
+where command is a Stata estimation command.
+
+
+Description
+-----------
+
+^parmest^ takes, as input, the parameters of the most recently fitted model,
+and their covariance matrix. It creates, as output, a new data set, with
+1 observation per parameter, and variables corresponding to parameter names,
+estimates, standard errors, z- or t-test statistics, P-values and confidence
+limits. This data set may be saved to a file, retained in memory (overwriting
+the pre-existing data set), or both. ^parmby^ executes a command for each
+by-group specified by the by-variables, and then creates an output data set
+with one observation per parameter of the model in each by-group for which the
+command executed successfully, and all the variables in the ^parmest^ output
+data set, together with the by-variables. ^parmby^ works by calling ^parmest^,
+and therefore should not be downloaded without ^parmest^.
+
+
+Options for use with ^parmest^ and ^parmby^
+---------------------------------------
+
+^dof(^#^)^ specifies the degrees of freedom for t-distribution-based confidence
+    limits. If ^dof^ is zero, then confidence limits are calculated using the
+    standard normal distribution. If ^dof^ is absent, it is set to a default
+    according to the last estimation results.
+
+^label^ indicates that a variable named label is to be generated in the new data
+    set, containing the variable labels of variables corresponding to the
+    parameter names, if such variables can be found in the existing data set.
+
+^eform^ indicates that the estimates and confidence limits are to be
+    exponentiated, and the standard errors multiplied by the exponentiated
+    estimates.
+
+^level(^numlist^)^ specifies the confidence levels, in percent, for confidence limits.
+    These levels must be integers. For each level ^xx^, ^parmest^ calculates a lower
+    ^xx^ percent confidence limit with the default name min^xx^, and an upper ^xx^ percent
+    confidence limit with the default name max^xx^. The default is ^level(95)^ or
+    another single number as set by ^set level^. (See ^[U] Estimation and post-estimation
+    commands^.)
+
+^fast^ specifies that ^parmest^ or ^parmby^ will not go to extra work so that
+    it can restore the original data should the user press Break. ^fast^ is
+    intended for use by programmers.
+
+^saving(^filename[,replace]^)^ saves the output data set in a file. If ^replace^
+    is specified, and a file of that name already exists, then the old file is
+    overwritten.
+
+^norestore^ specifies whether or not the pre-existing data set is restored at the
+    end of execution. This option is automatically set to ^norestore^ if ^fast^ is
+    specified or ^saving()^ is absent, otherwise it defaults to restoring the
+    pre-existing data set.
+
+^emac(^name_list^)^ specifies a list of names of macro estimation results to be
+    stored as additional string variables in the output data set. These variables
+    will be named em_1, ..., em_^yy^, in the order in which they are specified in
+    the name_list. Their values will be the values of the corresponding macro
+    estimation results, truncated to a length of 80 characters if necessary.
+
+^escal(^name_list^)^ specifies a list of names of scalar estimation results to be
+    stored as additional numeric variables in the output data set. These variables
+    will be named es_1, ..., es_^yy^, in the order in which they are specified in
+    the name_list. Their values will be the values of the corresponding scalar
+    estimation results.
+
+^evec(^name_list^)^ specifies a list of names of matrix estimation results to be
+    stored as additional numeric variables in the output data set. These variables
+    will be named ev_1, ..., ev_^yy^, in the order in which they are specified in
+    the name_list. Their values will be extracted from the corresponding matrix
+    estimation results, and will be reformatted if necessary, in order to fit in a
+    variable with one observation per model parameter. If the matrix is a square
+    matrix with numbers of rows and columns equal to the number of parameters in
+    the model, then the corresponding output variable will contain its vector
+    diagonal. Otherwise, if the matrix has a number of columns equal to the number
+    of parameters, then the corresponding output variable will contain its first
+    row. Otherwise, if the matrix has a number of rows equal to the number of
+    parameters, then the corresponding output variable will contain its first
+    column. Otherwise, the corresponding output variable will contain its first
+    column, truncated or completed with missing values as necessary. If the matrix
+    estimation result does not exist, then the corresponding output variable will
+    be filled with missing values. These rules may seem complicated, but are sensible.
+
+^idnum(^#^)^ specifies an ID number for the model fit. It is used to create a
+    numeric variable ^idnum^ in the output data set with that value for all
+    observations. This is useful if the output data set is concatenated with 
+    other ^parmest^ or ^parmby^ output data sets using ^append^.
+
+^idstr(^string^)^ is an ID string for the model fit. It is used to create a
+    string variable ^idstr^ in the output data set with that value for all
+    observations. (A ^parmest^ or ^parmby^ output data set may have idnum,
+    idstr, both or neither.)
+
+^flist(^global_macro_name^)^ specifies the name of a global macro, containing
+    a filename list (possibly empty). If ^saving()^ is also specified, then
+    ^parmest^ or ^parmby^ will append the name of the data set specified in the
+    ^saving()^ option to the value of the global macro specified in ^flist^. This
+    enables the user to build a list of filenames in a global macro, containing the
+    output of a sequence of model fits saved by ^parmest^. These files may later be
+    concatenated using @append@.
+
+^rename(^oldvarname_1 newvarname1 ... oldvarname_n newvarname_n^)^ specifies a list
+    of pairs of variable names. The first variable name of each pair specifies a
+    variable in the ^parmest^ output data set, which is renamed to the second
+    variable name of the pair. This option is provided to prevent name clashes,
+    eg with variables in the ^by^ list of ^parmby^ (see below).
+
+Options for use with ^parmby^
+---------------------------
+
+^by(^varlist^)^ specifies a list of existing variables which would usually appear
+    in the ^by^ varlist: section of a command. ^parmby^ creates an output data set
+    with one observation for each parameter in each by-group in which the command
+    executed successfully. The output data set contains values of the by-variables
+    in each by-group (if ^by^ is specified), in addition to the variables created
+    by ^parmest^.
+
+
+Remarks
+-------
+
+^parmest^  creates a new data set. This data set contains the character variables
+eq and parm, containing equation and parameter names, respectively. It also
+contains numeric variables estimate, stderr, z (or t), p, min^xx^ and max^xx^, where
+^xx^ is a value from the ^level^ list. These variables contain parameter
+estimates, standard errors, z-test (or t-test) statistics, P-values, and
+confidence limits, respectively. The P-values test the hypothesis that the
+appropriate parameter is zero, or one if ^eform^ is specified. If ^idnum^
+and/or ^idstr^ is specified, then the new data set also contains the numeric
+ID variable idnum and/or the string ID variable idstr, which have the same
+value for all observations of the new data set (see above). There may also be
+additional variables, with names of the form em_^yy^, es_^yy^ and ev_^yy^,
+containing macro, scalar and vector estimation results, respectively.
+^parmby^ creates a new data set with all the variables in the ^parmest^ output
+data set, together with the by-variables (if specified) and an additional variable
+parmseq, containing the parameter sequence number (from 1 to the number of parameters
+in the model). The ^parmby^ output data set is sorted primarily by the by-variables
+and secondarily by parmseq. ^parmby^ is similar to @statsby@, but it creates a data
+set with one observation per parameter per by-group, instead of a data set with one
+observation per by-group. Also, in default, ^parmby^ outputs the estimation output
+to the log, although the user can use @quietly@ to suppress this.
+
+
+Examples
+--------
+
+ . ^regr price mpg weight,robust^
+ . ^parmest^
+
+ . ^glm mpg foreign,family(gamma) link(power -1)^
+ . ^parmest, label^
+ . ^list parm label estimate p min95 max95,noobs^
+
+ . ^logit foreign mpg, or^
+ . ^parmest, label eform saving(parms1.dta)^
+
+ . ^svymean mpg weight,by(foreign)^
+ . ^parmest,label ev(_N _N_subp V_db) em(depvar) es(N)^
+ . ^list eq parm ev_* em_* es_*^
+
+ . ^regr gpm weight^
+ . ^parmest, lab saving(unadj1.dta,replace) idn(1) ids(Unadjusted)^
+ . ^regr gpm foreign^
+ . ^parmest, lab saving(unadj2.dta,replace) idn(2) ids(Unadjusted)^
+ . ^regr gpm weight foreign^
+ . ^parmest, lab saving(adj.dta,replace) idn(3) ids(Adjusted)^
+ . ^use unadj1.dta,clear^
+ . ^append using unadj2.dta^
+ . ^append using adj.dta^
+ . ^list idnum idstr parm estimate min95 max95 p,noobs nodis^
+
+ . ^parmby "regr mpg weight,robust",by(foreign) label^
+
+ . ^parmby "regr mpg weight displ,robust",by(foreign) label saving(myparms,replace)^
+
+ . ^rename foreign t^
+ . ^parmby "regr gpm weight",by(t) label rename(t tstat p pvalue)^
+
+
+Author
+------
+
+Roger Newson, King's College, London, UK.
+Email: ^roger.newson@@kcl.ac.uk^
+
+
+Also see
+--------
+
+    STB:  STB-49 dm65
+ Manual:  ^[U] Estimation and post-estimation commands^
+          ^[R] statsby^
+          ^[R] append^
+On-line:  help for @append@, @statsby@

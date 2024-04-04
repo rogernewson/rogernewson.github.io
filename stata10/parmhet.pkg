@@ -1,0 +1,37 @@
+d parmhet: Heterogeneity tests in parmest resultssets
+d parmhet and parmiv are designed for use with parmest resultssets,
+d which have one observation per estimated parameter and data on
+d parameter estimates.  parmhet inputs variables containing parameter
+d estimates, standard errors and (optionally) degrees of freedom, and
+d outputs an output dataset (or resultsset) with one observation, or
+d one observation per by-group, and data on heterogeneity test
+d statistics on the input parameters in the dataset or by-group.  The
+d output dataset can be listed to the Stata log, saved to a disk file,
+d or written to memory, overwriting the existing dataset.  Optionally,
+d parmhet may also add variables to the existing dataset, containing
+d inverse-variance weights and/or semi-weights and/or
+d semi-weight-based standard errors.  These additional variables may
+d then be input to the metaparm module of the parmest package, to
+d produce summary meta-analysed parameter estimates, using the
+d fixed-effect method or the DerSimonian-Laird
+d randomly-variable-effect method.  parmiv is a routine intended for
+d use by programmers, and inputs variables containing estimates,
+d standard errors and (optionally) degrees of freedom, and outputs
+d additional variables in the existing dataset, containing
+d inverse-variance weights and/or semi-weights and/or
+d semi-weight-based standard errors and/or heterogeneity test
+d statistics for the dataset or by-group.
+d
+d Author: Roger Newson
+d Distribution-Date: 28february2013
+d Stata-Version: 10
+f parmhet.ado
+f parmiv.ado
+f parmhet.sthlp
+f parmhet_basic_opts.sthlp
+f parmhet_resultsset_opts.sthlp
+f parmhet_hettest_opts.sthlp
+f parmhet_resultsset.sthlp
+f parmiv.sthlp
+f parmhet_example1.dta
+e

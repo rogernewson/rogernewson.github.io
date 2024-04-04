@@ -1,0 +1,19 @@
+d vallabdef: Define value labels from label name, value and label variables
+d vallabdef inputs 3 variables in the current dataset, assumed to
+d contain the names, values and labels for one or more value
+d labels, and defines (or extends) the named value labels.  The
+d user can then save the value labels in a label-only dataset on
+d disk, with no observations and no variables, which can then be
+d appended to another dataset, and used as a source of value labels
+d to be allocated to variables.  vallabdef is very useful for
+d defining value labels which cannot be defined using label define,
+d because they cannot be surrounded by simple or compound quotes
+d {for instance, a value label that contains an unpaired right
+d quote at the end).
+d
+d Author: Roger Newson
+d Distribution-Date: 15january2018
+d Stata-Version: 10
+f vallabdef.ado
+f vallabdef.sthlp
+e

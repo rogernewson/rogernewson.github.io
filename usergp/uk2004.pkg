@@ -1,0 +1,28 @@
+v 2
+d uk2004: From datasets to resultssets in Stata
+d A resultsset is a Stata dataset created as output by a Stata program. It can
+d be used as input to other Stata programs, which may in turn output the
+d results as publication-ready plots or tables. Programs that create
+d resultssets include xcontract, xcollapse, parmest, parmby and descsave.
+d Stata resultssets do a similar job to SAS output data sets, which are saved
+d to disk files. However, in Stata, the user typically has the options of
+d saving a resultsset to a disk file, writing it to the memory (overwriting
+d any pre-existing data set), or simply listing it. Resultssets are often
+d saved to temporary files, using the tempfile command. This lecture introduces
+d programs that create resultssets, and also programs that do things with
+d resultssets after they have been created. listtex outputs resultssets to
+d tables that can be inserted into a Microsoft Word, HTML or LaTeX document.
+d eclplot inputs resultssets and creates confidence interval plots. Other
+d programs, such as sencode and sdecode, process resultssets after they are
+d created and before they are listed, tabulated or plotted. These programs,
+d used together, have a power not always appreciated if the user simply reads
+d the on-line help for each package. This lecture is a survey lecture, and is
+d based on a handout and a set of example do-files, which can be downloaded
+d with the presentation.
+d
+d Author: Roger Newson
+d Distribution-date: 30 June 2004
+f ./uk2004/overhed2.pdf
+f ./uk2004/handout1.pdf
+f ./uk2004/exampdo3.zip
+e

@@ -1,0 +1,21 @@
+v 2
+d qqvalue: Frequentist q-values for multiple-test procedures
+d This is a pre-publication draft of a Stata Journal paper
+d (Newson, 2010). The paper describes the qqvalue package
+d (downloadable from SSC), and contains complete documentation
+d for the package, including Syntax, Methods and Formulas, and
+d Examples. The qqvalue package takes, as input, a variable
+d containing a vector of P-values, and outputs the corresponding
+d frequentist q-values corresponding to one of a choice of
+d frequentist multiple-test procedures. It uses the same methods
+d as the R package p.adjust.
+d
+d References
+d
+d Newson R. B. Frequentist q-values for multiple-test procedures.
+d The Stata Journal 10(4): 568-584.
+d
+d Author: Roger Newson
+d Distribution-date: 04 January 2011
+f qqvalue.pdf
+e

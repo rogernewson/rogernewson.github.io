@@ -1,0 +1,13 @@
+d rcentile: Robust confidence intervals for percentiles
+d rcentile calculates robust confidence intervals for
+d percentiles, allowing for clustered sampling and/or weighting
+d if necessary.  rcentile requires the SSC packages somersd, 
+d scsomersd and expgen in order to work.
+d
+d Author: Roger Newson
+d Distribution-date: 16april2016
+d Stata-version: 16.0
+d
+f rcentile.ado
+f rcentile.sthlp
+e

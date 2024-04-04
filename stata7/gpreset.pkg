@@ -1,0 +1,19 @@
+v 2
+d gpreset: Reset Stata Version 7 graphics preferences
+d gpreset resets the preferences for a specified customized graphics
+d scheme to their original values as shipped with Stata. That is to
+d say, custom1 is set to be the same as blackbg, custom2 is set to be
+d the same as whitebg, and custom3 is set to be the same as
+d monochrome.  The user can therefore change the preferences of
+d scheme custom# temporarily, and return them to their original
+d values afterwards. For further details on graphics preference
+d schemes, see help for gprefs. The gpreset package is part of the
+d Stata Version 7 graphics system, which users of higher Stata
+d versions can still use by using the graph7 or gr7 command.
+d
+d Author: Roger Newson
+d Distribution-Date: 10march2010
+d Stata-Version: 7
+f gpreset.ado
+f gpreset.hlp
+e

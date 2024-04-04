@@ -1,0 +1,20 @@
+d bmjcip: Format confidence intervals and P-values for medical journals
+d bmjcip reformats a list of numeric variables, containing estimates
+d and/or confidence limits and/or P-values, to string variables,
+d containing the same values formatted for presentation in medical
+d journals.  The new string variables replace the old numeric
+d variables, and have the same names, variable labels, variable
+d characteristics, and positions in the dataset.  bmjcip is usually
+d used in output datasets (or resultssets) produced by the parmest
+d package, and the reformatted string variables are usually later
+d output using the listtab package, for input to Microsoft Word or
+d other word processors.  It requires the sdecode package in order to
+d work.  The sdecode, parmest and listtab packages can all be
+d downloaded from SSC.
+d
+d Author: Roger Newson
+d Distribution-Date: 17january2011
+d Stata-Version: 10
+f bmjcip.ado
+f bmjcip.sthlp
+e

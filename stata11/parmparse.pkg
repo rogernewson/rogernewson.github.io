@@ -1,0 +1,26 @@
+v 3
+d parmparse: Parse a parameter name variable in a parmest resultsset
+d parmparse is intended for use in output datasets (or resultssets)
+d created by the programs parmest or parmby.  These are part of the
+d parmest package, which can be downloaded from SSC, and which
+d create output datasets (or resultssets), with one observation per
+d estimated parameter of a model fitted to an original dataset.
+d parmparse inputs a string variable containing parameter names,
+d usually named parm in a parmest resultsset, and outputs one or
+d more variables, containing parameter attributes which can be
+d inferred from the parameter name.  These attributes include the
+d parameter omit status, the parameter type, a list of the variable
+d names for the factors and other variables whose effects are
+d measured by the parameter, and lists of the corresponding base
+d statuses, factor levels, full operator portions, and time series
+d operator portions.  These lists can be delimited by a
+d user-specified delimiter string, allowing the output list
+d variables to be input to the split command for further
+d processing.
+d
+d Author: Roger Newson
+d Distribution-Date: 03august2011
+d Stata-Version: 11
+f parmparse.ado
+f parmparse.sthlp
+e

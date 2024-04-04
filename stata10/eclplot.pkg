@@ -1,0 +1,23 @@
+v 3
+d eclplot: Horizontal and vertical confidence interval plots
+d eclplot creates a plot of estimates with lower and upper confidence limits
+d on one axis against another numeric variable on the other axis. The estimates
+d and lower and upper confidence limits are stored in three variables, in a
+d data set with one observation per confidence interval to be plotted. Data
+d sets with such variables may be created manually (using a spreadsheet),
+d or using the parmest package, or using statsby or postfile in official Stata.
+d The user has a choice of plotting the confidence intervals horizontally or
+d vertically, a choice of plot styles for the estimates, and a choice of range
+d plot styles for the confidence intervals. It is also possible to overlay
+d the confidence interval plot with other plots using the plot() option,
+d and to overlay multiple superimposed confidence interval plots using the
+d supby() option. eclplot may be used either as a command or through a dialog.
+d
+d Author: Roger Newson
+d Distribution-Date: 12june2012
+d Stata-Version: 10
+f eclplot.ado
+f eclplot.sthlp
+f eclplot.dlg
+f eclplot_98s.dlg
+e

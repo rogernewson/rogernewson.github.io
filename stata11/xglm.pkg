@@ -1,0 +1,12 @@
+v 3
+d xglm: Extended version of glm
+d xglm is an extended version of glm, designed mostly for use
+d with the parmby module of the parmest package, downloadable
+d from SSC.
+d
+d Author: Roger Newson
+d Distribution-Date: 14june2012
+d Stata-Version: 11
+f xglm.ado
+f xglm.sthlp
+e

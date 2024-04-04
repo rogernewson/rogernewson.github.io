@@ -1,0 +1,31 @@
+v 3
+d Stata 13 packages written by Roger Newson
+d These can be used by users with Stata Version 13 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p cprdcribs Template do-files for inputting CPRD datasets into Stata
+p cprdenttype Converting CPRD entity string data of any enttype to numeric
+p cprdentutil Converting CPRD entity data variables to numeric variables
+p cprdhesaeutil Inputting CPRD HES A&E linkage datasets into Stata
+p cprdhesoputil Inputting CPRD HES/OP linkage datasets into Stata
+p cprdhesutil Inputting CPRD HES-linkage datasets into Stata
+p cprdlinkutil Inputting CPRD linkage-source datasets into Stata
+p cprdlsoautil Inputting CPRD LSOA-linkage datasets into Stata
+p cprdonsutil Inputting CPRD ONS-linkage datasets into Stata
+p cprdutil Utilities for inputting CPRD datasets into Stata
+p dolog Execute commands from a file, creating a log file
+p dologx Multiple versions of dolog for executing certification scripts
+p dotex Execute a do-file generating a SJ LaTeX log
+p eclplot Horizontal and vertical confidence interval plots
+p intext Read text files into string variables (without losing blanks)
+p marglmean Marginal log means from regression models
+p margprev Marginal prevalences from binary regression models
+p punaf Population attributable fractions for cohort studies
+p punafcc Population attributable fractions for case-control and survival studies
+p qrisk2cmd Running the QRISK2 command from within Stata
+p regpar Population attributable risks from binary regression models
+p scenttest Scenario arithmetic means and their difference
+p sdecode Decode a numeric variable to string, formatting unlabelled values
+p stcmd Run the Stat/Transfer st command from inside Stata
+p xglm Extended version of glm
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

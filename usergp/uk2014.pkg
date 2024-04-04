@@ -1,0 +1,30 @@
+v 2
+d uk2014: Easy-to-use packages for estimating rank and spline parameters
+d So-called non-parametric methods are in fact based on estimating and
+d testing parameters, usually either rank parameters or spline
+d parameters. Two comprehensive packages for estimating these are
+d somersd (for rank parameters) and bspline (for spline parameters).
+d Both of these estimate a wide range of parameters, but both are
+d frequently found to be difficult to use by casual users. This
+d presentation introduces rcentile, an easy-to-use front end for
+d somersd, and polyspline, an easy-to-use front end for bspline.
+d rcentile estimates percentiles with confidence limits, optionally
+d allowing for clustered sampling and sampling-probability weights. The
+d confidence intervals are saved in a Stata matrix, with one row per
+d percentile, which the user can save to a resultsset using the xsvmat
+d package. polyspline inputs an X-variable and a user-defined list of
+d reference points and outputs a basis of variables for a polynomial or
+d for another unrestricted spline. This basis can be included in the
+d covariate list for an estimation command, and the corresponding
+d parameters will be values of the polynomial or spline at the reference
+d points, or differences between these values. By default, the spline
+d will simply be a polynomial, with a degree one less than the number of
+d reference points. However, if the user specifies a lower degree, then
+d the spline will have knots interpolated sensibly between the reference
+d points.
+d
+d Author: Roger Newson
+d Distribution-date: 15 September 2014
+f ./uk2014/newson_ohp1.pdf
+f ./uk2014/examples1.do
+e

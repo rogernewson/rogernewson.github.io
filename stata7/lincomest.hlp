@@ -1,0 +1,120 @@
+{smcl}
+{hline}
+help for {cmd:lincomest} {right:(Roger Newson)}
+{hline}
+
+
+{title:Linear combinations of estimators saved as estimation results}
+
+{p 8 15}{cmd:lincomest} [{it:exp}] [ {cmd:,}
+ {cmdab:l:evel}{cmd:(}{it:#}{cmd:)} {cmdab:ef:orm}{cmd:(}{it:string}{cmd:)}
+ {cmdab:ho:ldname}{cmd:(}{it:holdname}{cmd:)} ]
+
+{p}
+where {it:holdname} is a name under which any pre-existing estimation results will be held,
+and {it:exp} is any linear combination of coefficients that is valid syntax for {cmd:test}. Note, however,
+that {it:exp} must not contain any additive constants nor equal signs.
+
+
+{title:Description}
+
+{p}
+{cmd:lincomest} is an extension to {help lincom}, which calculates confidence intervals and
+P-values for linear combinations of model coefficients. {cmd:lincomest} saves the estimate and variance
+of the linear combination as estimation results, with the option of saving the existing estimation
+results to be recalled by {cmd:estimates unhold}. (See help for {help estimates}.) The advantage
+of doing this is that the linear combination can be input to {help parmest} to create a data set
+with one observation containing a confidence interval and P-value for the linear combination.
+This data set can be concatenated with other {help parmest} output data sets using {help dsconcat},
+and the confidence intervals and/or P-values can then be plotted and/or tabulated.
+
+
+{title:Options}
+
+{p 0 4}{cmd:level(}{it:#}{cmd:)} specifies the confidence level, in percent, for confidence intervals;
+see help for {help level}.
+
+{p 0 4}{cmd:eform(}{it:string}{cmd:)} specifies that the linear combination and its confidence
+limits must be reported in exponentiated form, as exp(b) rather than b, and labelled by the
+{it:string}. If {cmd:eform()} is not specified, then the linear combination is reported in
+unexponentiated form, unless the last estimation command was {help logistic}, in which case
+the linear combination is reported in exponentiated form, with the {cmd:eform()} option set to
+{hi:"Odds ratio"}. Whether or not {cmd:eform()} is specified, {cmd:lincomest} always stores
+the unexponentiated estimates in the {help estimates:estimation results}.
+
+{p 0 4}{cmd:holdname(}{it:holdname}{cmd:)} specifies that the existing estimation results are to
+be stored under the name of {it:holdname}. They can then be restored by {cmd:estimates unhold}.
+(See help for {help estimates}.)
+
+
+{title:Remarks}
+
+{p}
+{cmd:lincomest} is intended to be used with {help parmest}, which saves the current
+estimation results as a data set with one observation per parameter of the most recently fitted model.
+This new data set is used to create tables and/or plots of confidence intervals and/or
+P-values. Other programs that are very useful with {help parmest} are {help dsconcat},
+{help descsave}, {help factext} and {help sencode}. The latest versions of all these
+programs can be installed using {help net}.
+
+
+{title:Examples}
+
+{p}
+The following example will work with the {hi:auto} data if {help parmest} and {help dsconcat}
+are installed. They will create confidence
+interval plots of the parameters corresponding to values of the factor {cmd:rep78}.
+
+{p 16 20}{inp:. tempfile tf1 tf2}{p_end}
+{p 16 20}{inp:. xi:regress mpg i.rep78}{p_end}
+{p 16 20}{inp:. parmest,label saving(`tf1',replace)}{p_end}
+{p 16 20}{inp:. lincomest (_Irep78_2+_Irep78_3+_Irep78_4+_Irep78_5)/4}{p_end}
+{p 16 20}{inp:. parmest,label saving(`tf2',replace)}{p_end}
+{p 16 20}{inp:. dsconcat `tf1' `tf2'}{p_end}
+{p 16 20}{inp:. list parm label estimate min95 max95 p}{p_end}
+
+{p}
+The following example demonstrates the {cmd:holdname} option. It will save confidence
+limits and P-values for a ratio of odds ratios, and then restore the original
+estimation results to be printed again.
+
+{p 16 20}{inp:. logit foreign length weight}{p_end}
+{p 16 20}{inp:. lincomest 30*length-1000*weight,eform(OR) hold(oldest)}{p_end}
+{p 16 20}{inp:. parmest,label saving(lincom1.dta,replace) eform}{p_end}
+{p 16 20}{inp:. estimates unhold oldest}{p_end}
+{p 16 20}{inp:. logit,or}{p_end}
+
+
+{title:Saved results}
+
+{p}
+{cmd:lincomest} saves in {hi:e()} the standard scalar estimation results {hi:e(N)} and {hi:e(df_r)},
+the standard matrix estimation results {hi:e(b)} and {hi:e(V)}, the standard function estimation
+result {hi: e(sample)}, the standard macro estimation results {hi:e(cmd)}, {hi:e(depvar)} and
+{hi:e(predict)}, and the additional macro results {hi:e(formula)} and {hi:e(holdname)}.
+To find more about the names and uses of standard estimation results, see {hi:[P] estimates}
+and {hi:[U] 21.10.2 Saving results in e()}. {cmd:lincomest} sets {hi:e(cmd)} to {cmd:lincomest},
+{hi:e(predict)} to {cmd:lincomest_p}, {hi:e(formula)} to the linear combination expression {it:exp},
+and {hi:e(holdname)} to the value of the {cmd:holdname} option if specified. These estimation results
+can be stored as variables in a {help parmest} output data set if the user specifies the
+{cmd:emac}, {cmd:escal} and/or {cmd:evec} options of {help parmest}.
+
+
+{title:Author}
+
+{p}
+Roger Newson, King's College, London, UK.
+Email: {browse "mailto:roger.newson@kcl.ac.uk":roger.newson@kcl.ac.uk}
+
+
+{title:Also see}
+
+{p 0 10}
+{bind: }Manual:   {hi:[R] lincom}, {hi:[R] xi}, {hi:[P] estimates},
+{hi:[U] 21.10 Saving results}, {hi:[U] 23 Estimation and post-estimation commands}
+{p_end}
+{p 0 10}
+On-line:   help for {help lincom}, {help estimates}, {help xi}
+ {break} help for {help parmest}, {help dsconcat}, {help descsave}, {help factext} and/or {help sencode}
+if installed
+{p_end}

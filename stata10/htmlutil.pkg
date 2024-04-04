@@ -1,0 +1,24 @@
+d htmlutil: Utilities for writing Hypertext Markup Language (HTML) files
+d The htmlutil package is a suite of file handling utilities for
+d producing Hypertext Markup Language (HTML) files in Stata.  The
+d user can open the file for input using htmlopen, and close the file
+d using htmlclose.  In between these statements, the user can insert
+d linked images from files using htmlimg, insert hypertext links
+d using htmllink, insert HTML tables using the listtab package, and
+d insert more HTML using the tfinsert package.  The packages listtab
+d and tfinsert are downloadable from SSC.
+d
+d Author: Roger Newson
+d Distribution-Date: 28march2017
+d Stata-Version: 10
+f htmlclose.ado
+f htmlimg.ado
+f htmllink.ado
+f htmlopen.ado
+f htmlclose.sthlp
+f htmlimg.sthlp
+f htmllink.sthlp
+f htmlopen.sthlp
+f htmlutil.sthlp
+f myhead1.htm
+e

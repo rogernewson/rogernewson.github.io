@@ -1,0 +1,7 @@
+1. clear out mistakes which cause TeXWorks to fail.
+DONE
+
+2. Upload to my website.
+
+Roger Newson
+06 July 2022

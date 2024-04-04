@@ -1,0 +1,25 @@
+d keyby: Key the dataset by a variable list
+d keyby sorts the dataset currently in memory by the variables in a 
+d varlist, checking that the variables in the varlist uniquely
+d identify the observations.  This makes the variables in the 
+d varlist a primary key for the dataset in memory.  If the user does
+d not specify otherwise, then keyby also reorders the variables in
+d the varlist to the start of the variable order in the dataset, and
+d checks that all values of these variables are nonmissing.
+d keybygen sorts the dataset currently in memory by the variables in
+d a varlist, preserving the existing order of observations within
+d each by-group, and then generates a new variable, containing the
+d sequential order of each observation within its by-group, to form
+d a primary key with the existing variables in the varlist.  keyby
+d and keybygen can be useful if the user combines multiple datasets
+d using merge, which may cause a dataset in memory to become
+d unsorted.
+d
+d Author: Roger Newson
+d Distribution-Date: 28july2014
+d Stata-Version: 10
+f keyby.ado
+f keybygen.ado
+f keyby.sthlp
+f keybygen.sthlp
+e

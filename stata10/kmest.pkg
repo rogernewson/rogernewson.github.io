@@ -1,0 +1,18 @@
+d kmest: Compute Kaplan-Meier survival probabilities and/or percentiles as estimation results
+d kmest is intended for use in a survival time dataset set up by stset.
+d It computes Kaplan-Meier survival probabilities (as computed by sts
+d generate) for a list of times (sorted in ascending order), and/or
+d Kaplan-meier percentiles for a list of percents (srted in ascending
+d order), and saves them as estimation results, without a variance
+d matrix.  kmest is intended for use with the bootstrap prefix, or
+d possibly with the jackknife prefix, to create confidence intervals for
+d the Kaplan-Meier survival probabilities and/or percentiles, possibly
+d allowing for clustering and/or sampling-probability weighting.
+d
+d Author: Roger Newson
+d Distribution-Date: 02march2020
+d Stata-Version: 10
+f kmest.ado
+f kmest_p.ado
+f kmest.sthlp
+e

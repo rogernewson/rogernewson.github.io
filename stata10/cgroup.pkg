@@ -1,0 +1,13 @@
+d cgroup: Group contiguous observations with identical values of a varlist
+d cgroup inputs a list of variables specified by a varlist, and
+d generates, as output, a new integer-valued variable,
+d indicating, in each observation, membership of a group of
+d contiguous observations with identical values of the varlist.
+d It is therefore a non-sorting version of gsort.
+d
+d Author: Roger Newson
+d Distribution-Date: 30november2009
+d Stata-Version: 10
+f cgroup.ado
+f cgroup.sthlp
+e

@@ -1,0 +1,28 @@
+d adodev: Reorder ado-path for developers and other independent-minded users
+d adodev re-orders the ado-file path to start with the Stata system
+d folders UPDATES, BASE, ., PERSONAL, PLUS, SITE, and OLDPLACE, in
+d that order.  adoind re-orders the ado-file path to start with the
+d Stata system folders UPDATES, BASE, PERSONAL, PLUS, SITE, ., and
+d OLDPLACE, in that order.  adofac re-orders the ado-file path to
+d start with the Stata system folders UPDATES, BASE, SITE, .,
+d PERSONAL, PLUS, and OLDPLACE, in that order.  adoins re-orders the
+d ado-file path to start with the Stata system folders UPDATES and
+d BASE (in that order), followed by the folders specified by the
+d path_or_codeword_list, followed by the Stata system folders SITE, .,
+d PERSONAL, PLUS, and OLDPLACE, in that order.  All these commands
+d preserve any existing ordering between any other folders on the
+d ado-file path, while keeping UPDATES and BASE at the start of the
+d path (for safety).
+d
+d Author: Roger Newson
+d Distribution-Date: 12november2017
+d Stata-Version: 10
+f adodev.ado
+f adoind.ado
+f adofac.ado
+f adoins.ado
+f adodev.sthlp
+f adoind.sthlp
+f adofac.sthlp
+f adoins.sthlp
+e

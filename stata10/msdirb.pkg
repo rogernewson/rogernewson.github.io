@@ -1,0 +1,22 @@
+d msdirb: Create a dataset of file names from the output of a MS-DOS dir/b command
+d msdirb inputs a directory specification and a file list
+d specification recognised by MS-DOS, and generates in the memory a
+d new Stata dataset, with 1 observation per file in the list, and
+d data on the directory and/or the name of the file.  This new Stata
+d dataset can then be used for mass-processing of the specified
+d files.  lmsdirb inputs a directory specification and a file list
+d specification recognised by MS-DOS, and generates local macros
+d containing lists, with 1 list item per file in the list, and data
+d on the directory and/or the name of the file.  msdirb and lmsdirb
+d work by using the MS-DOS dir command, with the switch /b to specify
+d display of filenames only.  They are designed to work only under a
+d Microsoft Windows operating environment.
+d
+d Author: Roger Newson
+d Distribution-Date: 07may2015
+d Stata-Version: 10
+f msdirb.ado
+f lmsdirb.ado
+f msdirb.sthlp
+f lmsdirb.sthlp
+e

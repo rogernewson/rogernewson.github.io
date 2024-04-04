@@ -1,0 +1,27 @@
+v 3
+d Stata 11 packages written by Roger Newson
+d These can be used by users with Stata Version 11 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p addinby Add in data from a disk dataset using a foreign key
+p bmjcip Format confidence intervals and P-values for medical journals
+p chardef Assign values to a characteristic of a list of items
+p creplace Exchange values cyclically between variables
+p dolog Execute commands from a file, creating a log file
+p dologx Multiple versions of dolog for executing certification scripts
+p dotex Execute a do-file generating a SJ LaTeX log
+p estparm Save results from a parmest resultsset and test equality
+p factmerg Merge a list of factors to create string variables
+p fvprevar Version of fvrevar generating permanent result variables
+p fvregen Regenerate factor variables in a parmest output dataset
+p haif Homoskedastic adjustment inflation factors for model selection
+p insingap Insert a single gap observation at the top of each by-group
+p listtab List variables as rows of a TeX, HTML or word processor table
+p parmest Create datasets with 1 observation per estimated parameter
+p parmparse Parse a parameter name variable in a parmest resultsset
+p punaf Population attributable fractions for cohort studies
+p rtfutil Utilities for writing Rich Text Format (RTF) files
+p sdecode Decode a numeric variable to string, formatting unlabelled values
+p vallabsave Save and load label-only Stata datasets
+p xglm Extended version of glm
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

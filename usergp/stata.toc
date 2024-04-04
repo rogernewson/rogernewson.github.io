@@ -1,0 +1,37 @@
+v 2
+d Stata User Meeting presentations by Roger Newson
+d These are presentations made by Roger Newson at Stata Users' Group
+d meetings, and can be viewed using the Adobe Acrobat Reader. More about Stata
+d Users' Group meetings can be found at the meeting proceedings site at
+d http://www.stata.com/support/meeting/
+d or at the RePEc site at
+d http://edirc.repec.org/data/debocus.html
+d which is maintained by Kit Baum. The unofficial Stata programs used in
+d the presentations can usually be downloaded from the SSC-Ideas archive.
+p uk2023 Customized Markdown and .docx tables using listtab and docxtab
+p uk2022 Resultssets in resultsframes in Stata 16-plus
+p uk2021 Ridits right, left, center, native and foreign
+p uk2020 From datasets to metadatasets in Stata
+p uk2019 Bland-Altman plots, rank parameters, and calibration ridit splines
+p uk2018 A fleet of packages for inputting United Kingdom primary care data
+p uk2017 Ridit splines with applications to propensity weighting
+p uk2016 The role of Somers's D in propensity modelling
+p uk2015 Somers' D: A common currency for associations
+p uk2014 Easy-to-use packages for estimating rank and spline parameters
+p uk2013 Creating factor variables in resultssets and other datasets
+p uk2012 Scenario comparisons: How much good can we do?
+p uk2011 Sensible parameters for polynomials and other splines
+p uk2010 Post–parmest peripherals: fvregen, invcise, and qqvalue
+p uk2009 Homoskedastic adjustment inflation factors in model selection
+p uk2008 parmest and extensions
+p uk2007 Robust confidence intervals for Hodges-Lehmann median differences
+p uk2006 On the central role of Somers' D
+p de2006 Resultssets, resultsspreadsheets and resultsplots in Stata
+p uk2005 Generalized confidence interval plots using commands or dialogs
+p uk2004 From datasets to resultssets in Stata
+p uk2003 Multiple test procedures and smile plots
+p uk2002 Creating plots and tables of estimation results using parmest
+p uk2001 Splines with parameters that can be explained to non-mathematicians
+p uk2000 Confidence intervals for rank order statistics
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

@@ -1,0 +1,27 @@
+d stcmd: Run the Stat/Transfer st command from inside Stata
+d The program stcmd runs the Stat/Transfer st command from inside Stata, if
+d Stat/Transfer is installed on the user's system. Stat/Transfer converts
+d data sets from one format to another (eg Stata to/from R). It is
+d available from Stata Corporation and manufactured by Circle Systems, and
+d further information can be found at http://www.stattransfer.com/. The
+d program inputst converts an existing non-Stata input file into a Stata
+d dataset in the memory, overwriting any existing data. The program outputst
+d converts the Stata dataset in the memory to a newly-created non-Stata
+d output file. The programs inputst and outputst require stcmd, and therefore
+d should not be downloaded alone. If the Stat/Transfer directory on the
+d user's system is not on the user's default path, then the user must set
+d the global macro StatTransfer_path to contain the path for the Stat/Transfer
+d st command, possibly in the profile.do file (see on-line help for details).
+d
+d Author: Roger Newson
+d Distribution-Date: 15august2022
+d Stata-Version: 13
+f stcmd.ado
+f inputst.ado
+f outputst.ado
+f outputstold.ado
+f stcmd.sthlp
+f inputst.sthlp
+f outputst.sthlp
+f outputstold.sthlp
+e

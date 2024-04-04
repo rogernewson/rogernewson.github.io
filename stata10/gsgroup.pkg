@@ -1,0 +1,20 @@
+d gsgroup: Create a group variable and optionally an output dataset for a gsort key
+d gsgroup inputs a gsort key (a list of elements of the form used
+d by gsort), and generates as output a new variable, indicating
+d the sequential order of the group to which each observation
+d belongs, and (optionally) an output dataset (or resultsset),
+d with 1 observation per group, and data on the values of the
+d generated variable, and the variables of the gsort key
+d corresponding to that group.  Unlike gsort, gsgroup does not
+d change the sort order of the dataset in memory.  The output
+d dataset can be merged into other datasets, using the official
+d Stata command merge or the SSC package addinby.  gsgroup is
+d typically used together with the SSC packages parmest and 
+d xcontract.
+d
+d Author: Roger Newson
+d Distribution-Date: 27september2012
+d Stata-Version: 10
+f gsgroup.ado
+f gsgroup.sthlp
+e

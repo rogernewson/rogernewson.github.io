@@ -1,0 +1,589 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Some of Roger Newson's Stata packages</title>
+</head>
+
+<body bgcolor="white">
+
+<a name="top_of_page">
+<img src="Queen-Mary-logo-956800381.png" style="width:160px;" alt="Queen Mary University London" class="logo" />
+</a>
+
+<h1>Some of Roger Newson's Stata packages</h1>
+
+<p>
+These can be downloaded from two sites, namely from the
+<a href="http://ideas.uqam.ca/ideas/data/bocbocode.html">the Statistical Software components (SSC) archive site</a>
+and from this website.
+A user who wants the latest version of a package should download from SSC,
+if the user's version of <a href="http://www.stata.com/">Stata</a> is ccompatible with the latest version of the package.
+The download facility on this website is mainly provided for users of superseded versions of <a href="http://www.stata.com/">Stata</a>,
+who need to download a superseded version of the package,
+written in the user's <a href="http://www.stata.com/">Stata</a> version,
+or in an earlier version.
+</p>
+
+<p>
+<a href="#download_from_ssc">Downloading Roger Newson's packages from SSC</a>
+<br>
+<a href="#download_from_here">Downloading Roger Newson's packages from this website</a>
+<br>
+<a href="#all_versions">List of all versions of all Stata packages on this website</a>
+</p>
+
+<p>
+Whichever download source is used, the user may want to download the latest versions of all the packages,
+or at least the latest version of each package that can work on the user's version of <a href="http://www.stata.com/">Stata</a>.
+This is because these packages are often used together, as a dialect of the <a href="http://www.stata.com/">Stata</a> language.
+I have therefore provided do-files to describe, install and uninstall these maximal sets of package versions from each source.
+These do-files can be downloaded from the sections of this page corresponding to the two download sources,
+and then run in <a href="http://www.stata.com/">Stata</a> using the <code>run</code> or <code>do</code> commands.
+</p>
+
+<p>
+<a href="#download_from_ssc">Downloading Roger Newson's packages from SSC</a>
+<br>
+<a href="#download_from_here">Downloading Roger Newson's packages from this website</a>
+<br>
+<a href="#all_versions">List of all versions of all Stata packages on this website</a>
+</p>
+
+<p>
+Users who have installed the full set of packages for their versions of  <a href="http://www.stata.com/">Stata</a>
+may also write do-files to be run using the <code>dolog</code> package,
+taking advantage of this and other installed packages.
+I have therefore provided template (or crib) do-files for <a href="http://www.stata.com/">Stata</a> versions 9 or higher.
+These can be downloaded from the table below.
+</p>
+
+<h3>Do-file templates for download</h3>
+
+<p>
+<table border="1">
+<tr><th>Do-file name</th><th>Description</th><th>Stata version</th><th>Download</th></tr>
+<tr><td><code>crib18.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/crib18.do">Download</a></td></tr>
+<tr><td><code>crcrib18.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/crcrib18.do">Download</a></td></tr>
+<tr><td><code>rtfcrib18.do</code></td><td>Template for RTF document generating do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/rtfcrib18.do">Download</a></td></tr>
+<tr><td><code>htmcrib18.do</code></td><td>Template for HTML document generating do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/htmcrib18.do">Download</a></td></tr>
+<tr><td><code>docxcrib18.do</code></td><td>Template for .docx document generating do-files in Stata Version 18</td><td>18</td><td><a href="./docribs/docxcrib18.do">Download</a></td></tr>
+<tr><td><code>crib17.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/crib17.do">Download</a></td></tr>
+<tr><td><code>crcrib17.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/crcrib17.do">Download</a></td></tr>
+<tr><td><code>rtfcrib17.do</code></td><td>Template for RTF document generating do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/rtfcrib17.do">Download</a></td></tr>
+<tr><td><code>htmcrib17.do</code></td><td>Template for HTML document generating do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/htmcrib17.do">Download</a></td></tr>
+<tr><td><code>docxcrib17.do</code></td><td>Template for .docx document generating do-files in Stata Version 17</td><td>17</td><td><a href="./docribs/docxcrib17.do">Download</a></td></tr>
+<tr><td><code>crib16.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/crib16.do">Download</a></td></tr>
+<tr><td><code>crcrib16.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/crcrib16.do">Download</a></td></tr>
+<tr><td><code>rtfcrib16.do</code></td><td>Template for RTF document generating do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/rtfcrib16.do">Download</a></td></tr>
+<tr><td><code>htmcrib16.do</code></td><td>Template for HTML document generating do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/htmcrib16.do">Download</a></td></tr>
+<tr><td><code>docxcrib16.do</code></td><td>Template for .docx document generating do-files in Stata Version 16</td><td>16</td><td><a href="./docribs/docxcrib16.do">Download</a></td></tr>
+<tr><td><code>crib15.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 15</td><td>15</td><td><a href="./docribs/crib15.do">Download</a></td></tr>
+<tr><td><code>crcrib15.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 15</td><td>15</td><td><a href="./docribs/crcrib15.do">Download</a></td></tr>
+<tr><td><code>rtfcrib15.do</code></td><td>Template for RTF document generating do-files in Stata Version 15</td><td>15</td><td><a href="./docribs/rtfcrib15.do">Download</a></td></tr>
+<tr><td><code>htmcrib15.do</code></td><td>Template for HTML document generating do-files in Stata Version 15</td><td>15</td><td><a href="./docribs/htmcrib15.do">Download</a></td></tr>
+<tr><td><code>crib14.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 14</td><td>14</td><td><a href="./docribs/crib14.do">Download</a></td></tr>
+<tr><td><code>crcrib14.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 14</td><td>14</td><td><a href="./docribs/crcrib14.do">Download</a></td></tr>
+<tr><td><code>rtfcrib14.do</code></td><td>Template for RTF document generating do-files in Stata Version 14</td><td>14</td><td><a href="./docribs/rtfcrib14.do">Download</a></td></tr>
+<tr><td><code>htmcrib14.do</code></td><td>Template for HTML document generating do-files in Stata Version 14</td><td>14</td><td><a href="./docribs/htmcrib14.do">Download</a></td></tr>
+<tr><td><code>crib13.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 13</td><td>13</td><td><a href="./docribs/crib13.do">Download</a></td></tr>
+<tr><td><code>crcrib13.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 13</td><td>13</td><td><a href="./docribs/crcrib13.do">Download</a></td></tr>
+<tr><td><code>rtfcrib13.do</code></td><td>Template for RTF document generating do-files in Stata Version 13</td><td>13</td><td><a href="./docribs/rtfcrib13.do">Download</a></td></tr>
+<tr><td><code>htmcrib13.do</code></td><td>Template for HTML document generating do-files in Stata Version 13</td><td>13</td><td><a href="./docribs/htmcrib13.do">Download</a></td></tr>
+<tr><td><code>crib12.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 12</td><td>12</td><td><a href="./docribs/crib12.do">Download</a></td></tr>
+<tr><td><code>crcrib12.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 12</td><td>12</td><td><a href="./docribs/crcrib12.do">Download</a></td></tr>
+<tr><td><code>rtfcrib12.do</code></td><td>Template for RTF document generating do-files in Stata Version 12</td><td>12</td><td><a href="./docribs/rtfcrib12.do">Download</a></td></tr>
+<tr><td><code>htmcrib12.do</code></td><td>Template for HTML document generating do-files in Stata Version 12</td><td>12</td><td><a href="./docribs/htmcrib12.do">Download</a></td></tr>
+<tr><td><code>crib11.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 11</td><td>11</td><td><a href="./docribs/crib11.do">Download</a></td></tr>
+<tr><td><code>crcrib11.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 11</td><td>11</td><td><a href="./docribs/crcrib11.do">Download</a></td></tr>
+<tr><td><code>rtfcrib11.do</code></td><td>Template for RTF document generating do-files in Stata Version 11</td><td>11</td><td><a href="./docribs/rtfcrib11.do">Download</a></td></tr>
+<tr><td><code>htmcrib11.do</code></td><td>Template for HTML document generating do-files in Stata Version 11</td><td>11</td><td><a href="./docribs/htmcrib11.do">Download</a></td></tr>
+<tr><td><code>crib10.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 10</td><td>10</td><td><a href="./docribs/crib10.do">Download</a></td></tr>
+<tr><td><code>crcrib10.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 10</td><td>10</td><td><a href="./docribs/crcrib10.do">Download</a></td></tr>
+<tr><td><code>rtfcrib10.do</code></td><td>Template for RTF document generating do-files in Stata Version 10</td><td>10</td><td><a href="./docribs/rtfcrib10.do">Download</a></td></tr>
+<tr><td><code>htmcrib10.do</code></td><td>Template for HTML document generating do-files in Stata Version 10</td><td>10</td><td><a href="./docribs/htmcrib10.do">Download</a></td></tr>
+<tr><td><code>crib9.do</code></td><td>Template for semicolon-delimited do-files in Stata Version 9</td><td>9</td><td><a href="./docribs/crib9.do">Download</a></td></tr>
+<tr><td><code>crcrib9.do</code></td><td>Template for carriage-return-delimited do-files in Stata Version 9</td><td>9</td><td><a href="./docribs/crcrib9.do">Download</a></td></tr>
+</table>
+</p>
+
+<p>
+To find more about Stata statistical software, <a href="http://www.stata.com/">click here</a>.
+</p>
+
+<p>
+<a href="#download_from_ssc">Downloading Roger Newson's packages from SSC</a>
+<br>
+<a href="#download_from_here">Downloading Roger Newson's packages from this website</a>
+<br>
+<a href="#all_versions">List of all versions of all Stata packages on this website</a>
+<br>
+<a href="http://ideas.uqam.ca/ideas/data/bocbocode.html">Statistical Software components (SSC) archive site</a>
+<br>
+<a href="http://www.stata.com/">Stata Corporation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<h2><a name="download_from_ssc">Downloading Roger Newson's packages from SSC</a></h2>
+
+<p>
+I usually follow a policy of distributing my Stata programs mainly from
+<a href="http://ideas.uqam.ca/ideas/data/bocbocode.html">the Statistical Software components (SSC) archive site</a>.
+Users of the latest version of Stata can download my programs from there, using the <code>ssc</code> command in Stata.
+Users of earlier versions of Stata should check that a package is written in the user's Stata version, or in an earlier version,
+before downloading it from SSC.
+</p>
+
+<p>
+To help users of the latest Stata version to download my packages from SSC,
+I have written 3 Stata do-files <code>descasisay.do</code>, <code>instasisay.do</code> and <code>uninstasisay.do</code>,
+which users can download from this page.
+<code>descasisay.do</code> attempts to describe the current versions, on SSC, of the packages,
+using the <code>ssc describe</code> command.
+<code>instasisay.do</code> attempts to install, on the user's site, the current versions, on SSC,
+of the packages,
+using the <code>ssc install</code> command, and replacing all existing versions of these packages.
+<code>uninstasisay.do</code> attempts to uninstall, on the user's site,
+all of my SSC packages (but does not attempt to uninstall any other SSC packages provided by other authors).
+The user therefore may install (and uninstall) all my packages at once,
+instead of installing (and uninstalling) them one by one.
+This option is useful, as these packages are often used together as a dialect of the Stata language.
+</p>
+
+<p>
+To execute these do-files in a Stata session, download them from this page to your local folder.
+Then, type, in Stata,
+</p>
+
+<p>
+<code>do descasisay</code>
+</p>
+
+<p>
+to execute <code>descasisay.do</code>, and/or type, in Stata,
+</p>
+
+<p>
+<code>do instasisay</code>
+
+<p>
+to execute <code>instasisay.do</code>, and/or type, in Stata,
+</p>
+
+<p>
+<code>do uninstasisay</code>
+</p>
+
+<p>
+to execute <code>uninstasisay.do</code>.
+</p>
+
+<h3>Do-files to describe, install and uninstall Stata packages from SSC</h3>
+
+<p>
+<table border="1">
+<tr><th>Do-file name</th><th>Description</th><th>Stata version</th><th>Download</th></tr>
+<tr><td><code>descasisay.do</code></td><td>Describe Roger Newson's packages from SSC</td><td>None</td><td><a href="./instasisay/descasisay.do">Download</a></td></tr>
+<tr><td><code>instasisay.do</code></td><td>Install Roger Newson's packages from SSC</td><td>None</td><td><a href="./instasisay/instasisay.do">Download</a></td></tr>
+<tr><td><code>uninstasisay.do</code></td><td>Uninstall Roger Newson's packages from SSC</td><td>None</td><td><a href="./instasisay/uninstasisay.do">Download</a></td></tr>
+</table>
+</p>
+
+<p>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<h2><a name="download_from_here">Downloading Roger Newson's packages from this website</a></h2>
+
+<p>
+The SSC archive is maintained by Kit Baum, who does an excellent job, and is greatly appreciated in the Stata Community for this.
+However, SSC only stores one version of a package with a given name.
+Therefore, if I distribute the Stata Version 15 version of a package on SSC,
+then users who only have Stata Versions 14, 13, 12, 11, 10, 9, 8, 7, 6 or 5
+can no longer download the Stata  14, 13, 12, 11, 10, 9, 8, 7, 6 or 5 versions from SSC.
+
+<p>
+I have tried to solve this problem by having my own site,
+which contains a separate folder for packages written in each Stata version.
+Users are advised to access them inside Web-aware Stata, using the commands
+</p>
+
+<p>
+<code>findit</code> <em>package_name</em>
+</p>
+
+<p>
+or
+</p>
+
+<p>
+<code>net search</code> <em>package_name</em>
+</p>
+
+<p>
+or
+</p>
+
+<p>
+<code>net from http://www.rogernewsonresources.org.uk</code>
+</p>
+
+<p>
+if the user's version of Stata supports one of those commands.
+</p>
+
+<p>
+I have provided some Stata do-files for use by users of versions of Stata from version 9 upwards,
+which a user can run in Stata, to describe and install, from my website,
+the latest version of each Stata package compatible with the version of Stata used by the user.
+I have also provided do-files to uninstall each of these sets of packages.
+All of these do-files can be downloaded from the table below.
+</p>
+
+<h3>Do-files to describe, install and uninstall Stata packages from this website</h3>
+
+<p>
+<table border="1">
+<tr><th>Do-file name</th><th>Description</th><th>Stata version</th><th>Download</th></tr>
+<tr><td><code>descasisay_18.do</code></td><td>Describe packages in Stata versions up to 18</td><td>None</td><td><a href="./instasisay/descasisay_18.do">Download</a></td></tr>
+<tr><td><code>instasisay_18.do</code></td><td>Install packages in Stata versions up to 18</td><td>None</td><td><a href="./instasisay/instasisay_18.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_18.do</code></td><td>Uninstall packages in Stata versions up to 18</td><td>None</td><td><a href="./instasisay/uninstasisay_18.do">Download</a></td></tr>
+<tr><td><code>descasisay_17.do</code></td><td>Describe packages in Stata versions up to 17</td><td>None</td><td><a href="./instasisay/descasisay_17.do">Download</a></td></tr>
+<tr><td><code>instasisay_17.do</code></td><td>Install packages in Stata versions up to 17</td><td>None</td><td><a href="./instasisay/instasisay_17.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_17.do</code></td><td>Uninstall packages in Stata versions up to 17</td><td>None</td><td><a href="./instasisay/uninstasisay_17.do">Download</a></td></tr>
+<tr><td><code>descasisay_16.do</code></td><td>Describe packages in Stata versions up to 16</td><td>None</td><td><a href="./instasisay/descasisay_16.do">Download</a></td></tr>
+<tr><td><code>instasisay_16.do</code></td><td>Install packages in Stata versions up to 16</td><td>None</td><td><a href="./instasisay/instasisay_16.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_16.do</code></td><td>Uninstall packages in Stata versions up to 16</td><td>None</td><td><a href="./instasisay/uninstasisay_16.do">Download</a></td></tr>
+<tr><td><code>descasisay_15.do</code></td><td>Describe packages in Stata versions up to 15</td><td>None</td><td><a href="./instasisay/descasisay_15.do">Download</a></td></tr>
+<tr><td><code>instasisay_15.do</code></td><td>Install packages in Stata versions up to 15</td><td>None</td><td><a href="./instasisay/instasisay_15.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_15.do</code></td><td>Uninstall packages in Stata versions up to 15</td><td>None</td><td><a href="./instasisay/uninstasisay_15.do">Download</a></td></tr>
+<tr><td><code>descasisay_14.do</code></td><td>Describe packages in Stata versions up to 14</td><td>None</td><td><a href="./instasisay/descasisay_14.do">Download</a></td></tr>
+<tr><td><code>instasisay_14.do</code></td><td>Install packages in Stata versions up to 14</td><td>None</td><td><a href="./instasisay/instasisay_14.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_14.do</code></td><td>Uninstall packages in Stata versions up to 14</td><td>None</td><td><a href="./instasisay/uninstasisay_14.do">Download</a></td></tr>
+<tr><td><code>descasisay_13.do</code></td><td>Describe packages in Stata versions up to 13</td><td>None</td><td><a href="./instasisay/descasisay_13.do">Download</a></td></tr>
+<tr><td><code>instasisay_13.do</code></td><td>Install packages in Stata versions up to 13</td><td>None</td><td><a href="./instasisay/instasisay_13.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_13.do</code></td><td>Uninstall packages in Stata versions up to 13</td><td>None</td><td><a href="./instasisay/uninstasisay_13.do">Download</a></td></tr>
+<tr><td><code>descasisay_12.do</code></td><td>Describe packages in Stata versions up to 12</td><td>None</td><td><a href="./instasisay/descasisay_12.do">Download</a></td></tr>
+<tr><td><code>instasisay_12.do</code></td><td>Install packages in Stata versions up to 12</td><td>None</td><td><a href="./instasisay/instasisay_12.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_12.do</code></td><td>Uninstall packages in Stata versions up to 12</td><td>None</td><td><a href="./instasisay/uninstasisay_12.do">Download</a></td></tr>
+<tr><td><code>descasisay_11.do</code></td><td>Describe packages in Stata versions up to 11</td><td>None</td><td><a href="./instasisay/descasisay_11.do">Download</a></td></tr>
+<tr><td><code>instasisay_11.do</code></td><td>Install packages in Stata versions up to 11</td><td>None</td><td><a href="./instasisay/instasisay_11.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_11.do</code></td><td>Uninstall packages in Stata versions up to 11</td><td>None</td><td><a href="./instasisay/uninstasisay_11.do">Download</a></td></tr>
+<tr><td><code>descasisay_10.do</code></td><td>Describe packages in Stata versions up to 10</td><td>None</td><td><a href="./instasisay/descasisay_10.do">Download</a></td></tr>
+<tr><td><code>instasisay_10.do</code></td><td>Install packages in Stata versions up to 10</td><td>None</td><td><a href="./instasisay/instasisay_10.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_10.do</code></td><td>Uninstall packages in Stata versions up to 10</td><td>None</td><td><a href="./instasisay/uninstasisay_10.do">Download</a></td></tr>
+<tr><td><code>descasisay_9.do</code></td><td>Describe packages in Stata versions up to 9</td><td>None</td><td><a href="./instasisay/descasisay_9.do">Download</a></td></tr>
+<tr><td><code>instasisay_9.do</code></td><td>Install packages in Stata versions up to 9</td><td>None</td><td><a href="./instasisay/instasisay_9.do">Download</a></td></tr>
+<tr><td><code>uninstasisay_9.do</code></td><td>Uninstall packages in Stata versions up to 9</td><td>None</td><td><a href="./instasisay/uninstasisay_9.do">Download</a></td></tr>
+</table>
+</p>
+
+<p>
+However, if the user cannot download the package version using Stata, or does not want to,
+then s/he can download the package versions (as .zip files) from the table below.
+These .zip files can be unzipped into the user's personal ado folder, and should then work if the
+user has the same version of Stata, or a higher version.
+If there are multiple versions of a package, corresponding to multiple Stata versions,
+then the user should choose the highest available version at or below his/her own Stata version.
+</p>
+
+<p>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<h2><a name="all_versions">List of all versions of all Stata packages on this website</a></h3>
+
+<p>
+<table border="1">
+<tr><th>Package name</th><th>Description</th><th>Stata version</th><th>Download</th></tr>
+<tr><td><code>addinby</code></td><td>Add in data from a disk or frame dataset using a foreign key</td><td>16</td><td><a href="./stata16/addinby.zip">Download</a></td></tr>
+<tr><td><code>addinby</code></td><td>Add in data from a disk dataset using a foreign key</td><td>11</td><td><a href="./stata11/addinby.zip">Download</a></td></tr>
+<tr><td><code>addinby</code></td><td>Add in data from a disk dataset using a foreign key</td><td>10</td><td><a href="./stata10/addinby.zip">Download</a></td></tr>
+<tr><td><code>adodev</code></td><td>Reorder ado-path for developers and other independent-minded users</td><td>10</td><td><a href="./stata10/adodev.zip">Download</a></td></tr>
+<tr><td><code>adostore</code></td><td>Store and restore the current ado-path</td><td>10</td><td><a href="./stata10/adostore.zip">Download</a></td></tr>
+<tr><td><code>bmjcip</code></td><td>Format confidence intervals and P-values for medical journals</td><td>11</td><td><a href="./stata11/bmjcip.zip">Download</a></td></tr>
+<tr><td><code>bmjcip</code></td><td>Format confidence intervals and P-values for medical journals</td><td>10</td><td><a href="./stata10/bmjcip.zip">Download</a></td></tr>
+<tr><td><code>bmjcip</code></td><td>Format confidence intervals and P-values for medical journals</td><td>9</td><td><a href="./stata9/bmjcip.zip">Download</a></td></tr>
+<tr><td><code>bpmedian</code></td><td>Bonett-Price confidence intervals for medians and their contrasts</td><td>10</td><td><a href="./stata10/bpmedian.zip">Download</a></td></tr>
+<tr><td><code>bspline</code></td><td>Create a basis of B-splines or reference splines</td><td>16</td><td><a href="./stata16/bspline.zip">Download</a></td></tr>
+<tr><td><code>bspline</code></td><td>Create a basis of B-splines or reference splines</td><td>10</td><td><a href="./stata10/bspline.zip">Download</a></td></tr>
+<tr><td><code>bspline</code></td><td>Create a basis of B-splines or reference splines</td><td>6</td><td><a href="./stata6/bspline.zip">Download</a></td></tr>
+<tr><td><code>bygap</code></td><td>Insert a by-gap observation at the start of each by-group</td><td>7</td><td><a href="./stata7/bygap.zip">Download</a></td></tr>
+<tr><td><code>bynote</code></td><td>Create a note with a user-specified format for use with the by option</td><td>10</td><td><a href="./stata10/bynote.zip">Download</a></td></tr>
+<tr><td><code>ccweight</code></td><td>module to generate inverse sampling probability weights</td><td>5</td><td><a href="./stata5/ccweight.zip">Download</a></td></tr>
+<tr><td><code>cgroup</code></td><td>Group contiguous observations with identical values of a varlist</td><td>10</td><td><a href="./stata10/cgroup.zip">Download</a></td></tr>
+<tr><td><code>chardef</code></td><td>Assign values to a characteristic of a list of items</td><td>11</td><td><a href="./stata11/chardef.zip">Download</a></td></tr>
+<tr><td><code>chardef</code></td><td>Assign values to a characteristic of a list of variables</td><td>10</td><td><a href="./stata10/chardef.zip">Download</a></td></tr>
+<tr><td><code>ciform</code></td><td>module to format confidence interval for tables in documents</td><td>7</td><td><a href="./stata7/ciform.zip">Download</a></td></tr>
+<tr><td><code>cprdcribs</code></td><td>Template do-files for inputting CPRD datasets into Stata</td><td>13</td><td><a href="./stata13/cprdcribs.zip">Download</a></td></tr>
+<tr><td><code>cprdenttype</code></td><td>Converting CPRD entity string data of any enttype to numeric</td><td>13</td><td><a href="./stata13/cprdenttype.zip">Download</a></td></tr>
+<tr><td><code>cprdentutil</code></td><td>Converting CPRD entity data variables to numeric variables</td><td>13</td><td><a href="./stata13/cprdentutil.zip">Download</a></td></tr>
+<tr><td><code>cprdhesaeutil</code></td><td>Inputting CPRD HES A&E linkage datasets into Stata</td><td>13</td><td><a href="./stata13/cprdhesaeutil.zip">Download</a></td></tr>
+<tr><td><code>cprdhesoputil</code></td><td>Inputting CPRD HES/OP linkage datasets into Stata</td><td>13</td><td><a href="./stata13/cprdhesoputil.zip">Download</a></td></tr>
+<tr><td><code>cprdhesutil</code></td><td>Inputting CPRD HES-linkage datasets into Stata</td><td>13</td><td><a href="./stata13/cprdhesutil.zip">Download</a></td></tr>
+<tr><td><code>cprdlinkutil</code></td><td>Inputting CPRD linkage-source datasets into Stata</td><td>13</td><td><a href="./stata13/cprdlinkutil.zip">Download</a></td></tr>
+<tr><td><code>cprdlsoautil</code></td><td>Inputting CPRD LSOA-linkage datasets into Stata</td><td>13</td><td><a href="./stata13/cprdlsoautil.zip">Download</a></td></tr>
+<tr><td><code>cprdonsutil</code></td><td>Inputting CPRD ONS-linkage datasets into Stata</td><td>13</td><td><a href="./stata13/cprdonsutil.zip">Download</a></td></tr>
+<tr><td><code>cprdutil</code></td><td>Utilities for inputting CPRD datasets into Stata</td><td>13</td><td><a href="./stata13/cprdutil.zip">Download</a></td></tr>
+<tr><td><code>creplace</code></td><td>Exchange values cyclically between variables</td><td>11</td><td><a href="./stata11/creplace.zip">Download</a></td></tr>
+<tr><td><code>creplace</code></td><td>Exchange values cyclically between variables</td><td>10</td><td><a href="./stata10/creplace.zip">Download</a></td></tr>
+<tr><td><code>descgen</code></td><td>Add Stata dataset attributes to a xdir or xframedir resultsset</td><td>16</td><td><a href="./stata16/descgen.zip">Download</a></td></tr>
+<tr><td><code>descgen</code></td><td>Add Stata dataset attribute variables to a xdir resultsset</td><td>10</td><td><a href="./stata10/descgen.zip">Download</a></td></tr>
+<tr><td><code>descsave</code></td><td>Save descriptive attributes of variables to a do-file and/or a Stata dataset</td><td>16</td><td><a href="./stata16/descsave.zip">Download</a></td></tr>
+<tr><td><code>descsave</code></td><td>Extension of describe creating output dataset and do-file</td><td>10</td><td><a href="./stata10/descsave.zip">Download</a></td></tr>
+<tr><td><code>descsave</code></td><td>Extension of describe creating output dataset and do-file</td><td>9</td><td><a href="./stata9/descsave.zip">Download</a></td></tr>
+<tr><td><code>descsave</code></td><td>Extension of describe creating output files</td><td>8</td><td><a href="./stata8/descsave.zip">Download</a></td></tr>
+<tr><td><code>descsave</code></td><td>Extension of describe creating output files</td><td>7</td><td><a href="./stata7/descsave.zip">Download</a></td></tr>
+<tr><td><code>docxtab</code></td><td>List variables to a .docx table with head or foot rows from characteristics</td><td>16</td><td><a href="./stata16/docxtab.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a do-file, creating a text or SMCL log file</td><td>16</td><td><a href="./stata16/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a do-file, creating a text or SMCL log file</td><td>15</td><td><a href="./stata15/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>14</td><td><a href="./stata14/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>13</td><td><a href="./stata13/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>12</td><td><a href="./stata12/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>11</td><td><a href="./stata11/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>10</td><td><a href="./stata10/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>9</td><td><a href="./stata9/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>8</td><td><a href="./stata8/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>7</td><td><a href="./stata7/dolog.zip">Download</a></td></tr>
+<tr><td><code>dolog</code></td><td>Execute commands from a file, creating a log file</td><td>6</td><td><a href="./stata6/dolog.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>16</td><td><a href="./stata16/dologx.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>15</td><td><a href="./stata15/dologx.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>14</td><td><a href="./stata14/dologx.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>13</td><td><a href="./stata13/dologx.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>12</td><td><a href="./stata12/dologx.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>11</td><td><a href="./stata11/dologx.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>10</td><td><a href="./stata10/dologx.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>9</td><td><a href="./stata9/dologx.zip">Download</a></td></tr>
+<tr><td><code>dologx</code></td><td>Multiple versions of dolog for executing certification scripts</td><td>8</td><td><a href="./stata8/dologx.zip">Download</a></td></tr>
+<tr><td><code>dotex</code></td><td>Execute a do-file generating a SJ LaTeX log</td><td>16</td><td><a href="./stata16/dotex.zip">Download</a></td></tr>
+<tr><td><code>dotex</code></td><td>Execute a do-file generating a SJ LaTeX log</td><td>15</td><td><a href="./stata15/dotex.zip">Download</a></td></tr>
+<tr><td><code>dotex</code></td><td>Execute a do-file generating a SJ LaTeX log</td><td>14</td><td><a href="./stata14/dotex.zip">Download</a></td></tr>
+<tr><td><code>dotex</code></td><td>Execute a do-file generating a SJ LaTeX log</td><td>13</td><td><a href="./stata13/dotex.zip">Download</a></td></tr>
+<tr><td><code>dotex</code></td><td>Execute a do-file generating a SJ LaTeX log</td><td>12</td><td><a href="./stata12/dotex.zip">Download</a></td></tr>
+<tr><td><code>dotex</code></td><td>Execute a do-file generating a SJ LaTeX log</td><td>11</td><td><a href="./stata11/dotex.zip">Download</a></td></tr>
+<tr><td><code>dotex</code></td><td>Execute a do-file generating a SJ LaTeX log</td><td>10</td><td><a href="./stata10/dotex.zip">Download</a></td></tr>
+<tr><td><code>dotex</code></td><td>Execute a do-file generating a SJ LaTeX log</td><td>7</td><td><a href="./stata7/dotex.zip">Download</a></td></tr>
+<tr><td><code>dsconcat</code></td><td>Concatenate a list of Stata data files into the memory</td><td>10</td><td><a href="./stata10/dsconcat.zip">Download</a></td></tr>
+<tr><td><code>dsconcat</code></td><td>Concatenate a list of Stata data files into the memory</td><td>9</td><td><a href="./stata9/dsconcat.zip">Download</a></td></tr>
+<tr><td><code>dsconcat</code></td><td>Concatenate a list of Stata data files into the memory</td><td>7</td><td><a href="./stata7/dsconcat.zip">Download</a></td></tr>
+<tr><td><code>dsconcat</code></td><td>Concatenate a list of Stata data files into the memory</td><td>6</td><td><a href="./stata6/dsconcat.zip">Download</a></td></tr>
+<tr><td><code>dsweight</code></td><td>Generate direct standardization weights</td><td>10</td><td><a href="./stata10/dsweight.zip">Download</a></td></tr>
+<tr><td><code>dtastamp</code></td><td>Store current date and time in dataset characteristics</td><td>10</td><td><a href="./stata10/dtastamp.zip">Download</a></td></tr>
+<tr><td><code>eclplot</code></td><td>Horizontal and vertical confidence interval plots</td><td>13</td><td><a href="./stata13/eclplot.zip">Download</a></td></tr>
+<tr><td><code>eclplot</code></td><td>Horizontal and vertical confidence interval plots</td><td>10</td><td><a href="./stata10/eclplot.zip">Download</a></td></tr>
+<tr><td><code>eclplot</code></td><td>Horizontal and vertical confidence interval plots</td><td>9</td><td><a href="./stata9/eclplot.zip">Download</a></td></tr>
+<tr><td><code>eclplot</code></td><td>Horizontal and vertical confidence interval plots</td><td>8</td><td><a href="./stata8/eclplot.zip">Download</a></td></tr>
+<tr><td><code>esetran</code></td><td>Transforming estimates and standard errors in parmest resultssets</td><td>10</td><td><a href="./stata10/esetran.zip">Download</a></td></tr>
+<tr><td><code>estparm</code></td><td>Save results from a parmest resultsset and test equality</td><td>11</td><td><a href="./stata11/estparm.zip">Download</a></td></tr>
+<tr><td><code>estparm</code></td><td>Save results from a parmest resultsset and test equality</td><td>10</td><td><a href="./stata10/estparm.zip">Download</a></td></tr>
+<tr><td><code>expgen</code></td><td>Duplicate observations and add generated variables</td><td>10</td><td><a href="./stata10/expgen.zip">Download</a></td></tr>
+<tr><td><code>expgen</code></td><td>Duplicate observations and add generated variables</td><td>9</td><td><a href="./stata9/expgen.zip">Download</a></td></tr>
+<tr><td><code>expgen</code></td><td>Duplicate observations and add generated variables</td><td>6</td><td><a href="./stata6/expgen.zip">Download</a></td></tr>
+<tr><td><code>explist</code></td><td>Creating exponentially-spaced lists of numbers</td><td>7</td><td><a href="./stata7/explist.zip">Download</a></td></tr>
+<tr><td><code>factext</code></td><td>Extract factor values from a label variable created by parmest</td><td>16</td><td><a href="./stata16/factext.zip">Download</a></td></tr>
+<tr><td><code>factext</code></td><td>Extract factor values from a label variable created by parmest</td><td>10</td><td><a href="./stata10/factext.zip">Download</a></td></tr>
+<tr><td><code>factext</code></td><td>Extract factor values from a label variable created by parmest</td><td>7</td><td><a href="./stata7/factext.zip">Download</a></td></tr>
+<tr><td><code>factmerg</code></td><td>Merge a list of factors to create string variables</td><td>11</td><td><a href="./stata11/factmerg.zip">Download</a></td></tr>
+<tr><td><code>factmerg</code></td><td>Merge a list of factors to create string variables</td><td>10</td><td><a href="./stata10/factmerg.zip">Download</a></td></tr>
+<tr><td><code>factmerg</code></td><td>Merge a list of factors to create string variables</td><td>7</td><td><a href="./stata7/factmerg.zip">Download</a></td></tr>
+<tr><td><code>factref</code></td><td>Insert new observations with reference values for factors</td><td>7</td><td><a href="./stata7/factref.zip">Download</a></td></tr>
+<tr><td><code>fvprevar</code></td><td>Version of fvrevar generating permanent result variables</td><td>11</td><td><a href="./stata11/fvprevar.zip">Download</a></td></tr>
+<tr><td><code>fvregen</code></td><td>Regenerate factor variables in a parmest output dataset</td><td>11</td><td><a href="./stata11/fvregen.zip">Download</a></td></tr>
+<tr><td><code>gphepssj</code></td><td>Translate a list of Stata graph files to Stata Journal .eps figures</td><td>7</td><td><a href="./stata7/gphepssj.zip">Download</a></td></tr>
+<tr><td><code>gpreset</code></td><td>Reset Stata Version 7 graphics preferences</td><td>7</td><td><a href="./stata7/gpreset.zip">Download</a></td></tr>
+<tr><td><code>gsgroup</code></td><td>Create a group variable and optionally an output dataset for a gsort key</td><td>10</td><td><a href="./stata10/gsgroup.zip">Download</a></td></tr>
+<tr><td><code>haif</code></td><td>Homoskedastic adjustment inflation factors for model selection</td><td>11</td><td><a href="./stata11/haif.zip">Download</a></td></tr>
+<tr><td><code>haif</code></td><td>Homoskedastic adjustment inflation factors for model selection</td><td>10</td><td><a href="./stata10/haif.zip">Download</a></td></tr>
+<tr><td><code>harmby</code></td><td>Harmonize values of variables within by-groups</td><td>7</td><td><a href="./stata7/harmby.zip">Download</a></td></tr>
+<tr><td><code>htmltit</code></td><td>Generate a document title variable for a HTML filename variable</td><td>14</td><td><a href="./stata14/htmltit.zip">Download</a></td></tr>
+<tr><td><code>htmlutil</code></td><td>Utilities for writing Hypertext Markup Language (HTML) files</td><td>14</td><td><a href="./stata14/htmlutil.zip">Download</a></td></tr>
+<tr><td><code>htmlutil</code></td><td>Utilities for writing Hypertext Markup Language (HTML) files</td><td>10</td><td><a href="./stata10/htmlutil.zip">Download</a></td></tr>
+<tr><td><code>inccat</code></td><td>Concatenate input files to an output file (possibly with insertions)</td><td>7</td><td><a href="./stata7/inccat.zip">Download</a></td></tr>
+<tr><td><code>ingap</code></td><td>Insert gap observations in a dataset</td><td>10</td><td><a href="./stata10/ingap.zip">Download</a></td></tr>
+<tr><td><code>ingap</code></td><td>Insert gap observations in a data set</td><td>7</td><td><a href="./stata7/ingap.zip">Download</a></td></tr>
+<tr><td><code>insingap</code></td><td>Insert a single gap observation at the top of each by-group</td><td>11</td><td><a href="./stata11/insingap.zip">Download</a></td></tr>
+<tr><td><code>intext</code></td><td>Read text files into string variables (without losing blanks)</td><td>13</td><td><a href="./stata13/intext.zip">Download</a></td></tr>
+<tr><td><code>intext</code></td><td>Read text files into string variables (without losing blanks)</td><td>9</td><td><a href="./stata9/intext.zip">Download</a></td></tr>
+<tr><td><code>intext</code></td><td>Read text files into string variables (without losing blanks)</td><td>7</td><td><a href="./stata7/intext.zip">Download</a></td></tr>
+<tr><td><code>invcise</code></td><td>Compute standard errors using the inverse confidence interval method</td><td>10</td><td><a href="./stata10/invcise.zip">Download</a></td></tr>
+<tr><td><code>invdesc</code></td><td>Change variable attributes using a describe or descsave resultsset</td><td>16</td><td><a href="./stata16/invdesc.zip">Download</a></td></tr>
+<tr><td><code>ipwbreg</code></td><td>Inverse propensity weights from Bernoulli regression</td><td>16</td><td><a href="./stata16/ipwbreg.zip">Download</a></td></tr>
+<tr><td><code>jformat</code></td><td>Justify formats for a list of variables</td><td>10</td><td><a href="./stata10/jformat.zip">Download</a></td></tr>
+<tr><td><code>keyby</code></td><td>Key the dataset by a variable list</td><td>10</td><td><a href="./stata10/keyby.zip">Download</a></td></tr>
+<tr><td><code>keyby</code></td><td>Key the dataset by a variable list</td><td>9</td><td><a href="./stata9/keyby.zip">Download</a></td></tr>
+<tr><td><code>kmest</code></td><td>Compute Kaplan-Meier survival probabilities and/or percentiles as estimation results</td><td>16</td><td><a href="./stata16/kmest.zip">Download</a></td></tr>
+<tr><td><code>kmest</code></td><td>Compute Kaplan-Meier survival probabilities and/or percentiles as estimation results</td><td>10</td><td><a href="./stata10/kmest.zip">Download</a></td></tr>
+<tr><td><code>lablist</code></td><td>List value labels (if present) for one or more variables</td><td>10</td><td><a href="./stata10/lablist.zip">Download</a></td></tr>
+<tr><td><code>lablist</code></td><td>List value labels (if present) for one or more variables</td><td>9</td><td><a href="./stata9/lablist.zip">Download</a></td></tr>
+<tr><td><code>lastupto</code></td><td>Condense a dataset to have 1 observation for each of a list of X-values</td><td>10</td><td><a href="./stata10/lastupto.zip">Download</a></td></tr>
+<tr><td><code>lincomest</code></td><td>Extension to lincom saving the combination as estimation results</td><td>10</td><td><a href="./stata10/lincomest.zip">Download</a></td></tr>
+<tr><td><code>lincomest</code></td><td>Extension to lincom saving the combination as estimation results</td><td>8</td><td><a href="./stata8/lincomest.zip">Download</a></td></tr>
+<tr><td><code>lincomest</code></td><td>Extension to lincom saving the combination as estimation results</td><td>7</td><td><a href="./stata7/lincomest.zip">Download</a></td></tr>
+<tr><td><code>linuxlsd1</code></td><td>Create a dataset of file records from the output of a Linux ls -d1 command</td><td>10</td><td><a href="./stata10/linuxlsd1.zip">Download</a></td></tr>
+<tr><td><code>listtab</code></td><td>List variables as rows of a TeX, HTML or word processor table</td><td>11</td><td><a href="./stata11/listtab.zip">Download</a></td></tr>
+<tr><td><code>listtab</code></td><td>List variables as rows of a TeX, HTML or word processor table</td><td>10</td><td><a href="./stata10/listtab.zip">Download</a></td></tr>
+<tr><td><code>listtex</code></td><td>List variables as rows of a TeX, HTML or word processor table</td><td>10</td><td><a href="./stata10/listtex.zip">Download</a></td></tr>
+<tr><td><code>listtex</code></td><td>List variables as rows of a TeX, HTML or word processor table</td><td>9</td><td><a href="./stata9/listtex.zip">Download</a></td></tr>
+<tr><td><code>listtex</code></td><td>List variables as rows of a TeX, HTML or word processor table</td><td>8</td><td><a href="./stata8/listtex.zip">Download</a></td></tr>
+<tr><td><code>listtex</code></td><td>List variables as rows of a TeX, HTML or word processor table</td><td>7</td><td><a href="./stata7/listtex.zip">Download</a></td></tr>
+<tr><td><code>ltop</code></td><td>Divide a dataset into pages without splitting internal by-groups</td><td>16</td><td><a href="./stata16/ltop.zip">Download</a></td></tr>
+<tr><td><code>marglmean</code></td><td>Marginal log means from regression models</td><td>14</td><td><a href="./stata14/marglmean.zip">Download</a></td></tr>
+<tr><td><code>marglmean</code></td><td>Marginal log means from regression models</td><td>13</td><td><a href="./stata13/marglmean.zip">Download</a></td></tr>
+<tr><td><code>marglmean</code></td><td>Marginal log means from regression models</td><td>12</td><td><a href="./stata12/marglmean.zip">Download</a></td></tr>
+<tr><td><code>margprev</code></td><td>Marginal prevalences from binary regression models</td><td>14</td><td><a href="./stata14/margprev.zip">Download</a></td></tr>
+<tr><td><code>margprev</code></td><td>Marginal prevalences from binary regression models</td><td>13</td><td><a href="./stata13/margprev.zip">Download</a></td></tr>
+<tr><td><code>margprev</code></td><td>Marginal prevalences from binary regression models</td><td>12</td><td><a href="./stata12/margprev.zip">Download</a></td></tr>
+<tr><td><code>metaparm</code></td><td>Meta-analysis and transformations using parmest resultssets</td><td>8</td><td><a href="./stata8/metaparm.zip">Download</a></td></tr>
+<tr><td><code>msdirb</code></td><td>Create a dataset of file names from the output of a MS-DOS dir/b command</td><td>10</td><td><a href="./stata10/msdirb.zip">Download</a></td></tr>
+<tr><td><code>normalbvr</code></td><td>Generate Normal bivariate ridits</td><td>10</td><td><a href="./stata10/normalbvr.zip">Download</a></td></tr>
+<tr><td><code>normalrir</code></td><td>Calculate ridits of inverse ridits between Normal populations</td><td>10</td><td><a href="./stata10/normalrir.zip">Download</a></td></tr>
+<tr><td><code>osgen</code></td><td>Add Python os_stat() file attributes to a xdir resultsset</td><td>16</td><td><a href="./stata16/osgen.zip">Download</a></td></tr>
+<tr><td><code>parmest</code></td><td>Create datasets with 1 observation per estimated parameter</td><td>16</td><td><a href="./stata16/parmest.zip">Download</a></td></tr>
+<tr><td><code>parmest</code></td><td>Create datasets with 1 observation per estimated parameter</td><td>11</td><td><a href="./stata11/parmest.zip">Download</a></td></tr>
+<tr><td><code>parmest</code></td><td>Create datasets with 1 observation per estimated parameter</td><td>10</td><td><a href="./stata10/parmest.zip">Download</a></td></tr>
+<tr><td><code>parmest</code></td><td>Create datasets with 1 observation per estimated parameter</td><td>9</td><td><a href="./stata9/parmest.zip">Download</a></td></tr>
+<tr><td><code>parmest</code></td><td>Convert estimation results to a data set with 1 obs per parameter</td><td>8</td><td><a href="./stata8/parmest.zip">Download</a></td></tr>
+<tr><td><code>parmest</code></td><td>Convert estimation results to a data set with 1 obs per parameter</td><td>7</td><td><a href="./stata7/parmest.zip">Download</a></td></tr>
+<tr><td><code>parmest</code></td><td>Save estimation results as a data set with 1 obs per parameter</td><td>6</td><td><a href="./stata6/parmest.zip">Download</a></td></tr>
+<tr><td><code>parmest</code></td><td>Save estimation results as a data set with 1 obs per parameter</td><td>5</td><td><a href="./stata5/parmest.zip">Download</a></td></tr>
+<tr><td><code>parmhet</code></td><td>Heterogeneity tests in parmest resultssets</td><td>10</td><td><a href="./stata10/parmhet.zip">Download</a></td></tr>
+<tr><td><code>parmparse</code></td><td>Parse a parameter name variable in a parmest resultsset</td><td>11</td><td><a href="./stata11/parmparse.zip">Download</a></td></tr>
+<tr><td><code>pcontract</code></td><td>Make a data set of frequencies and percentages</td><td>8</td><td><a href="./stata8/pcontract.zip">Download</a></td></tr>
+<tr><td><code>polyspline</code></td><td>Generate sensible bases for polynomials and other splines</td><td>16</td><td><a href="./stata16/polyspline.zip">Download</a></td></tr>
+<tr><td><code>polyspline</code></td><td>Generate sensible bases for polynomials and other splines</td><td>10</td><td><a href="./stata10/polyspline.zip">Download</a></td></tr>
+<tr><td><code>powercal</code></td><td>Generalized power calculations saving results in variables</td><td>10</td><td><a href="./stata10/powercal.zip">Download</a></td></tr>
+<tr><td><code>powercal</code></td><td>Generalized power calculations saving results in variables</td><td>7</td><td><a href="./stata7/powercal.zip">Download</a></td></tr>
+<tr><td><code>predsurv</code></td><td>Compute predicted or baseline survival after streg or stcox</td><td>10</td><td><a href="./stata10/predsurv.zip">Download</a></td></tr>
+<tr><td><code>prodvars</code></td><td>Create product variables for two lists of input variables</td><td>10</td><td><a href="./stata10/prodvars.zip">Download</a></td></tr>
+<tr><td><code>punaf</code></td><td>Population attributable fractions for cohort studies</td><td>14</td><td><a href="./stata14/punaf.zip">Download</a></td></tr>
+<tr><td><code>punaf</code></td><td>Population attributable fractions for cohort studies</td><td>13</td><td><a href="./stata13/punaf.zip">Download</a></td></tr>
+<tr><td><code>punaf</code></td><td>Population attributable fractions for cohort studies</td><td>12</td><td><a href="./stata12/punaf.zip">Download</a></td></tr>
+<tr><td><code>punaf</code></td><td>Population attributable fractions for cohort studies</td><td>11</td><td><a href="./stata11/punaf.zip">Download</a></td></tr>
+<tr><td><code>punafcc</code></td><td>Population attributable fractions for case-control and survival studies</td><td>14</td><td><a href="./stata14/punafcc.zip">Download</a></td></tr>
+<tr><td><code>punafcc</code></td><td>Population attributable fractions for case-control and survival studies</td><td>13</td><td><a href="./stata13/punafcc.zip">Download</a></td></tr>
+<tr><td><code>punafcc</code></td><td>Population attributable fractions for case-control and survival studies</td><td>12</td><td><a href="./stata12/punafcc.zip">Download</a></td></tr>
+<tr><td><code>qqvalue</code></td><td>Generate frequentist q-values by inverting multiple-test procedures</td><td>10</td><td><a href="./stata10/qqvalue.zip">Download</a></td></tr>
+<tr><td><code>qrisk2cmd</code></td><td>Running the QRISK2 command from within Stata</td><td>13</td><td><a href="./stata13/qrisk2cmd.zip">Download</a></td></tr>
+<tr><td><code>qrowname</code></td><td>Extract lists of quoted row and column names from a matrix</td><td>7</td><td><a href="./stata7/qrowname.zip">Download</a></td></tr>
+<tr><td><code>rcentile</code></td><td>Robust confidence intervals for percentiles</td><td>16</td><td><a href="./stata16/rcentile.zip">Download</a></td></tr>
+<tr><td><code>rcentile</code></td><td>Robust confidence intervals for percentiles</td><td>10</td><td><a href="./stata10/rcentile.zip">Download</a></td></tr>
+<tr><td><code>regaxis</code></td><td>Regular linear and logarithmic axis scales, ranges and tick lists</td><td>10</td><td><a href="./stata10/regaxis.zip">Download</a></td></tr>
+<tr><td><code>regaxis</code></td><td>Regular linear and logarithmic axis scales, ranges and tick lists</td><td>8</td><td><a href="./stata8/regaxis.zip">Download</a></td></tr>
+<tr><td><code>regpar</code></td><td>Population attributable risks from binary regression models</td><td>14</td><td><a href="./stata14/regpar.zip">Download</a></td></tr>
+<tr><td><code>regpar</code></td><td>Population attributable risks from binary regression models</td><td>13</td><td><a href="./stata13/regpar.zip">Download</a></td></tr>
+<tr><td><code>regpar</code></td><td>Population attributable risks from binary regression models</td><td>12</td><td><a href="./stata12/regpar.zip">Download</a></td></tr>
+<tr><td><code>rglm</code></td><td>module to estimate GLMs with Huber variances</td><td>5</td><td><a href="./stata5/rglm.zip">Download</a></td></tr>
+<tr><td><code>robit</code></td><td>Robit regression</td><td>16</td><td><a href="./stata16/robit.zip">Download</a></td></tr>
+<tr><td><code>rsource</code></td><td>Run R from inside Stata</td><td>10</td><td><a href="./stata10/rsource.zip">Download</a></td></tr>
+<tr><td><code>rsource</code></td><td>Run R from inside Stata using an R source file</td><td>9</td><td><a href="./stata9/rsource.zip">Download</a></td></tr>
+<tr><td><code>rtfutil</code></td><td>Utilities for writing Rich Text Format (RTF) files</td><td>11</td><td><a href="./stata11/rtfutil.zip">Download</a></td></tr>
+<tr><td><code>rtfutil</code></td><td>Utilities for writing Rich Text Format (RTF) files</td><td>10</td><td><a href="./stata10/rtfutil.zip">Download</a></td></tr>
+<tr><td><code>scenttest</code></td><td>Scenario arithmetic means and their difference</td><td>14</td><td><a href="./stata14/scenttest.zip">Download</a></td></tr>
+<tr><td><code>scenttest</code></td><td>Scenario arithmetic means and their difference</td><td>13</td><td><a href="./stata13/scenttest.zip">Download</a></td></tr>
+<tr><td><code>scheme_rbn1mono</code></td><td>Minimal monochrome graphics schemes</td><td>10</td><td><a href="./stata10/scheme_rbn1mono.zip">Download</a></td></tr>
+<tr><td><code>scheme_rbn1mono</code></td><td>Minimal monochrome graphics schemes</td><td>9</td><td><a href="./stata9/scheme_rbn1mono.zip">Download</a></td></tr>
+<tr><td><code>scsomersd</code></td><td>Rank statistics for scenario comparisons</td><td>16</td><td><a href="./stata16/scsomersd.zip">Download</a></td></tr>
+<tr><td><code>scsomersd</code></td><td>Rank statistics for scenario comparisons</td><td>10</td><td><a href="./stata10/scsomersd.zip">Download</a></td></tr>
+<tr><td><code>sdecode</code></td><td>Decode a numeric variable to string, formatting unlabelled values</td><td>13</td><td><a href="./stata13/sdecode.zip">Download</a></td></tr>
+<tr><td><code>sdecode</code></td><td>Decode a numeric variable to string, formatting unlabelled values</td><td>11</td><td><a href="./stata11/sdecode.zip">Download</a></td></tr>
+<tr><td><code>sdecode</code></td><td>Decode a numeric variable to string, formatting unlabelled values</td><td>10</td><td><a href="./stata10/sdecode.zip">Download</a></td></tr>
+<tr><td><code>sdecode</code></td><td>Decode a numeric variable to string, formatting unlabelled values</td><td>9</td><td><a href="./stata9/sdecode.zip">Download</a></td></tr>
+<tr><td><code>sdecode</code></td><td>Decode a numeric variable to string, formatting unlabelled values</td><td>7</td><td><a href="./stata7/sdecode.zip">Download</a></td></tr>
+<tr><td><code>sencode</code></td><td>Encode a string variable non-alphanumerically into a numeric variable</td><td>10</td><td><a href="./stata10/sencode.zip">Download</a></td></tr>
+<tr><td><code>sencode</code></td><td>Encode a string variable non-alphanumerically into a numeric variable</td><td>9</td><td><a href="./stata9/sencode.zip">Download</a></td></tr>
+<tr><td><code>sencode</code></td><td>Encode a string variable non-alphanumerically into a numeric variable</td><td>7</td><td><a href="./stata7/sencode.zip">Download</a></td></tr>
+<tr><td><code>senspec</code></td><td>Sensitivity and specificity results saved in generated variables</td><td>10</td><td><a href="./stata10/senspec.zip">Download</a></td></tr>
+<tr><td><code>senspec</code></td><td>Sensitivity and specificity results saved in generated variables</td><td>8</td><td><a href="./stata8/senspec.zip">Download</a></td></tr>
+<tr><td><code>smileplot</code></td><td>Multiple test procedures and smile plots</td><td>10</td><td><a href="./stata10/smileplot.zip">Download</a></td></tr>
+<tr><td><code>smileplot</code></td><td>Multiple test procedures and smile plots</td><td>8</td><td><a href="./stata8/smileplot.zip">Download</a></td></tr>
+<tr><td><code>smileplot</code></td><td>Multiple test procedures and smile plots</td><td>7</td><td><a href="./stata7/smileplot.zip">Download</a></td></tr>
+<tr><td><code>somersd</code></td><td>Kendall's tau-a, Somers' D and percentile slopes</td><td>16</td><td><a href="./stata16/somersd.zip">Download</a></td></tr>
+<tr><td><code>somersd</code></td><td>Kendall's tau-a, Somers' D and percentile slopes</td><td>12</td><td><a href="./stata12/somersd.zip">Download</a></td></tr>
+<tr><td><code>somersd</code></td><td>Kendall's tau-a, Somers' D and percentile slopes</td><td>10</td><td><a href="./stata10/somersd.zip">Download</a></td></tr>
+<tr><td><code>somersd</code></td><td>Kendall's tau-a, Somers' D and percentile slopes</td><td>9</td><td><a href="./stata9/somersd.zip">Download</a></td></tr>
+<tr><td><code>somersd</code></td><td>Kendall's tau-a, Somers' D and median differences</td><td>6</td><td><a href="./stata6/somersd.zip">Download</a></td></tr>
+<tr><td><code>somersd</code></td><td>Confidence intervals for Somers' D and Kendall's tau-a</td><td>5</td><td><a href="./stata5/somersd.zip">Download</a></td></tr>
+<tr><td><code>srslogit</code></td><td>Logit regression with secondary ridit splines</td><td>16</td><td><a href="./stata16/srslogit.zip">Download</a></td></tr>
+<tr><td><code>sscpax</code></td><td>Describe, install, or uninstall a list of SSC packages</td><td>10</td><td><a href="./stata10/sscpax.zip">Download</a></td></tr>
+<tr><td><code>stcmd</code></td><td>Run the Stat/Transfer st command from inside Stata</td><td>13</td><td><a href="./stata13/stcmd.zip">Download</a></td></tr>
+<tr><td><code>stcmd</code></td><td>Run the Stat/Transfer st command from inside Stata</td><td>10</td><td><a href="./stata10/stcmd.zip">Download</a></td></tr>
+<tr><td><code>stcmd</code></td><td>Run the Stat/Transfer st command from inside Stata</td><td>9</td><td><a href="./stata9/stcmd.zip">Download</a></td></tr>
+<tr><td><code>stcmd</code></td><td>Run the Stat/Transfer st command from inside Stata</td><td>6</td><td><a href="./stata6/stcmd.zip">Download</a></td></tr>
+<tr><td><code>strdate</code></td><td>Replace string date variables with numeric date variables</td><td>7</td><td><a href="./stata7/strdate.zip">Download</a></td></tr>
+<tr><td><code>subsave</code></td><td>Save a subset of the dataset in memory to a disk file</td><td>9</td><td><a href="./stata9/subsave.zip">Download</a></td></tr>
+<tr><td><code>sysport</code></td><td>Zip system directories for porting to another machine</td><td>16</td><td><a href="./stata16/sysport.zip">Download</a></td></tr>
+<tr><td><code>textpad</code></td><td>Call TextPad to edit a file</td><td>10</td><td><a href="./stata10/textpad.zip">Download</a></td></tr>
+<tr><td><code>tfinsert</code></td><td>Insert text into an open text file</td><td>10</td><td><a href="./stata10/tfinsert.zip">Download</a></td></tr>
+<tr><td><code>vallabdef</code></td><td>Define value labels from label name, value and label variables</td><td>10</td><td><a href="./stata10/vallabdef.zip">Download</a></td></tr>
+<tr><td><code>vallabframe</code></td><td>Convert a list of value labels to variables in a new data frame</td><td>16</td><td><a href="./stata16/vallabframe.zip">Download</a></td></tr>
+<tr><td><code>vallabsave</code></td><td>Save and load value labels and transfer them between frames</td><td>16</td><td><a href="./stata16/vallabsave.zip">Download</a></td></tr>
+<tr><td><code>vallabsave</code></td><td>Save and load label-only Stata datasets</td><td>11</td><td><a href="./stata11/vallabsave.zip">Download</a></td></tr>
+<tr><td><code>varlabdef</code></td><td>Define a value label with values corresponding to variables</td><td>10</td><td><a href="./stata10/varlabdef.zip">Download</a></td></tr>
+<tr><td><code>whichlist</code></td><td>Input list of package file items and output lists of present and absent items</td><td>16</td><td><a href="./stata16/whichlist.zip">Download</a></td></tr>
+<tr><td><code>wridit</code></td><td>Generate weighted ridits</td><td>16</td><td><a href="./stata16/wridit.zip">Download</a></td></tr>
+<tr><td><code>wridit</code></td><td>Generate weighted ridits</td><td>10</td><td><a href="./stata10/wridit.zip">Download</a></td></tr>
+<tr><td><code>xauto</code></td><td>Input an extended version of the auto data</td><td>10</td><td><a href="./stata10/xauto.zip">Download</a></td></tr>
+<tr><td><code>xcollapse</code></td><td>Make data set of summary statistics on disk or in memory</td><td>16</td><td><a href="./stata16/xcollapse.zip">Download</a></td></tr>
+<tr><td><code>xcollapse</code></td><td>Make data set of summary statistics on disk or in memory</td><td>10</td><td><a href="./stata10/xcollapse.zip">Download</a></td></tr>
+<tr><td><code>xcollapse</code></td><td>Make data set of summary statistics on disk or in memory</td><td>8</td><td><a href="./stata8/xcollapse.zip">Download</a></td></tr>
+<tr><td><code>xcontract</code></td><td>Create or extend dataset of variable combinations with frequencies and percents</td><td>16</td><td><a href="./stata16/xcontract.zip">Download</a></td></tr>
+<tr><td><code>xcontract</code></td><td>Make dataset of frequencies and percents on disk or in memory</td><td>10</td><td><a href="./stata10/xcontract.zip">Download</a></td></tr>
+<tr><td><code>xcontract</code></td><td>Make data set of frequencies and percents on disk or in memory</td><td>8</td><td><a href="./stata8/xcontract.zip">Download</a></td></tr>
+<tr><td><code>xdatelist</code></td><td>Create ascending numeric lists of dates</td><td>10</td><td><a href="./stata10/xdatelist.zip">Download</a></td></tr>
+<tr><td><code>xdatelist</code></td><td>Create ascending numeric lists of dates</td><td>7</td><td><a href="./stata7/xdatelist.zip">Download</a></td></tr>
+<tr><td><code>xdir</code></td><td> Create a resultsset with 1 observation per file or per frame</td><td>16</td><td><a href="./stata16/xdir.zip">Download</a></td></tr>
+<tr><td><code>xdir</code></td><td>Create a resultsset with 1 observation per file in a directory</td><td>10</td><td><a href="./stata10/xdir.zip">Download</a></td></tr>
+<tr><td><code>xframeappend</code></td><td>Append data frames to the end of the current data frame</td><td>16</td><td><a href="./stata16/xframeappend.zip">Download</a></td></tr>
+<tr><td><code>xglm</code></td><td>Extended version of glm</td><td>13</td><td><a href="./stata13/xglm.zip">Download</a></td></tr>
+<tr><td><code>xglm</code></td><td>Extended version of glm</td><td>11</td><td><a href="./stata11/xglm.zip">Download</a></td></tr>
+<tr><td><code>xgroup</code></td><td>Group the data creating a group variable and/or output dataset</td><td>10</td><td><a href="./stata10/xgroup.zip">Download</a></td></tr>
+<tr><td><code>xlink</code></td><td>Extra link functions for use with glm</td><td>16</td><td><a href="./stata16/xlink.zip">Download</a></td></tr>
+<tr><td><code>xrewide</code></td><td>Extended versions of reshape wide and reshape long</td><td>10</td><td><a href="./stata10/xrewide.zip">Download</a></td></tr>
+<tr><td><code>xsvmat</code></td><td>Convert a matrix to variables in an output dataset</td><td>16</td><td><a href="./stata16/xsvmat.zip">Download</a></td></tr>
+<tr><td><code>xsvmat</code></td><td>Convert a matrix to variables in an output dataset</td><td>10</td><td><a href="./stata10/xsvmat.zip">Download</a></td></tr>
+</table>
+</p>
+
+<p>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<p>
+Roger B. Newson
+<br>
+Email: <a href="mailto:r.newson@qmul.ac.uk">r.newson@qmul.ac.uk</a>
+<br>
+Text written: 01 April 2024. (Packages and do-files may have been added, deleted or revised since then.)
+<br>
+<a href="http://www.stata.com/">Stata Corporation</a>
+<br>
+<a href="http://ideas.uqam.ca/ideas/data/bocbocode.html">Statistical Software components (SSC) archive site</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+v 3
+d Stata 15 packages written by Roger Newson
+d These can be used by users with Stata Version 15 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p dolog Execute commands from a do-file, creating a text or SMCL log file
+p dologx Multiple versions of dolog for executing certification scripts
+p dotex Execute a do-file generating a SJ LaTeX log
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

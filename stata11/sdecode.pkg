@@ -1,0 +1,25 @@
+v 2
+d sdecode: Decode a numeric variable to string, formatting unlabelled values
+d sdecode ("super decode") creates an output string variable with
+d values from the input numeric variable varname, using labels if
+d present and formats otherwise.  The output string variable may either
+d replace the input numeric variable or be generated as a new variable
+d named newvar.  Unlike decode, sdecode creates an output string
+d variable containing the values of the input variable as output by the
+d tabulate command and other Stata output, instead of decoding all
+d unlabelled input values to missing.  sdecode is especially useful if
+d a numeric variable has value labels for some values but not for
+d others.  msdecode is a multivariate version of sdecode, which inputs
+d a list of numeric or string variables and (optionally) a list of
+d delimiters, and creates a single string variable, containing the
+d concatenated values of all the input variables, decoded if necessary
+d and separated by the delimiters if provided.
+d
+d Author: Roger Newson
+d Distribution-Date: 20september2013
+d Stata-Version: 11.0
+f sdecode.ado
+f sdecode.sthlp
+f msdecode.ado
+f msdecode.sthlp
+e

@@ -1,0 +1,10 @@
+v 2
+d ranksum1: Identity of Somers' D and the rank biserial correlation
+d This proves that the rank biserial correlation coefficient of
+d Edward Cureton, proportional to the difference between 2 mean ranks,
+d is in fact a special case of Somers' D.
+d
+d Author: Roger Newson
+d Distribution-date: 20 August 2008
+f ranksum1.pdf
+e

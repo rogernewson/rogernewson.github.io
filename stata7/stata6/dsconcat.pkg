@@ -1,0 +1,19 @@
+v 2
+d dsconcat: Concatenate a list of Stata data files into the memory
+d dsconcat takes, as input, a list of filenames, assumed to belong to Stata data
+d files, and creates a new data set in memory, containing all observations in all
+d the data sets, ordered primarily by source data set and secondarily by order
+d of observations within source data set. It is a multiple-file version of
+d append.
+d
+d Author: Roger Newson
+d Distribution-Date: 24apr2002
+d Stata-Version: 6
+d
+d Note: This is a superseded version of dsconcat for users with Stata Version 6.
+d The most recent version of dsconcat can usually be downloaded from SSC using
+d the Stata command:
+d ssc install dsconcat
+f dsconcat.ado
+f dsconcat.hlp
+e

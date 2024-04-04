@@ -1,0 +1,22 @@
+d vallabsave: Save and load label-only Stata datasets
+d The vallabsave package contains 2 modules, vallabsave and vallabload.
+d vallabsave saves a list of value labels (defaulting to all value labels
+d in the current dataset) to a label-only Stata dataset in a disk file,
+d containing no observations and no variables.  vallabload appends a
+d label-only Stata dataset in a disk file to the Stata dataset currently
+d in memory, after checking that the Stata dataset in the disk file is a
+d label-only Stata dataset.  Label-only Stata datasets are a sensible way
+d of storing value labels in a disk file, if the labels may have text
+d values that cannot be enclosed in compound quotes.  Such labels cannot
+d be stored using label save, or generated using label define, but they
+d may be generated using encode, or usng the SSC packages sencode and 
+d vallabdef.
+d
+d Author: Roger Newson
+d Distribution-Date: 21june2019
+d Stata-Version: 11
+f vallabsave.ado
+f vallabload.ado
+f vallabsave.sthlp
+f vallabload.sthlp
+e

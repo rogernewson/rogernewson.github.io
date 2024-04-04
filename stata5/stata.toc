@@ -1,0 +1,10 @@
+v 2
+d Stata 5 packages written by Roger Newson
+d These can be used by users with Stata Version 5 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+p ccweight module to generate inverse sampling probability weights
+p parmest Save estimation results as a data set with 1 obs per parameter
+p rglm module to estimate GLMs with Huber variances
+p somersd Confidence intervals for Somers' D and Kendall's tau-a
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

@@ -1,0 +1,12 @@
+v 2
+d mdexp1: Hodges-Lehmann median differences between exponential subpopulations
+d This gives formulas for the Hodges-Lehmann median difference between values,
+d in 2 subpopulations, of an outcome variable, which has an exponential
+d distribution within each subpopulation. The median difference is not equal
+d to the difference between medians, except if the two exponential
+d subpopulation distributions are the same.
+d
+d Author: Roger Newson
+d Distribution-date: 12 October 2008
+f mdexp1.pdf
+e

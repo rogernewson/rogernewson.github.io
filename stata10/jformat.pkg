@@ -1,0 +1,12 @@
+d jformat: Justify formats for a list of variables
+d jformat changes the display formats of a list of variables to be
+d left-justified, right-justified or centre-justified.  Other
+d features of the formats (such as the format width) are
+d preserved.
+d
+d Author: Roger Newson
+d Distribution-Date: 04november2018
+d Stata-Version: 10
+f jformat.ado
+f jformat.sthlp
+e

@@ -1,0 +1,32 @@
+v 2
+d Mixcellaneous documents written by Roger Newson
+d These documents have not been published in refereed journals.
+d They were written in response to queries and/or to justify methods.
+d Each package contains a document as an ancillary file, which the user
+d can download to his/her current directory by typing
+d
+d net get filename
+d
+d in Stata.
+p intsomd1 Interpretation of Somers' D under four simple models
+p bvridit1 Bivariate ridits and distribution theory for Kendall's tau-a
+p rankblandaltman Rank parameters for Bland-Altman plots
+p infiniteci The pure mathematics behind infinite confidence intervals for percentiles
+p asy2con1 Asymptotic distributions of two-sample rank statistics
+p selvip1 Asymptotic standard errors for logs of variance-inflated Poisson means
+p metahedgesg1 Estimating and pooling Hedges' g in a meta-analysis
+p scencomp1 Scenario comparisons: How much good can we do?
+p punaf1 Population unattributable fractions and other scenario comparisons
+p causconf1 Causality, confounders, and propensity scores
+p mdexp1 Hodges-Lehmann median differences between exponential subpopulations
+p linclog1 Linear combinations of logs of multinomial parameter estimates
+p ranksum1 Identity of Somers' D and the rank biserial correlation
+p multcomp1_rbn Multiple comparisons: The issues as I see them
+p scenario1 Confidence intervals for differences between scenario means
+p paraprop1 Paracetamol, paracetamol propensity and asthma/wheezing
+p transp1 Bias caused by missing values in primary predictor variables
+p sampvar1 Sampling variation, estimation and confidence intervals
+p infkeep1 INFKEEP, a Genstat procedure for calculating influence functions and associated standard errors
+p condis1 Calculation of concordance and discordance counts using an AVL search tree
+p bscthesis Competition between strains of bacteria with controlled and uncontrolled operons
+e

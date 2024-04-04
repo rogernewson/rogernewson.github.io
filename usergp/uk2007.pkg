@@ -1,0 +1,34 @@
+v 2
+d uk2007: Robust confidence intervals for Hodges-Lehmann median differences
+d The cendif module is part of the somersd package, and calculates confidence
+d intervals for the Hodges–Lehmann median difference between values of a
+d variable in two subpopulations. The traditional Lehmann formula, unlike the
+d formula used by cendif, assumes that the two subpopulation distributions
+d are different only in location, and that the subpopulations are therefore
+d equally variable. The cendif formula therefore contrasts with the Lehmann
+d formula as the unequal-variance t-test contrasts with the equal-variance
+d t-test. In a simulation study, designed to test cendif to destruction,
+d the performance of cendif was compared to that of the Lehmann formula,
+d using coverage probabilities and median confidence interval width ratios.
+d The simulations involved sampling from pairs of Normal or Cauchy
+d distributions, with subsample sizes ranging from 5 to 40, and
+d between-subpopulation variability scale ratios ranging from 1 to 4. If the
+d sample numbers were equal, then both methods gave coverage probabilities
+d close to the advertized confidence level. However, if the sample numbers
+d were unequal, then the Lehmann coverage probabilities were over-conservative
+d if the smaller sample was from the less variable population, and
+d over-liberal if the smaller sample was from the more variable population.
+d The cendif coverage probability was usually closer to the advertized level,
+d if the smaller sample was not very small. However, if the sample sizes were
+d 5 and 40, and the two populations were equally variable, then the Lehmann
+d coverage probability was close to its advertized level, while the cendif
+d coverage probability was over-liberal. The cendif confidence interval,
+d in its present form, is therefore robust both to non-Normality and to
+d unequal variablity, but may be less robust to the possibility that the
+d smaller sample size is very small. Possibilities for improvement are
+d discussed.
+d
+d Author: Roger Newson
+d Distribution-date: 12 September 2007
+f uk2007.pdf
+e

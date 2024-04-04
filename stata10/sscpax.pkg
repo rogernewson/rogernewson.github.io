@@ -1,0 +1,13 @@
+d sscpax: Describe, install, or uninstall a list of SSC packages
+d sscpax inputs a list of SSC package names and either describes,
+d installs, or uninstalls the packages in the list that are present
+d on SSC.  sscpax is useful if the user wants to install a package,
+d and also to install other SSC packages, on which the first
+d package is dependent.
+d
+d Author: Roger Newson
+d Distribution-Date: 14november2021
+d Stata-Version: 10
+f sscpax.ado
+f sscpax.sthlp
+e

@@ -1,0 +1,22 @@
+d scheme_rbn1mono: Minimal monochrome graphics schemes
+d rbn1mono contains Roger Newson's default graphics schemes.
+d The scheme rbn1mono specifies a minimal and photocopier-friendly
+d black-and-white look, with gray background lines and minimal gray
+d shading.  It is slightly more minimal and photocopier-friendly than
+d s1mono (which is its mother scheme), and slightly less minimal and
+d photocopier-friendly than Svend Juul's lean schemes (which can be
+d downloaded in their latest form using the findit command).
+d The package rbn1mono now includes a second scheme rbn2mono,
+d which is an alternative version of rbn1mono which does not alter
+d text sizes, marker sizes and line widths when by graphs and/or
+d graph combine and/or graph matrix are used.
+d 
+d Author: Roger Newson
+d Distribution-date: 23 March 2009
+d Stata-version: 9
+d
+f scheme-rbn1mono.scheme
+f scheme-rbn2mono.scheme
+f scheme_rbn1mono.hlp
+f scheme_rbn2mono.hlp
+e

@@ -1,0 +1,27 @@
+v 3
+d scenttest: Scenario arithmetic means and their difference
+d scenttest calculates confidence intervals for 2 scenario arithmetic
+d (or geometric) means, and for their difference (or ratio).
+d scenttest can be used after an estimation command whose predicted
+d values are interpreted as conditional arithmetic means of a
+d Y-variable, such as regress, poisson, or glm.  It estimates two
+d scenario means, a baseline scenario ("Scenario 0") and an
+d alternative scenario ("Scenario 1"), in which one or more exposure
+d variables are assumed to be set to particular values (typically
+d zero), and any other predictor variables in the model are assumed
+d to remain the same.  It also estimates the difference between the
+d Scenario 0 mean and the Scenario 1 mean.  This difference
+d represents the increase in the mean Y-value attributable to living
+d in Scenario 0 instead of Scenario 1.  If the Y-variable is derived
+d as the log of a positive-valued original outcome variable, then the
+d scenario means displayed may be the scenario geometric means of the
+d original outcome variable, and the comparison displayed may be
+d their ratio.
+d
+d Author: Roger Newson
+d Distribution-Date: 05september2014
+d Stata-Version: 13
+f scenttest.ado
+f scenttest_p.ado
+f scenttest.sthlp
+e

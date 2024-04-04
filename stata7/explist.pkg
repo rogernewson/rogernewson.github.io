@@ -1,0 +1,22 @@
+v 2
+d explist: Creating exponentially-spaced lists of numbers
+d
+d explist is a program to generate an exponentially-spaced list of numbers.
+d Such a list can be stored in a macro variable and used by the graph
+d command when the xlog or ylog option is used. explist takes, as input,
+d a list of numbers x_1, ... , x_n. It creates, as output, a list of
+d numbers y_1, ... , y_n, derived exponentially from the input list,
+d so that, for each i,
+d
+d y_i = scale*base^x_i
+d
+d where base and scale are numbers given by options of the same names.
+d The syntax of explist is similar to that of Nick Cox's listutil package,
+d available from SSC.
+d
+d Author: Roger Newson
+d Distribution-Date: 02august2002
+d Stata-Version: 7
+f explist.ado
+f explist.hlp
+e

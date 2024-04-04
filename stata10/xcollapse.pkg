@@ -1,0 +1,16 @@
+v 2
+d xcollapse: Make data set of summary statistics on disk or in memory
+d xcollapse is an extended version of collapse, which creates a data set with
+d one observation per combination of values of a list of variables in the
+d existing data set and new variables containing summary statistics of other
+d variables (eg means) in each combination. xcollapse allows the user to choose
+d the destination of the output data set, which may either be listed to the
+d Stata log, or saved to a disk file, or written to the memory (overwriting any
+d existing data set).
+d
+d Author: Roger Newson
+d Distribution-Date: 22march2012
+d Stata-Version: 10
+f xcollapse.ado
+f xcollapse.sthlp
+e

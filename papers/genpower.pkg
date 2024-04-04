@@ -1,0 +1,26 @@
+v 2
+d genpower: Generalized power calculations
+d This paper is the manual distributed with the powercal package (downloadable
+d from SSC). The powercal package performs generalized power calculations,
+d storing the result in a new variable, which can be plotted and/or listed.
+d It can calculate any of 5 quantities, namely number of sampling units, power,
+d alpha (significance level), delta (difference in parameter value to be
+d detected), or the standard deviation (SD) of the influence function, defined
+d as the standard error multiplied by the square root of the sample number. 
+d The paper gives generalized methods and formulas for a wide range of sample
+d designs and parameters, including any design where the parameter to be
+d estimated is a linear contrast of link functions of subpopulation means
+d arising from generalized linear models (McCullagh and Nelder, 1989).
+d These parameters include arithmetic mean differences, geometric mean ratios,
+d odds ratios, risk ratios and rate ratios. More general power calculations
+d may be carried out using a standard error from a pilot study or simulation.
+d
+d References
+d
+d McCullagh P. and J. A. Nelder. 1989. Generalized Linear Models. 2nd ed.
+d London, UK: Chapman & Hall.
+d 
+d Author: Roger Newson
+d Distribution-Date: 26march2012
+f powercal.pdf
+e

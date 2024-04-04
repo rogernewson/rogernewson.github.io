@@ -1,0 +1,26 @@
+v 2
+d multproc: Multiple test procedures and smile plots
+d This is a pre-publication draft of a Stata Journal paper (Newson et al.,
+d 2003). The paper describes the smileplot package (downloadable from SSC),
+d and contains complete documentation for the package, including Syntax,
+d Methods and Formulas, and Examples. The smileplot package takes, as input, a
+d data set with one observation for each parameter measured, and data on
+d P-values and possibly other parameter attributes. The package contains the
+d programs multproc, which carries out a range of multiple test procedures, and
+d smileplot, which expresses a multiple test procedure graphically by plotting
+d the P-values on a reverse log scale on the Y-axis against another variable on
+d the X-axis, which is usually the corresponding parameter estimates, but may
+d be another variable, such as the positions of the corresponding genes on the
+d chromosome map. There are reference lines on the Y-axis at the uncorrected
+d and corrected critical P-values. The multiple test procedures may control
+d either the familywise error rate (FWER) or the false discovery rate (FDR).
+d
+d References
+d
+d Newson R. and the ALSPAC Study Team. 2003. Multiple-test procedures and
+d smile plots. The Stata Journal 3(2): 109-132.
+d
+d Author: Roger Newson
+d Distribution-date: 27 June 2003
+f multproc.pdf
+e

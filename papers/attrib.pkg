@@ -1,0 +1,20 @@
+v 2
+d attrib: Attributable and unattributable risks and fractions
+d This is a pre-publication draft of a Stata Journal paper
+d (Newson, 2013). The paper describes the packages punaf,
+d puafcc, regpar, marglmean and margprev, which are used
+d to estimate scenario means and prevalences and comparisons
+d between these, such as population unattributable and
+d attributable risks and fractions. Methods, formulas and
+d examples are given.
+d
+d References
+d
+d Newson R. B. Attributable and unattributable risks and
+d fractions and other scenario comparisons. The Stata Journal
+d 2013; 13(4): 672–698.
+d
+d Author: Roger Newson
+d Distribution-date: 23december2013
+f attrib.pdf
+e

@@ -1,0 +1,19 @@
+v 2
+d prodvars: Create product variables for two lists of input variables
+d prodvars inputs 2 variable lists, known as the left variable list and
+d the right variable list. It produces as output a list of generated
+d variables, one for each pair of variables from the left and right
+d variable lists, each with a variable names derived either from a stub
+d or from the names of the pair of input variables, and values equal to
+d the products of the values of the two input variables. Optionally,
+d the generated variables may also have variable labels derived from
+d the variable labels, or variable names, of the input variables.
+d prodvars is useful for calculating variables for the design matrix
+d of a multiple-intercept model.
+d
+d Author: Roger Newson
+d Date: 08 February 2011
+d Stata version: 10
+f prodvars.ado
+f prodvars.sthlp
+e

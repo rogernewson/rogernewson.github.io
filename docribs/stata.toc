@@ -1,0 +1,16 @@
+v 2
+d Do-file cribs written by Roger Newson
+d These packages contain Stata do-files, which users can download and
+d use as templates (or cribs) to create do-files for use with packages
+d written by Roger Newson.
+p crib18 Do-file templates for use in Stata Version 18
+p crib17 Do-file templates for use in Stata Version 17
+p crib16 Do-file templates for use in Stata Version 16
+p crib15 Do-file templates for use in Stata Version 15
+p crib14 Do-file templates for use in Stata Version 14
+p crib13 Do-file templates for use in Stata Version 13
+p crib12 Do-file templates for use in Stata Version 12
+p crib11 Do-file templates for use in Stata Version 11
+p crib10 Do-file templates for use in Stata Version 10
+p crib9 Do-file templates for use in Stata Version 9
+e

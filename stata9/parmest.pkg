@@ -1,0 +1,43 @@
+v 2
+d parmest: Create datasets with 1 observation per estimated parameter
+d The parmest package has 4 modules: parmest, parmby, parmcip and metaparm.
+d parmest creates an output dataset, with 1 observation per parameter of the
+d most recent estimation results, and variables corresponding to parameter names,
+d estimates, standard errors, z- or t-test statistics, P-values, confidence
+d limits and other parameter attributes. parmby is a quasi-byable extension to
+d parmest, which calls an estimation command, and creates a new dataset, with 1
+d observation per parameter if the by() option is unspecified, or 1 observation
+d per parameter per by-group if the by() option is specified. parmcip inputs
+d variables containing estimates, standard errors and (optionally) degrees of
+d freedom, and computes new variables containing confidence intervals and
+d P-values. metaparm inputs a parmest-type dataset with 1 observation for each
+d of a set of independently-estimated parameters, and outputs a dataset with
+d 1 observation for each of a set of linear combinations of these parameters,
+d with confidence intervals and P-values, as for a meta-analysis. The output
+d datasets created by parmest, parmby or metaparm  may be listed to the Stata
+d log and/or saved to a file and/or retained in memory (overwriting any
+d pre-existing dataset). The confidence intervals, P-values and other parameter
+d attributes in the dataset may be listed and/or plotted and/or tabulated.
+d
+d Author: Roger Newson
+d Distribution-Date: 21february2007
+d Stata-Version: 9
+f metaparm.ado
+f parmby.ado
+f parmcip.ado
+f parmest.ado
+f metaparm.hlp
+f metaparm_content_opts.hlp
+f metaparm_outdest_opts.hlp
+f metaparm_resultssets.hlp
+f parmby.hlp
+f parmby_only_opts.hlp
+f parmcip.hlp
+f parmcip_opts.hlp
+f parmest.hlp
+f parmest_ci_opts.hlp
+f parmest_outdest_opts.hlp
+f parmest_resultssets.hlp
+f parmest_varadd_opts.hlp
+f parmest_varmod_opts.hlp
+e

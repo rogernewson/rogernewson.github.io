@@ -1,0 +1,28 @@
+v 2
+d params: Parameters behind "nonparametric" statistics
+d This is a pre-publication draft of a Stata Journal paper (Newson, 2002).
+d The paper reviews confidence intervals for the parameters behind rank or
+d "nonparametric" statistics, and how to calculate them in Stata, using the
+d somersd package (downloadable from SSC). The parameters are Kendall's tau-a,
+d Somers' D (defined in terms of Kendall's tau-a), and the Hodges-Lehmann
+d median difference and Theil slope (defined in terms of Somers' D). The paper
+d reviews the relation of these parameters with Pearson correlation, the
+d Wilcoxon or Mann-Whitney ranksum test, the Gehan test, areas under receiver
+d operating characteristic (ROC) curves, and Harrell's C. The main paper is in
+d the file params.pdf. However, users may also download the additional files
+d somersd.pdf, cendif.pdf and censlope.pdf, which contain full documentation,
+d including Syntax, Methods and Formulas, for the programs somersd, cendif
+d and censlope in the somersd package.
+d
+d References
+d
+d Newson R. 2002. Parameters behind "nonparametric" statistics: Kendall's tau,
+d Somers' D and median differences. The Stata Journal 2(1): 45-64.
+d
+d Author: Roger Newson
+d Distribution-date: 26 February 2006
+f params.pdf
+f somersd.pdf
+f cendif.pdf
+f censlope.pdf
+e

@@ -1,0 +1,480 @@
+% This is a LaTeX input file.
+%
+% A '%' character causes TeX to ignore all remaining text on the line,
+% and is used for comments like this one.
+
+\documentclass[a4paper]{article}      % Specifies the document class
+
+                             % The preamble begins here.
+\title{Formulas for estimating and pooling Hedges'~$g$ parameters in a meta-analysis}  % Declares the document's title.
+\author{Roger B. Newson}      % Declares the author's name.
+%\date{15 March, 2020}      % Deleting this command produces today's date.
+
+\newcommand{\ip}[2]{(#1, #2)}
+                             % Defines \ip{arg1}{arg2} to mean
+                             % (arg1, arg2).
+
+%\newcommand{\ip}[2]{\langle #1 | #2\rangle}
+                             % This is an alternative definition of
+                             % \ip that is commented out.
+
+\usepackage{hyperref}
+
+%
+% Set margins
+% (which are explained in Figure C3 of LaTeX User's Guide
+% and which CAN BE RESET BY EDITORS AT ANY TIME AS FAR AS I CARE!!!!!!!!
+% - RBN.)
+%
+\setlength{\topmargin}{-0.5in}
+%\setlength{\headsep}{0.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{10in}
+
+%
+% Set page style (headers and footers)
+%
+\pagestyle{myheadings}
+\markboth{\textit{Estimating and pooling Hedges'~$g$ in a meta--analysis}}
+{\textit{Estimating and pooling Hedges'~$g$ in a meta--analysis}}
+
+\begin{document}             % End of preamble and beginning of text.
+
+\maketitle                   % Produces the title.
+
+\section{Introduction}
+
+The parameter Hedges'~$g$ is also known as the standardized mean difference (SMD).
+It was advocated by Hedges (1981)\cite{hedges1981} as a measure of effect of a treatment,
+to be derived from a 2-sample comparison between treated and untreated subjects,
+which can be compared, and pooled in a meta-analysis, between studies where different outcomes are measured for the same treatment comparison.
+It is expected to be useful in areas such as physiotherapy,
+where there may be no consensus as to how to measure the efficacy of a treatment,
+and where different symptom scores are used in different studies.
+An example of an application of Hedges'~$g$ appears in Diong \textit{et al.}, 2016\cite{diongetal2016}.
+Having done a meta--analysis of Hedges'~$g$ parameters on a messy set of journal articles,
+the current author would like to share some of the formulas used with other meta--analysts for future reference.
+
+\section{Formulas}
+
+Hedges'~$g$ was defined by Hedges (1981)\cite{hedges1981} as a general measure of treatment effect,
+valid when comparing 2 treatment groups regarding a Normally--distributed outcome
+that is equally variable in the 2 sub--populations from which the treatment groups are sampled.
+Following Hedges, we assume that there are $K$ studies (or study-outcomes),
+each featuring 2 treatment groups, an intervention group (with index 1) and a control group (with index 0).
+For each $i$ from 1 to $K$, we assume that there are $n_{0i}$ subjects in the control group,
+and $n_{1i}$ subjects in the intervention group,
+and that the outcomes measured in Study~$i$ are $Y_{0ij}$ for $j$ from 1 to $n_{0i}$ in the control group
+and $Y_{1ij}$ for $j$ from 1 to $n_{1i}$ in the intervention group.
+We assume that, for each $i$, the control values $Y_{0ij}$ are sampled from a common Normal distribution
+with mean $\mu_{0i}$ and standard deviation (SD) $\sigma_{0i}$,
+and that the intervention values $Y_{1ij}$ are sampled from another common Normal distribution
+with mean $\mu_{1i}$ and SD $\sigma_{1i}$.
+
+The standard sampling estimators for $\mu_{0i}$ and $\mu_{1i}$ are the respective sample means,
+\def\Ybar{{\overline{Y}}}
+\begin{equation}
+\begin{array}{rl}
+\Ybar_{0i} = & n_{0i}^{-1}\sum_{j=1}^{n_{0i}} Y_{0ij}, \\
+\Ybar_{1i} = & n_{1i}^{-1}\sum_{j=1}^{n_{1i}} Y_{1ij},
+\label{eq:eqseq1}
+\end{array}
+\end{equation}
+and the standard sample estimators for $\sigma_{0i}$ and $\sigma_{1i}$ are the respective sample SDs,
+\def\SDbar{{\overline{SD}}}
+\begin{equation}
+\begin{array}{rl}
+\SDbar_{0i} = & \sqrt{ \left( n_{0i} - 1 \right)^{-1}\sum_{j=1}^{n_{0i}} \left( Y_{0ij} - \Ybar_{0i} \right)^2 }, \\
+\SDbar_{1i} = & \sqrt{ \left( n_{1i} - 1 \right)^{-1}\sum_{j=1}^{n_{1i}} \left( Y_{1ij} - \Ybar_{1i} \right)^2 }. \\
+\label{eq:eqseq2}
+\end{array}
+\end{equation}
+However, if we think that we can assume that the control and intervention SDs are equal in each study ($\sigma_{0i}=\sigma_{1i}=\sigma_i$),
+then we can estimate each common study--specific SD $\sigma_i$ by weighting the two squared treatment--specific SDs to give the estimate
+\begin{equation}
+\SDbar_i = \sqrt{ {{(n_{0i}-1)\SDbar^2_{0i} + (n_{1i}-1)\SDbar^2_{1i}}\over{n_{0i}+n_{1i}-2}} }.
+\label{eq:eqseq3}
+\end{equation}
+This estimate enables us to estimate the difference between the intervention and control study mean in each study, expressed in units of the common SD.
+In the $i$th study, this difference, in the study population at large, is the $i$th population Hedges'~$g$, defined as
+\begin{equation}
+\gamma_i = \left(\mu_{1i}-\mu_{0i}\right)/\sigma_i,
+\label{eq:eqseq4}
+\end{equation}
+and is estimated using the $i$th sample Hedges'~$g$, defined as the estimator
+\begin{equation}
+g_i = \left( \Ybar_{1i} - \Ybar_{0i} \right) / \SDbar_i .
+\label{eq:eqseq5}
+\end{equation}
+For the purposes of making funnel plots or carrying out heterogeneity tests,
+we may use the standard--error formula for the equal--variance $t$-test to define an approximate standard error for the individual $g_i$
+using the variance formula of Hedges (1981)\cite{hedges1981}.
+If we assume equal variances in the intervention and control groups,
+then each individual $g_i$ has the standard error
+\begin{equation}
+SE\left(g_i\right) = \sqrt{ {1\over n_{0i}} + {1 \over n_{1i}} } ,
+\label{eq:eqseq20}
+\end{equation}
+using the standard equal--variance linear--regression theory of Seber (1977)\cite{seber1977}.
+This standard error can be used with $g_i$ to generate a confidence interval and a $P$--value for $\gamma_i$,
+using the ``Student'' $t$--distribution with $n_{0i}+n_{1i}-2$ degrees of freedom.
+
+In a meta-analysis, we wish to estimate the weighted mean of the $\gamma_i$, which is equal to the common value if all the $\gamma_i$ are equal.
+Usually, this meta--population parameter is defined as a weighted sum of the $\gamma_i$,
+using weights $w_i$ that we hope are approximately inversely proportional to the sampling variance of the $g_i$.
+(These weights are frequently the pooled intervention and control sample numbers $n_i = n_{1i}+n_{0i}$.)
+It is defined as
+\def\gammabar{{\overline{\gamma}}}
+\begin{equation}
+\gammabar = {{\sum_{i=1}^K w_i \gamma_i}\over{\sum_{i=1}^K w_i}}.
+\label{eq:eqseq6}
+\end{equation}
+If these weights $w_i$ can be estimated using consistent estimators $W_i$,
+then the estimator for the meta--population $\gammabar$ is the weighted sum
+\def\gbar{{\overline {g}}}
+\begin{equation}
+\gbar = {{\sum_{i=1}^K W_i \, g_i}\over{\sum_{i=1}^K W_i}}.
+\label{eq:eqseq7}
+\end{equation}
+In the case where the $w_i$ are the pooled $n_i$, the $W_i$ are also the $n_i$.
+However, the $w_i$ might be inverse sampling variances for the $g_i$,
+and then the $W_i$ may be inverse variance estimates.
+
+\subsection{The connection with Somers'~$D$}
+
+A possible justification for Hedges'~$g$ is as a less robust, but more widely available, substitute for Somers'~$D$ (Newson, 2006)\cite{newson2006}.
+Somers'~$D$ can be viewed as a common currency for associations,
+which can be compared, and meta--analysed, between associations between variables defined on a variety of scales (Newson, 2015)\cite{newson2015}.
+In the two--sample case considered here,
+it measures how little overlap there is between the 2 treatment groups (intervention and control).
+
+If the assumption of equal variances between treatment groupss in the same study for the same outcome is true,
+then the $i$th Hedges'~$g$ is related to the corresponding Somers'~$D$
+using the formula
+\begin{equation}
+D_i = 2 \Phi\left( \gamma_i\over\sqrt{2}\right) - 1,
+\label{eq:eqseq8}
+\end{equation}
+where $\Phi(\cdot)$ is the cumulative standard Normal distribution function,
+and $D_i$ is the Somers'~$D$, in the $i$th study sub--population,
+of outcome with respect to treatment (defined as 0 for control, 1 for intervention).
+
+In practice, of course, we cannot always estimate Somers'~$D$ for each study in a meta-analysis,
+except if we have the original data for each study.
+Hedges'~$g$ has the advantage that journal articles usually provide enough information
+for the user to estimate the study--treatment means $\mu_{0i}$ and $\mu_{1i}$
+and the study--treatment SDs $\sigma_{0i}$ and $\sigma_{1i}$,
+allowing us to estimate Hedges'~$g$ for each study, using the formula (\ref{eq:eqseq5}).
+
+\subsection{Alternative estimates for the study parameters}
+
+Usually, when we do a meta-analysis, the report from a component study provides estimates for the study--specific $\mu_{0i}$, $\mu_{1i}$,
+$\sigma_{0i}$ and $\sigma_{1i}$.
+In most cases, these are the corresponding $\Ybar_{0i}$, $\Ybar_{1i}$, $\SDbar_{0i}$ and $\SDbar_{1i}$.
+However, sometimes these are not available. In these cases, the meta--analyst must find substitutes.
+
+Sometimes, instead of treatment--group means and SDs,
+the study reports give treatment--group means with confidence limits.
+For the $i$th study, and for $h$ equal to zero for the control sub--sample and 1 for the intervention sub--sample,
+the lower and upper confidence limits for $\Ybar_{hi}$ may be denoted
+\def\Ybarlowerhi{{\Ybar_{hi}^{\rm (lower)}}}
+\def\Ybarupperhi{{\Ybar_{hi}^{\rm (upper)}}}
+$\Ybarlowerhi$ and $\Ybarupperhi$, respectively. The estimated SD is then given by the alternative formula
+\def\invt{{\rm invt}}
+\def\half{{1\over 2}}
+\begin{equation}
+\SDbar_{hi} = {{\sqrt{n_{hi}} \left( \Ybarupperhi-\Ybarlowerhi \right)}\over{\invt \left( n_{hi}-1 , 1-\half\alpha \right) - \invt \left( n_{hi}-1 , \half\alpha \right) }}.
+\label{eq:eqseq9}
+\end{equation}
+Here,
+$\alpha$ is defined so that the confidence interval has confidence level $100(1-\alpha)$,
+so that $\alpha=0.05$ for a 95~percent confidence interval,
+and $\invt(a,b)$ is defined as the inverse cumulative Student's $t$--distribution function, with $a$ degrees of freedom, of $b$,
+as implemented in Stata using the Stata statistical function \texttt{invt()} (StataCorp, 2015)\citet{statacorp}.
+
+Alternatively, a report from a component study may provide confidence limits only for the difference between intervention and control study means,
+and not for the study means themselves.
+In these cases, we may denote the lower and upper confidence limits for the $i$th treated--control difference as
+\def\diffloweri{{{\rm diff}_{i}^{\rm (lower)}}}
+\def\diffupperi{{{\rm diff}_{i}^{\rm (upper)}}}
+$\diffloweri$ and $\diffupperi$, respectively.
+We may then reconstruct the standard error of the difference from the confidence limits,
+using the formula
+\def\SEdiffi{{{\rm SE}_i^{\rm diff}}}
+\begin{equation}
+\SEdiffi = {{\diffupperi - \diffloweri}\over{\invt \left( n_{0i}+n_{1i}-2 , 1-\half\alpha \right) - \invt \left( n_{0i}+n_{1i}-2 , \half\alpha \right) }},
+\label{eq:eqseq10}
+\end{equation}
+where $\alpha$ and $\invt(\cdot,\cdot)$ are defined as before.
+Assuming that the population SDs are equal in the control and treated subpopulations for the $i$th study,
+we may then estimate the common SD $\sigma_i$ using the formula
+\begin{equation}
+\SDbar_i = { { \SEdiffi }\over{ \sqrt{ 1/n_{0i} + 1/n_{1i} } } }.
+\label{eq:eqseq11}
+\end{equation}
+We can then substitute (\ref{eq:eqseq11}) into (\ref{eq:eqseq5}) to estimate the $i$th Hedges'~$g$.
+
+Alternatively, the study may present no means, standard deviations or standard errors, but only medians and other percentiles,
+or even only a median and an interpercentile range.
+In this case, the investigators may have done this because the outcome does not have a perfect Normal distribution.
+However, the best possible approximation to a Hedges'~$g$ may still be to treat the median as the mean,
+and to estimate the SD from the percentiles, or from the interpercentile range.
+\def\xibar{{\overline{\xi}}}
+For each probability $q$, we will denote by $\xi_{hi}^{(q)}$ the $100q$th population percentile, in treatment group~$h$ of study~$i$,
+and we will denote by $\xibar_{hi}^{(q)}$ the corresponding estimate of $\xi_{hi}^{(q)}$ from the study report.
+The treatment--group mean is then estimated as the corresponding median,
+\begin{equation}
+\Ybar_{hi} = \xibar_{hi}^{(0.5)}.
+\label{eq:eqseq12}
+\end{equation}
+To estimate the SD, we will need 2 percentiles, or at least their difference.
+For instance, if the percentiles given are the median, the 25th percentile, and the 75th percentile,
+then we usually estimate the SD using the 25th and 75th percentiles,
+or even using just their difference, known as the interquartile range,
+which is sometimes given in a study report without the original percentiles.
+\def\qlower{{q^{({\rm lower})}}}
+\def\qupper{{q^{({\rm upper})}}}
+We will denote by $\qlower$ and $\qupper$ the lower and upper proportions corresponding to the reported percentiles,
+such that the study report has presented percentiles $100\qlower$ and $100\qupper$,
+or just their difference.
+We will denote by $\xi_{hi}^{({\rm lower})}$ and $\xi_{hi}^{({\rm upper})}$
+the lower and upper population percentiles for treatment group~$h$ in study~$i$,
+and denote by  $\xibar_{hi}^{({\rm lower})}$ and $\xibar_{hi}^{({\rm upper})}$
+the corresponding sample percentiles, which were given in the report
+(or at least their difference was).
+The population SD for treatment group~$h$ of study~$i$ is then given by the formula
+\begin{equation}
+\sigma_{hi} = {{ \xi_{hi}^{({\rm upper})} - \xi_{hi}^{({\rm lower})} }\over{ \Phi^{-1}\left(\qupper\right) - \Phi^{-1}\left(\qlower\right) }},
+\label{eq:eqseq13}
+\end{equation}
+where $\Phi^{-1}(\cdot )$ is the inverse standard Normal cumulative distribution function,
+computed in Stata using the \texttt{invnormal()} function\cite{statacorp}.
+This SD can therefore be estimated using the formula
+\begin{equation}
+\SDbar_{hi} = {{ \xibar_{hi}^{({\rm upper})} - \xibar_{hi}^{({\rm lower})} }\over{ \Phi^{-1}\left(\qupper\right) - \Phi^{-1}\left(\qlower\right) }}.
+\label{eq:eqseq14}
+\end{equation}
+Note that this formula depends only on the difference between the upper and lower percentiles.
+Therefore, if $\qlower=0.25$ and $\qupper=0.75$,
+then the formula~(\ref{eq:eqseq14}) requires only the interquartile range.
+
+\subsection{The positive--beneficial Hedges'~$g$}
+
+Sometimes, the meta--analysis is complicated by the fact that some of the study outcomes are higher if the subject is doing well,
+and other study outcomes are higher if the subject is doing badly.
+In this case, we need to summarize the results using a revised Hedges'~$g$,
+known as a positive--beneficial Hedges'~$g$,
+which will be positive if subjects do better (on average) in the intervention group
+(as is expected to happen if the treatment is beneficial),
+and negative if subjects do less well (on average) in the intervention group
+(as is expected to happen if the treatment is harmful).
+
+To deal with this possibility, we define the study--specific beneficiality sign for the $i$th study (or study--outcome) as
+\begin{equation}
+\beta_i = \left\{
+\begin{array}{ll}
+1,  & \mbox{if higher $Y_{hij}$ values are  better,} \\
+-1, & \mbox{if lower $Y_{hij}$ values are better.}
+\end{array}
+\right.
+\label{eq:eqseq15}
+\end{equation}
+We can then redefine the $i$th study--specific population Hedges'~$g$ by modifying formula (\ref{eq:eqseq4}) as
+\begin{equation}
+\gamma_i^* = \beta_i \gamma_i,
+\label{eq:eqseq16}
+\end{equation}
+and redefine the corresponding $i$th study--specific sample Hedges'~$g$ by modifying (\ref{eq:eqseq5}) as
+\begin{equation}
+g_i^* = \beta_i g_i,
+\label{eq:eqseq17}
+\end{equation}
+for which an approximate standard error, for funnel plots and heterogeneity ttests, is once again given by the variance formula of Hedges (1981)\cite{hedges1981}.
+
+The parameter we need to estimate, in order to summarize the benefit of intervention, is then
+\begin{equation}
+\gammabar^* = {{\sum_{i=1}^K w_i \gamma_i^*}\over{\sum_{i=1}^K w_i}},
+\label{eq:eqseq18}
+\end{equation}
+which we estimate using the weighted mean
+\begin{equation}
+\gbar^* = {{\sum_{i=1}^K W_i \, g_i^*}\over{\sum_{i=1}^K W_i}}.
+\label{eq:eqseq19}
+\end{equation}
+Note that, if this method is to work as advertized,
+then the $\beta_i$ should be decided \textit{a priori},
+before knowing the directions of the $g_i$.
+
+\section{Further extensions}
+
+\subsection{Clustered and weighted Huber variances}
+
+In the simplest case, all the $K$ studies can be assumed mutually independent.
+However, this is not necessarily the case.
+In some complicated meta--analyses,
+we have multiple outcomes per study,
+each with its own beneficiality sign,
+and maybe also with its own weight,
+because some outcomes were measured in more subjects than others.
+
+In those cases, we can make the observational unit a study--outcome instead of a study,
+and use clustered Huber variances to estimate the standard errors and confidence limits
+for estimating the parameter (\ref{eq:eqseq18}) using the statistic (\ref{eq:eqseq19}).
+These clustered and weighted Huber variances use the assumption that we are sampling studies independently from a population of studies,
+instead of sampling study--outcomes from a population of study--outcomes.
+This method is essentially a special case of the more general meta--regression methods
+recommended by Hedges~\textit{et al.}, 2010\cite{hedges2010}.
+
+\subsection{Binary outcomes}
+
+Sometimes, the same meta--analysis can combine study--outcomes with quantitative outcomes and study--outcomes with binary outcomes.
+One possible way of combining these might be to convert the Hedges'~$g$ estimates to a Somers'~$D$ scale using \ref{eq:eqseq8},
+and to represent the binary--outcome comparisons as differences between proportions,
+possibly signing both types of comparisons to be positive--beneficial.
+This possibility is justified because a difference between proportions is a special case of Somers'~$D$\cite{newson2015}.
+\textit{However}, we may be presenting our meta--analysis to an audience who may be unfamiliar with Somers~$D$
+and who may think that they understand odds ratios better.
+And, sometimes, the studies in the meta--analysis may not even report the proportions of positive results,
+or even the corresponding odds,
+but only an odds ratio between the two corresponding odds.
+
+For such eventualities, Chinn (2000)\cite{chinn2000} developed a method for converting an odds ratio to a Hedges'~$g$,
+assuming each binary outcome in each treatment group to be derived from a Normally--distributed latent variable
+by being assigned the value of 1 if and only if the latent variable exceeds a threshold $\theta$.
+This Normally--distributed variable is known as the Normal-equivalent deviate (NED).
+Without loss of generality, we can assume that the NED has a standard deviation of 1,
+because otherwise a standard--Normal--equivalent deviate (SNED) can be derived by dividing the NED by its standard deviation.
+And,
+if the intervention and control groups have the same standard deviation for the NED
+and differ only in the value of the threshold SNED above which the binary outcome is 1,
+then the Hedges'~$g$ that we might want to estimate is simply the difference between the control SNED threshold $\theta_0$
+and the intervention SNED threshold $\theta_1$
+(if a positive binary outcome is thought to be beneficial),
+or the difference $\theta_1-\theta_0$ between the intervention and control SNED thresholds
+(if a positive binary outcome is thought to be harmful).
+
+The Chinn method is based on using a second latent variable, the standard logistic--equivalent deviate (SLED),
+as a proxy for the SNED.
+The SLED is assumed to have a standard--logistic distribution,
+which is defined on the real line, and has cumulative distribution function
+\begin{equation}
+\Lambda(x) = {1 \over {1-\exp\left(x\right)}} \, ,
+\label{eq:eqseq21}
+\end{equation}
+and has mean $0$ and variance $\pi^2/3$.
+In a logistic regression model, we can fantasize that the binary outcome is positive if and only if the SLED exceeds a standard--logistic threshold.
+And, if there are two different standard--logistic thresholds for the intervention and control groups,
+then the difference between the control standard--logistic threshold and the intervention standard--logistic threshold
+is equal to the log of the intervention/control odds ratio for a positive binary outcome.
+The Chinn method assumes that the SNED is monotonically increasing in the SLED,
+and is given by the formula
+\def\SNED{{\rm SNED}}
+\def\SLED{{\rm SLED}}
+\def\odds{{\rm Odds}}
+\begin{equation}
+\SNED = \Phi^{-1}\left[ \Lambda \left( \SLED \right) \right] \approx {\pi \over \sqrt{3}}\SLED \, ,
+\label{eq:eqseq22}
+\end{equation}
+which Chinn argued was a good linear approximation,
+as the standard Normal and standard logistic distributions are both bell--shaped and symmetrical around a common mode of 0.
+It follows that the difference between control and intervention standard--Normal thresholds (also known as the Hedges'~$g$)
+can be approximated as
+\def\OR{{\rm OR}}
+\begin{equation}
+\gamma \approx {\pi \over \sqrt{3}} \ln \OR \, ,
+\label{eq:eqseq23}
+\end{equation}
+where $\OR$ is the intervention/control odds ratio.
+So, in a meta--analysis, if the $i$th outcome is binary,
+then the $i$th control--intervention Hedges'~$g$ estimate can be derived approximately from the $i$th intervention/control odds ratio
+using the approximation
+\begin{equation}
+g_i \approx {\pi \over \sqrt{3}} \ln \widehat\OR_i \, ,
+\label{eq:eqseq24}
+\end{equation}
+where $\widehat\OR_i$ is the estimated intervention/control odds ratio for the $i$th outcome.
+Note that we can reverse the sign of the Hedges $g$ to be positive--beneficial,
+if we think that a positive binary outcome is a good thing instead of a bad thing,
+in which case we would prefer the intervention--control threshold difference to be negative,
+both on the SLED scale and on the SNED scale.
+And, if we think that we have a reliable standard error for $\ln \widehat \OR_i$,
+then we can use that in the meta-analysis.
+Otherwise, we can use clustered and sample--size--weighted Huber variances.
+
+If we are fortunate enough to have intervention and control odds for each study,
+instead of only having the intervention/control or control/intervention odds ratio,
+then we can estimate the SNED threshold ($\theta_{ji}$ for Treatment~$j$ and Outcome~$i$)
+directly from the corresponding SLED threshold (given by the log--odds of a positive binary outcome),
+using (\ref{eq:eqseq22}).
+Or, even better, we can estimate the SNED threshold more directly, using the formula
+\begin{equation}
+\theta_{ij} = \Phi^{-1}\left[ \odds_{ij}/\left( 1+\odds_{ij} \right) \right],
+\label{eq:eqseq25}
+\end{equation}
+where $\odds_{ij}$ is the odds of a positive outcome
+under Treatment~$i$ in the $j$th study--outcome.
+We can then use the exact formula, instead of the Chinn approximate formula.
+The intervention--control positive--beneficial Hedges'~$g$
+is then $\theta_{1i}-\theta_{0i}$ (if a positive binary outcome is bad),
+or $\theta_{0i}-\theta_{1i}$ (if a positive binary outcome is good).
+Whitehead \textit{et al}. (1999)\cite{whitehead1999} recommended essentially this method,
+phrasing it in terms of a lognormal latent variable,
+and a standard--lognormal threshold equal to the odds,
+which is the exponential of the standard--Normal threshold.
+
+\begin{thebibliography}{10}
+
+\bibitem{chinn2000}
+Chinn S.
+A simple method for converting an odds ratio to effect size for use in meta--analysis.
+\textsl{Statistics in Medicine} 2000; \textbf{19}: 3127--3131.
+
+\bibitem{hedges1981}
+Hedges LV.
+Distribution theory for Glass's estimator of effect size and related estimators.
+\textsl{Journal of Educational Statistics} 1981; \textbf{6(2)}: 107--128.
+
+\bibitem{hedges2010}
+Hedges LV, Tipton E, Johnson MC.
+Robust variance estimation in meta--regression with dependent effect size estimates.
+\textsl{Research Synthesis Methods} 2010; \textbf{1}: 39--65.
+
+\bibitem{diongetal2016}
+Diong J, Allen N, Sherrington C.
+Structured exercise improves mobility after hip fracture: a meta--analysis with meta--regression.
+\textsl{British Journal of Sports Medicine} 2016; \textbf{50}: 346--355.
+
+\bibitem{newson2006}
+Newson R.
+Confidence intervals for rank statistics: Somers'~$D$ and extensions.
+\textsl{The Stata Journal} 2006; \textbf{6(3)}: 309--334.
+Download from \hfill \break
+\mbox{\href{http://www.stata-journal.com/article.html?article=snp15_6}{\textsl{http://www.stata-journal.com/article.html?article=snp15\_6}}}
+
+\bibitem{newson2015}
+Newson RB.
+Somers'~$D$: A common currency for associations.
+Presented at the 21st UK Stata User Meeting, 10--11 September, 2015.
+Download from \hfill \break
+\mbox{\href{https://ideas.repec.org/p/boc/usug15/01.html}{\textsl{https://ideas.repec.org/p/boc/usug15/01.html}}}
+
+\bibitem{seber1977}
+Seber GAF.
+\textsl{Linear regression analysis.}
+New York, NY: John Wiley \& Sons; 1977.
+
+\bibitem{statacorp}
+StataCorp.
+\textsl{Stata: Release 14. Statistical Software.}
+College Station, TX: StataCorp LP; 2015.
+
+\bibitem{whitehead1999}
+Whitehead A, Bailey AJ, Elbourne D.
+Combining summaries of binary outcomes with those of continuous outcomes in a meta--analysis.
+\textsl{Journal of Biopharmaceutical Statistics} 1999; \textbf{9(1)}: 1–-16.
+
+\end{thebibliography}
+
+\end{document}               % End of document.

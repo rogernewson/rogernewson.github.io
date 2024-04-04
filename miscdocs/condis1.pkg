@@ -1,0 +1,16 @@
+v 2
+d condis1: Calculation of concordance and discordance counts using an AVL search tree
+d This document contains an article submitted to the Journal of the
+d Royal Statistical Society (Series C), describing a Fortran 77
+d implementation of the somersd algorithm (Newson, 2006). The article
+d was submitted on 27 November 1989 and rejected on 06 March 1990.
+d
+d References
+d
+d Newson R. Efficient calculation of jackknife confidence intervals for
+d rank statistics. Journal of Statistical Software 2006; 15(1): 1-10.
+d
+d Author: Roger Newson
+d Distribution-date: 16 March 2018
+f condis1.pdf
+e

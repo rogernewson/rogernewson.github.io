@@ -1,0 +1,23 @@
+d predsurv: Compute predicted or baseline survival after streg or stcox
+d predsurv and predbasesurv are intended for use in a survival time
+d dataset set up by stset.  predsurv is used after streg has been used to
+d fit a survival time regression model.  It computes a survival
+d probability or cumulative incidence for a user-specified survival time.
+d baseepredsurv is used after stcox has been used to fit a Cox regression
+d model.  It computes a survival probability and/or a baseline survival
+d probability for a user-specified survival time.  User-specified
+d survival times are expressed in the units specified by the scale()
+d option of stset.  Note that predsurv and predbasesurv can do
+d out-of-sample prediction, if streg or stcox has been used to fit a
+d model on a subset of the data, but predbasesurv will only give the
+d correct answers in the test set if the training set and the test set
+d are combined in the same dataset.
+d
+d Author: Roger Newson
+d Distribution-Date: 29may2020
+d Stata-Version: 10
+f predsurv.ado
+f predbasesurv.ado
+f predsurv.sthlp
+f predbasesurv.sthlp
+e

@@ -1,0 +1,129 @@
+--------------------------------------------------------------------------------------------------
+      name:  __000000
+       log:  C:\Users\k2142413\OneDrive - King's College London\rnewson\refuge\progdev\statadev\us
+> erqueries\boston2\take7\cdifror.log
+  log type:  text
+ opened on:   6 Jul 2022, 11:26:48
+
+. #delim ;
+delimiter now ;
+. version 16.1;
+
+. *
+>  Differences in c-statistics
+>  with corresponding ratios of interquartile odds ratios
+>  (assuming an equal-variance normal model)
+> *;
+. clear all;
+
+. set scheme rbn4mono;
+
+. *
+>  Input differences in c-statistics
+> *;
+. #delim cr
+delimiter now cr
+. input double cdif
+
+           cdif
+  1. 0.50
+  2. 0.25
+  3. 0.20
+  4. 0.10
+  5. 0.05
+  6. 0.04
+  7. 0.03
+  8. 0.02
+  9. 0.01
+ 10. 0.005
+ 11. 0.004
+ 12. 0.003
+ 13. 0.002
+ 14. 0.001
+ 15. 0.0005
+ 16. 0.0004
+ 17. 0.0003
+ 18. 0.0002
+ 19. 0.0001
+ 20. 0
+ 21. end
+
+. #delim ;
+delimiter now ;
+. lab var cdif "Difference in c-statistics";
+
+. desc, fu;
+
+Contains data
+ Observations:            20                  
+    Variables:             1                  
+--------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------------------------
+cdif            double  %10.0g                Difference in c-statistics
+--------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. *
+>  Compute approximate positive ratios between odds ratios
+> *;
+. gene double ror=exp(8*sqrt(2)*(invnorm(0.75))^2 * cdif);
+
+. lab var ror "Ratio of interquartile odds ratios";
+
+. desc, fu;
+
+Contains data
+ Observations:            20                  
+    Variables:             2                  
+--------------------------------------------------------------------------------------------------
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------------------------
+cdif            double  %10.0g                Difference in c-statistics
+ror             double  %10.0g                Ratio of interquartile odds ratios
+--------------------------------------------------------------------------------------------------
+Sorted by: 
+     Note: Dataset has changed since last saved.
+
+. list, abbr(32);
+
+     +-------------------+
+     |  cdif         ror |
+     |-------------------|
+  1. |    .5   13.111753 |
+  2. |   .25   3.6210155 |
+  3. |    .2   2.7993958 |
+  4. |    .1   1.6731395 |
+  5. |   .05   1.2934989 |
+     |-------------------|
+  6. |   .04   1.2286067 |
+  7. |   .03   1.1669699 |
+  8. |   .02   1.1084253 |
+  9. |   .01   1.0528178 |
+ 10. |  .005   1.0260691 |
+     |-------------------|
+ 11. |  .004   1.0208015 |
+ 12. |  .003   1.0155609 |
+ 13. |  .002   1.0103472 |
+ 14. |  .001   1.0051603 |
+ 15. | .0005   1.0025768 |
+     |-------------------|
+ 16. | .0004   1.0020609 |
+ 17. | .0003   1.0015453 |
+ 18. | .0002   1.0010299 |
+ 19. | .0001   1.0005148 |
+ 20. |     0           1 |
+     +-------------------+
+
+. exit;
+
+end of do-file
+      name:  __000000
+       log:  C:\Users\k2142413\OneDrive - King's College London\rnewson\refuge\progdev\statadev\us
+> erqueries\boston2\take7\cdifror.log
+  log type:  text
+ closed on:   6 Jul 2022, 11:26:48
+--------------------------------------------------------------------------------------------------

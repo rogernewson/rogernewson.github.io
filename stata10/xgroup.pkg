@@ -1,0 +1,20 @@
+d xgroup: Group the data creating a group variable and/or output dataset
+d xgroup is an extended version of the egen function group(varlist).
+d It inputs a varlist of existing variables, and groups the data by
+d the varlist.  It generates as output a new variable, indicating the
+d group to which each observation belongs, and/or also an output
+d dataset (or resultsset), with 1 observation per group, and data on
+d the values of the varlist variables, and of the generated variable
+d (if specified), corresponding to that group.  The output dataset
+d can be merged into other datasets, using the official Stata command
+d merge or the SSC package addinby.  xgroup is typically used
+d together with the SSC packages parmest and factext, especially when
+d a multiple-intercept model is fitted to the data, with 1 intercept
+d for each combination of values for the varlist.
+d
+d Author: Roger Newson
+d Distribution-Date: 03february2009
+d Stata-Version: 10
+f xgroup.ado
+f xgroup.sthlp
+e

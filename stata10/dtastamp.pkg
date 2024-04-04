@@ -1,0 +1,12 @@
+d dtastamp: Store current date and time in dataset characteristics
+d dtastamp stores the current date and time in the dataset characteristics
+d _dta[datestamp] and _dta[timestamp].  This is useful if the user then
+d saves the current dataset to a disk file, and later wants to know
+d approximately when the file was created.
+d
+d Author: Roger Newson
+d Distribution-Date: 31may2020
+d Stata-Version: 10
+f dtastamp.ado
+f dtastamp.sthlp
+e

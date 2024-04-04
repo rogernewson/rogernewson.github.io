@@ -1,0 +1,12 @@
+v 2
+d infkeep1: INFKEEP, a Genstat procedure for calculating influence functions and associated standard errors
+d This document describes a Genstat procedure, submitted to the
+d Genstat Procedures Library, for calculating influence functions
+d and Huber variances for the parameters of generalized linear models
+d and non-linear models. The procedure was submitted on 06 September
+d 1994 and rejected on 07 July 1995.
+d
+d Author: Roger Newson
+d Distribution-date: 21 March 2018
+f infkeep1.pdf
+e

@@ -1,0 +1,19 @@
+v 2
+d factmerg: Merge a list of factors to create string variables
+d factmerg inputs a list of factors and outputs up to 3 string variables,
+d containing, in each observation, the name, variable label and value,
+d respectively, of the first factor in the list with a nonmissing value in
+d that observation. These string variables can be used in creating row labels
+d for output tables and/or plots, possibly using the sencode package. The input
+d factors are usually either created in a parmest or parmby output data set by
+d using the factext package, or are in a data set created by concatenating
+d multiple xcontract output data sets using dsconcat. The sencode, parmest,
+d factext, xcontract and dsconcat packages are downloadable from SSC or from
+d this website.
+d
+d Author: Roger Newson
+d Distribution-Date: 25january2011
+d Stata-Version: 10
+f factmerg.ado
+f factmerg.sthlp
+e

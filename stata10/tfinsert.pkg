@@ -1,0 +1,13 @@
+d tfinsert: Insert text into an open text file
+d The tfinsert package inserts text from an instream dataset and/or
+d an existing text file into a text file open for text output and
+d identified by a handle recognised by the file command.  This
+d allows the user to insert text into a TeX, HTML or XML file that
+d is being built by a Stata do-file.
+d
+d Author: Roger Newson
+d Distribution-Date: 01march2014
+d Stata-Version: 10
+f tfinsert.ado
+f tfinsert.sthlp
+e

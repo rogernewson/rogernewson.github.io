@@ -1,0 +1,20 @@
+v 2
+d xdatelist: Create ascending numeric lists of dates
+d xdatelist creates a numeric list of dates bounded by a string-format
+d first and last date and spaced by a given number of time units (eg
+d weeks, months, quarters or years). It is similar to the numlist
+d command, and returns the numeric dates in the result r(numlist).
+d Optionally, xdatelist also returns a list of formatted string dates
+d in the result r(strlist). The program is useful if the list of dates
+d is separated by unequal numbers of days (because months and years
+d vary in length). xdatelist is an update of the datelist package
+d formerly distributed on SSC. The change of name was necessary because
+d Stata versions 8.1 and above use the word datelist to describe a
+d numlist including dates.
+d
+d Author: Roger Newson
+d Distribution-Date: 06february2005
+d Stata-Version: 7
+f xdatelist.ado
+f xdatelist.hlp
+e

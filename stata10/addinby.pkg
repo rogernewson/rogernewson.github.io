@@ -1,0 +1,23 @@
+d addinby: Add in data from a disk dataset using a foreign key
+d addinby is a "cleaner" alternative version of merge, designed to
+d reduce the lines of code in Stata do-files.  It adds variables and/or
+d values to existing observations in the dataset currently in memory
+d (the master dataset} from a Stata-format dataset stored in the file
+d filename (the using dataset), using a foreign key of variables
+d specified by the keyvarlist to identify observations in the using
+d dataset.  The using dataset must be sorted by the variables in the
+d keyvarlist, and these variables must identify observations in the
+d using dataset uniquely.  Unlike merge, addinby always preserves the
+d master dataset in its original sorting order, and does not add any
+d merge-status variables or additional observations.  However, addinby
+d checks that the foreign key uniquely identifies observations in the
+d using dataset, and may optionally check that there are no unmatched
+d observations in the master dataset, and/or check that there are no
+d missing values in the foreign key variables in the master dataset.
+d
+d Author: Roger Newson
+d Distribution-Date: 06may2008
+d Stata-Version: 10
+f addinby.ado
+f addinby.sthlp
+e

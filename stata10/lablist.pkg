@@ -1,0 +1,17 @@
+d lablist: List value labels (if present) for one or more variables
+d lablist produces a list of the values and value labels used by the
+d value label sets belonging to each of a list of variables, if such
+d value label sets are defined. If no varlist is specified, then
+d lablist uses the full list of variables in the dataset currently in
+d the memory. lablist is therefore similar to label list, but it
+d requires the user to specify only the variable name(s) in the 
+d varlist, instead of specifying the value label set(s) belonging to
+d the variable(s). It is often used with tabulate, or with the SSC
+d package xcontract.
+d
+d Author: Roger Newson
+d Distribution-Date: 13january2018
+d Stata-Version: 10
+f lablist.ado
+f lablist.sthlp
+e

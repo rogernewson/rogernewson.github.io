@@ -1,0 +1,267 @@
+% This is a LaTeX input file.
+%
+% A '%' character causes TeX to ignore all remaining text on the line,
+% and is used for comments like this one.
+
+\documentclass{article}      % Specifies the document class
+
+                             % The preamble begins here.
+\title{Asymptotic distributions of linear combinations of logs of multinomial parameter estimates}  % Declares the document's title.
+\author{Roger B. Newson}      % Declares the author's name.
+\date{23 July, 2008}      % Deleting this command produces today's date.
+
+\newcommand{\ip}[2]{(#1, #2)}
+                             % Defines \ip{arg1}{arg2} to mean
+                             % (arg1, arg2).
+
+%\newcommand{\ip}[2]{\langle #1 | #2\rangle}
+                             % This is an alternative definition of
+                             % \ip that is commented out.
+
+%
+% Set margins
+% (which are explained in Figure C3 of LaTeX User's Guide
+% and which CAN BE RESET BY EDITORS AT ANY TIME AS FAR AS I CARE!!!!!!!!
+% - RBN.)
+%
+\setlength{\topmargin}{-0.5in}
+%\setlength{\headsep}{0.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{10in}
+
+%
+% Set page style (headers and footers)
+%
+\pagestyle{myheadings}
+\markboth{\textit{Linear combinations of logs of multinomial parameters}}
+{\textit{Linear combinations of logs of multinomial parameters}}
+
+\begin{document}             % End of preamble and beginning of text.
+
+\maketitle                   % Produces the title.
+
+\section{Formulas}
+
+Suppose that $Y$ has a multinomial distribution with parameters $(p_1 , \ldots , p_m)$. (That is to say, suppose that
+\def\Var{{\rm Var}}
+\def\Cov{{\rm Cov}}
+\def\Pr{\ifmmode{{\rm Pr}}\else{$\Pr$}\fi}
+$\Pr(Y=i)=p_i$ for an integer $i$ such that $1\le i\le m$.)
+Given a sample $Y_1, \ldots, Y_n$ of multinomial random variables with vector parameter $(p_1 , \ldots , p_m)$,
+the maximum--likelihood (and method of moments) estimator of $p_i$ is
+\begin{equation}
+\hat p_i = \# \{ j: Y_j = i \} / n = n_i/n
+\label{eq:eqseq1}
+\end{equation}
+where $n_i=\#\{ j: Y_j = i \}$ is the number of sample indices $j$ such that $Y_j=i$.
+The dispersion matrix of the $\hat p_i$ is defined by
+\begin{equation}
+\Cov [ \hat p_i , p_j ] \quad = \quad \left\{
+\begin{array}{ll}
+n^{-1} p_i(1-p_i), & \mbox{if $i=j$, } \\
+-n^{-1} p_i p_j, & \mbox{if $i \ne j$. }
+\end{array}
+\right.
+\label{eq:eqseq2}
+\end{equation}
+We aim to estimate the $\ln p_i$ with a view to estimating linear combinations of these logs.
+For each $i$, we have
+\begin{equation}
+{\partial\over{\partial p_i}} \ln p_i = {1\over p_i},
+\label{eq:eqseq3}
+\end{equation}
+implying that the covariance of $\ln \hat p_i$ and $\ln \hat p_j$ is given by
+\begin{equation}
+\Cov [ \ln \hat p_i , \ln \hat p_j ] \quad = \quad { 1 \over { p_i p_j} } \Cov [ \hat p_i , \hat p_j ] + o_p(n^{-1})
+\quad = \quad \left\{
+\begin{array}{ll}
+n^{-1} (1-p_i)/p_i + o_p(n^{-1}), & \mbox{if $i=j$,} \\
+-n^{-1} + o_p(n^{-1}), & \mbox{if $i\ne j$,}
+\end{array}
+\right.
+\label{eq:eqseq4}
+\end{equation}
+where $o_p(n^{-1})$ is a term with the feature that $o_p(n^{-1})/n^{-1}$ is consistent for zero.
+It follows that, if $( \gamma_1, \ldots, \gamma_m )$ is a vector of coefficients, and we estimate the linear combination
+$\lambda = \sum_{i=1}^m \gamma_i \ln p_j $ using the estimator $\hat \lambda = \sum_{i=1}^m \gamma_i \ln \hat p_j $,
+then the variance of $\hat \lambda$ is expressed as
+\begin{eqnarray}
+\Var \left[ \sum_{i=1}^m \gamma_i \ln \hat p_i \right] &=& \sum_{i=1}^m \sum_{j=1}^m \gamma_i \gamma_j \Cov [\ln \hat p_i , \ln \hat p_j ] \nonumber \\
+&=& n^{-1} \sum_{i=1}^m \gamma_i^2 (1-p_i)/p_i \quad - \quad n^{-1} \left( \, \sum_{i=1}^m \, \sum_{i\le j \le m, \, j \ne i} \, \gamma_i \gamma_j \, \right) \quad + \quad o_p(n^{-1}) \nonumber \\
+&=& n^{-1} \sum_{i=1}^m \gamma_i^2 / p_i \quad - \quad n^{-1} \left( \sum_{i=1}^m \sum_{j=1}^m \gamma_i \gamma_j \right) \quad + \quad o_p(n^{-1}) \nonumber \\
+&=& n^{-1} \sum_{i=1}^m \gamma_i^2 / p_i \quad - \quad n^{-1} \left( \sum_{i=1}^m \gamma_i \right)^2 \quad + \quad o_p(n^{-1}) \, .
+\label{eq:eqseq5}
+\end{eqnarray}
+In the special case where $\sum_{i=1}^m \gamma_i = 0$, this simplifies to
+\begin{equation}
+\Var \left[ \sum_{i=1}^m \gamma_i \ln \hat p_i \right] \quad = \quad n^{-1} \sum_{i=1}^m \gamma_i^2 / p_i \quad + \quad o_p(n^{-1}) \, .
+\label{eq:eqseq6}
+\end{equation}
+It follows that a consistent standard error formula for $\hat\lambda$ is given in the general case by
+\def\SE{{\rm SE}}
+\begin{equation}
+\widehat \SE [ \hat \lambda ] \quad = \quad  \sqrt{ n^{-1} \sum_{i=1}^m \gamma_i^2 / \hat p_i
+\quad - \quad n^{-1} \left( \sum_{i=1}^m \gamma_i \right)^2 } \quad ,
+\label{eq:eqseq7}
+\end{equation}
+and, in the special case where $\sum_{i=1}^m \gamma_i = 0$, this simplifies to
+\begin{equation}
+\widehat \SE [ \hat \lambda ] \quad = \quad  \sqrt{ n^{-1} \sum_{i=1}^m \gamma_i^2 / \hat p_i }
+\quad = \quad \sqrt{ \sum_{i=1}^m \gamma_i^2 / n_i } \quad .
+\label{eq:eqseq8}
+\end{equation}
+Confidence intervals for $\lambda$, calculated using these standard errors, are typically exponentiated to derive
+confidence intervals for $\exp(\lambda)$, which are usually easier for non--mathematicians to understand.
+
+In the case where there are 2 vectors of coefficients $(\alpha_1, \ldots, \alpha_m)$ and $(\beta_1, \ldots, \beta_m)$,
+and the linear combinations of logs are $\nu = \sum_{i=1}^m \alpha_i \ln p_i$ and $\xi = \sum_{i=1}^m \beta_i \ln p_i$,
+then, by an argument similar to (\ref{eq:eqseq5}), their covariance is of the form
+\begin{equation}
+\Cov [ \nu, \xi ] \quad = \quad n^{-1} \sum_{i=1}^m \alpha_i \beta_i / p_i \quad - \quad n^{-1} \left( \sum_{i=1}^m \alpha_i \right) \left( \sum_{i=1}^m \beta_i \right)
+ \quad + \quad o_p(n^{-1}) \,  ,
+\label{eq:eqseq9}
+\end{equation}
+and the second term is zero if \textit{either} $\sum_{i=1}^m \alpha_i$ \textit{or} $\sum_{i=1}^m \beta_i$ is zero.
+This covariance can be used to derive standard errors for transformations, or for linear combinations of linear combinations.
+
+\section{Examples}
+
+\subsection{The odds ratio}
+
+Suppose that there is 1 random sample of $n$ units, in which 2 binary variables are measured on the $j$th unit,
+with possible values 0 and 1 and denoted $X_{j1}$ and $X_{j2}$, respectively,
+and common probabilities for all $j$
+\begin{eqnarray}
+P_{00} = \Pr \{ X_{j1} = 0\, \wedge \,X_{j2}=0 \},& \quad P_{01} = \Pr \{ X_{j1} = 0\, \wedge \,X_{j2}=1 \} \, , \nonumber \\
+\quad P_{10} = \Pr \{ X_{j1} = 1\, \wedge \,X_{j2}=0 \},& \quad P_{11} = \Pr \{ X_{j1} = 1\, \wedge \,X_{j2}=1 \} \, .
+\label{eq:eqseq10}
+\end{eqnarray}
+If we define $Y_j = 2 X_{1j} + X_{2j} + 1$, then the $Y_j$ are multinomial, with possible integer values 1 to 4
+and probabilities
+\begin{equation}
+p_1 = P_{00}, \quad p_2 = P_{01}, \quad p_3 = P_{10}, \quad p_4 = P_{11} \, .
+\label{eq:eqseq11}
+\end{equation}
+If the coefficients are $\gamma_0 = \gamma_4=1$ and $\gamma_2 = \gamma_3 = -1$,
+then the linear combination $\lambda = \sum_{i=1}^4 \gamma_i \ln p_i$ is the familiar expression
+for the log of the common odds ratio,
+measuring the association between $X_{j1}$ and $X_{j2}$ for all $j$.
+As the coefficients sum to zero,
+the variance of the sample log odds ratio $\hat\lambda = \sum_{i=1}^4 \gamma_i \ln \hat p_i$ is of the form (\ref{eq:eqseq6}),
+and is given by
+\begin{equation}
+\Var [\hat\lambda] \quad = \quad n^{-1} ( 1/P_{00} + 1/P_{01} + 1/P_{10} + 1/P_{11} ) \quad + \quad o_p(n^{-1}) \, ,
+\label{eq:eqseq12}
+\end{equation}
+and the sample standard error is of the form (\ref{eq:eqseq8}), and is given by the familiar formula
+\begin{equation}
+\widehat \SE [ \hat \lambda ] \quad = \quad  \sqrt{ 1/N_{00} + 1/N_{01} + 1/N_{10} + 1/N_{11} } \, ,
+\label{eq:eqseq13}
+\end{equation}
+where $N_{gh}=nP_{gh}$ for $g$ and $h$ in the set $\{0,1\}$.
+
+\subsection{Hardy--Weinberg disequilibrium}
+
+In the genetics of diploid organisms such as humans and fruit flies,
+a typical 2--allele polymorphism has a commoner allele $A$, a rarer allele $a$,
+and possible genotypes $AA$, $Aa$ and $aa$, with population prevalences $P_{AA}$, $P_{Aa}$ and $P_{aa}$, respectively.
+If $n$ individuals are sampled randomly from a population and genotyped,
+then we can estimate sample prevalences $\hat P_{AA}=N_{AA}/n$, $\hat P_{Aa}=N_{Aa}/n$ and $\hat P_{aa} = N_{aa}/n$, 
+where $N_{AA}$, $N_{Aa}$ and $N_{aa}$ are the respective sample frequencies of the 3 genotypes.
+
+Lindley (1988) proposed a reparameterization of the 3--dimensional vector parameter $(P_{AA},P_{Aa},P_{aa})$
+to a 2--dimensional vector parameter $(\alpha,\beta)$, defined by
+\begin{eqnarray}
+\alpha \quad =& {1\over 2} \ln \left( { {4P_{AA}P_{aa}}\over P_{Aa}^2 } \right) = \ln 2 + {1\over 2} \ln \left( { {P_{AA}P_{aa}}\over P_{Aa}^2 } \right) \, ,  \nonumber \\
+\beta \quad =& {1\over 2} \ln \left( { P_{AA} \over P_{aa} } \right) \, .
+\label{eq:eqseq14}
+\end{eqnarray}
+(This is possible because of the constraint $P_{AA}+P_{Aa}+P_{aa}=1$.)
+The parameter $\alpha$ is zero if the paternal and maternal alleles of a randomly--sampled member of the population
+are statistically independent, as they will be if their mothers and fathers selected each other at random
+(at least with respect to genotype).
+If $\alpha=0$, then the polymorphism is said to be in Hardy--Weinberg equilibrium.
+A positive value for $\alpha$ indicates a systematic tendency for the maternal and paternal alleles to be the same (``inbreeding''),
+whereas a negative value for $\alpha$ indicates a systematic tendency for the maternal and paternal alleles to be different (``outbreeding'').
+The parameter $\beta$ is the log of the square root of the ratio between the population prevalences
+of the two homozygous genotypes $AA$ and $aa$,
+and will be zero if the two homozygous genotypes are equally common,
+and equal to the log of the ratio of the allelic frequencies of $A$ and $a$,
+if the population is indeed in Hardy--Weinberg equilibrium.
+
+The parameters $\alpha-\ln 2$ and $\beta$ are clearly linear combinations of logs of multinomial proportions.
+If we denote $p_1=P_{AA}$, $p_2=P_{Aa}$ and $p_3=P_{aa}$,
+then the index of each multinomial proportion will be one greater than the number of copies of the rarer allele.
+The vector of coefficients for the linear combinations of the $\ln p_i$ will be $(0.5,-1,0.5)$ in the case of $\alpha-\ln 2$,
+and $(0.5,0,-0.5)$ in the case of $\beta$.
+Both of these vectors of coefficients sum to zero.
+The maximum--likelihood (and method of moments) estimators of the parameters $\alpha - \ln 2$ and $\beta$
+will be the corresponding linear combinations of the $\ln \hat p_i$.
+By the transformation--invariance property of maximum--likelihood estimators
+and the location--invariance property of moments,
+the estimate of $\alpha$ is derived by adding $\ln 2$ to the estimate of $\alpha - \ln 2$.
+Therefore, the estimates of $\alpha$ and $\beta$ are
+\begin{eqnarray}
+\hat\alpha \quad =&{1\over 2} \ln \hat P_{AA} \quad + \quad {1\over 2} \ln \hat P_{aa} \quad &- \quad \ln \hat P_{Aa} \quad + \quad \ln 2 \, , \nonumber \\
+\hat\beta \quad =& {1\over 2} \ln \hat P_{AA} \quad - \quad {1\over 2} \ln \hat P_{aa} \, .
+\label{eq:eqseq15}
+\end{eqnarray}
+The variances and covariances of these parameters are of the form (\ref{eq:eqseq6}) and (\ref{eq:eqseq9}), respectively,
+and variances and covariances involving $\alpha$ are the same as the corresponding variances and covariances involving $\alpha-\ln 2$.
+The variance--covariance matrix of $\hat\alpha$ and $\hat\beta$
+is therefore given by
+\begin{eqnarray}
+\Var[\hat\alpha] \quad =& n^{-1} \left( {1\over {4P_{AA}}} \quad + \quad {1\over {4P_{aa}}} \quad + \quad {1\over{P_{Aa}}}  \right) \quad + \quad o_p(n^{-1}) \, , \nonumber \\
+\Var[\hat\beta]  \quad =& n^{-1} \left( {1\over {4P_{AA}}} \quad + \quad {1\over {4P_{aa}}} \right) \quad + \quad o_p(n^{-1}) \, , \nonumber \\
+\Cov[\hat\alpha,\hat\beta] \quad =& n^{-1} \left( {1\over {4P_{AA}}} \quad - \quad {1\over {4P_{aa}}} \right) \quad + \quad o_p(n^{-1}) \, .
+\label{eq:eqseq16}
+\end{eqnarray}
+The sample standard errors of $\hat\alpha$ and $\hat\beta$ are of form (\ref{eq:eqseq8}), as follows:
+\begin{eqnarray}
+\widehat\SE[\hat\alpha] \quad =& \sqrt{ {1\over{4 N_{AA}}} \quad + \quad {1\over{4 N_{aa}}} \quad + \quad {1\over{N_{Aa}}} } \quad , \nonumber \\
+\widehat\SE[\hat\beta] \quad =& \sqrt{ {1\over{4 N_{AA}}} \quad + \quad {1\over{4 N_{aa}}} } \quad .
+\label{eq:eqseq17}
+\end{eqnarray}
+A variety of end--point transformations may be carried out on the parameters and their confidence intervals,
+to make the parameters more easy for non--mathematicians to understand.
+In fact, the parameter $\alpha$ has repeatedly been reinvented,
+with a variety of transformations.
+The parameter $\theta=\exp(-\alpha)$ was proposed in Olson (1993) and Olson and Foley (1996)
+as a measure of Hardy--Weinberg disequilibrium,
+apparently independently of Lindley (1988).
+The present author proposed the equivalent parameter $H=\exp(\alpha-\ln 2)$,
+for the same purpose,
+at some point in the late 1990s after 1996,
+without knowledge of any of the aforementioned references,
+naming it the ``geometric mean homozygote--heterozygote ratio''.
+It seemed strange to the present author that most geneticists seemed to be using a chi--squared test for Hardy--Weinberg equilibrium,
+and thereby discarding information about the direction of the disequilibrium.
+And it was a surprise to find so few prior references in the literature to this parameter,
+which can easily be computed, together with its standard error, using 1940s technology.
+And it was even more of a surprise to find that Lindley (1988)
+had derived a standard error for $\hat\alpha$ by a totally different methodology,
+based on likelihood functions,
+which leads to a \textit{much} more complicated expression for the standard error than the one presented here.
+\textit{However}, Lindley seems to have had an ulterior motive of developing a Bayesian methodology,
+rather than arriving at a confidence interval formula for frequentists to use.
+
+\section{References}
+
+{\parindent=0pt
+
+\smallskip
+Lindley DV. Statistical inference concerning Hardy--Weinberg equilibrium.
+\textsl{Bayesian Statistics} 1988; \textbf{3}: 307-–326.
+
+Olson JM. Testing the Hardy--Weinberg law across strata.
+\textsl{Annals of Human Genetics} 1993; \textbf{57}: 291--295.
+
+Olson JM, Foley M. Testing for homogeneity of Hardy--Weinberg disequilibrium.
+\textsl{Biometrics} 1996; \textbf{52}: 971--979.
+
+}
+
+
+\end{document}               % End of document.

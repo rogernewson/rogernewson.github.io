@@ -1,0 +1,384 @@
+% Set of TeX transparencies
+% for the asthma club seminar on 28 Jan 2003
+% (IN LANDSCAPE ORIENTATION with .eps Stata graphics)
+
+%Define magnification and area in which transparency is written
+%assuming an A4 acetate to be printed by the Departmental laser printer
+\magnification=\magstep3
+%\hoffset=-0.5truein \hsize=7.0truein \voffset=0.5truein \vsize=9truein
+\hoffset=0truein \hsize=10truein \voffset=0truein \vsize=7truein
+
+% Define tt font for verbatim listings
+\font\listingtt=cmtt10 at 17.28truept
+
+% Define macros for verbatim listings
+\def\uncatcodespecials{\def\do##1{\catcode`##1=12 }\dospecials}
+\def\setupverbatim{
+ \def\par{\leavevmode\endgraf} \catcode`\`=\active
+ \obeylines \uncatcodespecials \catcode`\\=0 \obeyspaces
+}
+{\obeyspaces\global\let =\ }{\catcode`\`=\active \gdef`{\relax\lq}}
+\def\startlisting{
+ \begingroup
+ \smallskip
+ \listingtt \baselineskip=10truept \parskip=0truept \parindent=0truept
+ \setupverbatim
+}
+\def\endlisting{\endgroup}
+
+% Define macros for item lists (when \parindent is zero)
+\def\beginitems{\begingroup\parindent=12pt}
+\def\enditems{\endgroup}
+
+% Define baselineskip and parskip
+\baselineskip=12pt \parskip=12pt
+\parindent=0pt
+
+% Redefine beginsection
+\def\beginsection#1{\medskip{\bf#1}\nobreak\smallskip}
+
+% Input the psbox routines for including PostScript graphics
+\input psbox
+
+% Define headline and footline
+\headline{{\it Paracetamol, paracetamol propensity and 7 year asthma/wheezing in ALSPAC}
+ \hfil {Frame \folio}}
+\footline{\hfil}
+
+\line{}\vfill
+
+\beginsection{Paracetamol, paracetamol propensity and 7 year asthma/wheezing in ALSPAC}
+
+Roger Newson (King's College, London, UK)
+
+Seif Shaheen (King's College, London, UK)
+
+and the ALSPAC team (Bristol University, UK)
+
+\medskip
+
+\beginitems
+
+\item{$\bullet$} Problems with multiple confounders.
+
+\item{$\bullet$} The method of propensity scores
+
+\item{$\bullet$} Paracetamol exposures and propensity scores in ALSPAC.
+
+\item{$\bullet$} Advantages and limitations of propensity scores.
+
+\enditems
+
+\vfill\eject
+%\line{}\vfill
+
+\beginsection{Prenatal paracetamol and asthma/wheezing at 7 years in the Avon Longitudinal Study of Parents and Children
+(ALSPAC) cohort (14060 children).}
+
+\beginitems
+
+\item{$\bullet$} {\bf 2 primary outcomes:} Questionnaire-reported asthma and wheezing at 69-81 months. (Yes or no.)
+
+\item{$\bullet$} {\bf 1 secondary outcome:} Questionnaire-reported asthma frequency at 69-81 months. (Never, 1-2 times or 3+ times.)
+
+\item{$\bullet$} {\bf 4 primary exposures:} Maternal paracetamol and aspirin consumption at 18-21 weeks and 32 weeks gestation.
+("Never", "Some days" or "Most days".)
+
+\item{$\bullet$} {\bf 14 ``primary'' (prenatal or perinatal) confounders:} Child's sex, mother's age, smoking in pregnancy, mother's education level,
+mother's housing tenure, mother's parity, mother's anxiety score, mother's ethnic origin, multiple pregnancy,
+child's birthweight, gestational age at birth, child's head circumference, maternal disease history, maternal infection history.
+
+\item{$\bullet$} {\bf 7 ``secondary'' (postnatal) confounders:} Younger siblings at 7 years, pets in first year, breast fed in first 6 months, day care in first 8 months,
+damp and/or mould in home, weekend tobacco exposure of child, child's body mass at 7 years.
+
+\item{$\bullet$} {\bf 2 ``tertiary'' confounders (subject to cautions about reverse causation):} Paracetamol use and antibiotic use during infancy.
+
+\enditems
+
+\vfill\eject
+\line{}\vfill
+
+\beginsection{General principles}
+
+In general, a statistical analysis should have 2 stages:
+
+\beginitems
+
+\item{1.} {\bf Deciding what parameters to measure.} This is the difficult part, and should be done before writing the Methods section.
+
+\item{2.} {\bf Measuring them.} This is the easy part, and should be done after writing the Methods section,
+to the specifications in the Methods section.
+
+\enditems
+
+Previously, I have usually defined these stages as follows:
+
+\beginitems
+
+\item{1.} {\bf Building a ``confounders-only'' regression model} to predict
+the outcome(s) from the counfounders.
+
+\item{2.} {\bf Adding the exposures of primary interest} to this model as additional predictors.
+
+\enditems
+
+\vfill\eject
+%\line{}\vfill
+\beginsection{The method of propensity scores}
+
+\beginitems
+
+\item{$\bullet$} Given an outcome $Y$, an exposure $X$ and a list of confounders $V_1,\ldots,V_k$,
+the {\bf propensity score} $W(V_1,\ldots,V_k)$ is a measure of ``exposure-proneness'', dependent on the confounder values.
+
+\item{$\bullet$} {\bf Stage~1} of the method involves optimising a regression model with the exposure $X$ as ``outcome'' and the confounders (or a subset of them)
+as ``predictors''.
+
+\item{$\bullet$} The propensity score $W(V_1,\ldots,V_k)$ is defined as the fitted value of the exposure, given the confounders. (Or as some
+``transformation'' of that fitted value, eg a linear predictor from a generalized linear model.)
+
+\item{$\bullet$} We may use this propensity score to define an ordered set of {\bf propensity groups}.
+
+\item{$\bullet$} In {\bf Stage~2} of the method, we carry out a ``bivariate'' regression analysis of $Y$ with respect to $X$ and the propensity group.
+
+\item{$\bullet$} So the propensity score is a single ``summary confounder'' that does the job of a multitude of confounders.
+
+\enditems
+
+\vfill\eject
+\line{}\vfill
+
+\beginsection{Propensity scores for prenatal paracetamol and aspirin exposure}
+
+\beginitems
+
+\item{$\bullet$} The 4 primary exposures are maternal paracetamol and aspirin consumption at 18-21 weeks and 32 weeks gestation,
+each with 3 ordered levels ("Never", "Some days" and "Most days").
+
+\item{$\bullet$} For each exposure, we fitted an ordinal logistic regression model,
+using {\tt ologit} in Stata.
+The exposure was the ``outcome'', and the 14 ``primary'' and 7 ``secondary'' confounders were ``predictors''.
+
+\item{$\bullet$} We defined the propensity score as the log odds ratio, calculated using the Stata {\tt predict} command.
+
+\item{$\bullet$} We then grouped the values of each propensity score into 8 similarly-sized propensity groups,
+using the Stata {\tt xtile} command.
+
+\enditems
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Box plot of 32-week paracetamol propensity score by 32-week paracetamol exposure}
+
+\centerline{
+\vtop{\hsize=8truein\vfill
+\psboxto(\hsize;0truein){propfig1.eps}
+\vfill
+}
+}
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Table of 32-week paracetamol exposure by 32-week paracetamol propensity group}
+
+The propensity score was grouped into 8 approximately equal groups using {\tt xtile}, and tabulated
+against paracetamol exposure as shown:
+
+\startlisting
+
+         8 |
+ quantiles |     Paracetamol at 32 weeks
+        of |            gestation
+PS_para32g |     Never  Some days  Most days |     Total
+-----------+---------------------------------+----------
+         1 |      1181        333          2 |      1516 
+         2 |      1059        455          2 |      1516 
+         3 |      1000        511          5 |      1516 
+         4 |       890        617          9 |      1516 
+         5 |       833        673         10 |      1516 
+         6 |       751        749         16 |      1516 
+         7 |       634        856         26 |      1516 
+         8 |       456        992         67 |      1515 
+-----------+---------------------------------+----------
+     Total |      6804       5186        137 |     12127 
+
+\endlisting
+
+Note that higher propensity groups predict higher paracetamol exposures, but not
+too reliably. This suggests that we should be able to
+disentangle the effect of paracetamol exposure on asthma from the effect of ``paracetamol-proneness''
+on asthma by using a ``bivariate'' regression model. (If paracetamol-proneness predicts paracetamol
+exposure ``too well'', then this will widen the confidence limits for the propensity-adjusted
+exposure effect.)
+
+\vfill\eject
+\line{}\vfill
+
+\beginsection{Stage~2 analysis: ``Bivariate'' regressions on exposure and propensity}
+
+\beginitems
+
+\item{$\bullet$} For all 4 exposures (paracetamol and aspirin exposure at 18-20 and
+32 weeks), we found that propensity group predicted exposure, but not ``too well''.
+
+\item{$\bullet$} We therefore went on to Stage~2, and fitted a ``bivariate''
+logistic regression model of each of the outcomes (asthma, wheezing, and wheezing frequency)
+with respect to each of the 4 exposures (with its propensity grouping).
+
+\item{$\bullet$} For each combination of exposure and outcome, we fitted a model
+for the outcome, with 8 unexposed odds (one for each propensity group), and 2 common
+odds ratios (associated with pre-natal analgesic exposure on ``some days'' and on ``most days'').
+
+\enditems
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Adjusted unexposed disease odds by propensity group for the 4 exposures}
+
+\centerline{
+\vtop{\hsize=7truein\vfill
+\psboxto(\hsize;0truein){orplot2_0.eps}
+\vfill
+}
+}
+
+Note that children whose mothers are more ``paracetamol-prone'' or ``aspirin-prone'' are also more
+asthma-prone and wheeze-prone, even if unexposed before birth.
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Propensity-adjusted asthma odds ratios for the 4 exposures}
+
+\centerline{
+\vtop{\hsize=7truein\vfill
+\psboxto(\hsize;0truein){orplot2_1.eps}
+\vfill
+}
+}
+
+The adjusted odds ratios are similar to those from the conventional confounder-adjusted analysis
+involving the same confounders.
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Propensity-adjusted wheezing+whistling odds ratios for the 4 exposures}
+
+\centerline{
+\vtop{\hsize=7truein\vfill
+\psboxto(\hsize;0truein){orplot2_2.eps}
+\vfill
+}
+}
+
+The adjusted odds ratios are similar to those from the conventional confounder-adjusted analysis
+involving the same confounders.
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Propensity-adjusted infrequent wheezing odds ratios for the 4 exposures}
+
+\centerline{
+\vtop{\hsize=7truein\vfill
+\psboxto(\hsize;0truein){orplot2_4.eps}
+\vfill
+}
+}
+
+The adjusted odds ratios are similar to those from the conventional confounder-adjusted analysis
+involving the same confounders.
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Propensity-adjusted frequent wheezing odds ratios for the 4 exposures}
+
+\centerline{
+\vtop{\hsize=7truein\vfill
+\psboxto(\hsize;0truein){orplot2_5.eps}
+\vfill
+}
+}
+
+The adjusted odds ratios are similar to those from the conventional confounder-adjusted analysis
+involving the same confounders.
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Advantages of propensity scores}
+
+The advantages of using propensity scores, rather than conventional confounder adjustment,
+are twofold:
+
+\beginitems
+
+\item{$\bullet$} {\bf Statistically rigorous separation of Stages~1 and 2.}
+
+\itemitem{$-$} The outcomes are not used in Stage~1 (which deals only with exposures and confounders).
+
+\itemitem{$-$} The user can therefore use a lot of ``trial and error'' methods in Stage~1
+to select a confounder set and
+to choose the right number of propensity groups. ({\it Possibly} even stepwise regression!)
+
+\itemitem{$-$} This will not
+invalidate the confidence intervals and/or $P$-values calculated in Stage~2 for presentation
+in the Results, because the formulae for calculating these are based on the {\it conditional}
+distribution of the outcome, {\it given} the values of the exposure and the confounders.
+
+\item{$\bullet$} {\bf Bivariate regressions are simpler to plan
+than multivariate regressions.}
+
+\itemitem{$-$} In particular, in Stage~1, we can carry out diagnostics
+such as plotting the propensity score and/or tabulating the propensity group against the
+exposure, to check that the propensity score does not predict the exposure ``too well''.
+
+\enditems
+
+\vfill\eject
+%\line{}
+\vfill
+
+\beginsection{Limitations of propensity scores}
+
+Propensity scores are a good way of controlling for multiple {\it observed} confounders.
+However, they are subject to the following limitations:
+
+\beginitems
+
+\item{$\bullet$} {\bf Propensity scores cannot control for {\it unobserved} confounders.}
+
+\itemitem{$-$} Therefore, a propensity-adjusted effect may still be explained by residual confounding
+by unobserved confounders, or even by imperfect measurement of the ``observed'' confounders.
+
+\itemitem{$-$} This limitation does {\it not} apply to a {\it large} randomized trial.
+
+\itemitem{$-$} However, it {\it does} apply to conventional confounder-adjusted multivariate regressions.
+
+\item{$\bullet$} {\bf Propensity scores cannot tell us which individual confounders are ``doing the confounding''.}
+
+\itemitem{$-$} {\it However}, in our case, we have a large number of weak confounders, which together
+are expected to act as ``markers'' for hidden causal variables.
+
+\itemitem{$-$} Therefore, asking which confounder is ``doing the confounding''
+is probably like asking which straw broke the camel's back.
+Or like asking which study made a meta-analysis ``significant''.
+
+\enditems
+
+\vfill\eject
+
+\bye

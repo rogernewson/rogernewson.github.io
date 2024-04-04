@@ -1,0 +1,23 @@
+d chardef: Assign values to a characteristic of a list of variables
+d chardef is a mass-production version of the char define
+d command.  It assigns a list of values to a named
+d characteristic of a list of variables specified by a varlist.
+d If the varlist is not supplied, then chardef assigns the
+d values to the named characteristic for all variables in the
+d dataset currently in the memory.  If the named characteristic
+d is not supplied, then the values are assigned to the
+d characteristic varname, used by the list command.  If the list
+d of values is shorter than the varlist, then the list of values
+d is extended on the right with copies of the last value.
+d Optionally, a prefix and/or a suffix may be added to the
+d values.  The charundef module resets a list of characteristics
+d to empty strings for a list of variables.
+d
+d Author: Roger Newson
+d Distribution-Date: 21june2011
+d Stata-Version: 10
+f chardef.ado
+f charundef.ado
+f chardef.sthlp
+f charundef.sthlp
+e

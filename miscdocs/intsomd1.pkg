@@ -1,0 +1,15 @@
+v 2
+d intsomd1: Interpretation of Somers' D under four simple models
+d This document outlines the interpretation of Somers' D of Y with
+d respect to X under four specific models, namely binary X and Y,
+d binary X and continuous Y with a constant hazard ratio, binary X and
+d Normal Y with equal variance in both X-groups, and bivariate Normal
+d X and Y. These interpretations enable users to understand the meaning
+d of a confidence interval for Somers' D, and to transform that
+d confidence interval to derive an outlier-resistant confidence interval
+d for an alternative parameter.
+d
+d Author: Roger Newson
+d Distribution-date: 06 July 2022
+f intsomd1.pdf
+e

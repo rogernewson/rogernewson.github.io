@@ -1,0 +1,15 @@
+v 2
+d sampvar1: Sampling variation, estimation and confidence intervals
+d This lecture was given to the students of the first-year
+d Biometry and Medical Statistics (BMS) course for pre-clinical
+d students at King's College London in 2001 (academic year 2001-2002).
+d It was my first electronic overhead projection using TeX to produce
+d a .pdf document, and was made after a bad experience in the previous
+d year, when I started with a Microsoft PowerPoint presentation, and
+d the square root sign was lost during conversion to .pdf for
+d distribution on the Web.
+d
+d Author: Roger Newson
+d Distribution-date: 25 April 2018
+f sampvar1.pdf
+e

@@ -1,0 +1,19 @@
+v 2
+d descsave: Extension of describe creating output files
+d descsave is an extended version of describe, which creates up to 2 output files.
+d One is a Stata data set with 1 observation per variable and data on variable
+d attributes (name, type, format, variable label, value label, and selected
+d characteristics). The other is a Stata do-file which reconstructs these
+d attributes when run, assuming that the variable exists and is of the correct
+d mode (numeric or string). descsave can be used to reconstruct variables that
+d have been output to a generic spreadsheet using outsheet and then input using
+d insheet, or variables that have been extracted (using factext) from the label
+d variable of an output data set created by parmby or parmest. (The parmest and
+d factext packages are downloadable from this website or from SSC.)
+d
+d Author: Roger Newson
+d Date: 26 April 2005
+d Stata version: 8
+f descsave.ado
+f descsave.hlp
+e

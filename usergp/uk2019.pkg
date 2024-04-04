@@ -1,0 +1,27 @@
+v 2
+d uk2019: Bland-Altman plots, rank parameters, and calibration ridit splines
+d Scientists frequently work with pairs of alternative variables intended to
+d measure the same quantity. Examples include measured and predicted disease
+d prevalences in primary-care practices, and marks awarded to student exam
+d scripts by two different teachers. Statistical methods developed for use
+d with such pairs of variables (A and B) may aim to measure components of
+d disagreement between the variables (like discordance, bias and scale
+d differential), or they may aim to estimate one variable from the other
+d (calibration). The Bland-Altman plot is the standard way of presenting a
+d pair of alternative measures, and allows us to visualise discordance, bias
+d and scale differential at the same time. However, it lacks parameters with
+d confidence limits. The SSC packages somersd, scsomersd and rcentile can be
+d used to estimate rank parameters. They can measure discordance using
+Kendall's tau-a between A and B, bias using the mean sign and percentiles
+d of A-B, and scale differential using Kendall's tau-a between A-B and A+B.
+d For calibration (predicting A from B), we can use the SSC packages wridit
+d and polyspline to define a ridit spline of A with respect to B. We can
+d then plot the observed B and the predicted A (with confidence limits)
+d against the ridit of B, to create a continuous alternative to the standard
+d decile plot commonly used for calibration.
+d
+d Author: Roger Newson
+d Distribution-date: 10 September 2019
+f ./uk2019/newson_ohp1.pdf
+f ./uk2019/newson_examples.zip
+e

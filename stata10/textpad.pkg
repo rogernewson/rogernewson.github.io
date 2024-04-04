@@ -1,0 +1,12 @@
+d textpad: Call TextPad to edit a file
+d textpad calls the TextPad text editor, if this editor is
+d installed on the user's system.  The TextPad text editor is a
+d powerful multi-purpose text editor, available under Microsoft
+d Windows operating environments.
+d
+d Author: Roger Newson
+d Distribution-Date: 21june2017
+d Stata-Version: 10
+f textpad.ado
+f textpad.sthlp
+e

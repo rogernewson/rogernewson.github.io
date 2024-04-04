@@ -1,0 +1,11 @@
+v 2
+d scenario1: Confidence intervals for differences between scenario means
+d This summarizes the formulas for estimating differences or ratios
+d between scenario means, using generalized linear models.  Examples
+d include the population attributable fraction and the population
+d attributable risk.
+d
+d Author: Roger Newson
+d Distribution-date: 20 August 2008
+f scenario1.pdf
+e

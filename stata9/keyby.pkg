@@ -1,0 +1,17 @@
+d keyby: Key the dataset by a variable list
+d keyby sorts the dataset currently in memory by the variables in a 
+d varlist, checking that the variables in the varlist uniquely
+d identify the observations.  This makes the variables in the varlist
+d a primary key for the dataset in memory.  If the user does not
+d specify otherwise, then keyby also reorders the variables in the 
+d varlist to the start of the variable order in the dataset, and
+d checks that all values of these variables are nonmissing.  keyby
+d can be useful if the user combines multiple datasets using merge,
+d which may cause a dataset in memory to become unsorted.
+d
+d Author: Roger Newson
+d Distribution-Date: 24august2007
+d Stata-Version: 9
+f keyby.ado
+f keyby.hlp
+e

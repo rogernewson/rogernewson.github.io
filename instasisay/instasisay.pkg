@@ -1,0 +1,20 @@
+v 2
+d instasisay: Install, uninstall and describe Roger Newson's SSC packages
+d The do-files in this package can be used to install, uninstall and
+d describe the latest versions of Roger Newson's packages from SSC.
+d Users are advised to install these packages from SSC if they have
+d the latest version of Stata, and to install packages from this website
+d if they require a superseded version from a previous version of Stata.
+d The file descasisay.do attempts to describe the SSC versions of all
+d the program packages distributed on this website. The file
+d instasisay.do attempts to install these packages from SSC, replacing
+d any existing versions. The file uninstasisay.do attempts to uninstall
+d all these packages. All of these do-files are automatically updated
+d when a new program package is added to this website.
+d
+d Author: Roger Newson
+d Distribution-date: 30 March 2009
+f descasisay.do
+f instasisay.do
+f uninstasisay.do
+e

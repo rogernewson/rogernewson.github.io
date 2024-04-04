@@ -1,0 +1,30 @@
+v 2
+d invdesc: Change variable attributes using a describe or descsave resultsset
+d invdesc inputs a data frame containing descriptive data in a 
+d describe or descsave output dataset or resultsset), and
+d (optionally) another (or the same) data frame, containing value
+d labels.  It uses information in the variables in the descriptive
+d resultsset to change the attributes of variables in the dataset in
+d the current data frame in memory.  These attributes can be
+d variable mode (string or numeric), storage type, format, value
+d label, variable label, or variable characteristics.  The
+d descriptive resultsset can be created using describe or descsave,
+d or can be created manually using a spreadsheet (generic or
+d proprietary), and can contain extra variables and/or exclude
+d variables usually present, in which case the corresponding
+d variable attributes are not modified.  sinvdesc is a version of
+d invdesc which attempts to find the descriptives in the current
+d data frame.  The descsave package can be downloaded from SSC using
+d the ssc command.
+d
+d Author: Roger Newson
+d Date: 20november2020
+d Stata version: 16
+f invdesc.ado
+f invdesc.sthlp
+f sinvdesc.ado
+f sinvdesc.sthlp
+f descriptive.txt
+f valuelabel.txt
+f xauto.txt
+e

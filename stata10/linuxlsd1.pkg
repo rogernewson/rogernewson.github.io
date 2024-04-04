@@ -1,0 +1,24 @@
+d linuxlsd1: Create a dataset of file records from the output of a Linux ls -d1 command
+d linuxlsd1 inputs a file list specification recognised by Linux, Unix
+d or Mac OS X, and generates in the memory a new Stata dataset, with 1
+d observation per file in the list, and data on information about the
+d file, including the file name and possibly other file-specific
+d information.  This new Stata dataset can then be used for
+d mass-processing of the specified files.  llinuxlsd1 inputs a file
+d list specification recognised by Linux or Mac OS X, and generates a
+d local macro containing a list, with 1 list item per file in the list,
+d containing information about the file, including the file name and
+d possibly other items.  linuxlsd1 and llinuxlsd1 work by using the
+d Linux ls command, with the options -d1 to specify that directories in
+d the file list will be listed as files (and not expanded), and that
+d the output will contain 1 line per file.  They are designed to work
+d only under a Linux, Unix or Mac OS X operating environment.
+d
+d Author: Roger Newson
+d Distribution-Date: 01april2016
+d Stata-Version: 10
+f linuxlsd1.ado
+f llinuxlsd1.ado
+f linuxlsd1.sthlp
+f llinuxlsd1.sthlp
+e

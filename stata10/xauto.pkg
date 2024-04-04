@@ -1,0 +1,12 @@
+d xauto: Input an extended version of the auto data
+d xauto inputs an extended version of the auto dataset shipped
+d with official Stata, with extra variables and a primary key,
+d and all variables compressed, and describes the new dataset.
+d xauto requires the SSC package keyby.
+d
+d Author: Roger Newson
+d Distribution-Date: 12may2020
+d Stata-Version: 10
+f xauto.ado
+f xauto.sthlp
+e

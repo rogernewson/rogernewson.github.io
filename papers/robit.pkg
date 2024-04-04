@@ -1,0 +1,24 @@
+d robit: Robit regression in Stata
+d Logistic and probit models are the most popular regression models
+d for binary outcomes. A simple robust alternative is the robit model,
+d which replaces the underlying normal distribution in the probit
+d model with a Student’s t distribution. The heavier tails of the
+d t distribution (compared with the normal distribution) mean that
+d model outliers are less influential. Robit regression models can
+d be fit as generalized linear models with the link function defined
+d as the inverse cumulative t distribution function with a specified
+d number of degrees of freedom; they have been advocated as being
+d particularly suitable for estimating inverse-probability weights
+d and propensity scoring more generally. Here we describe a new
+d command, robit, that implements robit regression in Stata.
+d
+d References
+d
+d Newson RB, Falcaro M. Robit regression in Stata.
+d The Stata Journal 2023; 23(3): 658-682.
+d 
+d Authors: Roger Newson, Milena Falcaro
+d Distribution-date: 29 October 2023
+f robit.pdf
+e
+

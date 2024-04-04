@@ -1,0 +1,135 @@
+% This is a LaTeX input file.
+%
+% A '%' character causes TeX to ignore all remaining text on the line,
+% and is used for comments like this one.
+
+\documentclass{article}      % Specifies the document class
+
+                             % The preamble begins here.
+\title{Identity of Somers' $D$ and the rank biserial correlation coefficient}  % Declares the document's title.
+\author{Roger Newson}      % Declares the author's name.
+\date{21 February, 2008}      % Deleting this command produces today's date.
+
+\newcommand{\ip}[2]{(#1, #2)}
+                             % Defines \ip{arg1}{arg2} to mean
+                             % (arg1, arg2).
+
+%\newcommand{\ip}[2]{\langle #1 | #2\rangle}
+                             % This is an alternative definition of
+                             % \ip that is commented out.
+
+%
+% Set margins
+% (which are explained in Figure C3 of LaTeX User's Guide
+% and which CAN BE RESET BY EDITORS AT ANY TIME AS FAR AS I CARE!!!!!!!!
+% - RBN.)
+%
+\setlength{\topmargin}{-0.5in}
+%\setlength{\headsep}{0.25in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{10in}
+
+%
+% Set page style (headers and footers)
+%
+\pagestyle{myheadings}
+\markboth{\textit{Somers' $D$ and the rank biserial correlation coefficient}}
+{\textit{Identity of Somers' $D$ and the rank biserial correlation coefficient}}
+
+\begin{document}             % End of preamble and beginning of text.
+
+\maketitle                   % Produces the title.
+
+\section{Formulas}
+
+We assume that there is a single sample of $N$ sampling units, partitioned into 2 subsamples (Subsample 1 and Subsample~2),
+of $N_1$ and $N_2$ units, respectively,
+such that $N_1+N_2=N$. For $h\in \{1,2\}$ and $1\le i\le N_h$,
+denote by $Y_{hi}$ the outcome measure for the $i$th unit in Subsample~$h$,
+and define $X_{hi}=h$, so that the ordinal $X$--variable indicates membership of the second subsample, rather than the first.
+
+We note that, for each $h$ and $i$,
+\begin{equation}
+N = \#\{(j,k): Y_{jk}<Y_{hi}\} + \#\{(j,k): Y_{jk}=Y_{hi}\} + \#\{(j,k): Y_{jk}>Y_{hi}\},
+\label{eq:eqseq8}
+\end{equation}
+where, for a set $S$, $\#S$ indicates the cardinality, or number of members, of $S$.
+We can now define formally the rank of the $i$th member of Subsample~$h$ as
+\def\half{{\frac{\scriptstyle 1}{\scriptstyle 2}}}
+\begin{equation}
+R_{hi} = \half + \half \#\{(j,k): Y_{jk}=Y_{hi}\} + \#\{(j,k): Y_{jk}<Y_{hi}\},
+\label{eq:eqseq9}
+\end{equation}
+which implies that ranks can range from 1 to $N$,
+and that units in a subset with tied $Y$--values are assigned the common mean rank that they would have had,
+if they had been ordered randomly.
+To simplify the algebra used with mean ranks, we may prefer to work with the linear transformation
+\begin{equation}
+Q_{hi} = 2R_{hi} - (N+1) = \#\{(j,k): Y_{jk}<Y_{hi}\} - \#\{(j,k): Y_{jk}>Y_{hi}\},
+\label{eq:eqseq10}
+\end{equation}
+as implied by (\ref{eq:eqseq8}) and (\ref{eq:eqseq9}).
+The sample mean rank, and mean transformed rank, for Subsample~$h$ are defined as
+\begin{equation}
+\bar R_{h} = N_h^{-1} \sum_{i=1}^{N_h} R_{hi}, \quad \bar Q_{h} = N_h^{-1} \sum_{i=1}^{N_h} Q_{hi} = 2 \bar R_{h}-(N+1).
+\label{eq:eqseq11}
+\end{equation}
+Note that
+\begin{eqnarray}
+\bar Q_{h} \quad =&& N_h^{-1} \sum_{i=1}^{N_h} \# \{j: Y_{hj} < Y_{hi} \}
+           \quad + \quad N_h^{-1} \sum_{i=1}^{N_h}  \# \{j: Y_{2-h+1,j}<Y_{hi} \} \nonumber \\
+           &-& N_h^{-1} \sum_{i=1}^{N_h} \# \{j: Y_{hj} > Y_{hi} \}
+           \quad - \quad N_h^{-1} \sum_{i=1}^{N_h}  \# \{j: Y_{2-h+1,j}>Y_{hi} \} \nonumber \\
+=&& N_h^{-1} \sum_{i=1}^{N_h} \bigl[ \quad \# \{j: Y_{2-h+1,j}<Y_{hi} \} \quad - \quad \# \{j: Y_{2-h+1,j}>Y_{hi} \} \quad \bigr] ,
+\label{eq:eqseq12}
+\end{eqnarray}
+because the terms involving within--sample ordinal contrasts of form $Y_{hi}<Y_{hj}$ and $Y_{hi}>Y_{hj}$ cancel out.
+
+\def\RBC{{\rm RBC}}
+We can now define the rank biserial correlation ($\RBC$) of Cureton (1956) as
+\begin{equation}
+\RBC = \frac{2}{N} \left( \bar R_2 - \bar R_1 \right) = N^{-1} \left( \bar Q_2 - \bar Q_1 \right).
+\label{eq:eqseq13}
+\end{equation}
+Using (\ref{eq:eqseq12}), we see that
+\def\sign{{\rm sign}}
+\begin{eqnarray}
+\label{eq:eqseq14}
+\RBC \quad =&& \frac{N_1}{N} \frac{1}{N_1 N_2} \sum_{j=1}^{N_2} \quad \# \{k: Y_{1k}<Y_{2j} \}
+     \quad - \quad \frac{N_1}{N} \frac{1}{N_1 N_2} \sum_{j=1}^{N_2} \quad \# \{k: Y_{1k}>Y_{2j} \} \nonumber \\
+     &-& \frac{N_2}{N} \frac{1}{N_1 N_2} \sum_{k=1}^{N_1} \quad \# \{j: Y_{2j}<Y_{1k} \}
+     \quad + \quad \frac{N_2}{N} \frac{1}{N_1 N_2} \sum_{k=1}^{N_1} \quad \# \{j: Y_{2j}>Y_{1k} \} \nonumber \\
+     =&& \frac{1}{N_1 N_2} \sum_{j=1}^{N_2} \sum_{k=1}^{N_1} \sign(Y_{2j} - Y_{1k} )  \nonumber \\
+     =&& \hat D(Y|X),
+\end{eqnarray}
+where $\sign(z)$ is 1 if $z>0$, $-1$ if $z<0$, and 0 if $z=0$,
+and $\hat D(Y|X)$ is the sample estimate of Somers'~$D$ of $Y$ with respect to $X$,
+based on the $Y_{hi}$ and the $X_{hi}$ (Somers, 1962).
+The sample and population Somers'~$D$ parameters are discussed further in Newson (2006) and Newson (2002).
+
+\section{References}
+
+{\parindent=0pt
+
+\smallskip
+Cureton EE. Rank--biserial correlation.
+\textsl{Psychometrika} 1956; \textbf{21}: 287--290.
+
+\smallskip
+Newson R. Confidence intervals for rank statistics: Somers'~$D$ and extensions.
+\textsl{The Stata Journal} 2006; \textbf{6(3)}: 309--334.
+
+\smallskip
+Newson R. Parameters behind ``nonparametric'' statistics: Kendall's tau, Somers'~$D$ and median differences.
+\textsl{The Stata Journal} 2002; \textbf{2(1)}: 45--64.
+
+\smallskip
+Somers RH. A new asymmetric measure of association for ordinal variables.
+\textsl{American Sociological Review} 1962; \textbf{27}: 799-–811.
+
+}
+
+
+\end{document}               % End of document.

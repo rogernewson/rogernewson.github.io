@@ -1,0 +1,207 @@
+% Set of TeX transparencies
+% for the Stats Group Meeting on 28 Jan 2002
+% (IN LANDSCAPE ORIENTATION)
+
+%Define magnification and area in which transparency is written
+%assuming an A4 acetate to be printed by the Departmental laser printer
+\magnification=\magstep3
+%\hoffset=-0.5truein \hsize=7.0truein \voffset=0.5truein \vsize=9truein
+\hoffset=0truein \hsize=10truein \voffset=0truein \vsize=7truein
+
+% Define tt font for verbatim listings
+\font\listingtt=cmtt10 at 17.28truept
+
+% Define macros for verbatim listings
+\def\uncatcodespecials{\def\do##1{\catcode`##1=12 }\dospecials}
+\def\setupverbatim{
+ \def\par{\leavevmode\endgraf} \catcode`\`=\active
+ \obeylines \uncatcodespecials \catcode`\\=0 \obeyspaces
+}
+{\obeyspaces\global\let =\ }{\catcode`\`=\active \gdef`{\relax\lq}}
+\def\startlisting{
+ \begingroup
+ \smallskip
+ \listingtt \baselineskip=10truept \parskip=0truept \parindent=0truept
+ \setupverbatim
+}
+\def\endlisting{\endgroup}
+
+% Define macros for item lists (when \parindent is zero)
+\def\beginitems{\begingroup\parindent=12pt}
+\def\enditems{\endgroup}
+
+% Define baselineskip and parskip
+\baselineskip=12pt \parskip=12pt
+\parindent=0pt
+
+% Redefine beginsection
+\def\beginsection#1{\medskip{\bf#1}\nobreak\smallskip}
+
+% Input the psbox routines for including PostScript graphics
+\input psbox
+
+% Define headline and footline
+\headline{{\it Does smoking kill the drinking classes or {\rm vice versa}?}
+ \hfil {Frame \folio}}
+\footline{\hfil}
+
+\medskip
+
+\beginsection{Bias caused by missing values in primary predictor variables.
+(Does smoking kill the drinking classes or {\it vice versa}?)}
+
+Roger Newson (King's College, London, UK)
+
+{\tt roger.newson@kcl.ac.uk}
+
+{28 January 2002}
+
+\medskip
+
+\beginitems
+
+\item{$\bullet$} What drew my attention to this subject.
+
+\item{$\bullet$} A fantasy cohort study on a fantasy population.
+
+\item{$\bullet$} Levels of bias caused by missing primary predictor values.
+
+\item{$\bullet$} Implications for real-world studies.
+
+\enditems
+
+\vfill\eject
+\medskip
+
+\beginsection{What drew my attention to this subject}
+
+\beginitems
+
+\item{$\bullet$} The ALSPAC study involves 14060 children, of whom a minority of 2973
+(selected in a way unknown) have cord trace element assays. (The money ran out
+before all the cords were assayed.)
+
+\item{$\bullet$} We want to assess the association of cord trace elements (eg selenium) with
+atopic disease outcomes, controlling for a long list of established confounders.
+
+\item{$\bullet$} Initially, we used the whole cohort in our analyses, having a huge
+category with unknown values for trace elements.
+
+\item{$\bullet$} This was done in order to use data
+on the majority, without cord element assays, to estimate confounder effects.
+
+\item{$\bullet$} It was objected that this might in some way cause bias. (With a
+bit of thought, I decided that this objection was probably valid.)
+
+\enditems
+
+\vfill\eject
+\medskip
+
+\beginsection{A fantasy study on a fantasy population}
+
+\beginitems
+
+\item{$\bullet$} Imagine a hypothetical population where 50\% are cigarette smokers and 50\% are beer drinkers,
+and the two habits may be positively associated.
+
+\item{$\bullet$} Imagine also that, in that population, cigarette smoking doubles the death rate,
+whereas beer drinking has no effect on the death rate.
+
+\item{$\bullet$} Imagine, in addition, that the epidemiologists in that country
+view beer drinking as an established risk factor, but have not yet investigated smoking.
+
+\item{$\bullet$} A group of epidemiologists design a cohort study to investigate
+smoking and drinking as predictors of dying, to investigate
+a recently-proposed hypothesis that smoking is killing the drinking classes.
+
+\item{$\bullet$} The data are analysed using Poisson regression to establish death rates per
+person-year at risk. Smoking is included as the predictor of primary interest, and drinking
+is included as a necessary counfounder. However, a lot of subjects have unknown smoking status,
+possibly because the money ran out before all the cotinine assays were done.
+
+\enditems
+
+\vfill\eject
+\medskip
+
+\beginsection{Simulations carried out}
+
+In all simulations, I assumed that, in fact, 50\% of the cohort smoke, and 50\% drink, and that the
+two habits are non-negatively associated. However, for some reason, drinking habits are recorded
+for the whole cohort, whereas a {\it random} subset of the cohort have unknown smoking habits.
+Two parameters were varied independently between simulations:
+
+\beginitems
+
+\item{$\bullet$} The association between smoking and drinking. The percent of drinkers who also smoked
+(and therefore the percent of non-drinkers who were also non-smokers) was varied from 50\%
+to 90\%, in increments of 5\%.
+
+\item{$\bullet$} The percent of the cohort who had missing smoking status. This was varied from
+0\% to 99\% in increments of 1\%.
+
+There were therefore $9\times 100 = 900$ simulations. In each simulation, the mutually-adjusted
+smoking-related and drinking-related relative risks were measured, assuming no interaction. \break
+Smoking was a 3-level factor (yes, no or missing), whereas drinking was a two-level factor
+(yes or no).
+
+\enditems
+
+
+\vfill\eject
+\medskip
+\beginsection{Adjusted relative risks from beer drinking estimated from the cohort study}
+
+\medskip
+
+\psboxto(7truein;0truein){fig1.eps}
+
+\medskip
+
+If smoking and drinking are positively associated, then random missing smoking values cause a spurious
+positive association between drinking and dying, even after adjustment.
+
+\vfill\eject
+\medskip
+\beginsection{Adjusted relative risks from cigarette smoking estimated from the cohort study}
+
+\medskip
+
+\psboxto(7truein;0truein){fig2.eps}
+
+\medskip
+
+If smoking and drinking are positively associated, then random missing smoking values cause smoking
+to appear less hazardous than it is, even after adjustment.
+\vfill\eject
+\medskip
+
+\beginsection{What does this imply for real-world studies?}
+
+In our fantasy study:
+
+\beginitems
+
+\item{$\bullet$} Smoking played a role similar to selenium in the ALSPAC study, namely
+the novel risk factor being investigated.
+
+\item{$\bullet$} Drinking played a role similar to the established confounders in the
+ALSPAC study, namely the established risk factor which will be invoked by a skeptical audience if not controlled for.
+
+\item{$\bullet$} If a lot of individuals have missing smoking (or selenium) values,
+then this may cause some of the effect of smoking (or low selenium) to be spuriously attributed to
+drinking (or established confounders such as mother's education and prematurity).
+
+\item{$\bullet$} Therefore, if the novel predictor is the true cause of effects traditionally attributed to the confounders,
+then a large category with the novel predictor unknown will cause the novel predictor effect to
+be underestimated.
+
+\item{$\bullet$} Note that this is true even if the missing category is chosen at random, in a way unrelated
+to what the values would have been, had they not been missing.
+
+\enditems
+
+\vfill\eject
+
+\bye

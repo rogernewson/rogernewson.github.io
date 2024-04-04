@@ -1,0 +1,29 @@
+v 2
+d smileplot: Multiple test procedures and smile plots
+d This package contains the programs multproc and smileplot. multproc inputs
+d a data set with 1 observation for each of a set of multiple significance
+d tests and data on the P-values, and carries out a multiple test procedure
+d chosen by the user to define a corrected overall critical P-value for
+d accepting or rejecting the null hypotheses tested. These procedures
+d may be one-step, step-up or step-down, and may control the familywise error
+d rate (eg the Bonferroni, Sidak, Holm, Holland-Copenhaver, Hochberg and Rom
+d procedures) or the false discovery rate (eg the Simes, Benjamini-Liu,
+d Benjamini-Yekutieli and Benjamini-Krieger-Yekutieli procedures). smileplot
+d calls multproc and then creates a smile plot, with data points corresponding
+d to multiple estimated parameters, the P-values (on a reverse log scale) on
+d the Y-axis, and the corresponding parameter estimates (or another variable)
+d on the X-axis. There are Y-axis reference lines at the uncorrected and
+d corrected overall critical P-values. The reference line at the corrected
+d critical P-value, known as the parapet line, is interpreted informally as
+d a boundary between data mining and data dredging. multproc and smileplot are
+d used on data sets with one observation per estimated parameter and data on
+d estimates and their P-values, as created by statsby, parmby or parmest.
+d
+d Author: Roger Newson
+d Distribution-Date: 28november2002
+d Stata-Version: 7
+f multproc.ado
+f multproc.hlp
+f smileplot.ado
+f smileplot.hlp
+e

@@ -1,0 +1,34 @@
+v 2
+d sensparm: Sensible parameters for univariate and multivariate splines
+d This is a pre-publication draft of a Stata Journal paper
+d (Newson, 2012). The paper describes the bspline package,
+d which now has 3 modules. The first, bspline, generates a
+d basis of Schoenberg B-splines. The second, frencurv, generates
+d a basis of reference splines whose parameters in the regression
+d model are simply values of the spline at reference points on
+d the X axis. The recent addition, flexcurv, is an easy-to-use
+d version of frencurv that generates reference splines with
+d automatically generated, sensibly spaced knots. frencurv and
+d flexcurv now have the additional option of generating an
+d incomplete basis of reference splines, with the reference spline
+d for a baseline reference point omitted or set to 0. This
+d incomplete basis can be completed by adding the standard unit
+d vector to the design matrix and can then be used to estimate
+d differences between values of the spline at the remaining
+d reference points and the value of the spline at the baseline
+d reference point. Reference splines therefore model continuous
+d factor variables as indicator variables (or “dummies”) model
+d discrete factor variables. The method can be extended in a similar
+d way to define factor-product bases, allowing the user to estimate
+d factor-combination means, subset-specific effects, or even factor
+d interactions involving multiple continuous or discrete factors.
+d
+d References
+d
+d Newson R. B. Sensible parameters for univariate and multivariate
+d splines. The Stata Journal 2012; 12(3): 479-504.
+d
+d Author: Roger Newson
+d Distribution-date: 26september2012
+f sensparm.pdf
+e

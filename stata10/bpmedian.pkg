@@ -1,0 +1,19 @@
+d bpmedian: Bonett-Price confidence intervals for medians and their contrasts
+d bpmedian calculates a Bonett-Price confidence interval for a median,
+d using the Bonett-Price standard error, and saves the results as
+d estimation results.  These can then be saved in an output dataset (or
+d resultsset), using the parmest package (downloadable from SSC), and
+d then input to the metaparm module of the parmest package to calculate
+d Bonett-Price confidence intervals for a linear contrast between
+d medians of independent groups.  bpdifmed calculates Bonett-Price
+d confidence intervals for the medians of two groups, defined by a
+d grouping variable, and also for their difference or ratio.
+d
+d Author: Roger Newson
+d Distribution-Date: 06october2016
+d Stata-Version: 10
+f bpmedian.ado
+f bpdifmed.ado
+f bpmedian.sthlp
+f bpdifmed.sthlp
+e

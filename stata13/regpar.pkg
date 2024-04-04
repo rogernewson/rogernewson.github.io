@@ -1,0 +1,23 @@
+v 3
+d regpar: Population attributable risks from binary regression models
+d regpar calculates confidence intervals for population attributable
+d risks, and also for scenario proportions.  regpar can be used after
+d an estimation command whose predicted values are interpreted as
+d conditional proportions, such as logit, logistic, probit, or glm.
+d It estimates two scenario proportions, a baseline scenario
+d ("Scenario 0") and a fantasy scenario ("Scenario 1"), in which one
+d or more exposure variables are assumed to be set to particular
+d values (typically zero), and any other predictor variables in the
+d model are assumed to remain the same.  It also estimates the
+d difference between the Scenario 0 proportion and the Scenario 1
+d proportion.  This difference is known as the population
+d attributable risk (PAR), and represents the amount of risk
+d attributable to living in Scenario 0 instead of Scenario 1.
+d
+d Author: Roger Newson
+d Distribution-Date: 25december2013
+d Stata-Version: 13
+f regpar.ado
+f regpar_p.ado
+f regpar.sthlp
+e

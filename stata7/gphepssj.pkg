@@ -1,0 +1,16 @@
+v 2
+d gphepssj: Translate a list of Stata graph files to Stata Journal .eps figures
+d ghepssj translates a list of Stata .gph files to a list of Encapsulated
+d PostScript (.eps) files, containing figures of the usual default size used by
+d The Stata Journal (SJ). It is intended for SJ authors who want to preview
+d their inserts with the figures at the right size. It should be stressed that
+d the SJ editors prefer to be supplied with the original .gph files in a SJ
+d submission, so they can manually adjust them.
+d
+d Author: Roger Newson
+d Distribution-Date: 21august2002
+d Stata-Version: 7
+d
+f gphepssj.ado
+f gphepssj.hlp
+e

@@ -1,0 +1,69 @@
+d cprdutil: Utilities for inputting CPRD datasets into Stata
+d The cprdutil package is a suite of utility programs for inputting
+d text datasets produced by the Clinical Practice Research Datalink
+d (CPRD), and outputting Stata datasets and/or do-files to create
+d value labels.  CPRD text datasets may contain XYZ lookup tables,
+d non-XYZ lookup tables, non-lookup datasets, or browser-export
+d datasets, with one text row for each of a set of things of a kind
+d known to the primary-care sector of the British Health Service,
+d such as patients, primary-care practices, clinical events or
+d prescriptions.  All of these may be output into Stata datasets,
+d with one output observation per input text row.  An XYZ lookup
+d table may alternatively be translated into a set of Stata value
+d labels, created using a generated do-file, to be assigned to
+d variables in other Stata datasets after running the do-file in the
+d dataset.  The cprdutil package uses the SSC packages keyby, 
+d addinby, lablist, chardef, and intext, which need to be installed
+d for cprdutil to work.
+d
+d Author: Roger Newson
+d Distribution-Date: 21february2019
+d Stata-Version: 13
+f cprd_additional.ado
+f cprd_batchnumber.ado
+f cprd_bnfcodes.ado
+f cprd_browser_medical.ado
+f cprd_browser_product.ado
+f cprd_clinical.ado
+f cprd_common_dosages.ado
+f cprd_consultation.ado
+f cprd_entity.ado
+f cprd_immunisation.ado
+f cprd_medical.ado
+f cprd_nonxyzlookup.ado
+f cprd_packtype.ado
+f cprd_patient.ado
+f cprd_patientobs.ado
+f cprd_practice.ado
+f cprd_product.ado
+f cprd_referral.ado
+f cprd_scoremethod.ado
+f cprd_staff.ado
+f cprd_test.ado
+f cprd_therapy.ado
+f cprd_xyzlookup.ado
+f cprd_additional.sthlp
+f cprd_batchnumber.sthlp
+f cprd_bnfcodes.sthlp
+f cprd_browser_medical.sthlp
+f cprd_browser_product.sthlp
+f cprd_clinical.sthlp
+f cprd_common_dosages.sthlp
+f cprd_consultation.sthlp
+f cprd_entity.sthlp
+f cprd_immunisation.sthlp
+f cprd_medical.sthlp
+f cprd_nonxyzlookup.sthlp
+f cprd_packtype.sthlp
+f cprd_patient.sthlp
+f cprd_patientobs.sthlp
+f cprd_practice.sthlp
+f cprd_product.sthlp
+f cprd_referral.sthlp
+f cprd_scoremethod.sthlp
+f cprd_staff.sthlp
+f cprd_test.sthlp
+f cprd_therapy.sthlp
+f cprd_xyzlookup.sthlp
+f cprdutil.sthlp
+e

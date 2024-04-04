@@ -1,0 +1,12 @@
+v 2
+d bvridit1: Bivariate ridits and distribution theory for Kendall's tau-a
+d This document intrroduces bivariate ridits and their role in defining
+d the asymptotic sampling distribution of the sample Kendall's tau-a.
+d This asymptotic distribution can be used to do power and sample size
+d calculations for Kendall's tau-a by numerical integration, using the
+d SSC packages expgen, normalbvr and powercal.
+d
+d Author: Roger Newson
+d Distribution-date: 22 February 2019
+f bvridit1.pdf
+e

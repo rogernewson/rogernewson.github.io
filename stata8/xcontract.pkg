@@ -1,0 +1,17 @@
+v 2
+d xcontract: Make data set of frequencies and percents on disk or in memory
+d xcontract is an extended version of contract. It creates a data set with one
+d observation per combination of values of a list of variables in the existing
+d data set and new variables containing the frequency and percent of each
+d combination, and, optionally, the cumulative frequency and percent of each
+d combination. A list of by-variables can be used with xcontract, and the
+d percents will then be calculated within by-groups. The output data set may
+d either be listed to the Stata log, or saved to a disk file, or written to the
+d memory (overwriting any existing data set).
+d
+d Author: Roger Newson
+d Distribution-Date: 22february2007
+d Stata-Version: 8
+f xcontract.ado
+f xcontract.hlp
+e

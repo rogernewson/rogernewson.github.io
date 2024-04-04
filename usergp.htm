@@ -1,0 +1,1084 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-gb">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Stata User Meeting presentations by Roger Newson</title>
+</head>
+
+<body bgcolor="white">
+
+<a name="top_of_page">
+<img src="Queen-Mary-logo-956800381.png" style="width:160px;" alt="Queen Mary University London" class="logo" />
+</a>
+
+<h1>Stata User Meeting presentations by Roger Newson</h1>
+
+<p>
+These were given at Stata User Meetings (or Stata Conferences), and are summarized here with their abstracts and downloadables.
+Stata User Meetings (or Conferences) are a principal opportunity for face-to-face networking within the Stata user community,
+and are also an opportunity to feed ideas and wishes for further development
+back to <a href="http://www.stata.com/">Stata Corporation</a>,
+the makers of Stata statistical software.
+These meetings take place in many locations all over the world,
+but the largest ones are usually in London, UK,
+where a large concentration of Stata users is based at locations mutually accessible by train, bus or bicycle.
+This page contains all my own presentations given at these meetings,
+in reverse order of presentation date.
+</p>
+
+<p>
+To find out more about Stata User Meetings (or Conferences), <a href="http://www.stata.com/support/meeting/">click here</a>
+for the official Stata versions of the proceedings, or <a href="http://edirc.repec.org/data/debocus.html">click here</a>
+for the Boston College of Economics versions maintained by <a href="http://fmwww.bc.edu/ec/baum.php">Kit Baum</a>
+and listed with <a href="http://repec.org/">RePEc</a>.
+To find out more about Stata Statistical Software, <a href="http://www.stata.com/">click here</a>.
+</p>
+
+<p>
+<a href="http://www.stata.com/">Stata Corporation</a>
+<br>
+<a href="http://edirc.repec.org/data/debocus.html">Stata User Meeting proceedings at RePEc</a>
+<br>
+<a href="http://www.stata.com/support/meeting/">Stata User Meeting proceedings at StataCorp</a>
+<br>
+<a href="./papers.htm">Return to Roger Newson's main documents page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+<hr>
+
+<h2>List of presentations</h2>
+
+<p>
+<table border="1">
+<tr><th>Presentation year</th><th>Presentation title</th></tr>
+<tr><td>2023</td><td><a href="#uk2023">Customized Markdown and <tt>.docx</tt> tables using <tt>listtab</tt> and <tt>docxtab</tt></a></td></tr>
+<tr><td>2022</td><td><a href="#uk2022">Resultssets in resultsframes in Stata 16-plus</a></td></tr>
+<tr><td>2021</td><td><a href="#uk2021">Ridits <tt>right</tt>, <tt>left</tt>, <tt>center</tt>, native and foreign</a></td></tr>
+<tr><td>2020</td><td><a href="#uk2020">From datasets to metadatasets in Stata</a></td></tr>
+<tr><td>2019</td><td><a href="#uk2019">Bland-Altman plots, rank parameters, and calibration ridit splines</a></td></tr>
+<tr><td>2018</td><td><a href="#uk2018">A fleet of packages for inputting United Kingdom primary care data</a></td></tr>
+<tr><td>2017</td><td><a href="#uk2017">Ridit splines with applications to propensity weighting</a></td></tr>
+<tr><td>2016</td><td><a href="#uk2016">The role of Somers' <i>D</i> in propensity modelling</a></td></tr>
+<tr><td>2015</td><td><a href="#uk2015">Somers' <i>D</i>: A common currency for associations</a></td></tr>
+<tr><td>2014</td><td><a href="#uk2014">Easy-to-use packages for estimating rank and spline parameters</a></td></tr>
+<tr><td>2013</td><td><a href="#uk2013">Creating factor variables in resultssets and other datasets</a></td></tr>
+<tr><td>2012</td><td><a href="#uk2012">Scenario comparisons: How much good can we do?</a></td></tr>
+<tr><td>2011</td><td><a href="#uk2011">Sensible parameters for polynomials and other splines</a></td></tr>
+<tr><td>2010</td><td><a href="#uk2010">Post-<code>parmest</code> peripherals: <code>fvregen</code>, <code>invcise</code>, and <code>qqvalue</code></a></td></tr>
+<tr><td>2009</td><td><a href="#uk2009">Homoskedastic adjustment inflation factors in model selection</a></td></tr>
+<tr><td>2008</td><td><a href="#uk2008"><code>parmest</code> and extensions</a></td></tr>
+<tr><td>2007</td><td><a href="#uk2007">Robust confidence intervals for Hodges-Lehmann median differences</a></td></tr>
+<tr><td>2006</td><td><a href="#uk2006">On the central role of Somers' <i>D</i></a></td></tr>
+<tr><td>2006</td><td><a href="#de2006">Resultssets, resultsspreadsheets and resultsplots in Stata</a></td></tr>
+<tr><td>2005</td><td><a href="#uk2005">Generalized confidence interval plots using commands or dialogs</a></td></tr>
+<tr><td>2004</td><td><a href="#uk2004">From datasets to resultssets in Stata</a></td></tr>
+<tr><td>2003</td><td><a href="#uk2003">Multiple test procedures and smile plots</a></td></tr>
+<tr><td>2002</td><td><a href="#uk2002">Creating plots and tables of estimation results using <code>parmest</code> and friends</a></td></tr>
+<tr><td>2001</td><td><a href="#uk2001">Splines with parameters that can be explained in words to non-mathematicians</a></td></tr>
+<tr><td>2000</td><td><a href="#uk2000">Confidence intervals for rank order statistics: Somers' <i>D</i>, Kendall's tau-a and their differences</a></td></tr>
+</table>
+</p>
+
+<p>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+<hr>
+
+<h2><a name="uk2023">
+Customized Markdown and <tt>.docx</tt> tables using <tt>listtab</tt> and <tt>docxtab</tt>.
+Presented at the 2023 London Stata Conference, 7-8 September, 2023.
+</a></h2>
+
+<p>
+Statisticians make their living producing tables (and plots).
+We present an update of a general family of methods
+for making customized tables,
+called the
+ <b>DCRIL path</b> (<u>d</u>ecode, <u>c</u>haracterize, <u>r</u>eshape, <u>i</u>nsert, <u>l</u>ist),
+with customized table cells (using the package <tt>sdecode</tt>),
+customized column attributes (using the package <tt>chardef</tt>),
+customized column labels (using the package <tt>xrewide</tt>),
+and/or customized inserted gap-row labels (using the package <tt>insingap</tt>),
+and listing these tables to automatically-generated documents.
+This demonstration uses the package <tt>listtab</tt>
+to list Markdown tables for browser-ready HTML documents,
+which Stata users like to generate,
+and the package <tt>docxtab</tt> to list <tt>.docx</tt> tables
+for printer-ready <tt>.docx</tt> documents,
+which our superiors like us to generate.
+</p>
+
+<p>
+<a href="./usergp/uk2023/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2023/newson_examples.zip">Download example do-files</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2022">
+Resultssets in resultsframes in Stata 16-plus.
+Presented at the 2022 London Stata Conference, 8-9 September, 2022.
+</a></h2>
+
+<p>
+A resultsset is a Stata dataset created as output by a Stata command.
+It may be listed and/or saved in a disk file
+3and/or (in Stata Versions 16 or higher) written to a data frame (or resultsframe) in the memory,
+without damaging any existing data frames.
+Commands creating resultssets include <tt>parmest</tt>, <tt>parmby</tt>,
+<tt>xcontract</tt>, <tt>xcollapse</tt>, <tt>descsave</tt>, <tt>xsvmat</tt>,
+and <tt>xdir</tt>.
+Commands useful for processing resultsframes include <tt>xframeappend</tt>, <tt>fraddinby</tt>,
+and <tt>invdesc</tt>.
+We survey the ways in which resultsset processing has been changed by resultsframes.
+</p>
+
+<p>
+<a href="./usergp/uk2022/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2022/examples.zip">Download example do-files</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2021">
+Ridits <tt>right</tt>, <tt>left</tt>, <tt>center</tt>, native and foreign.
+Presented at the 2021 London Stata Conference, 9-10 September, 2021.
+</a></h2>
+
+<p>
+Ridit functions are specified
+with respect to an identified probability distribution.
+They are like ranks, only expressed on a scale from 0 to 1 (for unfolded ridits),
+or -1 to 1 (for folded ridits).
+Ridit functions have generalised inverses called percentile functions.
+A native ridit is a ridit
+of a variable with respect to its own distribution.
+Native ridits can be computed using the <tt>ridit()</tt> function
+of Nick Cox's SSC package <tt>egenmore</tt>.
+Alternatively, weighted ridits
+can be computed using the SSC package <tt>wridit</tt>.
+This has a <tt>handedness()</tt> option,
+where <tt>handedness(right)</tt> specifies a right--continuous ridit
+(also known as a cumulative distribution function),
+<tt>handedness(left)</tt> specifies a left--continuous ridit,
+and <tt>handedness(center)</tt> (the default) specifies a ridit function discontinuous at its mass points.
+<tt>wridit</tt> now has a module <tt>fridit</tt>,
+computing foreign ridits of a variable with respect to a distribution other than its own,
+specifying the foreign distribution in another data frame.
+An application of ridits is ridit splines,
+which are splines in a ridit function,
+typically computed using the SSC package <tt>polyspline</tt>.
+As an example, we may fit a ridit spline to a training set,
+and use it for prediction in a test set,
+using foreign ridits of an <i>X</i>-variable in the test set
+with respect to the distribution of the <i>X</i>-variable in the training set.
+The model parameterss are typically values of an outcome variable
+corresponding to percentiles of the <i>X</i>-variable in the training set.
+This practice stabilises (or Winsorises) outcome values corresponding to <i>X</i>-values in the test set
+outside the range of <i>X</i>-values in the training set.
+</p>
+
+<p>
+<a href="./usergp/uk2021/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2021/exampledofiles.zip">Download example do-files</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2020">
+From datasets to metadatasets in Stata.
+Presented at the 2020 London Stata Conference, 10-11 September, 2020.
+</a></h2>
+
+<p>
+Metadatasets are Stata datasets, in files or in frames,
+which may have one observation per file, per dataset, per variable, or per variable value.
+Metadatasets can be used to modify a Stata database,
+or to make a Stata database self-documenting,
+especially if converted to non-Stata formats, such as HTML or even Microsoft Excel.
+We present some user-written packages, updated to Stata Version 16, for creating and using metadatasets.
+The <tt>xdir</tt> package creates a resultsset with one observation per file in a folder
+conforming to a user-specified pattern.
+The <tt>descgen</tt> pacgage inputs a <tt>xdir</tt> resultsset,
+and generates a new variable indicating whether each file is a Stata dataset,
+and other new variables containing dataset attributes, such as the dataset label and characteristics,
+the sort key of variables,
+and the numbers of observations and variables.
+The <tt>vallabdef</tt> package inputs a dataset with 1 observation per label name per value per value label,
+and generates Stata value labels.
+The <tt>vallabsave</tt> package loads and saves value labels from and to label-only datasets,
+and transfers value labels between data frames.
+The <tt>descsave</tt> package creates a metadataset with one observation per variable in a dataset,
+and data on variable attributes (including characteristics).
+The <tt>invdesc</tt> package modifies the variable attributes of the dataset in the current frame,
+inputting a <tt>descsave</tt> resultsset in a second data frame to set the variable attributes,
+and inputting value labels from a dataset in a third data frame.
+The datasets containing the variable attributes and value labels
+may be produced as resultssets by Stata packages,
+or produced manually in a spreadsheet using LibreOffice Calc or Microsoft Excel,
+and input into Stata datasets using <tt>import delimited</tt> or <tt>import excel</tt>.
+</p>
+
+<p>
+<a href="./usergp/uk2020/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2020/example1.do">Download example do-file</a>
+<br>
+<a href="./usergp/uk2020/txtinput1.zip">Download example .txt input files</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2019">
+Bland-Altman plots, rank parameters, and calibration ridit splines.
+Presented at the 2019 London Stata Conference, 5-6 September, 2019.
+</a></h2>
+
+<p>
+Scientists frequently work with pairs of alternative variables intended to measure the same quantity.
+Examples include measured and predicted disease prevalences in primary-care practices,
+and marks awarded to student exam scripts by two different teachers.
+Statistical methods developed for use with such pairs of variables (<i>A</i> and <i>B</i>)
+may aim to measure components of disagreement between the variables
+(like discordance, bias and scale differential),
+or they may aim to estimate one variable from the other (calibration).
+The Bland-Altman plot is the standard way of presenting a pair of alternative measures,
+and allows us to visualise discordance, bias and scale differential at the same time.
+However, it lacks parameters with confidence limits.
+The SSC packages <tt>somersd</tt>, <tt>scsomersd</tt> and <tt>rcentile</tt>
+can be used to estimate rank parameters.
+They can measure discordance using Kendall's &tau;<sub>a</sub> between <i>A</i> and <i>B</i>,
+bias using the mean sign and percentiles of <i>A-B</i>,
+and scale differential using Kendall's &tau;<sub>a</sub> between <i>A-B</i> and <i>A+B</i>.
+For calibration (predicting <i>A</i> from <i>B</i>),
+we can use the SSC packages <tt>wridit</tt> and <tt>polyspline</tt>
+to define a ridit spline of <i>A</i> with respect to <i>B</i>.
+We can then plot the observed <i>B</i> and the predicted <i>A</i> (with confidence limits)
+against the ridit of <i>B</i>,
+to create a continuous alternative to the standard decile plot commonly used for calibration.
+</p>
+
+<p>
+<a href="./usergp/uk2019/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2019/newson_examples.zip">Download example dataset and do-files</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2018">
+A fleet of packages for inputting United Kingdom primary care data.
+Presented at the 2018 London Stata Conference, 8-9 September, 2018.
+</a></h2>
+
+<p>
+The Clinical Practice Research Datalink (CPRD) is a centrally-managed data warehouse,
+storing data provided by the
+primary-care sector of the United Kingdom (UK) National
+Health Service (NHS).
+Medical researchers request retrievals from this database,
+which take the form of a collection of text datasets,
+whose format can be complicated.
+I have written a flagship package <tt>cprdutil</tt>,
+with multiple modules to input into Stata the many text dataset types provided in a CPRD retrieval.
+These text datasets may be converted either to Stata value labels or to Stata datasets,
+which can be created complete with value labels, variable labels, and numeric Stata dates.
+I have also written a fleet of satellite packages,
+to input into Stata the text datasets for retrievals of linked data,
+in which data are provided from non-CPRD sources,
+with CPRD identifier variables as a foreign key to allow data linkage.
+The modules of <tt>cprdutil</tt> are introduced.
+A demonstration example is given,
+in which a minimal CPRD database is produced in Stata, using <tt>cprdutil</tt>,
+and some principles of sensible programming practice for creating large databases are illustrated.
+</p>
+
+<p>
+<a href="./usergp/uk2018/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2018/newson_examples.zip">Download example do-files</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2017">
+Ridit splines with applications to propensity weighting.
+Presented at the 23rd UK User Meeting, 7–8 September, 2017.
+</a></h2>
+
+<p>
+Given a random variable <i>X</i>, the ridit function <i>R<sub>X</sub>(·)</i> specifies its distribution.
+The SSC package <tt>wridit</tt> can compute ridits (possibly weighted) for a variable.
+A ridit spline in a variable <i>X</i> is a spline in the ridit <i>R<sub>X</sub>(X)</i>.
+The SSC package <tt>polyspline</tt> can be used with
+<tt>wridit</tt> to generate an unrestricted ridit-spline basis for an <i>X</i>-variable,
+with the feature that, in
+a regression model, the parameters corresponding to the basis variables are equal to mean
+values of the outcome variable at a list of percentiles of the <i>X</i>-variable.
+Ridit splines are especially useful in propensity weighting.
+The user may define a primary propensity score in
+the usual way, by fitting a regression model of the treatment variable with respect to the
+confounders, and then using the predicted values of the treatment variable. A secondary
+propensity score is then defined by regressing the treatment variable with respect to a ridit-spline
+basis in the primary propensity score. We have found that secondary propensity scores
+can predict the treatment variable as well as the corresponding primary propensity scores, as
+measured using the unweighted Somers' <i>D</i> with respect to the treatment variable. However,
+secondary propensity weights frequently perform better than primary propensity weights at
+standardizing out the treatment-propensity association, as measured using the propensity-weighted
+Somers' <i>D</i> with respect to the treatment variable. Also, when we measure the
+treatment effect, secondary propensity weights may cause considerably less variance inflation
+than primary propensity weights. This is because the secondary propensity score is less likely
+to produce extreme propensity weights than the primary propensity score.
+</p>
+
+<p>
+<a href="./usergp/uk2017/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2017/examples1.do">Download example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2016">
+The role of Somers' <i>D</i> in propensity modelling.
+Presented at the 22nd UK Stata User Meeting, 8–9 September, 2016.
+</a></h2>
+
+<p>
+The Rubin method of confounder adjustment, in its 21st-century version, is a two-phase method for using
+observational data to estimate a causal treatment effect on an outcome variable. It involves first finding a
+propensity model in the joint distribution of a treatment variable and its confounders (the design phase), and
+then estimating the treatment effect from the conditional distribution of the outcome, given the treatments
+and confounders (the analysis phase). In the design phase, we want to limit the level of spurious treatment
+effect that might be caused by any residual imbalance between treatment and confounders that may remain,
+after adjusting for the propensity score by propensity matching and/or weighting and/or stratification. A
+good measure of this is Somers' <i>D(W|X)</i>, where <i>W</i> is a confounder or a propensity score, and <i>X</i> is the
+treatment variable. The SSC package <code>somersd</code> calculates Somers' <i>D</i> for a wide range of sampling schemes,
+allowing matching and/or weighting and/or restriction to comparisons within strata. Somers' <i>D</i> has the
+feature that, if <i>Y</i> is an outcome, then a higher-magnitude <i>D(W|X)</i> cannot be secondary to a lower-magnitude
+<i>D(W|X)</i>, implying that <i>D(W|X)</i> can be used to set an upper bound to the size of a spurious treatment effect
+on an outcome. For a binary treatment variable X, <i>D(W|X)</i> gives an upper bound to the size of a difference
+between the proportions, in the two treatment groups, that can be caused for a binary outcome. If <i>D(W|X)</i>
+is less than 0.5, then it can be doubled to give an upper bound to the size of a difference between the means,
+in the two treatment groups, that can be caused for an equal-variance Normal outcome, expressed in units
+of the common standard deviation for the two treatment groups. We illustrate this method using a familiar
+dataset, with examples using propensity matching, weighting and stratification. We use the SSC package
+<code>haif</code> in the design phase, to check for variance inflation caused by propensity adjustment, and use the SSC
+package <code>scenttest</code> (an addition to the <code>punaf</code> family) to estimate the treatment effect in the analysis phase.
+</p>
+
+<p>
+<a href="./usergp/uk2016/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2016/examples1.do">Download example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2015">
+Somers' <i>D</i>: A common currency for associations.
+Presented at the 21st UK Stata User Meeting, 10–11 September, 2015.
+</a></h2>
+
+<p>
+Somers' <i>D(Y|X)</i> is an asymmetric measure of ordinal association
+between two variables <i>Y</i> and <i>X</i>, on a scale from -1 to 1.
+It is defined as the difference between the <i>conditional</i>
+probabilities of concordance and discordance between two randomly-sampled
+<i>(X,Y)</i>-pairs, <i>given</i> that the two <i>X</i>-values are
+ordered. The <code>somersd</code> package enables the user to estimate Somers'
+<i>D</i> for a wide range of sampling schemes, allowing clustering and/or
+sampling-probability weighting and/or restriction to comparisons within
+strata. Somers' <i>D</i> has the useful feature that a larger <i>D(Y|X)
+</i> cannot be secondary to a smaller <i>D(W|X)</i> with the same sign,
+enabling us to make scientific statements that the first ordinal
+association cannot be caused by the second. An important practical example,
+especially for public-health scientists, is the case where <i>Y</i> is an
+outcome, <i>X</i> an exposure, and <i>W</i> a propensity score.
+However, an audience accustomed to other measures of association may be
+culture-shocked, if we present associations measured using Somers' <i>
+D</i>. Fortunately, under some commonly-used models, Somers' <i>D</i> is
+related monotonically to an alternative association measure, which may be
+more clearly related to the practical question of how much good we can do.
+These relationships are nearly linear (or log-linear) over the range of
+Somers' <i>D</i> values from -0.5 to 0.5. We present examples with <i>
+X</i> and <i>Y</i> binary, with <i>X</i> binary and <i>Y</i> a
+survival time, with <i>X</i> binary and <i>Y</i> conditionally Normal,
+and with <i>X</i> and <i>Y</i> bivariate Normal. Somers' <i>D</i> can
+therefore be used as a common currency for comparing a wide range of
+associations between variables, not limited to a particular model.
+</p>
+
+<p>
+<a href="./usergp/uk2015/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2015/examples1.do">Download example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2014">
+Easy-to-use packages for estimating rank and spline parameters.
+Presented at the 20th UK Stata User Meeting, 11–12 September, 2014.
+</a></h2>
+
+<p>
+So-called non-parametric methods are in fact based on estimating and testing parameters, usually either rank
+parameters or spline parameters. Two comprehensive packages for estimating these are <code>somersd</code> (for rank
+parameters) and <code>bspline</code> (for spline parameters). Both of these estimate a wide range of parameters, but
+both are frequently found to be difficult to use by casual users. This presentation introduces <code>rcentile</code>, an
+easy-to-use front end for <code>somersd</code>, and <code>polyspline</code>, an easy-to-use front end for <code>bspline</code>.
+<code>rcentile</code> estimates percentiles with confidence limits, optionally allowing for clustered sampling and
+sampling-probability weights. The confidence intervals are saved in a Stata matrix, with one row per percentile,
+which the user can save to a resultsset using the <code>xsvmat</code> package. <code>polyspline</code> inputs an <i>X</i>-
+variable and a user-defined list of reference points and outputs a basis of variables for a polynomial or for
+another unrestricted spline. This basis can be included in the covariate list for an estimation command, and the
+corresponding parameters will be values of the polynomial or spline at the reference points, or differences between
+these values. By default, the spline will simply be a polynomial, with a degree one less than the number of
+reference points. However, if the user specifies a lower degree, then the spline will have knots interpolated
+sensibly between the reference points.
+</p>
+
+<p>
+<a href="./usergp/uk2014/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2014/examples1.do">Download example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2013">
+Creating factor variables in resultssets and other datasets.
+Presented at the 19th UK Stata User Meeting, 12–13 September, 2013.
+</a></h2>
+
+<p>
+Factor variables are defined as categorical variables with integer
+values, which may represent values of some other kind, specified by a
+value label. We frequently want to generate such variables in Stata
+datasets, especially resultssets, which are output Stata datasets
+produced by Stata programs, such as the official Stata <code>statsby</code> command
+and the SSC packages <code>parmest</code> and <code>xcontract</code>. This is because
+categorical string variables can only be plotted after conversion to
+numeric variables, and because these numeric variables are also
+frequently used in defining a key of variables, which identify
+observations in the resultsset uniquely in a sensible sort order. The
+<code>sencode</code> package is downloadable, and frequently downloaded, from SSC,
+and is a “super” version of <code>encode</code>, which inputs a string variable and
+outputs a numeric factor variable. Its added features include a
+<code>replace</code> option allowing the output numeric variable to replace the
+input string variable, a <code>gsort()</code> option allowing the numeric values to
+be ordered in ways other than alphabetical order of the input string
+values, and a <code>manyto1</code> option allowing multiple output numeric values
+to map to the same input string value. The <code>sencode</code> package is
+well–established, and has existed since 2001. However, some tips will
+be given on ways of using it that are not immediately obvious, but
+which the author has found very useful over the years when
+mass–producing resultssets. These applications use <code>sencode</code> with other
+commands, such as the official Stata command <code>split</code> and the SSC
+packages <code>factmerg</code>, <code>factext</code> and <code>fvregen</code>.
+</p>
+
+<p>
+<a href="./usergp/uk2013/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2013/examples1.do">Download example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2012">
+Scenario comparisons: How much good can we do?
+Presented at the 18th UK Stata User Meeting, 13–14 September, 2012.
+</a></h2>
+
+<p>
+Applied scientists, especially public health scientists, frequently want to know how much good can be caused
+by a proposed intervention. For instance, they might want to estimate how much we could decrease the level
+of a disease, in a dream scenario where the whole world stopped smoking, assuming that a regression model
+fitted to a sample is true. Alternatively, they may want to compare the same scenario between regression
+models fitted to different datasets, as when disease rates in different subpopulations are standardized to a
+common distribution of gender and age, using the same logistic regression model with different parameters in
+each subpopulation. In statistics, scenarios can be defined as alternative versions of a dataset, with the same
+variables, but with different values in the observations, or even with non–corresponding observations. Using
+regression methods, we may estimate scenario means of a <i>Y</i>–variable in scenarios with specified <i>X</i>–values,
+and compare these scenario means. In Stata Versions 11 and 12, the standard tool for estimating scenario
+means is <code>margins</code>. A suite of packages is introduced for estimating scenario means and their comparisons,
+using <code>margins</code>, together with <code>nlcom</code> to implement Normalizing and variance–stabilizing transformations.
+<code>margprev</code> estimates scenario prevalences for binary variables. <code>marglmean</code> estimates scenario arithmetic
+means for non–negative valued variables. <code>regpar</code> estimates 2 scenario prevalences, together with their
+difference, the population attributable risk (PAR). <code>punaf</code> estimates 2 scenario arithmetic means from cohort
+or cross–sectional data, together with their ratio, the population unattributable fraction (PUF), which is
+subtracted from 1 to give the population attributable fraction (PAF). <code>punafcc</code> estimates an arithmetic mean
+between–scenario rate ratio for cases or non–survivors in case–control or survival data, respectively. This
+mean rate ratio, also known as a PUF, is also subtracted from 1 to estimate a PAF. These packages use
+the log transformation for arithmetic means and their ratios, the logit transformation for prevalences, and
+the hyperbolic arctangent or Fisher’s <i>z</i> transformation for differences between prevalences. Examples are
+presented for these packages.
+</p>
+
+<p>
+<a href="./usergp/uk2012/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2012/examples1.do">Download example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2011">
+Sensible parameters for polynomials and other splines.
+Presented at the 17th UK Stata User Meeting, 15-16 September, 2011.
+</a></h2>
+
+<p>
+Splines, including polynomials, are traditionally used to model non-linear relationships involving continuous
+predictors. However, when they are included in linear models (or generalized linear models), the estimated
+parameters for polynomials are not easy for non–mathematicians to understand, and the estimated parameters
+for other splines are often not easy even for mathematicians to understand. It would be easier if the
+parameters were values of the polynomial or spline at reference points on the <i>X</i>–axis, or differences or ratios
+between the values of the spline at the reference points and the value of the spline at a base reference point.
+The <code>bspline</code> package can be downloaded from SSC, and generates spline bases for inclusion in the design
+matrices of linear models, based on Schoenberg <i>B</i>–splines. The package now has a recently added module
+<code>flexcurv</code>, which inputs a sequence of reference points on the <i>X</i>–axis, and outputs a spline basis, based on
+equally–spaced knots generated automatically, whose parameters are the values of the spline at the reference
+points. This spline basis can be modified by excluding the spline vector at a base reference point and
+including the unit vector. If this is done, then the parameter corresponding to the unit vector will be the
+value of the spline at the base reference point, and the parameters corresponding to the remaining reference
+spline vectors will be differences between the values of the spline at the corresponding reference points and
+the value of the spline at the base reference point. The spline bases are therefore extensions, to continuous
+factors, of the bases of unit vectors and/or indicator functions used to model discrete factors. It is possible
+to combine these bases for different continuous and/or discrete factors in the same way, using product bases
+in a design matrix to estimate factor–value combination means and/or factor–value effects and/or factor
+interactions.
+</p>
+
+<p>
+<a href="./usergp/uk2011/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2011/newson_dofiles1.zip">Download example do-files</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2010">
+Post-<code>parmest</code> peripherals: <code>fvregen</code>, <code>invcise</code>, and <code>qqvalue</code>.
+Presented at the 16th UK Stata User Meeting, 9-10 September, 2010.
+</a></h2>
+
+<p>
+The <code>parmest</code> package is used with Stata estimation commands to produce output datasets (or resultssets)
+with one observation per estimated parameter, and data on parameter names, estimates, confidence limits,
+<i>P</i>-values, and other parameter attributes. These resultssets can then be input to other Stata programs
+to produce tables, listings, plots, and secondary resultssets containing derived parameters.
+Three recently-added packages for post-<code>parmest</code> processing are <code>fvregen</code>, <code>invcise</code>, and <code>qqvalue</code>.
+<code>fvregen</code> is used when the
+parameters belong to models containing factor variables, introduced in Stata Version 11.
+It regenerates these factor variables in the resultsset,
+enabling the user to plot, list, or tabulate factor levels with estimates and
+confidence limits of parameters specific to these factor levels. <code>invcise</code> calculates standard errors inversely
+from confidence limits produced without standard errors, such as those for medians and for Hodges-Lehmann
+median differences. These standard errors can then be input, with the estimates, into the <code>metaparm</code> module
+of <code>parmest</code>, to produce confidence intervals for linear combinations of medians or of median differences, such
+as those used in meta-analysis or interaction estimation. <code>qqvalue</code> inputs the <i>P</i>-values in a resultsset, and
+creates a new variable containing the frequentist <i>q</i>-values, calculated by inverting a multiple-test procedure
+designed to control the familywise error rate (FWER) or the false discovery rate (FDR). The frequentist
+<i>q</i>-value for each <i>P</i>-value is the minimum FWER or FDR for which that <i>P</i>-value would be in the discovery
+set, if the specified multiple-test procedure was used on the full set of <i>P</i>-values.
+<code>fvregen</code>, <code>invcise</code>, <code>qqvalue</code>, and <code>parmest</code> can be downloaded from SSC.
+</p>
+
+<p>
+<a href="./usergp/uk2010/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2010/fvregendemo1.do">Download first example do-file</a>
+<br>
+<a href="./usergp/uk2010/invcisedemo1.do">Download second example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+<h2><a name="uk2009">
+Homoskedastic adjustment inflation factors in model selection.
+Presented at the 15th UK Stata User Meeting, 10-11 September, 2009.
+</a></h2>
+
+<p>
+Insufficient confounder adjustment is viewed as a common source of "false
+discoveries", especially in the epidemiology sector. However, adjustment for
+"confounders" that are correlated with the exposure, but which do not
+independently predict the outcome, may cause loss of power to detect the
+exposure effect. On the other hand, choosing confounders based on "stepwise"
+methods is subject to many hazards, which imply that the confidence interval
+eventually published is likely not to have the advertized coverage
+probability for the effect that we wanted to know. We would like to be able
+to find a model in the data on exposures and confounders, and then to
+estimate the parameters of that model from the conditional distribution of
+the outcome, given the exposures and confounders. The <code>haif</code> package,
+downloadable from SSC, calculates the homoskedastic adjustment inflation
+factors (HAIFs), by which the variances and standard errors of coefficients
+for a matrix of <i>X</i>-variables are scaled (or inflated), if a matrix of
+unnecessary confounders <i>A</i> is also included in a regression model, assuming
+equal variances (homoskedasticity). These can be calculated from the <i>A</i>- and
+<i>X</i>-variables alone, and can be used to inform the choice of a set of models
+eventually fitted to the outcome data, together with the usual criteria
+involving causality and prior opinion. Examples are given of the use of HAIFs
+and their ratios.
+</p>
+
+<p>
+<a href="./usergp/uk2009.pdf">Download presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2008">
+<code>parmest</code> and extensions.
+Presented at the 14th UK Stata User Meeting, 8-9 September, 2008.
+</a></h2>
+
+<p>
+The <code>parmest</code> package creates output datasets (or resultssets) with one
+observation for each of a set of estimated parameters, and data on the
+parameter estimates, standard errors, degrees of freedom, <i>t</i>- or <i>z</i>-statistics,
+<i>P</i>-values, confidence limits, and other parameter attributes specified by the
+user. It is especially useful when parameter estimates are "mass-produced",
+as in a genome scan. Versions of the package have existed on SSC since 1998,
+when it contained the single command <code>parmest</code>. However, the package has since
+been extended with additional commands. The <code>metaparm</code> command allows the user
+to mass-produce confidence intervals for linear combinations of uncorrelated
+parameters. Examples include confidence intervals for a weighted arithmetic
+or geometric mean parameter in a meta-analysis, or for differences or ratios
+between parameters, or for interactions, defined as differences (or ratios)
+between differences (or ratios). The <code>parmcip</code> command is a lower-level utility,
+inputting variables containing estimates, standard errors, and degrees of
+freedom, and outputting variables containing confidence limits and <i>P</i>-values.
+As an example, we may input genotype frequencies and calculate confidence
+intervals for geometric mean homozygote/heterozygote ratios for genetic
+polymorphisms, measuring the size and direction of departures from
+Hardy-Weinberg equilibrium.
+</p>
+
+<p>
+<a href="./usergp/uk2008.pdf">Download presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2007">
+Robust confidence intervals for Hodges-Lehmann median differences.
+Presented at the 13th UK Stata User Meeting, 10-11 September, 2007.
+</a></h2>
+
+<p>
+The <code>cendif</code> module is part of the <code>somersd</code> package, and calculates confidence
+intervals for the Hodges-Lehmann median difference between values of a
+variable in two subpopulations. The traditional Lehmann formula, unlike the
+formula used by <code>cendif</code>, assumes that the two subpopulation distributions
+are different only in location, and that the subpopulations are therefore
+equally variable. The <code>cendif</code> formula therefore contrasts with the Lehmann
+formula as the unequal-variance <i>t</i>-test contrasts with the equal-variance
+<i>t</i>-test. In a simulation study, designed to test <code>cendif</code> to destruction,
+the performance of <code>cendif</code> was compared to that of the Lehmann formula,
+using coverage probabilities and median confidence interval width ratios.
+The simulations involved sampling from pairs of Normal or Cauchy
+distributions, with subsample sizes ranging from 5 to 40, and
+between-subpopulation variability scale ratios ranging from 1 to 4. If the
+sample numbers were equal, then both methods gave coverage probabilities
+close to the advertized confidence level. However, if the sample numbers
+were unequal, then the Lehmann coverage probabilities were over-conservative
+if the smaller sample was from the less variable population, and
+over-liberal if the smaller sample was from the more variable population.
+The <code>cendif</code> coverage probability was usually closer to the advertized level,
+if the smaller sample was not very small. However, if the sample sizes were
+5 and 40, and the two populations were equally variable, then the Lehmann
+coverage probability was close to its advertized level, while the <code>cendif</code>
+coverage probability was over-liberal. The <code>cendif</code> confidence interval,
+in its present form, is therefore robust both to non-Normality and to
+unequal variablity, but may be less robust to the possibility that the
+smaller sample size is very small. Possibilities for improvement are
+discussed.
+</p>
+
+<p>
+<a href="./usergp/uk2007.pdf">Download presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2006">
+On the central role of Somers' <i>D</i>.
+Presented at the 12th UK Stata User Meeting, 11-12 September, 2006.
+</a></h2>
+
+<p>
+Somers' <i>D</i> and Kendall's tau-a are parameters behind rank or "non-parametric"
+statistics, interpreted as differences between proportions. Given two
+bivariate data pairs <i>(X_1,Y_1)</i> and <i>(X_2,Y_2)</i>, Kendall's tau-a is the
+difference between the probability that the two pairs are concordant
+and the probability that the two pairs are discordant, and Somers' <i>D</i> is the
+difference between the corresponding conditional probabilities, given
+that the <i>X</i>-values are ordered. The <code>somersd</code> package computes confidence
+intervals for both parameters. The Stata 9 version of <code>somersd</code> uses Mata,
+and greatly extends the definition of Somers' <i>D</i>, allowing the <i>X</i>- and/or
+<i>Y</i>-variables to be left- or right-censored, and allowing multiple versions
+of Somers' <i>D</i> for multiple sampling schemes for pairs of <i>X,Y</i>-pairs.
+In particular, we may define stratified versions of Somers' <i>D</i>, in which we
+only compare pairs from the same stratum. The strata may be defined by
+grouping a Rubin-Rosenbaum propensity score, based on the values of
+multiple confounders for an association between an exposure variable <i>X</i> and
+an outcome variable <i>Y</i>. Therefore, rank statistics can have not only
+confidence intervals, but confounder-adjusted confidence intervals.
+Usually, we either estimate <i>D(Y|X)</i> as a measure of the effect of <i>X</i> on <i>Y</i>,
+or estimate <i>D(X|Y)</i> as a measure of the performance of <i>X</i> as a predictor of <i>Y</i>,
+compared to other predictors. Alternative rank-based measures of the effect
+of <i>X</i> on <i>Y</i> include the Hodges-Lehmann median difference and the Theil-Sen
+median slope, both of which are defined in terms of Somers' <i>D</i> and estimated
+using the <code>somersd</code> package.
+</p>
+
+<p>
+<a href="./usergp/uk2006.pdf">Download presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="de2006">
+Resultssets, resultsspreadsheets and resultsplots in Stata.
+Presented at the 4th German Stata User Meeting, 31 March, 2006.
+</a></h2>
+
+<p>
+Most Stata users make their living producing results in a form accessible to end users.
+Most of these end users cannot immediately understand Stata logs.
+However, they can understand tables (in paper, PDF, HTML, spreadsheet or word processor documents)
+and plots (produced using Stata or non-Stata software).
+Tables are produced by Stata as resultsspreadsheets, and plots are produced by Stata as resultsplots.
+Sometimes (but not always), resultsspreadsheets and resultsplots are produced using resultssets.
+Resultssets, resultsspreadsheets and resultsplots are all produced, directly or indirectly, as output by Stata commands.
+A resultsset is a Stata dataset, which is a table,
+whose rows are Stata observations and whose columns are Stata variables.
+A resultsspreadsheet is a table in generic text format, conforming to a TeX or HTML convention, or to another convention
+with a column separator string and possibly left and right row delimiter strings.
+A resultsplot is a plot produced as output, using a resultsset or a resultsspreadsheet as input.
+Resultsset-producing programs include <code>statsby</code>, <code>parmby</code>, <code>parmest</code>, <code>collapse</code>, <code>contract</code>,
+<code>xcollapse</code> and <code>xcontract</code>.
+Resultsspreadsheet-producing programs include <code>outsheet</code>, <code>listtex</code>, <code>estout</code> and <code>estimates table</code>.
+Resultsplot-producing programs include <code>eclplot</code> and <code>smileplot</code>.
+There are two main approaches (or dogmas) for generating resultsspreadsheets and resultsplots.
+The resultsset-central dogma is followed by <code>parmest</code> and <code>parmby</code> users, and states:
+"Datasets make resultssets, which make resultsplots and resultsspreadsheets".
+The resultsspreadsheet-central dogma is followed by <code>estout</code> and <code>estimates table</code> users, and states:
+"Datasets make resultsspreadsheets, which make resultssets, which make resultsplots".
+The two dogmas are complementary, and each dogma has its advantages and disadvantages.
+The resultsspreadsheet dogma is much easier for the casual user to learn to apply in a hurry,
+and is therefore probably preferred by most users most of the time.
+The resultsset dogma is more difficult for most users to learn, but is more convenient
+for users who wish to program <i>everything</i> in do-files,
+with little or no manual cutting and pasting.
+</p>
+
+<p>
+<a href="./usergp/de2006/newson_ohp1.pdf">Download projection</a>
+<br>
+<a href="./usergp/de2006/newson_examples1.do">Download first example do-file</a>
+<br>
+<a href="./usergp/de2006/newson_examples2.do">Download second example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2005">
+Generalized confidence interval plots using commands or dialogs.
+Presented at the 11th UK Stata User Meeting, 17-18 May, 2005.
+</a></h2>
+
+<p>
+Confidence intervals may be presented as publication-ready tables or as presentation-ready plots. <code>eclplot</code>
+produces plots of estimates and confidence intervals. It inputs a dataset (or resultsset) with one observation
+per parameter and variables containing estimates, lower and upper confidence limits, and a fourth variable,
+against which the confidence intervals are plotted. This resultsset can be used for producing both plots
+and tables, and may be generated using a spreadsheet or using <code>statsby</code>, <code>postfile</code> or the unofficial Stata
+<code>parmest</code> package. Currently, <code>eclplot</code> offers 7 plot types for the estimates and 8 plot types for the confidence
+intervals, each corresponding to a <code>graph twoway</code> subcommand. These plot types can be combined to produce
+56 combined plot types, some of which are more useful than others, and all of which can be either horizontal
+or vertical. <code>eclplot</code> has a <code>plot()</code> option, allowing the user to superimpose other plots to add features such
+as stars for <i>P</i>-values. <code>eclplot</code> can be used either by typing a command, which may have multiple lines and
+sub-suboptions, or by using a dialog, which generates the command for users not fluent in the Stata graphics
+language. This presentation includes a demonstration of <code>eclplot</code>, using both commands and dialogs.
+</p>
+
+<p>
+<a href="./usergp/uk2005/newson_ohp1.pdf">Download projection</a>
+<br>
+<a href="./usergp/uk2005/newson_pres1.zip">Download entire presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2004">
+From datasets to resultssets in Stata.
+Presented at the 10th UK Stata User Meeting, 28-29 June, 2004.
+</a></h2>
+
+<p>
+A resultsset is a Stata dataset created as output by a Stata program.
+It can be used as input to other Stata programs, which may in turn output the results
+as publication-ready plots or tables. Programs that create resultssets include
+<code>xcontract</code>, <code>xcollapse</code>, <code>parmest</code>, <code>parmby</code> and <code>descsave</code>.
+Stata resultssets do a similar job to SAS output data sets,
+which are saved to disk files. However, in Stata, the user typically has the options of saving a resultsset
+to a disk file, writing it to the memory (overwriting any pre-existing data set), or simply listing it.
+Resultssets are often saved to temporary files, using the <code>tempfile</code> command.
+This lecture introduces programs that create resultssets,
+and also programs that do things with resultssets after they have been created.
+<code>listtex</code> outputs resultssets to tables that can be inserted into a Microsoft Word, HTML or LaTeX document.
+<code>eclplot</code> inputs resultssets and creates confidence interval plots.
+Other programs, such as <code>sencode</code> and <code>sdecode</code>, process resultssets after they are created
+and before they are listed, tabulated or plotted.
+These programs, used together, have a power not always appreciated if the user simply reads the on-line help
+for each package.
+This lecture is a survey lecture, and is based on a handout and a set of example do-files,
+which can be downloaded with or without the presentation.
+</p>
+
+<p>
+<a href="./usergp/uk2004/overhed2.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2004/handout1.pdf">Download handout</a>
+<br>
+<a href="./usergp/uk2004/exampdo3.zip">Download example do-files</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2003">
+Multiple test procedures and smile plots.
+Presented at the 9th UK Stata User Meeting, 19-20 May, 2003.
+</a></h2>
+
+<p>
+Scientists often have good reasons for wanting to calculate multiple confidence intervals and/or <i>P</i>-values,
+especially when scanning a genome. However, if we do this, then the probability of <i>not</i> observing
+at least one "significant" difference tends to fall, even if all null hypotheses are true.
+A sceptical public will rightly ask whether a difference is "significant" when considered
+as one of a large number of parameters estimated. This presentation demonstrates some solutions to
+this problem, using the unofficial Stata packages <code>parmest</code> and <code>smileplot</code>.
+The <code>parmest</code> package allows the calculation of Bonferroni-corrected or Sidak-corrected
+confidence intervals for multiple estimated parameters. The <code>smileplot</code> package contains two programs,
+<code>multproc</code> (which carries out multiple test procedures) and <code>smileplot</code> (which presents their
+results graphically by plotting the <i>P</i>-value on a reverse log scale on the vertical axis
+against the parameter estimate on the horizontal axis). A multiple test procedure takes, as input,
+a set of estimates and <i>P</i>-values, and rejects a subset (possibly empty) of the null hypotheses
+corresponding to these <i>P</i>-values. Multiple test procedures have traditionally controlled the
+family-wise error rate (FWER), typically enabling the user to be 95% confident that <i>all</i> the rejected
+null hypotheses are false, and that <i>all</i> the corresponding "discoveries" are real.
+The price of this confidence is that the power to detect a difference of a given size tends to zero
+as the number of measured parameters becomes large. Therefore, recent work has concentrated on procedures
+that control the false discovery rate (FDR), such as the Simes procedure and the Yekutieli-Benjamini procedure.
+FDR-controlling procedures attempt to control the number of false discoveries as a proportion
+of the number of true discoveries, typically enabling the user to be 95% confident that <i>some</i>
+of the discoveries are real, or 90\% confident that <i>most</i> of the discoveries are real.
+This less stringent requirement causes power to "bottom out" at a non-zero level as the number
+of tests becomes large. The <code>smileplot</code> package offers a selection of multiple test procedures of both kinds.
+This presentation uses data provided by <a href="http://www.alspac.bris.ac.uk">the ALSPAC Study Team</a> at the Institute of Child Health
+at Bristol University, UK.
+</p>
+
+<p>
+<a href="./usergp/uk2003.pdf">Download presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2002">
+Creating plots and tables of estimation results using <code>parmest</code> and friends.
+Presented at the 8th UK Stata User Meeting, 20-21 May, 2002.
+</a></h2>
+
+<p>
+Statisticians make their living mostly by producing confidence intervals and
+<i>P</i>-values. However, the ones supplied in the Stata log are not in any fit state to be
+delivered to the end user, who usually at least wants them tabulated and formatted,
+and may appreciate them even more if they are plotted on a graph for immediate impact.
+The <code>parmest</code> package was developed to make this easy, and consists of two programs.
+These are <code>parmest</code>, which converts the latest estimation results to a data set
+with one observation per estimated parameter and data on confidence intervals, <i>P</i>-values
+and other estimation results,
+and <code>parmby</code>, a "quasi-byable" front end to <code>parmest</code>, which is like
+<code>statsby</code>, but creates a data set with one observation per parameter per by-group
+instead of a data set with one observation per by-group.
+The <code>parmest</code> package can be used together with a team of other Stata programs
+to produce a wide range of tables and plots of confidence intervals and <i>P</i>-values.
+The programs <code>descsave</code> and <code>factext</code> can be used with <code>parmby</code>
+to create plots of confidence intervals against values of a categorical factor included in the
+fitted model, using dummy variables produced by <code>xi</code> or <code>tabulate</code>.
+The user may easily fit multiple models, produce a <code>parmby</code> output data set
+for each one, and concatenate these output data sets using the program <code>dsconcat</code>
+to produce a combined data set, which can then be used to produce tables or plots
+involving parameters from all the models. For instance, the user might tabulate or
+plot unadjusted and adjusted regression parameters side by side, together with their
+confidence limits and/or <i>P</i>-values. The <code>parmest</code> team is particularly useful
+when dealing with large volumes of results derived from multiple multi-parameter
+models, which are particularly common in the world of epidemiology.
+This version of the presentation is a post-publication update, made in response to changes
+in the <code>parmest</code> package suggested by Bill Gould of StataCorp after seeing the original presentation.
+</p>
+
+<p>
+<a href="./usergp/uk2002.pdf">Download presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2001">
+Splines with parameters that can be explained in words to non-mathematicians.
+Presented at the 7th UK Stata User Meeting, 14 May, 2001.
+</a></h2>
+
+<p>
+Splines are traditionally used to model non-linear relationships
+involving continuous predictors, usually confounders. One example is in asthma
+epidemiology, where splines are used to model a seasonal and longer-term time trend in
+asthma-related hospital admissions,
+which must be eliminated in a search for shorter-term epidemics caused by pollution
+episodes. Usually, the spline is included in a regression model by defining a basis
+of splines, and including this basis amongst the <i>X</i>-variates, together with the
+predictors of interest. The basis is typically a plus-function basis, a truncated-power
+basis, or a Schoenberg <i>B</i>-spline basis. With either of these options, the parameters
+estimated by the regression model will not be easy to explain in words to non-mathematicians.
+An STB insert (sg151 in STB-57) presented two programs for generating spline bases. One of
+these (<code>bspline</code>) generates Schoenberg <i>B</i>-splines. The other program (<code>frencurv</code>,
+short for "French curve")
+generates an alternative spline basis, whose parameters are simply values of the spline
+at reference points along the horizontal axis. In the example from asthma epidemiology,
+these parameters might be the expected hospital admissions counts on the first day of
+each month, in the absence of a pollution episode. The expected pollution-free
+admissions counts on other days of the month are interpolated between the parameters,
+using the spline. These parameters can be presented, with their confidence limits,
+to non-technical people. Confidence limits can also be computed for differences and/or
+ratios between expected values at different reference points, using <code>lincom</code>.
+</p>
+
+<p>
+<a href="./usergp/uk2001.pdf">Download presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+<h2><a name="uk2000">
+Confidence intervals for rank order statistics: Somers' <i>D</i>, Kendall's tau-a and their differences.
+Presented at the 6th UK Stata User Meeting, 15 May, 2000.
+</a></h2>
+
+<p>
+So-called "non-parametric" methods are in fact based on population
+parameters, which are zero under the null hypothesis.
+Two of these parameters are Kendall's tau-a and Somers' <i>D</i>.
+both of which measure ordinal correlation between two variables
+<i>X</i> and <i>Y</i>. If <i>X</i> is a binary variable,
+then Somers' <i>D(Y|X)</i> is the parameter tested by a Wilcoxon rank-sum test.
+It is more informative to have
+confidence limits for these parameters than <i>P</i>-values alone,
+for three main reasons. First, it <i>might</i> discourage people from
+arguing that a high <i>P</i>-value proves a null hypothesis.
+Second, for continuous
+data, Kendall's tau-a is often related to the classical Pearson
+correlation by Greiner's relation,
+so we can use Kendall's tau-a to
+define robust confidence limits for Pearson's correlation.
+Third, we might want to know confidence limits for differences
+between two Kendall's tau-a or Somers' <i>D</i> parameters,
+because a larger Kendall's tau-a or Somers' <i>D</i>
+cannot be secondary to a smaller one.
+The program <code>somersd</code>
+calculates confidence intervals for Somers' <i>D</i> or Kendall's tau-a,
+using jackknife variances. There is a choice of transformations,
+including Fisher's <i>z</i>, Daniels' arcsine, Greiner's rho, and the
+<i>z</i>-transform of Greiner's rho. A <code>cluster</code> option is available, intended
+for measuring intra-class correlation (such as exists between
+measurements on pairs of sisters). The estimation results are
+saved as for a model fit, so that differences can be estimated using <code>lincom</code>.
+</p>
+
+<p>
+<a href="./usergp/uk2000.pdf">Download presentation</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr><hr>
+
+<p>
+Roger B. Newson
+<br>
+Email: <a href="mailto:r.newson@qmul.ac.uk">r.newson@qmul.ac.uk</a>
+<br>
+Text written: 01 April 2024. (Papers and presentations may have been revised since then.)
+<br>
+<a href="#top_of_page">Return to top of page</a>
+<br>
+<a href="./papers.htm">Return to Roger Newson's main documents page</a>
+<br>
+<a href="./index.htm">Return to Roger Newson's main resource page</a>
+</p>
+
+</body>
+
+</html>

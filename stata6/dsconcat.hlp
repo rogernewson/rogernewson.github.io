@@ -1,0 +1,49 @@
+.-
+help for ^dsconcat^                                                (Roger Newson)
+.-
+
+
+Concatenate a list of Stata data files into the memory
+------------------------------------------------------
+
+	^dsconcat^  filename_list
+
+where filename_list is a list of filenames separated by spaces.
+
+
+Description
+-----------
+
+^dsconcat^ takes, as input, a list of filenames, assumed to belong to Stata data
+files, and creates a new data set in memory, containing all observations in all
+the data sets, ordered primarily by source data set and secondarily by order
+of observations within source data set. It is a multiple-file version of ^append^.
+As with ^append^, the data set created in memory contains all variables present
+in any of the input data sets. For any one of these variables, values of the
+variable are set to missing in any observation from an input data set not
+containing that variable.
+
+
+Examples
+--------
+
+ . ^dsconcat auto1 auto2 auto3 auto4^
+
+ . ^dsconcat "Microsoft is inferior" Unix_is_superior IdontknowaboutMacOS^
+
+
+Author
+------
+
+Roger Newson, King's College, London, UK.
+Email: ^roger.newson@@kcl.ac.uk^
+
+
+Also see
+--------
+
+ Manual:  ^[U] 25 Commands for combining data^
+          ^[R] append^
+          ^[R] use^
+          ^[R] save^
+On-line:  help for @append@, @use@, @save@

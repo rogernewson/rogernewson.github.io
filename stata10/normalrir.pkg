@@ -1,0 +1,22 @@
+v 2
+d normalrir: Calculate ridits of inverse ridits between Normal populations
+d normalrir inputs expressions to deliver, respectively, a uniform deviate
+d variable, 2 means for 2 Normal populations (Population 1 and Population
+d 0), and 2 standard deviations for the same 2 Normal populations.  It
+d outputs a new variable, containing, in each observation, the ridit with
+d respect to Population 0 of a value sampled from Population 1, whose
+d Normal cumulative distribution function for Population 1 has the value
+d of the uniform deviate variable in the same observation.  normalrir can
+d be used with the SSC packages expgen and powercal to perform
+d multi-scenario power and sample size calculations for the 2-sample rank
+d statistics Somers' D and Harrell's c, assuming that there exists an
+d unspecified transformation that transforms the outcome variable to a
+d variable with a Normal distribution in each of the 2 populations from
+d which the 2 samples are sampled.
+d
+d Author: Roger Newson
+d Distribution-Date: 02april2018
+d Stata-Version: 10
+f normalrir.ado
+f normalrir.sthlp
+e

@@ -1,0 +1,29 @@
+v 2
+d dologx: Multiple versions of dolog for executing certification scripts
+d dologx (like dolog) causes Stata to execute the commands stored in a do-file
+d named filename.do as if they were entered from the keyboard, and echos the
+d commands as it executes them, creating a log file filename.log. The dologx
+d package contains multiple versions of dolog, written in multiple Stata
+d versions, intended for use when running certification scripts. Usually, a
+d do-file should contain a version statement at or near the top, so it will
+d still run in the Stata version in which it was written, even if the user runs
+d it under a later version of Stata. Certification scripts are an exception to
+d this rule, because they are run under multiple Stata versions, to certify
+d that the package being tested works under all of these versions. A
+d certification script therefore should not contain a version statement at the
+d top. The version of Stata under which it run will therefore be the version in
+d force in the program that calls it, even if that program is dolog. The
+d standard version of dolog should therefore not be used to run a certification
+d script, and the user should use the dologx package instead, using dolog6 to
+d run it under Stata 6, dolog7 to run it under Stata 7, and so on.
+d
+d Author: Roger Newson
+d Distribution-Date: 16january2008
+d Stata-Version: 10
+f dolog6.ado
+f dolog7.ado
+f dolog8.ado
+f dolog9.ado
+f dolog10.ado
+f dologx.sthlp
+e

@@ -1,0 +1,27 @@
+d invcise: Compute standard errors using the inverse confidence interval method
+d invcise is intended for use in an output dataset (or resultsset), with
+d one observation for each of a set of estimated parameters, and
+d variables containing their confidence limits, and (optionally)
+d containing the degrees of freedom used to calculate these confidence
+d limits.  Such datasets may be produced using the official Stata 
+d statsby prefix, or by the parmest package, downloadable from SSC.
+d invcise uses the confidence limits to compute a new variable,
+d containing standard errors for the parameters, using the inverse
+d confidence interval method.  These standard errors, together with
+d parameter estimates in another variable in the dataset, may be used to
+d calculate standard errors and confidence intervals for linear
+d combinations of these parameters, using the metaparm module of the 
+d parmest package, assuming that the parameters are independently
+d estimated.  The inverse confidence interval method is frequently used
+d with rank statistics, such as medians, median differences, and median
+d slopes, to compute confidence intervals for linear combinations of
+d these rank statistics, particularly differences between differences
+d ("interactions") or weighted means of several differences
+d ("meta-analysis summaries").
+d
+d Author: Roger Newson
+d Distribution-Date: 02august2018
+d Stata-Version: 10
+f invcise.ado
+f invcise.sthlp
+e
