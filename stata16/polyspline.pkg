@@ -12,7 +12,7 @@ d the SSC package bspline, which must be installed for
 d polyspline to work.
 d 
 d Author: Roger Newson
-d Distribution-date: 17july2022
+d Distribution-date: 21may2024
 d Stata-version: 16
 d
 f polyspline.ado
