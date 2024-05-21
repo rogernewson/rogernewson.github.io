@@ -165,7 +165,7 @@ They are like ranks, only expressed on a scale from 0 to 1 (for unfolded ridits)
 or -1 to 1 (for folded ridits).
 Ridit functions have generalised inverses called percentile functions.
 A native ridit is a ridit
-of a variable with respect to its own distribution.
+of a variable with respect to its own distribution.
 Native ridits can be computed using the <tt>ridit()</tt> function
 of Nick Cox's SSC package <tt>egenmore</tt>.
 Alternatively, weighted ridits
@@ -325,11 +325,11 @@ and some principles of sensible programming practice for creating large database
 
 <h2><a name="uk2017">
 Ridit splines with applications to propensity weighting.
-Presented at the 23rd UK User Meeting, 7–8 September, 2017.
+Presented at the 23rd UK User Meeting, 7-8 September, 2017.
 </a></h2>
 
 <p>
-Given a random variable <i>X</i>, the ridit function <i>R<sub>X</sub>(·)</i> specifies its distribution.
+Given a random variable <i>X</i>, the ridit function <i>R<sub>X</sub>(.)</i> specifies its distribution.
 The SSC package <tt>wridit</tt> can compute ridits (possibly weighted) for a variable.
 A ridit spline in a variable <i>X</i> is a spline in the ridit <i>R<sub>X</sub>(X)</i>.
 The SSC package <tt>polyspline</tt> can be used with
@@ -365,7 +365,7 @@ to produce extreme propensity weights than the primary propensity score.
 
 <h2><a name="uk2016">
 The role of Somers' <i>D</i> in propensity modelling.
-Presented at the 22nd UK Stata User Meeting, 8–9 September, 2016.
+Presented at the 22nd UK Stata User Meeting, 8-9 September, 2016.
 </a></h2>
 
 <p>
@@ -403,7 +403,7 @@ package <code>scenttest</code> (an addition to the <code>punaf</code> family) to
 
 <h2><a name="uk2015">
 Somers' <i>D</i>: A common currency for associations.
-Presented at the 21st UK Stata User Meeting, 10–11 September, 2015.
+Presented at the 21st UK Stata User Meeting, 10-11 September, 2015.
 </a></h2>
 
 <p>
@@ -447,7 +447,7 @@ associations between variables, not limited to a particular model.
 
 <h2><a name="uk2014">
 Easy-to-use packages for estimating rank and spline parameters.
-Presented at the 20th UK Stata User Meeting, 11–12 September, 2014.
+Presented at the 20th UK Stata User Meeting, 11-12 September, 2014.
 </a></h2>
 
 <p>
@@ -479,7 +479,7 @@ sensibly between the reference points.
 
 <h2><a name="uk2013">
 Creating factor variables in resultssets and other datasets.
-Presented at the 19th UK Stata User Meeting, 12–13 September, 2013.
+Presented at the 19th UK Stata User Meeting, 12-13 September, 2013.
 </a></h2>
 
 <p>
@@ -494,17 +494,17 @@ numeric variables, and because these numeric variables are also
 frequently used in defining a key of variables, which identify
 observations in the resultsset uniquely in a sensible sort order. The
 <code>sencode</code> package is downloadable, and frequently downloaded, from SSC,
-and is a “super” version of <code>encode</code>, which inputs a string variable and
+and is a "super" version of <code>encode</code>, which inputs a string variable and
 outputs a numeric factor variable. Its added features include a
 <code>replace</code> option allowing the output numeric variable to replace the
 input string variable, a <code>gsort()</code> option allowing the numeric values to
 be ordered in ways other than alphabetical order of the input string
 values, and a <code>manyto1</code> option allowing multiple output numeric values
 to map to the same input string value. The <code>sencode</code> package is
-well–established, and has existed since 2001. However, some tips will
+well-established, and has existed since 2001. However, some tips will
 be given on ways of using it that are not immediately obvious, but
 which the author has found very useful over the years when
-mass–producing resultssets. These applications use <code>sencode</code> with other
+mass-producing resultssets. These applications use <code>sencode</code> with other
 commands, such as the official Stata command <code>split</code> and the SSC
 packages <code>factmerg</code>, <code>factext</code> and <code>fvregen</code>.
 </p>
@@ -521,7 +521,7 @@ packages <code>factmerg</code>, <code>factext</code> and <code>fvregen</code>.
 
 <h2><a name="uk2012">
 Scenario comparisons: How much good can we do?
-Presented at the 18th UK Stata User Meeting, 13–14 September, 2012.
+Presented at the 18th UK Stata User Meeting, 13-14 September, 2012.
 </a></h2>
 
 <p>
@@ -532,20 +532,20 @@ fitted to a sample is true. Alternatively, they may want to compare the same sce
 models fitted to different datasets, as when disease rates in different subpopulations are standardized to a
 common distribution of gender and age, using the same logistic regression model with different parameters in
 each subpopulation. In statistics, scenarios can be defined as alternative versions of a dataset, with the same
-variables, but with different values in the observations, or even with non–corresponding observations. Using
-regression methods, we may estimate scenario means of a <i>Y</i>–variable in scenarios with specified <i>X</i>–values,
+variables, but with different values in the observations, or even with non-corresponding observations. Using
+regression methods, we may estimate scenario means of a <i>Y</i>-variable in scenarios with specified <i>X</i>-values,
 and compare these scenario means. In Stata Versions 11 and 12, the standard tool for estimating scenario
 means is <code>margins</code>. A suite of packages is introduced for estimating scenario means and their comparisons,
-using <code>margins</code>, together with <code>nlcom</code> to implement Normalizing and variance–stabilizing transformations.
+using <code>margins</code>, together with <code>nlcom</code> to implement Normalizing and variance-stabilizing transformations.
 <code>margprev</code> estimates scenario prevalences for binary variables. <code>marglmean</code> estimates scenario arithmetic
-means for non–negative valued variables. <code>regpar</code> estimates 2 scenario prevalences, together with their
+means for non-negative valued variables. <code>regpar</code> estimates 2 scenario prevalences, together with their
 difference, the population attributable risk (PAR). <code>punaf</code> estimates 2 scenario arithmetic means from cohort
-or cross–sectional data, together with their ratio, the population unattributable fraction (PUF), which is
+or cross-sectional data, together with their ratio, the population unattributable fraction (PUF), which is
 subtracted from 1 to give the population attributable fraction (PAF). <code>punafcc</code> estimates an arithmetic mean
-between–scenario rate ratio for cases or non–survivors in case–control or survival data, respectively. This
+between-scenario rate ratio for cases or non-survivors in case-control or survival data, respectively. This
 mean rate ratio, also known as a PUF, is also subtracted from 1 to estimate a PAF. These packages use
 the log transformation for arithmetic means and their ratios, the logit transformation for prevalences, and
-the hyperbolic arctangent or Fisher’s <i>z</i> transformation for differences between prevalences. Examples are
+the hyperbolic arctangent or Fisher's <i>z</i> transformation for differences between prevalences. Examples are
 presented for these packages.
 </p>
 
@@ -555,8 +555,7 @@ presented for these packages.
 <a href="./usergp/uk2012/examples1.do">Download example do-file</a>
 <br>
 <a href="#top_of_page">Return to top of page</a>
-</p>
-
+</p>'
 <hr>
 
 <h2><a name="uk2011">
@@ -567,14 +566,14 @@ Presented at the 17th UK Stata User Meeting, 15-16 September, 2011.
 <p>
 Splines, including polynomials, are traditionally used to model non-linear relationships involving continuous
 predictors. However, when they are included in linear models (or generalized linear models), the estimated
-parameters for polynomials are not easy for non–mathematicians to understand, and the estimated parameters
+parameters for polynomials are not easy for non-mathematicians to understand, and the estimated parameters
 for other splines are often not easy even for mathematicians to understand. It would be easier if the
-parameters were values of the polynomial or spline at reference points on the <i>X</i>–axis, or differences or ratios
+parameters were values of the polynomial or spline at reference points on the <i>X</i>-axis, or differences or ratios
 between the values of the spline at the reference points and the value of the spline at a base reference point.
 The <code>bspline</code> package can be downloaded from SSC, and generates spline bases for inclusion in the design
-matrices of linear models, based on Schoenberg <i>B</i>–splines. The package now has a recently added module
-<code>flexcurv</code>, which inputs a sequence of reference points on the <i>X</i>–axis, and outputs a spline basis, based on
-equally–spaced knots generated automatically, whose parameters are the values of the spline at the reference
+matrices of linear models, based on Schoenberg <i>B</i>-splines. The package now has a recently added module
+<code>flexcurv</code>, which inputs a sequence of reference points on the <i>X</i>-axis, and outputs a spline basis, based on
+equally-spaced knots generated automatically, whose parameters are the values of the spline at the reference
 points. This spline basis can be modified by excluding the spline vector at a base reference point and
 including the unit vector. If this is done, then the parameter corresponding to the unit vector will be the
 value of the spline at the base reference point, and the parameters corresponding to the remaining reference
@@ -582,7 +581,7 @@ spline vectors will be differences between the values of the spline at the corre
 the value of the spline at the base reference point. The spline bases are therefore extensions, to continuous
 factors, of the bases of unit vectors and/or indicator functions used to model discrete factors. It is possible
 to combine these bases for different continuous and/or discrete factors in the same way, using product bases
-in a design matrix to estimate factor–value combination means and/or factor–value effects and/or factor
+in a design matrix to estimate factor-value combination means and/or factor-value effects and/or factor
 interactions.
 </p>
 
@@ -1070,7 +1069,7 @@ Roger B. Newson
 <br>
 Email: <a href="mailto:r.newson@qmul.ac.uk">r.newson@qmul.ac.uk</a>
 <br>
-Text written: 17 May 2024. (Papers and presentations may have been revised since then.)
+Text written: 21 May 2024. (Papers and presentations may have been revised since then.)
 <br>
 <a href="#top_of_page">Return to top of page</a>
 <br>
