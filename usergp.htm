@@ -56,6 +56,7 @@ To find out more about Stata Statistical Software, <a href="http://www.stata.com
 <p>
 <table border="1">
 <tr><th>Presentation year</th><th>Presentation title</th></tr>
+<tr><td>2024</td><td><a href="#uk2024">Balance and variance inflation checks for completeness-propensity weights</a></td></tr>
 <tr><td>2023</td><td><a href="#uk2023">Customized Markdown and <tt>.docx</tt> tables using <tt>listtab</tt> and <tt>docxtab</tt></a></td></tr>
 <tr><td>2022</td><td><a href="#uk2022">Resultssets in resultsframes in Stata 16-plus</a></td></tr>
 <tr><td>2021</td><td><a href="#uk2021">Ridits <tt>right</tt>, <tt>left</tt>, <tt>center</tt>, native and foreign</a></td></tr>
@@ -89,6 +90,43 @@ To find out more about Stata Statistical Software, <a href="http://www.stata.com
 </p>
 
 <hr>
+<hr>
+
+<h2><a name="uk2024">
+Balance and variance inflation checks for completeness-propensity weights.
+Presented at the 2024 London Stata Conference, 12-13 September, 2024.
+</a></h2>
+
+<p>
+Inverse treatment-propensity weights are a standard method for adjusting for predictors of exposure to a treatment.
+As a treatment-propensity score is a balancing score,
+it makes sense to do balance checks on the corresponding treatment-propensity weights.
+It is also a good idea to do variance-inflation checks,
+to estimate how much the propensity weights might inflate the variance of an estimated treatment effect,
+in the pessimistic scenario in which the weights are not really necessary.
+In Stata, the SSC package <tt>somersd</tt> can be used for balance checks,
+and the SSC package <tt>haif</tt> can be used for variance-inflation checks.
+It is argued that balance and variance-inflation checks are also necessary in the case of completeness-propensity weights,
+which are intended to remove inbalance in predictors of completeness
+between the subsample with complete data
+and the full sample of subjects with complete or incomplete data.
+However, the usage of <tt>somersd</tt>, <tt>scsomersd</tt>, and <tt>haif</tt> must be modified,
+because we are removing imbalance between the complete sample and the full sample,
+instead of between the treated subsample and the untreated subsample.
+An example will be presented, from a clinical trial in which the author was involved,
+and in which nearly a quarter of randomized subjects had no final outcome data.
+A <i>post-hoc</i> sensitivity analysis is presented,
+using inverse completeness-propensity weights.
+</p>
+
+<p>
+<a href="./usergp/uk2024/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2024/example1.do">Download example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
 <hr>
 
 <h2><a name="uk2023">
