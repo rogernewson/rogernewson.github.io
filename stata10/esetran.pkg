@@ -20,7 +20,7 @@ d asymmetric confidence intervals, which are more likely to have the
 d correct coverage probability.
 d
 d Author: Roger Newson
-d Distribution-Date: 31july2015
+d Distribution-Date: 13july2025
 d Stata-Version: 10
 f esetran.ado
 f esetran.sthlp
