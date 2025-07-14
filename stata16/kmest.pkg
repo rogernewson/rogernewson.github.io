@@ -8,9 +8,12 @@ d matrix.  kmest is intended for use with the bootstrap prefix, or
 d possibly with the jackknife prefix, to create confidence intervals for
 d the Kaplan-Meier survival probabilities and/or percentiles, possibly
 d allowing for clustering and/or sampling-probability weighting.
+d Alternatively, kmest can be used with the SSC packages parmest and 
+d esetran to compute Greenwood confidence intervals, or delta-Greenwood
+d confidence intervals using a variety of Normalizing transforms.
 d
 d Author: Roger Newson
-d Distribution-Date: 11march2020
+d Distribution-Date: 14 July 2025
 d Stata-Version: 16
 f kmest.ado
 f kmest_p.ado
