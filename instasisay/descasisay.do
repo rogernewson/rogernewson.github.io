@@ -104,6 +104,7 @@ cap noi ssc desc factext
 cap noi ssc desc invdesc
 cap noi ssc desc ipwbreg
 cap noi ssc desc kmest
+cap noi ssc desc kmsenspec
 cap noi ssc desc ltop
 cap noi ssc desc osgen
 cap noi ssc desc parmest

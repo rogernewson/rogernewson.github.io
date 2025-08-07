@@ -104,6 +104,7 @@ cap noi ssc inst factext, replace
 cap noi ssc inst invdesc, replace
 cap noi ssc inst ipwbreg, replace
 cap noi ssc inst kmest, replace
+cap noi ssc inst kmsenspec, replace
 cap noi ssc inst ltop, replace
 cap noi ssc inst osgen, replace
 cap noi ssc inst parmest, replace

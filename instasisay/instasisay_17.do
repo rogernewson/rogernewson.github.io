@@ -104,6 +104,7 @@ cap noi net inst factext, replace from(http://www.rogernewsonresources.org.uk/st
 cap noi net inst invdesc, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst ipwbreg, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst kmest, replace from(http://www.rogernewsonresources.org.uk/stata16)
+cap noi net inst kmsenspec, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst ltop, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst osgen, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst parmest, replace from(http://www.rogernewsonresources.org.uk/stata16)
