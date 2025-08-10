@@ -8,7 +8,7 @@ version 16.0;
  for an input binary test-positivity indicator variable,
  using Kaplan-Meier survival probability for an input time.
 *!Author: Roger Newson
-*!Date: 07 August 2025
+*!Date: 10 August 2025
 */
 
 * Check that required packages are present *;
@@ -35,6 +35,8 @@ disp as text "Kaplan-Meier PPV and NPV estimated at time: " as result e(time)
   _n as text "Valid observations: " as result e(N)
   _n as text "Observations testing positive: " as result e(Ntestpos)
   _n as text "Observations testing negative: " as result e(Ntestneg)
+  _n as text "Failures testing positive: " as result e(NFtestpos)
+  _n as text "Failures testing negative: " as result e(NFtestneg)
   ;
 ereturn display, level(`level');
 
@@ -53,7 +55,15 @@ syntax varname(min=1 max=1 numeric) [if] [in] , Time(numlist min=1 max=1 >=0) [ 
    sensitivity, and specificity are evaluated.
 */
 
+* Check that _d is a variable as it will be in a st dataset *;
+cap conf numeric var _d _st _t;
+if _rc {;
+  disp as error "Dataset does not seem to be set up as survival data";
+  error 498;
+};
+
 marksample touse;
+qui replace `touse'=0 if _st!=1;
 
 *
  Identify test-positivity variable
@@ -74,7 +84,7 @@ if _rc {;
 };
 
 * tempnames for scalars used in calculations *;
-tempname Ntestpos Ntestneg PPV NPV Var_PPV Var_NPV sens spec Dcur;
+tempname Ntestpos Ntestneg NFtestpos NFtestneg PPV NPV Var_PPV Var_NPV sens spec Dcur;
 
 * Estimate PPV *;
 qui kmest if `touse' & `testpos'==1, times(`time');
@@ -82,6 +92,8 @@ scal `Ntestpos'=e(N);
 scal `PPV'=1-e(b)[1,1];
 scal `Var_PPV'=e(greenwood_Vdiag)[1,1];
 scal `Var_PPV'=cond(missing(`Var_PPV'),0,`Var_PPV');
+qui count if `touse' & `testpos'==1 & _t<=`time' & _d==1;
+scal `NFtestpos'=r(N);
 
 * Estimate NPV *;
 qui kmest if `touse' & `testpos'==0, times(`time');
@@ -89,6 +101,8 @@ scal `Ntestneg'=e(N);
 scal `NPV'=e(b)[1,1];
 scal `Var_NPV'=e(greenwood_Vdiag)[1,1];
 scal `Var_NPV'=cond(missing(`Var_NPV'),0,`Var_NPV');
+qui count if `touse' & `testpos'==0 & _t<=`time' & _d==1;
+scal `NFtestneg'=r(N);
 
 * Create estimate and variance matrices for PPV and NPV *;
 tempname A Cov_A B Cov_B D;
@@ -139,6 +153,8 @@ local Ntot = `Ntestpos' + `Ntestneg';
 ereturn post `B' `Cov_B', depname(`testpos') obs(`Ntot') esample(`touse');
 ereturn scalar Ntestpos=`Ntestpos';
 ereturn scalar Ntestneg=`Ntestneg';
+ereturn scalar NFtestpos=`NFtestpos';
+ereturn scalar NFtestneg=`NFtestneg';
 ereturn scalar time=`time';
 ereturn matrix D=`D';
 ereturn local cmdline `"kmsenspec `0'"';
@@ -148,10 +164,13 @@ ereturn local predict "kmsenspec_p";
 
 
 * Display estimation results *;
+* Display estimation results *;
 disp as text "Kaplan-Meier PPV and NPV estimated at time: " as result e(time)
   _n as text "Valid observations: " as result e(N)
   _n as text "Observations testing positive: " as result e(Ntestpos)
   _n as text "Observations testing negative: " as result e(Ntestneg)
+  _n as text "Failures testing positive: " as result e(NFtestpos)
+  _n as text "Failures testing negative: " as result e(NFtestneg)
   ;
 ereturn display, level(`level');
 

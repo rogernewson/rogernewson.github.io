@@ -15,7 +15,7 @@ d a variety of Normalizing transforms.  The kmsenspec package uses the SSC
 d package kmest, which must be installed in order for kmsenspec to work.
 d
 d Author: Roger Newson
-d Distribution-Date: 07 August 2025
+d Distribution-Date: 10 August 2025
 d Stata-Version: 16
 f kmsenspec.ado
 f kmsenspec_p.ado

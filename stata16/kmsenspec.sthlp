@@ -172,8 +172,9 @@ and data on asymmetric confidence intervals generated using the log transform.
 {synopt:{cmd:e(N)}}Number of observations{p_end}
 {synopt:{cmd:e(Ntestpos)}}Number of observations testing positive{p_end}
 {synopt:{cmd:e(Ntestneg)}}Number of observations testing negative{p_end}
+{synopt:{cmd:e(NFtestpos)}}Number of failures testing positive{p_end}
+{synopt:{cmd:e(NFtestneg)}}Number of failures testing negative{p_end}
 {synopt:{cmd:e(time)}}{cmd:time()} option{p_end}
-
 
 {p2col 5 20 24 2: Macros}{p_end}
 {synopt:{cmd:e(predict)}}program called by {cmd:predict} ({cmd:kmsenspec_p}){p_end}
