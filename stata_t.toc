@@ -1,2 +1,0 @@
-l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
-e

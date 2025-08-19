@@ -1,39 +1,32 @@
-v 3
-d Stata 16 packages written by Roger Newson
-d These can be used by users with Stata Version 16 or above.
-d The latest version of a package can usually be downloaded from SSC-Ideas.
-p addinby Add in data from a disk or frame dataset using a foreign key
-p bspline Create a basis of B-splines or reference splines
-p descgen Add Stata dataset attributes to a xdir or xframedir resultsset
-p descsave Save descriptive attributes of variables to a do-file and/or a Stata dataset
-p docxtab List variables to a .docx table with head or foot rows from characteristics
-p dolog Execute commands from a do-file, creating a text or SMCL log file
-p dologx Multiple versions of dolog for executing certification scripts
-p dotex Execute a do-file generating a SJ LaTeX log
-p factext Extract factor values from a label variable created by parmest
-p invdesc Change variable attributes using a describe or descsave resultsset
-p ipwbreg Inverse propensity weights from Bernoulli regression
-p kmest Compute Kaplan-Meier survival probabilities and/or percentiles as estimation results
-p kmsenspec Estimate sensitivity, specificity and predictive values from Kaplan-Meier curves
-p ltop Divide a dataset into pages without splitting internal by-groups
-p osgen Add Python os_stat() file attributes to a xdir resultsset
-p parmest Create datasets with 1 observation per estimated parameter
-p polyspline Generate sensible bases for polynomials and other splines
-p rcentile Robust confidence intervals for percentiles
-p robit Robit regression
-p scsomersd Rank statistics for scenario comparisons
-p somersd Kendall's tau-a, Somers' D and percentile slopes
-p srslogit Logit regression with secondary ridit splines
-p sysport Zip system directories for porting to another machine
-p vallabframe Convert a list of value labels to variables in a new data frame
-p vallabsave Save and load value labels and transfer them between frames
-p whichlist Input list of package file items and output lists of present and absent items
-p wridit Generate weighted ridits
-p xcollapse Make data set of summary statistics on disk or in memory
-p xcontract Create or extend dataset of variable combinations with frequencies and percents
-p xdir  Create a resultsset with 1 observation per file or per frame
-p xframeappend Append data frames to the end of the current data frame
-p xlink Extra link functions for use with glm
-p xsvmat Convert a matrix to variables in an output dataset
+v 2
+d Stata packages written by Roger Newson
+d At present, I follow a policy of distributing most of my Stata packages
+d on the SSC-Ideas site, maintained by Kit Baum. The latest version of a
+d package can usually be downloaded from there. However, the SSC-Ideas site
+d distributes only one version of a package with a given name at a given time.
+d Therefore, if a package on SSC-Ideas is updated to a higher version of Stata,
+d then users who only have lower versions of Stata can no longer use it. These
+d users may now download earlier versions of my packages from this site.
+d
+d Roger Newson, 26 April 2021.
+t stata18 Stata Version 18 packages
+t stata17 Stata Version 17 packages
+t stata16 Stata Version 16 packages
+t stata15 Stata Version 15 packages
+t stata14 Stata Version 14 packages
+t stata13 Stata Version 13 packages
+t stata12 Stata Version 12 packages
+t stata11 Stata Version 11 packages
+t stata10 Stata Version 10 packages
+t stata9 Stata Version 9 packages
+t stata8 Stata Version 8 packages
+t stata7 Stata Version 7 packages
+t stata6 Stata Version 6 packages
+t stata5 Stata Version 5 packages
+t papers Papers written by Roger Newson
+t usergp Stata User Meeting presentations by Roger Newson
+t docribs Do-file templates written by Roger Newson
+t instasisay Package installation do-files written by Roger Newson
+t miscdocs Miscellaneous documents written by Roger Newson
 l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
 e

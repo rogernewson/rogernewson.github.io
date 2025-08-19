@@ -104,7 +104,6 @@ cap noi ssc uninstall factext
 cap noi ssc uninstall invdesc
 cap noi ssc uninstall ipwbreg
 cap noi ssc uninstall kmest
-cap noi ssc uninstall kmsenspec
 cap noi ssc uninstall ltop
 cap noi ssc uninstall osgen
 cap noi ssc uninstall parmest
