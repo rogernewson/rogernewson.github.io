@@ -1,0 +1,21 @@
+d srslogit: Logit regression with secondary ridit splines
+d srslogit fits a primary logit model for a binary dependent variable
+d in a list of independent variables, followed optionally by a
+d secondary ridit spline model for the same binary dependent variable
+d in the ridit of the predicted dependent variable from the primary
+d logit model.  It optionally outputs variables created in this
+d process, including the predicted values (also known as propensity
+d scores) and inverse probability weights (also known as inverse
+d propensity weights) from the primary and secondary logit models.
+d These propensity weights may be used as treatment propensity weights
+d (if the dependent variable is a treatment indicator) or as
+d completeness-propensity weights (if the dependent variable is a
+d completeness indicator).  srslogit uses the SSC packages wridit and 
+d bspline, which have to be installed in order for srslogit to run.
+d
+d Author: Roger Newson
+d Distribution-Date: 21september2021
+d Stata-Version: 16
+f srslogit.ado
+f srslogit.sthlp
+e

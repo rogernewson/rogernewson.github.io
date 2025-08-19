@@ -1,0 +1,24 @@
+d xdir:  Create a resultsset with 1 observation per file or per frame
+d xdir is an extended version of dir, or of the extended macro
+d function dir.  It creates an output dataset (or resultsset), with 1
+d observation for each file in a user-specified directory conforming
+d to a user-specified pattern, and belonging to a user-specified file
+d type, and data on the file name and the directory name.  xframedir
+d is an extended version of frames dir.  It creates a resultsset with
+d 1 observation per frame in the memory.  The resultsset from xdir or
+d xframedir may be listed using the list() option and/or saved to a
+d data frame using the frame() option and/or saved to a file using the
+d saving() option and/or written to the memory using the norestore or
+d fast option, overwriting any existing dataset.  Alternatively (or
+d additionally), a list of the file or frame names may be saved in a
+d local macro, using the local() option, or the plocal() option for
+d xdir.
+d
+d Author: Roger Newson
+d Distribution-Date: 07may2020
+d Stata-Version: 16
+f xdir.ado
+f xframedir.ado
+f xdir.sthlp
+f xframedir.sthlp
+e

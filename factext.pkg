@@ -1,0 +1,38 @@
+v 2
+d factext: Extract factor values from a label variable created by parmest
+d factext is intended for use after the programs parmest or parmby.
+d These are part of the parmest package, which can be downloaded from
+d SSC, and which create output datasets (or resultssets) with one
+d observation per parameter of the most recently fitted model.  It is
+d used when the fitted model contains factors (categorical
+d variables), in which case some of the parameters correspond to
+d dummy variables in the original dataset, indicating individual
+d values of these factors.  These dummy variables are usually created
+d by xi, by tabulate, by John Hendrickx's desmat package.  For
+d continuous predictor variables, similar dummy-like variables, known
+d as reference splines, can be created using the SSC package 
+d polyspline, or the flexcurv and frencurv modules of the SSC package
+d bspline, with the labprefix() option.  factext is used to create
+d new factors with the same names in the new dataset created by 
+d parmest.  These new factors can be used to make confidence interval
+d plots and/or tables.  Each new factor is assigned the appropriate
+d value in observations belonging to parameters belonging to the
+d factor, and missing values in other observations.  The values of
+d these factors are usually extracted from the label variable in the
+d dataset created by parmby or parmest.  If the model contains
+d categorical factors, then the :label variable will have values of
+d the form
+d
+d "factor_name==value"
+d
+d in observations belonging to parameters belonging to these factors.
+d The names of the factors to be re-created are specified in the
+d newvarlist if it is present, and otherwise are specified by the
+d factor_names.  The factor values are specified in the values.
+d
+d Author: Roger Newson
+d Distribution-Date: 25november2020
+d Stata-Version: 16
+f factext.ado
+f factext.sthlp
+e

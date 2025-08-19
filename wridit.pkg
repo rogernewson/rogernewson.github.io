@@ -1,0 +1,19 @@
+d wridit: Generate weighted ridits
+d wridit inputs a variable and generates its weighted ridits.
+d If no weights are provided, then all weights are assumed
+d equal to 1, so unweighted ridits are generated.  Zero weights
+d are allowed, and imply that the ridits calculated for the
+d observations with zero weights will refer to the distribution
+d of weights in the observations with nonzero weights.  fridit
+d inputs a variable and generates its weighted foreign ridits,
+d with respect to a distribution identified by the data in a
+d data frame.
+d
+d Author: Roger Newson
+d Distribution-Date: 21july2021
+d Stata-Version: 16
+f wridit.ado
+f fridit.ado
+f wridit.sthlp
+f fridit.sthlp
+e

@@ -1,0 +1,17 @@
+d docxtab: List variables to a .docx table with head or foot rows from characteristics
+d docxtab lists the variables in the varlist (or all variables, if the 
+d varlist is absent) to an Office Open XML (.docx) table acceptable to
+d putdocx table, with added header rows above and footer rows below,
+d extracted from variable characteristics.  These characteristics may
+d be multiple (allowing multiple header and footer rows), and each
+d characteristic may be set for multiple variables by the SSC package 
+d chardef.  The generated .docx table can then be modified using
+d other putdocx table commands, to change the formatting of rows,
+d columns, or cells.
+d
+d Author: Roger Newson
+d Distribution-Date: 20january2022
+d Stata-Version: 16
+f docxtab.ado
+f docxtab.sthlp
+e
