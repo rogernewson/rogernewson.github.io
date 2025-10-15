@@ -1,0 +1,13 @@
+v 3
+d robit: Robit regression
+d robit fits a robit regression model, with a number of degrees
+d of freedom specified by the user.  robit requires the SSC
+d package xlink in order to work.
+d
+d Author: Roger Newson
+d Author: Milena Falcaro
+d Distribution-Date: 26october2022
+d Stata-Version: 16
+f robit.ado
+f robit.sthlp
+e

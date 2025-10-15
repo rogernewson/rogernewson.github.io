@@ -1,0 +1,13 @@
+d vallabframe: Convert a list of value labels to variables in a new data frame
+d The vallabframe package inputs a list of value label names, and
+d outputs a new data frame, containing a dataset with 1 observation per
+d value label per value, and data on the label specified by the value
+d label for the value.  This dataset may then be listed, stored, or
+d exported to a generic (or proprietary) format of the user's choice.
+d
+d Author: Roger Newson
+d Distribution-Date: 23january2020
+d Stata-Version: 16
+f vallabframe.ado
+f vallabframe.sthlp
+e

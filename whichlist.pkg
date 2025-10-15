@@ -1,0 +1,15 @@
+d whichlist: Input list of package file items and output lists of present and absent items
+d whichlist inputs a list of one or more items that might be included in
+d Stata packages and/or input to the which command, and (optionally) a
+d list of Stata package names that might belong to packages including the
+d input items.  It outputs lists of present and absent items and
+d (optionally) lists of complete and incomplete Stata packages.  It is
+d useful for finding out which of a list of Stata packages the user has
+d installed.
+d
+d Author: Roger Newson
+d Distribution-Date: 09december2021
+d Stata-Version: 16
+f whichlist.ado
+f whichlist.sthlp
+e

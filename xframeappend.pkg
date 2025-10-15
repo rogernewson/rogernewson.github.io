@@ -1,0 +1,15 @@
+d xframeappend: Append data frames to the end of the current data frame
+d xframeappend appends the contents of one or more frames in the
+d input framelist to the current data frame.  The new
+d observations will be at the bottom of the current frame.  And
+d any variables in the appended frames in the framelist but not
+d in the current frame will be ordered in order of appearance in
+d the framelist.  The command works for variables whose names
+d begin with an underscore.
+d
+d Author: Roger Newson
+d Distribution-Date: 01january2025
+d Stata-Version: 16
+f xframeappend.ado
+f xframeappend.sthlp
+e
