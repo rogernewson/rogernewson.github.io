@@ -1,0 +1,20 @@
+d tabagree: Nonparametric measures of agreement and disagreement in paired ordinal data
+d In this article, we describe tabagree, a new command for assessing the
+d level of agreement and disagreement in paired ordinal data. tabagree implements
+d some of the nonparametric measures proposed by Svensson (1993, Analysis of
+d Systematic and Random Differences Between Paired Ordinal Categorical Data
+d [Almqvist and Wiksell]) and allows the user to evaluate systematic disagreement
+d separately from random differences. For example, the command can be used in
+d interrater and intrarater reliability studies or in analyses of change.
+d
+d References
+d
+d Falcaro M, Newson RB. tabagree: Nonparametric measures of agreement and disagreement
+d in paired ordinal data.
+d The Stata Journal 2025; 25(3): 627-645.
+d 
+d Authors: Milena Falcaro, Roger Newson.
+d Distribution-date: 15 October 2025
+f tabagree.pdf
+e
+

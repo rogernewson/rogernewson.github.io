@@ -56,6 +56,7 @@ To find out more about Stata Statistical Software, <a href="http://www.stata.com
 <p>
 <table border="1">
 <tr><th>Presentation year</th><th>Presentation title</th></tr>
+<tr><td>2025</td><td><a href="#uk2025">Resultssets to resultstables revisited</a></td></tr>
 <tr><td>2024</td><td><a href="#uk2024">Balance and variance inflation checks for completeness-propensity weights</a></td></tr>
 <tr><td>2023</td><td><a href="#uk2023">Customized Markdown and <tt>.docx</tt> tables using <tt>listtab</tt> and <tt>docxtab</tt></a></td></tr>
 <tr><td>2022</td><td><a href="#uk2022">Resultssets in resultsframes in Stata 16-plus</a></td></tr>
@@ -91,6 +92,43 @@ To find out more about Stata Statistical Software, <a href="http://www.stata.com
 
 <hr>
 <hr>
+
+<h2><a name="uk2025">
+Resultssets to resultstables revisited. Presented at the 2025 UK Stata Conference, London, 11-12 September, 2025
+</a></h2>
+
+<p>
+A resultsset is a dataset created as output by a Stata command.
+Multiple resultssets can be appended or merged or combined in other ways
+ro make secondary resultssets.
+However, their usefulness is in that they can be converted to resultsplots and/or resultstables in documents in a variety of formats.
+We focus on resultstables in <tt>.docx</tt> documents.
+Converting resultssets to resultstables starts with decoding
+(using <tt>sdecode</tt> and its family of dependent packages)
+and ends with listing decoded variables to a document
+(using <tt>docxtab</tt> or <tt>listtab</tt>).
+However, intermediate steps may include
+<tt>reshape</tt>ing (<tt>long</tt> or <tt>wide</tt>),
+appending, merging,
+characterizing (to define column headers),
+inserting gap observations, and/or grouping rows into pages
+in multi--page tables.
+We illustrate this process using an example,
+outputting a multi-page table to a <tt>.docx</tt> document,
+and introducing the <tt>ltop</tt> package for grouping lines into pages..
+</p>
+
+<p>
+<a href="./usergp/uk2025/newson_ohp1.pdf">Download presentation</a>
+<br>
+<a href="./usergp/uk2025/example1.do">Download example do-file</a>
+<br>
+<a href="#top_of_page">Return to top of page</a>
+</p>
+
+<hr>
+
+
 
 <h2><a name="uk2024">
 Balance and variance inflation checks for completeness-propensity weights.
@@ -1107,7 +1145,7 @@ Roger B. Newson
 <br>
 Email: <a href="mailto:r.newson@qmul.ac.uk">r.newson@qmul.ac.uk</a>
 <br>
-Text written: 21 May 2024. (Papers and presentations may have been revised since then.)
+Text written: 15 October 2025. (Papers and presentations may have been revised since then.)
 <br>
 <a href="#top_of_page">Return to top of page</a>
 <br>

@@ -8,6 +8,7 @@ d or at the RePEc site at
 d http://edirc.repec.org/data/debocus.html
 d which is maintained by Kit Baum. The unofficial Stata programs used in
 d the presentations can usually be downloaded from the SSC-Ideas archive.
+p uk2025 Resultssets to resultstables revisited
 p uk2024 Balance and variance inflation checks for completeness-propensity weights
 p uk2023 Customized Markdown and .docx tables using listtab and docxtab
 p uk2022 Resultssets in resultsframes in Stata 16-plus

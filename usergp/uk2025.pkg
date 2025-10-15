@@ -1,0 +1,22 @@
+v 2
+d uk2025: Resultssets to resultstables revisited
+d A resultsset is a dataset created as output by a Stata command.
+d Multiple resultssets can be appended or merged or combined in other
+d ways ro make secondary resultssets. However, their usefulness is in
+d that they can be converted to resultsplots and/or resultstables in
+d documents in a variety of formats. We focus on resultstables in .docx 
+d documents. Converting resultssets to resultstables starts with decoding 
+d (using sdecode and its family of dependent packages) and ends with 
+d listing decoded variables to a document (using docxtab or listtab). 
+d However, intermediate steps may include reshapeing (long or wide), 
+d appending, merging, characterizing (to define column headers), 
+d inserting gap observations, and/or grouping rows into pages in 
+d multi--page tables. We illustrate this process using an example, 
+d outputting a multi-page table to a .docx document, and introducing the 
+d ltop package for grouping lines into pages.
+d
+d Author: Roger Newson
+d Distribution-date: 15 October 2025
+f ./uk2025/newson_ohp1.pdf
+f ./uk2025/example1.do
+e

@@ -9,6 +9,7 @@ d net get filename
 d
 d in Stata. The programs used in these papers are usually downloadable
 d from the SSC-Ideas site.
+p tabagree tabagree: Nonparametric measures of agreement and disagreement in paired ordinal data
 p robit Robit regression in Stata
 p portplus Stata tip 147: Porting downloaded packages between machines
 p capnoi Stata tip 127: Use capture noisily groups
