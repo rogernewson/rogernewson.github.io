@@ -1,0 +1,6 @@
+v 3
+d Stata 19 packages written by Roger Newson
+d These can be used by users with Stata Version 19 or above.
+d The latest version of a package can usually be downloaded from SSC-Ideas.
+l ssc-ideas http://fmwww.bc.edu/RePEc/bocode/ SSC-Ideas site
+e

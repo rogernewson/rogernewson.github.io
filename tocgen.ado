@@ -9,7 +9,7 @@ version 17.0;
   create a HTML page with the full table of packages in the current directory,
   and create do-files for describing, installing and uninstalling sets of packages.
 *! Author: Roger Newson
-*! Date: 23 January 2024
+*! Date: 15 October 2025
 */
 
 *
@@ -49,7 +49,9 @@ local maxsdversion=r(max);
  Store subdirectory names in local macros
 *;
 local nsd=_N;
-forv i1=1(1)`nsd' {;local sd`i1'=sdname[`i1'];};
+forv i1=1(1)`nsd' {;
+  local sd`i1'=sdname[`i1'];
+};
 
 *
  Create dataset with 1 obs per Stata package name per Stata version

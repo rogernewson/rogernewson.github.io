@@ -8,7 +8,8 @@ d Therefore, if a package on SSC-Ideas is updated to a higher version of Stata,
 d then users who only have lower versions of Stata can no longer use it. These
 d users may now download earlier versions of my packages from this site.
 d
-d Roger Newson, 26 April 2021.
+d Roger Newson, 15 October 2025.
+t stata19 Stata Version 19 packages
 t stata18 Stata Version 18 packages
 t stata17 Stata Version 17 packages
 t stata16 Stata Version 16 packages
