@@ -5,6 +5,7 @@ d use to install current versions of Roger Newson's Stata packages from SSC,
 d or to install earlier versions of Roger Newson's Stata packages, for use
 d with earlier versions of Stata, from Roger Newson's website.
 p instasisay Install, uninstall and describe Roger Newson's SSC packages
+p instasisay_19 Install packages in Stata versions up to Version 19
 p instasisay_18 Install packages in Stata versions up to Version 18
 p instasisay_17 Install packages in Stata versions up to Version 17
 p instasisay_16 Install packages in Stata versions up to Version 16

@@ -17,6 +17,7 @@ p kmest Compute Kaplan-Meier survival probabilities and/or percentiles as estima
 p ltop Divide a dataset into pages without splitting internal by-groups
 p osgen Add Python os_stat() file attributes to a xdir resultsset
 p parmest Create datasets with 1 observation per estimated parameter
+p parmhet Heterogeneity tests in parmest resultssets
 p polyspline Generate sensible bases for polynomials and other splines
 p rcentile Robust confidence intervals for percentiles
 p robit Robit regression

@@ -36,7 +36,6 @@ cap noi ssc inst listtex, replace
 cap noi ssc inst msdirb, replace
 cap noi ssc inst normalbvr, replace
 cap noi ssc inst normalrir, replace
-cap noi ssc inst parmhet, replace
 cap noi ssc inst powercal, replace
 cap noi ssc inst predsurv, replace
 cap noi ssc inst prodvars, replace
@@ -107,6 +106,7 @@ cap noi ssc inst kmest, replace
 cap noi ssc inst ltop, replace
 cap noi ssc inst osgen, replace
 cap noi ssc inst parmest, replace
+cap noi ssc inst parmhet, replace
 cap noi ssc inst polyspline, replace
 cap noi ssc inst rcentile, replace
 cap noi ssc inst robit, replace

@@ -36,7 +36,6 @@ cap noi ado uninstall listtex
 cap noi ado uninstall msdirb
 cap noi ado uninstall normalbvr
 cap noi ado uninstall normalrir
-cap noi ado uninstall parmhet
 cap noi ado uninstall powercal
 cap noi ado uninstall predsurv
 cap noi ado uninstall prodvars
@@ -107,6 +106,7 @@ cap noi ado uninstall kmest
 cap noi ado uninstall ltop
 cap noi ado uninstall osgen
 cap noi ado uninstall parmest
+cap noi ado uninstall parmhet
 cap noi ado uninstall polyspline
 cap noi ado uninstall rcentile
 cap noi ado uninstall robit

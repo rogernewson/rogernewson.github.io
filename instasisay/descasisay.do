@@ -36,7 +36,6 @@ cap noi ssc desc listtex
 cap noi ssc desc msdirb
 cap noi ssc desc normalbvr
 cap noi ssc desc normalrir
-cap noi ssc desc parmhet
 cap noi ssc desc powercal
 cap noi ssc desc predsurv
 cap noi ssc desc prodvars
@@ -107,6 +106,7 @@ cap noi ssc desc kmest
 cap noi ssc desc ltop
 cap noi ssc desc osgen
 cap noi ssc desc parmest
+cap noi ssc desc parmhet
 cap noi ssc desc polyspline
 cap noi ssc desc rcentile
 cap noi ssc desc robit
