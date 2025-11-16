@@ -12,7 +12,7 @@ version 16.0;
  containing inverse-variance weights and/or semi-weights
  and/or semiweight-based standard errors.
 *!Author: Roger Newson
-*!Date: 16 Novem FRAme(string asis)ber 2015.
+*!Date: 16 November 2025.
 */
 
 
