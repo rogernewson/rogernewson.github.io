@@ -1,0 +1,25 @@
+v 3
+d crib19: Do-file templates for use in Stata Version 19
+d These files are used as templates (or cribs) to create do-files in
+d Stata Version 19 for use with the dolog package. They can be inserted
+d into the Stata do-file editor, or other text editors, and edited and
+d saved with other names, and then executed using the dolog package.
+d The file crib19.do is used to create semicolon-delimited do-files,
+d the file crcrib19.do is used to create carriage-return-delimited
+d do-files, the file rtfcrib19.do is used to create semicolon-delimited
+d RTF document-generating do-files, the file htmcrib19 is used to
+d create semicolon-delimited HTML document-generating do-files, and
+d the file docxcrib19.do is used to create semicolon-delimited .docx
+d document generating do-files. These templates are written assuming that
+d the user has already installed some of the packages by Roger Newson,
+d downloadable from SSC or from this website.
+d
+d Author: Roger Newson
+d Distribution-date: 17november2025
+d Stata-version: 19
+f crib19.do
+f crcrib19.do
+f rtfcrib19.do
+f htmcrib19.do
+f docxcrib19.do
+e
