@@ -17,7 +17,7 @@ d fraddinby is similar to addinby, but it adds variables from a dataset
 d in a data frame, instead of from a dataset in a disk file.
 d
 d Author: Roger Newson
-d Distribution-Date: 23april2026
+d Distribution-Date: 26april2026
 d Stata-Version: 16
 f addinby.ado
 f fraddinby.ado
