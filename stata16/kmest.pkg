@@ -13,7 +13,7 @@ d esetran to compute Greenwood confidence intervals, or delta-Greenwood
 d confidence intervals using a variety of Normalizing transforms.
 d
 d Author: Roger Newson
-d Distribution-Date: 24 July 2025
+d Distribution-Date: 30 July 2026
 d Stata-Version: 16
 f kmest.ado
 f kmest_p.ado
