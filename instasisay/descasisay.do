@@ -110,6 +110,7 @@ cap noi ssc desc parmhet
 cap noi ssc desc polyspline
 cap noi ssc desc rcentile
 cap noi ssc desc robit
+cap noi ssc desc rtablabs
 cap noi ssc desc scsomersd
 cap noi ssc desc somersd
 cap noi ssc desc srslogit

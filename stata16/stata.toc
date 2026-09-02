@@ -21,6 +21,7 @@ p parmhet Heterogeneity tests in parmest resultssets
 p polyspline Generate sensible bases for polynomials and other splines
 p rcentile Robust confidence intervals for percentiles
 p robit Robit regression
+p rtablabs Label variables in a xsvmat dataset from a transposed r(table) matrix
 p scsomersd Rank statistics for scenario comparisons
 p somersd Kendall's tau-a, Somers' D and percentile slopes
 p srslogit Logit regression with secondary ridit splines

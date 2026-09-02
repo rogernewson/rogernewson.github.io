@@ -110,6 +110,7 @@ cap noi ssc inst parmhet, replace
 cap noi ssc inst polyspline, replace
 cap noi ssc inst rcentile, replace
 cap noi ssc inst robit, replace
+cap noi ssc inst rtablabs, replace
 cap noi ssc inst scsomersd, replace
 cap noi ssc inst somersd, replace
 cap noi ssc inst srslogit, replace

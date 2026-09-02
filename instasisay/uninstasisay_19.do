@@ -110,6 +110,7 @@ cap noi ado uninstall parmhet
 cap noi ado uninstall polyspline
 cap noi ado uninstall rcentile
 cap noi ado uninstall robit
+cap noi ado uninstall rtablabs
 cap noi ado uninstall scsomersd
 cap noi ado uninstall somersd
 cap noi ado uninstall srslogit

@@ -110,6 +110,7 @@ cap noi net inst parmhet, replace from(http://www.rogernewsonresources.org.uk/st
 cap noi net inst polyspline, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst rcentile, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst robit, replace from(http://www.rogernewsonresources.org.uk/stata16)
+cap noi net inst rtablabs, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst scsomersd, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst somersd, replace from(http://www.rogernewsonresources.org.uk/stata16)
 cap noi net inst srslogit, replace from(http://www.rogernewsonresources.org.uk/stata16)
