@@ -1,0 +1,18 @@
+v 2
+d uk2026: Writing R Markdown documents in Stata
+R Markdown, an extension of Pandoc Markdown, is promoted as a grand
+d unified solution to writing computer-generated scientific
+d documents. It inputs a text document, and outputs documents in
+d formats .docx and/or .html and/or .pdf (via LaTeX). The output
+d documents can contain publication-quality tables, graphics, and
+d also equations (in formats .html or .pdf). Unsurprisingly, the 
+d input text file can be generated using Stata, using the official
+d Stata file command, together with the SSC packages listtab to
+d make the tables and tfinsert to make the rest of the document. We
+d demonstrate how this might be done.
+d
+d Author: Roger Newson
+d Distribution-date: 06 September 2026
+f ./uk2026/newson_ohp1.pdf
+f ./uk2026/newson_examples.zip
+e
