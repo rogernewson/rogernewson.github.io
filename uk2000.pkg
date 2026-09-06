@@ -1,0 +1,27 @@
+v 2
+d uk2000: Confidence intervals for rank order statistics
+d So-called "non-parametric" methods are in fact based on population
+d parameters, which are zero under the null hypothesis. Two of these parameters
+d are Kendall's tau-a and Somers' D. both of which measure ordinal correlation
+d between two variables X and Y. If X is a binary variable, then Somers' D(Y|X)
+d is the parameter tested by a Wilcoxon rank-sum test. It is more informative
+d to have confidence limits for these parameters than P-values alone, for three
+d main reasons. First, it might discourage people from arguing that a high
+d P-value proves a null hypothesis. Second, for continuous data, Kendall's
+d tau-a is often related to the classical Pearson correlation by Greiner's
+d relation, so we can use Kendall's tau-a to define robust confidence limits
+d for Pearson's correlation. Third, we might want to know confidence limits for
+d differences between two Kendall's tau-a or Somers' D parameters, because a
+d larger Kendall's tau-a or Somers' D cannot be secondary to a smaller one. The
+d program somersd calculates confidence intervals for Somers' D or Kendall's
+d tau-a, using jackknife variances. There is a choice of transformations,
+d including Fisher's z, Daniels' arcsine, Greiner's rho, and the z-transform of
+d Greiner's rho. A cluster option is available, intended for measuring
+d intra-class correlation (such as exists between measurements on pairs of
+d sisters). The estimation results are saved as for a model fit, so that
+d differences can be estimated using lincom.
+d
+d Author: Roger Newson
+d Distribution-date: 01 June 2003
+f uk2000.pdf
+e

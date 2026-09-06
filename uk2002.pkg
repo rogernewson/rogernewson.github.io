@@ -1,0 +1,34 @@
+v 2
+d uk2002: Creating plots and tables of estimation results using parmest
+d Statisticians make their living mostly by producing confidence intervals and
+d P-values. However, the ones supplied in the Stata log are not in any fit
+d state to be delivered to the end user, who usually at least wants them
+d tabulated and formatted, and may appreciate them even more if they are
+d plotted on a graph for immediate impact. The parmest package was developed
+d to make this easy, and consists of two programs. These are parmest, which
+d converts the latest estimation results to a data set with one observation per
+d estimated parameter and data on confidence intervals, P-values and other
+d estimation results, and parmby, a "quasi-byable" front end to parmest, which
+d is like statsby, but creates a data set with one observation per parameter
+d per by-group instead of a data set with one observation per by-group. The
+d parmest package can be used together with a team of other Stata programs to
+d produce a wide range of tables and plots of confidence intervals and
+d P-values. The programs descsave and factext can be used with parmby to create
+d plots of confidence intervals against values of a categorical factor included
+d in the fitted model, using dummy variables produced by xi or tabulate. The
+d user may easily fit multiple models, produce a parmby output data set for
+d each one, and concatenate these output data sets using the program dsconcat
+d to produce a combined data set, which can then be used to produce tables or
+d plots involving parameters from all the models. For instance, the user might
+d tabulate or plot unadjusted and adjusted regression parameters side by side,
+d together with their confidence limits and/or P-values. The parmest team is
+d particularly useful when dealing with large volumes of results derived from
+d multiple multi-parameter models, which are particularly common in the world
+d of epidemiology. This version of the presentation is a post-publication
+d update, made in response to changes in the parmest package suggested by Bill
+d Gould of StataCorp after seeing the original presentation. 
+d
+d Author: Roger Newson
+d Distribution-date: 01 June 2003
+f uk2002.pdf
+e

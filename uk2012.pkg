@@ -1,0 +1,42 @@
+v 2
+d uk2012: Scenario comparisons: How much good can we do?
+d Applied scientists, especially public health scientists, frequently
+d want to know how much good can be caused by a proposed intervention.
+d For instance, they might want to estimate how much we could decrease
+d the level of a disease, in a dream scenario where the whole world
+d stopped smoking, assuming that a regression model fitted to a sample
+d is true. Alternatively, they may want to compare the same scenario
+d between regression models fitted to different datasets, as when
+d disease rates in different subpopulations are standardized to a common
+d distribution of gender and age, using the same logistic regression
+d model with different parameters in each subpopulation. In statistics,
+d scenarios can be defined as alternative versions of a dataset, with
+d the same variables, but with different values in the observations, or
+d even with non–corresponding observations. Using regression methods, we
+d may estimate scenario means of a Y –variable in scenarios with
+d specified X–values, and compare these scenario means. In Stata
+d Versions 11 and 12, the standard tool for estimating scenario means is
+d margins. A suite of packages is introduced for estimating scenario
+d means and their comparisons, using margins, together with nlcom to
+d implement Normalizing and variance–stabilizing transformations.
+d margprev estimates scenario prevalences for binary variables.
+d marglmean estimates scenario arithmetic means for non–negative valued
+d variables. regpar estimates 2 scenario prevalences, together with
+d their difference, the population attributable risk (PAR). punaf
+d estimates 2 scenario arithmetic means from cohort or cross–sectional
+d data, together with their ratio, the population unattributable
+d fraction (PUF), which is subtracted from 1 to give the population
+d attributable fraction (PAF). punafcc estimates an arithmetic mean
+d between–scenario rate ratio for cases or non–survivors in case–control
+d or survival data, respectively. This mean rate ratio, also known as a
+d PUF, is also subtracted from 1 to estimate a PAF. These packages use
+d the log transformation for arithmetic means and their ratios, the
+d logit transformation for prevalences, and the hyperbolic arctangent or
+d Fisher’s z transformation for differences between prevalences.
+d Examples are presented for these packages.
+d
+d Author: Roger Newson
+d Distribution-date: 17 September 2012
+f ./uk2012/newson_ohp1.pdf
+f ./uk2012/examples1.do
+e

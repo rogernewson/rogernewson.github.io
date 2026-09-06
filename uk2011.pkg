@@ -1,0 +1,39 @@
+v 2
+d uk2011: Sensible parameters for polynomials and other splines
+d Splines, including polynomials, are traditionally used to model
+d non-linear relationships involving continuous predictors.
+d However, when they are included in linear models (or
+d generalized linear models), the estimated parameters for
+d polynomials are not easy for non–mathematicians to understand,
+d and the estimated parameters for other splines are often not
+d easy even for mathematicians to understand. It would be
+d easier if the parameters were values of the polynomial or spline
+d at reference points on the X–axis, or differences or ratios
+d between the values of the spline at the reference points and the
+d value of the spline at a base reference point. The bspline package
+d can be downloaded from SSC, and generates spline bases for inclusion
+d in the design matrices of linear models, based on Schoenberg
+d B–splines. The package now has a recently added module flexcurv,
+d which inputs a sequence of reference points on the X–axis, and
+d outputs a spline basis, based on equally–spaced knots generated
+d automatically, whose parameters are the values of the spline at the
+d reference points. This spline basis can be modified by excluding the
+d spline vector at a base reference point and including the unit
+d vector. If this is done, then the parameter corresponding to the unit
+d vector will be the value of the spline at the base reference point,
+d and the parameters corresponding to the remaining reference spline
+d vectors will be differences between the values of the spline at the
+d corresponding reference points and the value of the spline at the
+d base reference point. The spline bases are therefore extensions, to
+d continuous factors, of the bases of unit vectors and/or indicator
+d functions used to model discrete factors. It is possible to combine
+d these bases for different continuous and/or discrete factors in the
+d same way, using product bases in a design matrix to estimate
+d factor–value combination means and/or factor–value effects and/or
+d factor interactions.
+d
+d Author: Roger Newson
+d Distribution-date: 19 September 2011
+f ./uk2011/newson_ohp1.pdf
+f ./uk2011/newson_dofiles1.zip
+e

@@ -1,0 +1,17 @@
+v 2
+d uk2022: Resultssets in resultsframes in Stata 16-plus
+d A resultsset is a Stata dataset created as output by a Stata command.
+d It may be listed and/or saved in a disk file and/or written over an existing
+d dataset in memory, and/or (in Stata Versions 16 or higher) written to a
+d data frame (or resultsframe) in the memory, without damaging any existing
+d data frames. Commands creating resultssets include parmest, parmby,
+d xcontract, xcollapse, descsave, xsvmat, and xdir. Commands useful for
+d processing resultsframes include xframeappend, fraddinby, and invdesc.
+d We survey the ways in which resultsset processing has been changed by
+d resultsframes.
+d
+d Author: Roger Newson
+d Distribution-date: 23 September 2021
+f ./uk2022/newson_ohp1.pdf
+f ./uk2022/examples.zip
+e

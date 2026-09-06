@@ -1,0 +1,26 @@
+v 2
+d uk2008: parmest and extensions
+d The parmest package creates output datasets (or resultssets) with one
+d observation for each of a set of estimated parameters, and data on the
+d parameter estimates, standard errors, degrees of freedom, t- or z-statistics,
+d P-values, confidence limits, and other parameter attributes specified by the
+d user. It is especially useful when parameter estimates are "mass-produced",
+d as in a genome scan. Versions of the package have existed on SSC since 1998,
+d when it contained the single command parmest. However, the package has since
+d been extended with additional commands. The metaparm command allows the user
+d to mass-produce confidence intervals for linear combinations of uncorrelated
+d parameters. Examples include confidence intervals for a weighted arithmetic
+d or geometric mean parameter in a meta-analysis, or for differences or ratios
+d between parameters, or for interactions, defined as differences (or ratios)
+d between differences (or ratios). The parmcip command is a lower-level utility,
+d inputting variables containing estimates, standard errors, and degrees of
+d freedom, and outputting variables containing confidence limits and P-values.
+d As an example, we may input genotype frequencies and calculate confidence
+d intervals for geometric mean homozygote/heterozygote ratios for genetic
+d polymorphisms, measuring the size and direction of departures from
+d Hardy-Weinberg equilibrium.
+d
+d Author: Roger Newson
+d Distribution-date: 11 September 2008
+f uk2008.pdf
+e

@@ -1,0 +1,28 @@
+v 2
+d uk2024: Balance and variance inflation checks for completeness-propensity weights
+d Inverse treatment-propensity weights are a standard method for adjusting
+d for predictors of exposure to a treatment. As a treatment-propensity
+d score is a balancing score, it makes sense to do balance checks on the
+d corresponding treatment-propensity weights. It is also a good idea to do
+d variance-inflation checks, to estimate how much the propensity weights
+d might inflate the variance of an estimated treatment effect, in the
+d pessimistic scenario in which the weights are not really necessary. In
+d Stata, the SSC package somersd can be used for balance checks, and the
+d SSC package haif can be used for variance-inflation checks. It is argued
+d that balance and variance-inflation checks are also necessary in the case
+d of completeness-propensity weights, which are intended to remove
+d inbalance in predictors of completeness between the subsample with
+d complete data and the full sample of subjects with complete or incomplete
+d data. However, the usage of somersd, scsomersd, and haif must be
+d modified, because we are removing imbalance between the complete sample
+d and the full sample, instead of between the treated subsample and the
+d untreated subsample. An example will be presented, from a clinical trial
+d in which the author was involved, and in which nearly a quarter of
+d randomized subjects had no final outcome data. A post-hoc sensitivity
+d analysis is presented, using inverse completeness-propensity weights.
+d
+d Author: Roger Newson
+d Distribution-date: 17 September 2024
+f ./uk2024/newson_ohp1.pdf
+f ./uk2024/example1.do
+e

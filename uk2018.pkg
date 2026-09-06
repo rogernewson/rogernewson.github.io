@@ -1,0 +1,24 @@
+v 2
+d uk2018: A fleet of packages for inputting United Kingdom primary care data
+d The Clinical Practice Research Datalink (CPRD) is a centrally-managed data
+d warehouse, storing data provided by the primary-care sector of the United
+d Kingdom (UK) National Health Service (NHS). Medical researchers request
+d retrievals from this database, which take the form of a collection of text
+d datasets, whose format can be complicated. I have written a flagship
+d package cprdutil, with multiple modules to input into Stata the many text
+d dataset types provided in a CPRD retrieval. These text datasets may be
+d converted either to Stata value labels or to Stata datasets, which can be
+d created complete with value labels, variable labels, and numeric Stata
+d dates. I have also written a fleet of satellite packages, to input into
+d Stata the text datasets for retrievals of linked data, in which data are
+d provided from non-CPRD sources, with CPRD identifier variables as a
+d foreign key to allow data linkage. The modules of cprdutil are introduced.
+d A demonstration example is given, in which a minimal CPRD database is
+d produced in Stata, using cprdutil, and some principles of sensible
+d programming practice for creating large databases are illustrated.
+d
+d Author: Roger Newson
+d Distribution-date: 11 September 2018
+f ./uk2018/newson_ohp1.pdf
+f ./uk2018/newson_examples.zip
+e

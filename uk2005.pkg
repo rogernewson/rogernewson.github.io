@@ -1,0 +1,26 @@
+v 2
+d uk2005: Generalized confidence interval plots using commands or dialogs
+d Confidence intervals may be presented as publication-ready tables or as
+d presentation-ready plots. eclplot produces plots of estimates and
+d confidence intervals. It inputs a dataset (or resultsset) with one
+d observation per parameter and variables containing estimates, lower and upper
+d confidence limits, and a fourth variable, against which the confidence
+d intervals are plotted. This resultsset can be used for producing both plots
+d and tables, and may be generated using a spreadsheet or using statsby,
+d postfile or the unofficial Stata parmest package. Currently, eclplot offers
+d 7 plot types for the estimates and 8 plot types for the confidence intervals,
+d each corresponding to a graph twoway subcommand. These plot types can be
+d combined to produce 56 combined plot types, some of which are more useful
+d than others, and all of which can be either horizontal or vertical. eclplot
+d has a plot() option, allowing the user to superimpose other plots to add
+d features such as stars for P-values. eclplot can be used either by typing a
+d command, which may have multiple lines and sub-suboptions, or by using a
+d dialog, which generates the command for users not fluent in the Stata
+d graphics language. This presentation includes a demonstration of eclplot,
+d using both commands and dialogs.
+d
+d Author: Roger Newson
+d Distribution-date: 19 May 2005
+f ./uk2005/newson_ohp1.pdf
+f ./uk2005/newson_pres1.zip
+e

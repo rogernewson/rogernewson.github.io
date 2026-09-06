@@ -1,0 +1,40 @@
+v 2
+d uk2016: The role of Somers' D in propensity modelling
+d The Rubin method of confounder adjustment, in its 21st-century
+d version, is a two-phase method for using observational data to
+d estimate a causal treatment effect on an outcome variable. It involves
+d first finding a propensity model in the joint distribution of a
+d treatment variable and its confounders (the design phase), and then
+d estimating the treatment effect from the conditional distribution of
+d the outcome, given the treatments and confounders (the analysis
+d phase). In the design phase, we want to limit the level of spurious
+d treatment effect that might be caused by any residual imbalance
+d between treatment and confounders that may remain, after adjusting for
+d the propensity score by propensity matching and/or weighting and/or
+d stratification. A good measure of this is Somers' D(W|X), where W is
+d a confounder or a propensity score and X is the treatment variable.
+d The SSC package somersd calculates Somers' D for a wide range of
+d sampling schemes, allowing matching and weighting and restriction to
+d comparisons within strata. Somers' D has the feature that if Y is an
+d outcome, then a higher-magnitude D(Y|X) cannot be secondary to a
+d lower-magnitude D(W|X), implying that D(W|X) can be used to set an
+d upper bound to the size of a spurious treatment effect on an outcome.
+d For a binary treatment variable X, D(W|X) gives an upper bound to the
+d size of a difference between the proportions, in the two treatment
+d groups, that can be caused for a binary outcome. If D(W|X) is less
+d than 0.5, then it can be doubled to give an upper bound to the size of
+d a difference between the means, in the two treatment groups, that can
+d be caused for an equal-variance normal outcome, expressed in units of
+d the common standard deviation for the two treatment groups. We
+d illustrate this method using a familiar dataset, with examples using
+d propensity matching, weighting, and stratification. We use the SSC
+d package haif in the design phase to check for variance inflation
+d caused by propensity adjustment and use the SSC package scenttest (an
+d addition to the punaf family) to estimate the treatment effect in the
+d analysis
+d
+d Author: Roger Newson
+d Distribution-date: 12 September 2016
+f ./uk2016/newson_ohp1.pdf
+f ./uk2016/examples1.do
+e

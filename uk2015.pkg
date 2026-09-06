@@ -1,0 +1,32 @@
+v 2
+d uk2015: Somers' D: A common currency for associations
+d Somers' D(Y|X) is an asymmetric measure of ordinal association between
+d two variables Y and X, on a scale from -1 to 1. It is defined as the
+d difference between the conditional probabilities of concordance and
+d discordance between two randomly-sampled (X,Y)-pairs, given that the
+d two X-values are ordered. The somersd package enables the user to
+d estimate Somers' D for a wide range of sampling schemes, allowing
+d clustering and/or sampling-probability weighting and/or restriction
+d to comparisons within strata. Somers' D has the useful feature that a
+d larger D(Y|X) cannot be secondary to a smaller D(W|X) with the same
+d sign, enabling us to make scientific statements that the first ordinal
+d association cannot be caused by the second. An important practical
+d example, especially for public-health scientists, is the case where Y
+d is an outcome, X an exposure, and W a propensity score. However, an
+d audience accustomed to other measures of association may be culture-
+d shocked, if we present associations measured using Somers' D.
+d Fortunately, under some commonly-used models, Somers' D is related
+d monotonically to an alternative association measure, which may be more
+d clearly related to the practical question of how much good we can do.
+d These relationships are nearly linear (or log-linear) over the range
+d of Somers' D values from -0.5 to 0.5. We present examples with X and Y
+d binary, with X binary and Y a survival time, with X binary and Y
+d conditionally Normal, and with X and Y bivariate Normal. Somers' D can
+d therefore be used as a common currency for comparing a wide range of
+d associations between variables, not limited to a particular model.
+d
+d Author: Roger Newson
+d Distribution-date: 14 September 2015
+f ./uk2015/newson_ohp1.pdf
+f ./uk2015/examples1.do
+e

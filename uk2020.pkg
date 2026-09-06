@@ -1,0 +1,34 @@
+v 2
+d uk2020: From datasets to metadatasets in Stata
+d Metadatasets are Stata datasets, in files or in frames, which may have
+d one observation per file, per dataset, per variable, or per variable
+value. Metadatasets can be used to modify a Stata database, or to make
+d a Stata database self-documenting, especially if converted to non-Stata
+d formats, such as HTML or even Microsoft Excel. We present some user-written
+d packages, updated to Stata Version 16, for creating and using metadatasets.
+d The xdir package creates a resultsset with one observation per file in a
+d folder conforming to a user-specified pattern. The descgen pacgage inputs
+d a xdir resultsset, and generates a new variable indicating whether each
+d file is a Stata dataset, and other new variables containing dataset
+d attributes, such as the dataset label and characteristics, the sort key
+d of variables, and the numbers of observations and variables. The vallabdef
+d package inputs a dataset with 1 observation per label name per value per
+d value label, and generates Stata value labels. The vallabsave package
+d loads and saves value labels from and to label-only datasets, and transfers
+d value labels between data frames. The descsave package creates a metadataset
+d with one observation per variable in a dataset, and data on variable
+d attributes (including characteristics). The invdesc package modifies the
+d variable attributes of the dataset in the current frame, inputting a descsave
+d resultsset in a second data frame to set the variable attributes, and
+d inputting value labels from a dataset in a third data frame. The datasets
+d containing the variable attributes and value labels may be produced as
+d resultssets by Stata packages, or produced manually in a spreadsheet using
+d LibreOffice Calc or Microsoft Excel, and input into Stata datasets using
+d import delimited or import excel.
+d
+d Author: Roger Newson
+d Distribution-date: 11 September 2020
+f ./uk2020/newson_ohp1.pdf
+f ./uk2020/example1.do
+f ./uk2020/txtinput1.zip
+e

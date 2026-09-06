@@ -1,0 +1,36 @@
+v 2
+d uk2010: Post–parmest peripherals: fvregen, invcise, and qqvalue
+d The parmest package is used with Stata estimation commands to produce
+d output datasets (or resultssets) with one observation per estimated
+d parameter, and data on parameter names, estimates, confidence limits,
+d P–values, and other parameter attributes. These resultssets can then
+d be input to other Stata programs to produce tables, listings, plots,
+d and secondary resultssets containing derived parameters. Three
+recently–added packages for post–parmest processing are fvregen,
+d invcise, and qqvalue. fvregen is used when the parameters belong to
+d models containing factor variables, introduced in Stata Version 11.
+d It regenerates these factor variables in the resultsset, enabling the
+d user to plot, list, or tabulate factor levels with estimates and
+d confidence limits of parameters specific to these factor levels.
+d invcise calculates standard errors inversely from confidence limits
+d produced without standard errors, such as those for medians and for
+d Hodges–Lehmann median differences. These standard errors can then be
+d input, with the estimates, into the metaparm module of parmest, to
+d produce confidence intervals for linear combinations of medians or of
+d median differences, such as those used in meta–analysis or
+d interaction estimation. qqvalue inputs the P–values in a resultsset,
+d and creates a new variable containing the frequentist q–values,
+d calculated by inverting a multiple–test procedure designed to control
+d the familywise error rate (FWER) or the false discovery rate (FDR).
+d The frequentist q–value for each P–value is the minimum FWER or FDR
+d for which that P–value would be in the discovery set, if the
+d specified multiple–test procedure was used on the full set of
+P–values. fvregen, invcise, qqvalue, and parmest can be downloaded
+d from SSC.
+d
+d Author: Roger Newson
+d Distribution-date: 14 September 2010
+f ./uk2010/newson_ohp1.pdf
+f ./uk2010/fvregendemo1.do
+f ./uk2010/invcisedemo1.do
+e

@@ -1,0 +1,34 @@
+v 2
+d uk2017: Ridit splines with applications to propensity weighting
+d Given a random variable X, the ridit function R_X(.) specifies its
+d distribution. The SSC package wridit can compute ridits (possibly
+d weighted) for a variable. A ridit spline in a variable X is a spline
+d in the ridit R_X(X). The SSC package polyspline can be used with wridit
+d to generate an unrestricted ridit-spline basis for an X-variable, with
+d the feature that, in a regression model, the parameters corresponding
+d to the basis variables are equal to mean values of the outcome
+d variable at a list of percentiles of the X-variable. Ridit splines are
+d especially useful in propensity weighting. The user may define a
+d primary propensity score in the usual way, by fitting a regression
+d model of the treatment variable with respect to the confounders, and
+d then using the predicted values of the treatment variable. A secondary
+d propensity score is then defined by regressing the treatment variable
+d with respect to a ridit-spline basis in the primary propensity score.
+d We have found that secondary propensity scores can predict the
+d treatment variable as well as the corresponding primary propensity
+d scores, as measured using the unweighted Somers' D with respect to the
+d treatment variable. However, secondary propensity weights frequently
+d perform better than primary propensity weights at standardizing out
+d the treatment-propensity association, as measured using the
+d propensity-weighted Somers' D with respect to the treatment variable.
+d Also, when we measure the treatment effect, secondary propensity
+d weights may cause considerably less variance inflation than primary
+d propensity weights. This is because the secondary propensity score is
+d less likely to produce extreme propensity weights than the primary
+d propensity score.
+d
+d Author: Roger Newson
+d Distribution-date: 10 September 2017
+f ./uk2017/newson_ohp1.pdf
+f ./uk2017/examples1.do
+e

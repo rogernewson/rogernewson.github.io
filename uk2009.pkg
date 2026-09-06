@@ -1,0 +1,27 @@
+v 2
+d uk2009: Homoskedastic adjustment inflation factors in model selection
+d Insufficient confounder adjustment is viewed as a common source of "false
+d discoveries", especially in the epidemiology sector. However, adjustment for
+d "confounders" that are correlated with the exposure, but which do not
+d independently predict the outcome, may cause loss of power to detect the
+d exposure effect. On the other hand, choosing confounders based on "stepwise"
+d methods is subject to many hazards, which imply that the confidence interval
+d eventually published is likely not to have the advertized coverage
+d probability for the effect that we wanted to know. We would like to be able
+d to find a model in the data on exposures and confounders, and then to
+d estimate the parameters of that model from the conditional distribution of
+d the outcome, given the exposures and confounders. The haif package,
+d downloadable from SSC, calculates the homoskedastic adjustment inflation
+d factors (HAIFs), by which the variances and standard errors of coefficients
+d for a matrix of X-variables are scaled (or inflated), if a matrix of
+d unnecessary confounders A is also included in a regression model, assuming
+d equal variances (homoskedasticity). These can be calculated from the A- and
+d X-variables alone, and can be used to inform the choice of a set of models
+d eventually fitted to the outcome data, together with the usual criteria
+d involving causality and prior opinion. Examples are given of the use of HAIFs
+d and their ratios.
+d
+d Author: Roger Newson
+d Distribution-date: 16 September 2009
+f uk2009.pdf
+e

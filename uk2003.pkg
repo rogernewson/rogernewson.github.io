@@ -1,0 +1,40 @@
+v 2
+d uk2003: Multiple test procedures and smile plots
+d Scientists often have good reasons for wanting to calculate multiple
+d confidence intervals and/or P-values, especially when scanning a genome.
+d However, if we do this, then the probability of not observing at least one
+d "significant" difference tends to fall, even if all null hypotheses are true.
+d A sceptical public will rightly ask whether a difference is "significant"
+d when considered as one of a large number of parameters estimated. This
+d presentation demonstrates some solutions to this problem, using the
+d unofficial Stata packages parmest and smileplot. The parmest package allows
+d the calculation of Bonferroni-corrected or Sidak-corrected confidence
+d intervals for multiple estimated parameters. The smileplot package contains
+d two programs, multproc (which carries out multiple test procedures) and
+d smileplot (which presents their results graphically by plotting the P-value
+d on a reverse log scale on the vertical axis against the parameter estimate on
+d the horizontal axis). A multiple test procedure takes, as input, a set of
+d estimates and P-values, and rejects a subset (possibly empty) of the null
+d hypotheses corresponding to these P-values. Multiple test procedures have
+d traditionally controlled the family-wise error rate (FWER), typically
+d enabling the user to be 95% confident that all the rejected null hypotheses
+d are false, and that all the corresponding "discoveries" are real. The price
+d of this confidence is that the power to detect a difference of a given size
+d tends to zero as the number of measured parameters become large. Therefore,
+d recent work has concentrated on procedures that control the false discovery
+d rate (FDR), such as the Simes procedure and the Yekutieli-Benjamini
+d procedure. FDR-controlling procedures attempt to control the number of false
+d discoveries as a proportion of the number of true discoveries, typically
+d enabling the user to be 95% confident that some of the discoveries are real,
+d or 90% confident that most of the discoveries are real. This less stringent
+d requirement causes power to "bottom out" at a non-zero level as the number of
+d tests becomes large. The smileplot package offers a selection of multiple
+d test procedures of both kinds. This presentation uses data provided by the
+d ALSPAC Study Team at the Institute of Child Health at Bristol University, UK,
+d who have a Web page at
+d http://www.alspac.bris.ac.uk
+d
+d Author: Roger Newson
+d Distribution-date: 01 June 2003
+f uk2003.pdf
+e

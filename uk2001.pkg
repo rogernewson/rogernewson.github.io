@@ -1,0 +1,30 @@
+v 2
+d uk2001: Splines with parameters that can be explained to non-mathematicians
+d Splines are traditionally used to model non-linear relationships involving
+d continuous predictors, usually confounders. One example is in asthma
+d epidemiology, where splines are used to model a seasonal and longer-term time
+d trend in asthma-related hospital admissions, which must be eliminated in a
+d search for shorter-term epidemics caused by pollution episodes. Usually, the
+d spline is included in a regression model by defining a basis of splines, and
+d including this basis amongst the X-variates, together with the predictors of
+d interest. The basis is typically a plus-function basis, a truncated-power
+d basis, or a Schoenberg B-spline basis. With either of these options, the
+d parameters estimated by the regression model will not be easy to explain in
+d words to non-mathematicians. An STB insert (sg151 in STB-57) presented two
+d programs for generating spline bases. One of these (bspline) generates
+d Schoenberg B-splines. The other program (frencurv, short for "French
+d curve") generates an alternative spline basis, whose parameters are simply
+d values of the spline at reference points along the horizontal axis. In the
+d example from asthma epidemiology, these parameters might be the expected
+d hospital admissions counts on the first day of each month, in the absence of
+d a pollution episode. The expected pollution-free admissions counts on other
+d days of the month are interpolated between the parameters, using the spline.
+d These parameters can be presented, with their confidence limits, to
+d non-technical people. Confidence limits can also be computed for differences
+d and/or ratios between expected values at different reference points, using
+d lincom.
+d
+d Author: Roger Newson
+d Distribution-date: 01 June 2003
+f uk2001.pdf
+e

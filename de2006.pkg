@@ -1,0 +1,40 @@
+v 2
+d de2006: Resultssets, resultsspreadsheets and resultsplots in Stata
+d Most Stata users make their living producing results in a form accessible
+d to end users. Most of these end users cannot immediately understand Stata
+d logs. However, they can understand tables (in paper, PDF, HTML, spreadsheet
+d or word processor documents) and plots (produced using Stata or non-Stata
+d software). Tables are produced by Stata as resultsspreadsheets, and plots are
+d produced by Stata as resultsplots. Sometimes (but not always),
+d resultsspreadsheets and resultsplots are produced using resultssets.
+d Resultssets, resultsspreadsheets and resultsplots are all produced, directly
+d or indirectly, as output by Stata commands. A resultsset is a Stata dataset,
+d which is a table, whose rows are Stata observations and whose columns are
+d Stata variables. A resultsspreadsheet is a table in generic text format,
+d conforming to a TeX or HTML convention, or to another convention with a
+d column separator string and possibly left and right row delimiter strings.
+d A resultsplot is a plot produced as output, using a resultsset or a
+d resultsspreadsheet as input. Resultsset-producing programs include statsby,
+d parmby, parmest, collapse, contract, xcollapse and xcontract.
+d Resultsspreadsheet-producing programs include outsheet, listtex, estout and
+d estimates table. Resultsplot-producing programs include eclplot and
+d smileplot. There are two main approaches (or dogmas) for generating
+d resultsspreadsheets and resultsplots. The resultsset-central dogma is
+d followed by parmest and parmby users, and states: "Datasets make resultssets,
+d which make resultsplots and resultsspreadsheets". The
+d resultsspreadsheet-central dogma is followed by estout and estimates table
+d users, and states: "Datasets make resultsspreadsheets, which make
+d resultssets, which make resultsplots". The two dogmas are complementary, and
+d each dogma has its advantages and disadvantages. The resultsspreadsheet dogma
+d is much easier for the casual user to learn to apply in a hurry, and is
+d therefore probably preferred by most users most of the time. The resultsset
+d dogma is more difficult for most users to learn, but is more convenient for
+d users who wish to program everything in do-files, with little or no manual
+d cutting and pasting.
+d
+d Author: Roger Newson
+d Distribution-date: 04 April 2006
+f ./de2006/newson_ohp1.pdf
+f ./de2006/newson_examples1.do
+f ./de2006/newson_examples2.do
+e

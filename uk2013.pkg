@@ -1,0 +1,32 @@
+v 2
+d uk2013: Creating factor variables in resultssets and other datasets
+d Factor variables are defined as categorical variables with integer
+d values, which may represent values of some other kind, specified by a
+d value label. We frequently want to generate such variables in Stata
+d datasets, especially resultssets, which are output Stata datasets
+d produced by Stata programs, such as the official Stata statsby command
+d and the SSC packages parmest and xcontract. This is because
+d categorical string variables can only be plotted after conversion to
+d numeric variables, and because these numeric variables are also
+d frequently used in defining a key of variables, which identify
+d observations in the resultsset uniquely in a sensible sort order. The
+d sencode package is downloadable, and frequently downloaded, from SSC,
+d and is a “super” version of encode, which inputs a string variable and
+d outputs a numeric factor variable. Its added features include a
+d replace option allowing the output numeric variable to replace the
+d input string variable, a gsort() option allowing the numeric values to
+d be ordered in ways other than alphabetical order of the input string
+d values, and a manyto1 option allowing multiple output numeric values
+d to map to the same input string value. The sencode package is
+d well–established, and has existed since 2001. However, some tips will
+d be given on ways of using it that are not immediately obvious, but
+d which the author has found very useful over the years when
+d mass–producing resultssets. These applications use sencode with other
+d commands, such as the official Stata command split and the SSC
+d packages factmerg, factext and fvregen.
+d
+d Author: Roger Newson
+d Distribution-date: 18 September 2013
+f ./uk2013/newson_ohp1.pdf
+f ./uk2013/examples1.do
+e
