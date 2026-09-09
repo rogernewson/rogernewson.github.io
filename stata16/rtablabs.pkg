@@ -6,7 +6,6 @@ d variable labels to the numeric variables.  The packages xsvmat and
 d descsave can be downloaded from SSC.
 d
 d Author: Roger Newson
-d Author: Milena Falcaro
 d Distribution-Date: 02September2026
 d Stata-Version: 16
 f rtablabs.ado
